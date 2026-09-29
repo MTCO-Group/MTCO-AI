@@ -1249,10 +1249,37 @@
   ],
   "plan": {
     "lanes": {
-      "now": [],
-      "next": [],
-      "later": []
+      "now": [
+        "aes-ai-dynamic-pricing-and-self-serve-quoting-tool-aes"
+      ],
+      "next": [
+        "kensite-ai-organisational-tree-sub-agent-architecture",
+        "kensite-esg-compliance-dashboard-for-site-setups"
+      ],
+      "later": [
+        "kensite-voice-notes-as-a-data-collection-tool",
+        "kensite-churn-signals-from-sales-activity",
+        "kensite-kensite-technicals-technical-help-triage-knowledge-hub",
+        "aes-hazardous-waste-consignment-notes-and-consignee-returns",
+        "aes-ainscough-haulage-driver-tracking-agent",
+        "aes-aes-service-agent",
+        "kensite-hired-in-plant-insurance-verification",
+        "mtco-ai-systems-process-evaluation-group-wide-scoping-and-assessment",
+        "kensite-off-hire-inbox-monitor-daily-summary",
+        "aes-sla-agreement-agent",
+        "kensite-ai-skills-development-plans-hybrid-builders",
+        "kensite-production-planning-agent",
+        "mtco-idea-tournaments-best-value-prioritisation",
+        "aes-business-esg-reporting-for-aes-fleet",
+        "kensite-the-pizza-tracker-automated-customer-delivery-cycle",
+        "kensite-demand-forecaster-demand-and-utr-prediction",
+        "mtco-shared-ai-knowledge-repository-event-transcripts",
+        "aes-abnormal-load-and-movement-notifications",
+        "kensite-credit-control-early-warning-payment-risk-signals",
+        "kensite-cross-hire-invoice-reconciliation",
+        "kensite-site-training-matrix-and-card-evidence"
+      ]
     },
-    "updated": "2026-09-21 08:43"
+    "updated": "2026-09-29 18:53"
   }
 }
