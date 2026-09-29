@@ -1213,6 +1213,38 @@
         }
       ],
       "proposed_at": "2026-09-23"
+    },
+    {
+      "id": "aes-ai-dynamic-pricing-and-self-serve-quoting-tool-aes",
+      "company": "aes",
+      "name": "AI Dynamic Pricing and Self-Serve Quoting Tool (AES)",
+      "stage": "Proposed",
+      "category": "Hire Desk and Sales",
+      "owner": "Chloe Ainscough",
+      "proposed_by": "chloe.ainscough@kensite.co.uk",
+      "date": "Sep 2026",
+      "summary": "Prices AES quotes dynamically instead of at a fixed rate, and lets customers self-serve a quote and a booki...",
+      "scope": "Prices AES quotes dynamically instead of at a fixed rate, and lets customers self-serve a quote and a booking without a phone call. It solves margin leaking between price reviews when fuel moves, and gives each enquirer 3-4 date-specific priced options instead of a single rate.",
+      "how": "Reads four pricing inputs - a live weekly diesel price index feeding a fuel surcharge or base rate, the scheduler's capacity for the requested date, the number of quotes and bookings already taken for that date, and day-of-week fill patterns - and passes them through a rules layer with a floor price per job type so it can show why a price came out as it did. Customers log in with an account number and password, enter the job, see priced options across different days with availability, pick a slot, upload a PO to convert the quote to an order, and get an automated email when their quote is expiring. Quotes and bookings are logged, prices expire, and Kensite staff use the same front end for AES work. Human override for quotes above a set value or named key accounts.",
+      "who": [
+        {
+          "who": "AES hire desk and sales",
+          "how": "fewer phone-bound quotes, less labour per quote, no margin leakage between reviews, and a record of who quoted what"
+        },
+        {
+          "who": "AES management",
+          "how": "visibility and control of why a price came out as it did"
+        },
+        {
+          "who": "Customers",
+          "how": "instant self-serve pricing, off-peak incentive and a choice of days"
+        },
+        {
+          "who": "AES",
+          "how": "better fill on quiet days by pricing them to sell."
+        }
+      ],
+      "proposed_at": "2026-09-29"
     }
   ],
   "plan": {
