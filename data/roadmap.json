@@ -1245,6 +1245,30 @@
         }
       ],
       "proposed_at": "2026-09-29"
+    },
+    {
+      "id": "kensite-quarterly-must-dos-what-s-next-window",
+      "company": "kensite",
+      "name": "Quarterly Must-Dos 'What's Next' Window",
+      "stage": "Proposed",
+      "category": "Operations",
+      "owner": "Chloe Ainscough",
+      "proposed_by": "chloe.ainscough@kensite.co.uk",
+      "date": "Sep 2026",
+      "summary": "Turns the quarterly set of Must-Dos, which are assigned to everyone in the business to help prioritise impr...",
+      "scope": "Turns the quarterly set of Must-Dos, which are assigned to everyone in the business to help prioritise improvements, into a personal 'what's next' window so each person can see what they have been asked to do and work through it.",
+      "how": "Reuses the 'what's next' window from the MTCO AI project organiser and points it at the quarterly Must-Dos, showing each person the Must-Dos assigned to them rather than one list for the whole business.",
+      "who": [
+        {
+          "who": "Everyone in the business",
+          "how": "each person sees their own Must-Dos and what to prioritise"
+        },
+        {
+          "who": "Chloe and the leadership team",
+          "how": "quarterly improvements are assigned, visible and progressed across the business rather than sitting on one list."
+        }
+      ],
+      "proposed_at": "2026-09-29"
     }
   ],
   "plan": {
