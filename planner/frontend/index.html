@@ -189,6 +189,21 @@
   .wfent .tt{font-size:13.5px;font-weight:700;line-height:1.3}
   .wfent .dt{font-size:12.5px;color:#53565e;margin-top:3px;line-height:1.45}
   .wfempty{margin:auto 0;text-align:center;padding:24px 10px;color:#6b6e76;font-size:13px}
+  /* the month's trend under the calendar: emails and work, two slim panels on one date axis */
+  .wftrend{flex:none;height:168px;position:relative;border:1px solid #e6e5e1;border-radius:12px;background:#fff;padding:10px 14px 6px}
+  .wftrend svg{display:block;width:100%;height:100%;overflow:visible}
+  .wftrend .lab{font:700 12px "Figtree",system-ui,sans-serif;fill:#1a1b1e}
+  .wftrend .sub{font:500 11px "Figtree",system-ui,sans-serif;fill:#6b6e76;font-variant-numeric:tabular-nums}
+  .wftrend .tick{font:500 10.5px "Figtree",system-ui,sans-serif;fill:#8a8c94;font-variant-numeric:tabular-nums}
+  .wftip{
+    position:absolute;pointer-events:none;background:#fff;border:1px solid #e6e5e1;border-radius:10px;
+    box-shadow:0 12px 30px -16px rgba(16,26,20,.45);padding:9px 11px;font-size:12.5px;line-height:1.5;
+    color:#1a1b1e;white-space:nowrap;display:none;z-index:3
+  }
+  .wftip b{display:block;font-weight:800;margin-bottom:2px}
+  .wftip .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:baseline}
+  .wftip .mut{color:#6b6e76}
+  @media (max-width:760px){.wftrend{height:150px}}
   .wfempty svg{width:28px;height:28px;color:#b9bcc2;display:block;margin:0 auto 8px}
   @media (max-width:760px){
     .wfbody.open{grid-template-columns:minmax(0,1fr)}
@@ -281,6 +296,10 @@
           </div>
           <div class="wflist" id="wfList"></div>
         </aside>
+      </div>
+      <div class="wftrend" id="wfTrend" role="img" aria-label="Emails and work entries through the month">
+        <svg id="wfTrendSvg" aria-hidden="true"></svg>
+        <div class="wftip" id="wfTip"></div>
       </div>
     </section>
   </div>
@@ -555,6 +574,14 @@ function wfDate(key){ const [y,m,d] = key.split("-").map(Number); return new Dat
 function wfDow(d){ return (d.getDay() + 6) % 7; }
 function wfLong(d){ return WF_DOW_LONG[wfDow(d)] + " " + d.getDate() + " " + WF_MON[d.getMonth()] + " " + d.getFullYear(); }
 function wfList(key){ const e = WF.entries[key]; return Array.isArray(e) ? e : []; }
+// the work done that day, without the email count line
+function wfWork(key){ return wfList(key).filter(e => e && e.kind !== "email"); }
+// {r, s} from that day's "Emails: N received, M sent" line, or null
+function wfEmails(key){
+  const e = wfList(key).find(x => x && x.kind === "email");
+  const m = e && /(\d+)\s+received,\s*(\d+)\s+sent/.exec(e.title || "");
+  return m ? {r: +m[1], s: +m[2]} : null;
+}
 function wfSave(){
   try{ sessionStorage.setItem("mtco.wf", JSON.stringify({y:WF.year, m:WF.month, sel:WF.sel, open:$("#wf").classList.contains("show")})); }catch(e){}
 }
@@ -586,7 +613,8 @@ function wfRender(){
       if(key === today){ b.classList.add("today"); b.setAttribute("aria-current","date"); }
       if(key === WF.sel){ b.classList.add("sel"); b.setAttribute("aria-selected","true"); }
       b.tabIndex = key === WF.focus ? 0 : -1;
-      b.setAttribute("aria-label", wfLong(d) + (items.length ? ", " + items.length + " work entr" + (items.length === 1 ? "y" : "ies") : ", no work entries"));
+      const nWork = wfWork(key).length;
+      b.setAttribute("aria-label", wfLong(d) + (nWork ? ", " + nWork + " work entr" + (nWork === 1 ? "y" : "ies") : ", no work entries"));
       const num = el("span","num"); num.textContent = d.getDate(); b.appendChild(num);
       items.slice(0,2).forEach(it => { const e = el("span","ent"); e.textContent = (it.time ? it.time + "  " : "") + (it.title || ""); b.appendChild(e); });
       if(items.length > 2){ const m = el("span","more"); m.textContent = "+" + (items.length - 2) + " more"; b.appendChild(m); }
@@ -596,7 +624,96 @@ function wfRender(){
     cal.appendChild(row);
   }
   wfPanel();
+  wfTrend();
 }
+
+/* ── the month's trend: emails (blue) and work entries (green) ──────────────
+   Two slim panels on one shared date axis rather than one chart with two
+   scales: emails run around a hundred a day and work entries around ten, so a
+   shared scale would flatten the work line and a second axis would mislead.
+   Days after today are not drawn. Hover shows the day; a click opens it. */
+const WFT = {email:"#2563eb", work:"#0d823b"};
+function wfTrend(){
+  const host = $("#wfTrend"), svg = $("#wfTrendSvg"), tip = $("#wfTip");
+  if(!host || !svg) return;
+  tip.style.display = "none";
+  const W = Math.max(320, svg.clientWidth || host.clientWidth - 28), H = Math.max(110, svg.clientHeight || 150);
+  const N = new Date(WF.year, WF.month + 1, 0).getDate();
+  const t = new Date(), tk = wfKey(t);
+  const thisMonth = t.getFullYear() === WF.year && t.getMonth() === WF.month;
+  const future = new Date(WF.year, WF.month, 1) > t;
+  const last = future ? 0 : (thisMonth ? t.getDate() : N);
+  const days = [];
+  for(let i = 1; i <= N; i += 1){
+    const key = wfKey(new Date(WF.year, WF.month, i));
+    const em = wfEmails(key);
+    days.push({i, key, em, emails: em ? em.r + em.s : 0, work: wfWork(key).length, drawn: i <= last});
+  }
+  const L = 96, R = 10, top = 6, gap = 16, axisH = 16;
+  const ph = (H - top - gap - axisH) / 2;
+  const x = i => L + (i - 0.5) / N * (W - L - R);
+  const rows = [
+    {name:"Emails", key:"emails", color:WFT.email, y0: top},
+    {name:"Work", key:"work", color:WFT.work, y0: top + ph + gap}
+  ];
+  const nice = v => { if(v <= 5) return Math.max(1, v); const p = Math.pow(10, Math.floor(Math.log10(v))); return Math.ceil(v / p * 2) / 2 * p; };
+  let out = "";
+  // weekend columns, faint, so the weekly rhythm reads
+  days.forEach(d => { const dw = wfDow(new Date(WF.year, WF.month, d.i)); if(dw >= 5){
+    const w = (W - L - R) / N; out += `<rect x="${(x(d.i) - w/2).toFixed(1)}" y="${top}" width="${w.toFixed(1)}" height="${(2*ph + gap).toFixed(1)}" fill="#f6f5f1"/>`; } });
+  rows.forEach(r => {
+    const vals = days.filter(d => d.drawn).map(d => d[r.key]);
+    const max = nice(Math.max(1, ...vals, 0));
+    r.max = max;
+    const y = v => r.y0 + ph - v / max * ph;
+    r.y = y;
+    out += `<line x1="${L}" x2="${W - R}" y1="${(r.y0 + ph).toFixed(1)}" y2="${(r.y0 + ph).toFixed(1)}" stroke="#e6e5e1" stroke-width="1"/>`;
+    out += `<line x1="${L}" x2="${W - R}" y1="${r.y0.toFixed(1)}" y2="${r.y0.toFixed(1)}" stroke="#f0efeb" stroke-width="1" stroke-dasharray="2 3"/>`;
+    out += `<text class="lab" x="0" y="${(r.y0 + 12).toFixed(1)}"><tspan fill="${r.color}">\u25CF</tspan> ${r.name}</text>`;
+    const tot = vals.reduce((a, b) => a + b, 0);
+    out += `<text class="sub" x="0" y="${(r.y0 + 27).toFixed(1)}">${tot.toLocaleString("en-GB")} this month</text>`;
+    out += `<text class="tick" x="${L - 6}" y="${(r.y0 + 4).toFixed(1)}" text-anchor="end">${max}</text>`;
+    out += `<text class="tick" x="${L - 6}" y="${(r.y0 + ph).toFixed(1)}" text-anchor="end">0</text>`;
+    const pts = days.filter(d => d.drawn).map(d => `${x(d.i).toFixed(1)},${y(d[r.key]).toFixed(1)}`);
+    if(pts.length > 1) out += `<polyline points="${pts.join(" ")}" fill="none" stroke="${r.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    else if(pts.length === 1){ const [px, py] = pts[0].split(","); out += `<circle cx="${px}" cy="${py}" r="3" fill="${r.color}"/>`; }
+  });
+  // date axis
+  const ticks = new Set([1, 5, 10, 15, 20, 25, N]);
+  days.forEach(d => { if(ticks.has(d.i)) out += `<text class="tick" x="${x(d.i).toFixed(1)}" y="${H - 3}" text-anchor="middle">${d.i}</text>`; });
+  if(thisMonth) out += `<line x1="${x(t.getDate()).toFixed(1)}" x2="${x(t.getDate()).toFixed(1)}" y1="${top}" y2="${(top + 2*ph + gap).toFixed(1)}" stroke="#0d823b" stroke-width="1" stroke-dasharray="3 3" opacity=".5"/>`;
+  out += `<g id="wfHover" style="display:none"><line id="wfHl" y1="${top}" y2="${(top + 2*ph + gap).toFixed(1)}" stroke="#8a8c94" stroke-width="1"/>`
+       + rows.map((r, n) => `<circle id="wfHd${n}" r="4.5" fill="${r.color}" stroke="#fff" stroke-width="2"/>`).join("") + `</g>`;
+  out += `<rect id="wfHit" x="${L}" y="0" width="${W - L - R}" height="${H}" fill="transparent" style="cursor:pointer"/>`;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.innerHTML = out;
+  const sumE = days.filter(d => d.drawn).reduce((a, d) => a + d.emails, 0), sumW = days.filter(d => d.drawn).reduce((a, d) => a + d.work, 0);
+  host.setAttribute("aria-label", `${WF_MON[WF.month]} ${WF.year}: ${sumE} emails and ${sumW} work entries` + (last ? ` over ${last} day(s)` : ", no days yet"));
+  const hit = $("#wfHit"), hov = $("#wfHover");
+  const dayAt = ev => { const b = svg.getBoundingClientRect(); const px = (ev.clientX - b.left) * W / b.width;
+                        return Math.min(N, Math.max(1, Math.floor((px - L) / (W - L - R) * N) + 1)); };
+  hit.addEventListener("mousemove", ev => {
+    const d = days[dayAt(ev) - 1];
+    if(!d.drawn){ hov.style.display = "none"; tip.style.display = "none"; return; }
+    hov.style.display = "";
+    $("#wfHl").setAttribute("x1", x(d.i)); $("#wfHl").setAttribute("x2", x(d.i));
+    rows.forEach((r, n) => { const c = $("#wfHd" + n); c.setAttribute("cx", x(d.i)); c.setAttribute("cy", r.y(d[r.key])); });
+    const dd = new Date(WF.year, WF.month, d.i);
+    tip.innerHTML = `<b></b><div><span class="sw" style="background:${WFT.email}"></span><span class="e"></span></div>`
+                  + `<div><span class="sw" style="background:${WFT.work}"></span><span class="w"></span></div>`;
+    tip.querySelector("b").textContent = WF_DOW[wfDow(dd)] + " " + d.i + " " + WF_MON[WF.month].slice(0, 3);
+    tip.querySelector(".e").textContent = d.em ? `Emails ${d.em.r + d.em.s}  (${d.em.r} received, ${d.em.s} sent)` : "Emails: none counted";
+    tip.querySelector(".w").textContent = `Work ${d.work} entr${d.work === 1 ? "y" : "ies"}`;
+    tip.style.display = "block";
+    const hb = host.getBoundingClientRect(), sb = svg.getBoundingClientRect();
+    let left = sb.left - hb.left + x(d.i) * sb.width / W + 12;
+    if(left + tip.offsetWidth > hb.width - 6) left -= tip.offsetWidth + 24;
+    tip.style.left = left + "px"; tip.style.top = "8px";
+  });
+  hit.addEventListener("mouseleave", () => { hov.style.display = "none"; tip.style.display = "none"; });
+  hit.addEventListener("click", ev => { const d = days[dayAt(ev) - 1]; if(d.drawn) wfSelect(d.key); });
+}
+window.addEventListener("resize", () => { if($("#wf").classList.contains("show")) wfTrend(); });
 
 function wfPanel(){
   const open = !!WF.sel;
@@ -605,7 +722,8 @@ function wfPanel(){
   const d = wfDate(WF.sel);
   const items = wfList(WF.sel);
   $("#wfPH").textContent = wfLong(d);
-  $("#wfPSub").textContent = items.length ? items.length + " work entr" + (items.length === 1 ? "y" : "ies") : "Work entries";
+  const nWork = wfWork(WF.sel).length;
+  $("#wfPSub").textContent = nWork ? nWork + " work entr" + (nWork === 1 ? "y" : "ies") : "Work entries";
   const list = $("#wfList"); list.innerHTML = "";
   if(!items.length){
     const e = el("div","wfempty");
