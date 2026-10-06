@@ -3,11 +3,15 @@
   "2026-07-21": [
    {
     "time": "22:59",
-    "title": "Updated Store BigChange Credentials 1.1"
+    "title": "Updated Store BigChange Credentials 1.1",
+    "detail": "Enables secure, hands-free sign-in for automated tools",
+    "tagline": true
    },
    {
     "time": "23:41",
-    "title": "Updated Big Change Fetch 1.1"
+    "title": "Updated Big Change Fetch 1.1",
+    "detail": "Automates downloading of invoice and job data for reconciliation",
+    "tagline": true
    },
    {
     "title": "Emails: 69 received, 31 sent",
@@ -17,7 +21,9 @@
   "2026-07-22": [
    {
     "time": "13:34",
-    "title": "Updated Store AES Key 1.2"
+    "title": "Updated Store AES Key 1.2",
+    "detail": "Stores sensitive access details securely on the machine without writing files to disk",
+    "tagline": true
    },
    {
     "title": "Emails: 88 received, 52 sent",
@@ -93,7 +99,8 @@
   "2026-08-07": [
    {
     "time": "11:35",
-    "title": "Built Update MCS Credentials 1.0"
+    "title": "Built Update MCS Credentials 1.0",
+    "tagline": true
    },
    {
     "title": "Emails: 34 received, 18 sent",
@@ -121,11 +128,15 @@
   "2026-08-11": [
    {
     "time": "09:28",
-    "title": "Built MCS Contact Audit 1.0"
+    "title": "Built MCS Contact Audit 1.0",
+    "detail": "Shows which accounts lack contact email or phone details in a branded report",
+    "tagline": true
    },
    {
     "time": "15:13",
-    "title": "Updated MCS Contact Enrichment 1.3"
+    "title": "Updated MCS Contact Enrichment 1.3",
+    "detail": "Finds missing contact details in mailboxes and proposes them for human approval",
+    "tagline": true
    },
    {
     "title": "Emails: 62 received, 34 sent",
@@ -147,11 +158,15 @@
   "2026-08-14": [
    {
     "time": "11:15",
-    "title": "Updated Zahara Invoice Analysis 1.3"
+    "title": "Updated Zahara Invoice Analysis 1.3",
+    "detail": "Invoice analysis now captures actual purchased items and part codes for routing and pricing",
+    "tagline": true
    },
    {
     "time": "16:38",
-    "title": "Updated Danfast Catalogue Sync 1.2"
+    "title": "Updated Danfast Catalogue Sync 1.2",
+    "detail": "Catalogue sync now keeps product codes and list prices ready for purchase orders",
+    "tagline": true
    },
    {
     "title": "Emails: 62 received, 28 sent",
@@ -161,7 +176,9 @@
   "2026-08-15": [
    {
     "time": "20:49",
-    "title": "Updated Publish App To GitHub 1.1"
+    "title": "Updated Publish App To GitHub 1.1",
+    "detail": "Publish app updates safely without overwriting someone else's manual changes",
+    "tagline": true
    },
    {
     "title": "Emails: 1 received, 1 sent",
@@ -171,11 +188,15 @@
   "2026-08-16": [
    {
     "time": "15:04",
-    "title": "Built Quote Worker Probe 1.0"
+    "title": "Built Quote Worker Probe 1.0",
+    "detail": "Diagnose why quote requests fail by capturing the hidden server error",
+    "tagline": true
    },
    {
     "time": "15:36",
-    "title": "Updated Quote Worker Bisect 2.0"
+    "title": "Updated Quote Worker Bisect 2.0",
+    "detail": "Pinpoint which quote field breaks rendering by testing root values one at a time",
+    "tagline": true
    },
    {
     "title": "Emails: 10 received, 11 sent",
@@ -185,7 +206,9 @@
   "2026-08-17": [
    {
     "time": "15:08",
-    "title": "Built Repair Lost PO Stamps 1.0"
+    "title": "Built Repair Lost PO Stamps 1.0",
+    "detail": "Repaired lost purchase order links so affected requests could proceed",
+    "tagline": true
    },
    {
     "title": "Emails: 83 received, 51 sent",
@@ -213,43 +236,57 @@
   "2026-08-21": [
    {
     "time": "10:52",
-    "title": "Updated InfoTime Weekly Clocking Report 2.1"
+    "title": "Updated InfoTime Weekly Clocking Report 2.1",
+    "detail": "Automates weekly timesheet reporting and flags missing data or delivery problems",
+    "tagline": true
    },
    {
     "time": "11:10",
-    "title": "Updated Ken Credential Transfer 1.2"
+    "title": "Updated Ken Credential Transfer 1.2",
+    "detail": "Moves saved access between machines so setup avoids manual re-entry",
+    "tagline": true
    },
    {
     "time": "12:40",
-    "title": "Updated Ken Launcher 1.2"
+    "title": "Updated Ken Launcher 1.2",
+    "detail": "Enables remote updates by automatically launching the newest agent and preventing double starts",
+    "tagline": true
    },
    {
     "time": "13:24",
-    "title": "Updated Ken Mission Control 1.6"
+    "title": "Updated Ken Mission Control 1.6",
+    "detail": "Improves dashboard visuals and status display for easier monitoring",
+    "tagline": true
    },
    {
     "time": "13:35",
-    "title": "Updated Ken Mission Control 1.7"
+    "title": "Updated Ken Mission Control 1.7",
+    "detail": "Refreshes dashboard layout with clearer wishlist and quick reload",
+    "tagline": true
    },
    {
     "time": "",
     "title": "Updated Ken Agent V4.3",
-    "detail": "Customer order references and braver triage"
+    "detail": "Helps identify unfamiliar order references and trusts colleague questions by default",
+    "tagline": true
    },
    {
     "time": "",
     "title": "Updated Ken Agent V4.4",
-    "detail": "One Ken, enforced"
+    "detail": "Prevents duplicate assistant instances from running and replying twice",
+    "tagline": true
    },
    {
     "time": "",
     "title": "Updated Ken Agent V4.5",
-    "detail": "The tidy folder"
+    "detail": "Tidies assistant folders and migrates files automatically on update",
+    "tagline": true
    },
    {
     "time": "",
     "title": "Updated Ken Agent V4.6",
-    "detail": "Log review fixes, 21/08/2026"
+    "detail": "Improves lookup diagnostics, limits repeated calls, and retries invoice copies",
+    "tagline": true
    },
    {
     "title": "Emails: 57 received, 27 sent",
@@ -265,12 +302,15 @@
   "2026-08-23": [
    {
     "time": "",
-    "title": "Updated Ken Agent V4.7"
+    "title": "Updated Ken Agent V4.7",
+    "detail": "Prevents long conversations from crashing the AI assistant and logs evidence for failures",
+    "tagline": true
    },
    {
     "time": "",
     "title": "Updated Ken Agent V4.8",
-    "detail": "Ken gets a proper email signature, built to match the Kensite staff signature and the..."
+    "detail": "Gives the AI assistant a branded email signature that never blocks replies",
+    "tagline": true
    },
    {
     "title": "Emails: 3 received, 5 sent",
@@ -280,104 +320,129 @@
   "2026-08-24": [
    {
     "time": "10:21",
-    "title": "Updated Ken Mission Control 1.8"
+    "title": "Updated Ken Mission Control 1.8",
+    "detail": "Let the dashboard show the AI assistant alive even when its database cannot sync",
+    "tagline": true
    },
    {
     "time": "10:50",
-    "title": "Updated Ken Mission Control 1.9"
+    "title": "Updated Ken Mission Control 1.9",
+    "detail": "Keep the assistant's live status accurate while its history syncs separately",
+    "tagline": true
    },
    {
     "time": "11:10",
-    "title": "Built Ken Dashboard Launcher 1.0"
+    "title": "Built Ken Dashboard Launcher 1.0",
+    "detail": "Launch the assistant's dashboard from any machine with clear errors when it fails",
+    "tagline": true
    },
    {
     "time": "11:40",
     "title": "Updated Ken Agent V4.9",
-    "detail": "Ken can now be seen from anywhere"
+    "detail": "Make the assistant visible from any machine even with stale data",
+    "tagline": true
    },
    {
     "time": "11:40",
     "title": "Updated Ken Agent V5.0",
-    "detail": "Taking the cause out rather than surviving it"
+    "detail": "Stop sync jams by moving the assistant's database off the synced library",
+    "tagline": true
    },
    {
     "time": "11:40",
     "title": "Updated Ken Agent V5.1",
-    "detail": "A probe for the missing contract document"
+    "detail": "Find the missing contract document by probing its details page",
+    "tagline": true
    },
    {
     "time": "11:40",
     "title": "Updated Ken Agent V5.2",
-    "detail": "One sign off, always"
+    "detail": "Make every email from the assistant end with one consistent sign-off",
+    "tagline": true
    },
    {
     "time": "11:40",
     "title": "Updated Ken Agent V5.3",
-    "detail": "Ken keeps his own version history, and the estate emails come back into the fold"
+    "detail": "Give the assistant a self-maintained version history and restore email signatures",
+    "tagline": true
    },
    {
     "time": "11:40",
-    "title": "Updated Ken Mission Control 2.0"
+    "title": "Updated Ken Mission Control 2.0",
+    "detail": "Show the assistant's version history in a clear, expandable tab",
+    "tagline": true
    },
    {
     "time": "12:37",
     "title": "Updated Ken Agent V5.4",
-    "detail": "A probe for the MCS report list"
+    "detail": "List every available report so weekly checks stop guessing",
+    "tagline": true
    },
    {
     "time": "12:43",
     "title": "Updated Ken Agent V5.5",
-    "detail": "The second half of that job"
+    "detail": "Probe any report's structure to learn its columns from evidence",
+    "tagline": true
    },
    {
     "time": "13:31",
     "title": "Updated Ken Agent V5.6",
-    "detail": "Two faults in 5.5, both found the first time it was used for real"
+    "detail": "Fix probe arguments and report errors properly",
+    "tagline": true
    },
    {
     "time": "14:11",
     "title": "Updated Ken Agent V5.7",
-    "detail": "The report list probe stops guessing"
+    "detail": "Save the report list page to learn its true structure",
+    "tagline": true
    },
    {
     "time": "14:19",
     "title": "Updated Ken Agent V5.8",
-    "detail": "The report numbers, found and written down"
+    "detail": "Record the correct report numbers and their types",
+    "tagline": true
    },
    {
     "time": "14:42",
     "title": "Updated Ken Agent V5.9",
-    "detail": "The probe was reading the envelope, not the letter"
+    "detail": "Unwrap report data properly and stop counting empty reads as success",
+    "tagline": true
    },
    {
     "time": "15:06",
     "title": "Updated Ken Agent V6.0",
-    "detail": "The check up reports read properly, and what they hold is worth recording"
+    "detail": "Read key check-up reports to fill four sections from one pull",
+    "tagline": true
    },
    {
     "time": "15:54",
     "title": "Updated Ken Agent V6.1",
-    "detail": "Fleet readiness has a source after all"
+    "detail": "Find fleet readiness data in stock take reports",
+    "tagline": true
    },
    {
     "time": "16:03",
     "title": "Updated Ken Agent V6.2",
-    "detail": "Every probe now writes what it found to a file as well as the screen"
+    "detail": "Log every probe's output so closed windows don't lose answers",
+    "tagline": true
    },
    {
     "time": "16:15",
     "title": "Updated Ken Agent V6.3",
-    "detail": "\"No records were found\" is not data"
+    "detail": "Treat empty report results as parameter problems, not data",
+    "tagline": true
    },
    {
     "time": "16:46",
     "title": "Updated Ken Agent V6.4",
-    "detail": "Finding a report that has just been added"
+    "detail": "Search live report list by name and run the match automatically",
+    "tagline": true
    },
    {
     "time": "16:52",
     "title": "Updated Ken Agent V6.5",
-    "detail": "Findreport only ever received its first word"
+    "detail": "Use full search phrase to find exact report and fill breakdown section",
+    "tagline": true
    },
    {
     "title": "Emails: 75 received, 33 sent",
@@ -388,144 +453,182 @@
    {
     "time": "08:50",
     "title": "Updated Ken Agent V6.6",
-    "detail": "Three faults, all of them shown by one run of \"--probe report 61\""
+    "detail": "Diagnostics now tell the truth and read-only checks no longer change anything",
+    "tagline": true
    },
    {
     "time": "08:55",
     "title": "Updated Ken Agent V6.7",
-    "detail": "The list of probes is written once"
+    "detail": "Probe list can no longer fall out of date and pasted commands are understood",
+    "tagline": true
    },
    {
     "time": "08:58",
     "title": "Updated Ken Agent V6.8",
-    "detail": "The report 61 bug, diagnosed"
+    "detail": "Found why a report returned no rows and added a safe way to test values",
+    "tagline": true
    },
    {
     "time": "09:04",
     "title": "Updated Ken Agent V6.9",
-    "detail": "The report 61 fix, and it is one character"
+    "detail": "Fixed a data lookup so it returns live hire records, and documented its limits",
+    "tagline": true
    },
    {
     "time": "09:57",
-    "title": "Updated Weekly Check Up Preview 1.2"
+    "title": "Updated Weekly Check Up Preview 1.2",
+    "detail": "Lets the weekly check-up sheet be previewed safely, labelling real and placeholder figures",
+    "tagline": true
    },
    {
     "time": "10:12",
     "title": "Updated Ken Agent V7.0",
-    "detail": "Ken can now see everything about a Zahara purchase order, and can see which parts of..."
+    "detail": "Gave the assistant read-only sight of purchase orders before any editing is allowed",
+    "tagline": true
    },
    {
     "time": "10:28",
     "title": "Updated Ken Agent V7.1",
-    "detail": "Ken can work out a purchase order edit in full, and Chris can now ask him for one"
+    "detail": "Purchase order edits can be planned and checked, with unsafe orders refused automatically",
+    "tagline": true
    },
    {
     "time": "10:39",
     "title": "Updated Ken Agent V7.2",
-    "detail": "Ken learns who we buy what from, by asking"
+    "detail": "Assistant learns supplier habits by asking, and only advises rather than acting alone",
+    "tagline": true
    },
    {
     "time": "10:44",
     "title": "Updated Ken Agent V7.3",
-    "detail": "The endpoint probe asks Zahara a better question"
+    "detail": "Improved how the assistant discovers system endpoints, reporting each attempt and its answer",
+    "tagline": true
    },
    {
     "time": "10:49",
     "title": "Updated Ken Agent V7.4",
-    "detail": "Zahara answered, and it told us something nobody had said: there is a DRAFT LIFECYCLE"
+    "detail": "Mapped which purchase order actions are permitted and blocked the dangerous ones",
+    "tagline": true
    },
    {
     "time": "11:02",
     "title": "Updated Ken Agent V7.5",
-    "detail": "Ken can change a purchase order"
+    "detail": "Assistant can now amend purchase orders, verifying each change by reading it back",
+    "tagline": true
    },
    {
     "time": "11:07",
     "title": "Updated Ken Agent V7.6",
-    "detail": "The three things that follow from Nathan saying these orders are almost always sitting..."
+    "detail": "Order summaries now show unit and total costs, and flag when approval status changes",
+    "tagline": true
    },
    {
     "time": "11:20",
     "title": "Updated Ken Agent V7.7",
-    "detail": "Ken was reading the wrong config, and had been all afternoon"
+    "detail": "Stopped the assistant silently reading a stale settings file, and made refusals clearer",
+    "tagline": true
    },
    {
     "time": "11:29",
     "title": "Updated Ken Agent V7.8",
-    "detail": "The one line fix for \"name 'preview_only' is not defined\", and the check that stops..."
+    "detail": "Fixed an error that broke a live request and added a check for similar faults",
+    "tagline": true
    },
    {
     "time": "11:29",
-    "title": "Built Name Check 1.0"
+    "title": "Built Name Check 1.0",
+    "detail": "New check finds undefined names before deployment, catching faults tests missed",
+    "tagline": true
    },
    {
     "time": "11:40",
     "title": "Updated Ken Agent V7.9",
-    "detail": "\"Pilkington Oils Ltd\" and \"Pilkington Oils\" are the same firm, and Ken refused to..."
+    "detail": "Supplier name matching now reconciles near-identical names and asks when unsure",
+    "tagline": true
    },
    {
     "time": "11:48",
     "title": "Updated Ken Agent V8.0",
-    "detail": "Zahara answered 500 to the edit, and Ken could only say \"500 Server Error\""
+    "detail": "System errors now quote the real message, and a probe tests request shapes safely",
+    "tagline": true
    },
    {
     "time": "11:53",
     "title": "Updated Ken Agent V8.1",
-    "detail": "The diagnostic asks four questions instead of one, for the same single run of the probe"
+    "detail": "Diagnostic now tries four safe variations and stops at the first that works",
+    "tagline": true
    },
    {
     "time": "12:01",
     "title": "Updated Ken Agent V8.2",
-    "detail": "All four payload variants were rejected, so the problem is not what the request SAYS"
+    "detail": "Narrowed a rejected write to missing security headers, with a no-licence fallback planned",
+    "tagline": true
    },
    {
     "time": "12:15",
     "title": "Updated Ken Agent V8.3",
-    "detail": "There are TWO Zahara apis and I spent the afternoon on the wrong one"
+    "detail": "Switched to the documented purchase order interface and recalculated totals correctly",
+    "tagline": true
    },
    {
     "time": "13:03",
     "title": "Updated Ken Agent V8.4",
-    "detail": "One command to prove the key works before anybody trusts it"
+    "detail": "Added a read-only check that proves the connection works before anyone relies on it",
+    "tagline": true
    },
    {
     "time": "13:20",
     "title": "Updated Ken Agent V8.5",
-    "detail": "Two things Nathan asked for once the write started working"
+    "detail": "Order emails now lead with what changed and suggest prices backed by past invoices",
+    "tagline": true
    },
    {
     "time": "14:21",
     "title": "Updated Ken Agent V8.6",
-    "detail": "He asks in words, not in function names"
+    "detail": "Approval requests are now written in plain English instead of technical names",
+    "tagline": true
    },
    {
     "time": "15:01",
     "title": "Updated Ken Agent V8.7",
-    "detail": "A budget refusal no longer stops the order dead"
+    "detail": "Orders blocked by budget limits now save with the price written on the line",
+    "tagline": true
    },
    {
     "time": "15:04",
-    "title": "Updated Materials PO Worker 3.2"
+    "title": "Updated Materials PO Worker 3.2",
+    "detail": "Materials orders are now raised as real priced purchase orders, one per supplier",
+    "tagline": true
    },
    {
     "time": "15:04",
-    "title": "Updated Materials PO Worker 3.3"
+    "title": "Updated Materials PO Worker 3.3",
+    "detail": "Invoice history now informs supplier matching, with disagreements shown for review",
+    "tagline": true
    },
    {
     "time": "15:06",
-    "title": "Updated Materials PO Worker Routing Test 1.1"
+    "title": "Updated Materials PO Worker Routing Test 1.1",
+    "detail": "Offline test shows which items change supplier routing and whether the change is right",
+    "tagline": true
    },
    {
     "time": "20:55",
-    "title": "Built Site Builder Deploy 1.0"
+    "title": "Built Site Builder Deploy 1.0",
+    "detail": "App updates can be published without logging in, with drawings and deletions protected",
+    "tagline": true
    },
    {
     "time": "21:30",
-    "title": "Built Compound Drawing Watcher 1.0"
+    "title": "Built Compound Drawing Watcher 1.0",
+    "detail": "New drawings are automatically turned into branded PDFs and emailed out",
+    "tagline": true
    },
    {
     "time": "22:05",
-    "title": "Updated Compound Drawing Watcher 1.1"
+    "title": "Updated Compound Drawing Watcher 1.1",
+    "detail": "Fixed an ordering fault so drawings are never marked issued without their PDF",
+    "tagline": true
    },
    {
     "title": "Emails: 88 received, 53 sent",
@@ -535,11 +638,15 @@
   "2026-08-26": [
    {
     "time": "09:06",
-    "title": "Updated Compound Drawing Watcher 1.2"
+    "title": "Updated Compound Drawing Watcher 1.2",
+    "detail": "Flag drawings being passed around by tracking how many places open them",
+    "tagline": true
    },
    {
     "time": "09:27",
-    "title": "Updated Site Builder Deploy 1.1"
+    "title": "Updated Site Builder Deploy 1.1",
+    "detail": "Push app updates without logging in, keeping customer drawings untouched",
+    "tagline": true
    },
    {
     "title": "Emails: 54 received, 10 sent",
@@ -550,28 +657,38 @@
    {
     "time": "09:49",
     "title": "Updated Ken Agent V8.8",
-    "detail": "Ken told Nathan 27 invoices were not in MCS"
+    "detail": "Error messages now carry real detail so failures no longer look like missing invoices",
+    "tagline": true
    },
    {
     "time": "14:10",
-    "title": "Updated Big Change Reconciliation Worker 1.5"
+    "title": "Updated Big Change Reconciliation Worker 1.5",
+    "detail": "Reconciliation report now matches haulage invoices to contracts and flags any unmatched lines",
+    "tagline": true
    },
    {
     "time": "14:10",
-    "title": "Updated Kensite Quote Trends 1.1"
+    "title": "Updated Kensite Quote Trends 1.1",
+    "detail": "Shows what is being quoted and to whom with trends by month and top customers",
+    "tagline": true
    },
    {
     "time": "14:11",
-    "title": "Updated Kensite Shared Toolbox 1.4"
+    "title": "Updated Kensite Shared Toolbox 1.4",
+    "detail": "One shared rule now handles more document shapes so no data is lost",
+    "tagline": true
    },
    {
     "time": "14:11",
-    "title": "Updated Weekly Check Up Sources 2.2"
+    "title": "Updated Weekly Check Up Sources 2.2",
+    "detail": "Fixes a fault that wrongly reported invoices as missing from the system",
+    "tagline": true
    },
    {
     "time": "",
     "title": "Updated Ken Agent V8.9",
-    "detail": "The invoice fetch"
+    "detail": "Document reads now work reliably ending false claims that invoices are missing",
+    "tagline": true
    },
    {
     "title": "Emails: 46 received, 27 sent",
@@ -582,17 +699,20 @@
    {
     "time": "15:25",
     "title": "Updated Ken Agent V9.0",
-    "detail": "Ken issues Site Builder drawing references"
+    "detail": "Automated drawing requests so customers receive references and links by email",
+    "tagline": true
    },
    {
     "time": "15:38",
     "title": "Updated Ken Agent V9.1",
-    "detail": "Drawing requests every three minutes"
+    "detail": "Sped up drawing request turnaround by checking more frequently",
+    "tagline": true
    },
    {
     "time": "16:04",
     "title": "Updated Ken Agent V9.2",
-    "detail": "Ken sends Site Builder drawing PDFs to Kensite colleagues"
+    "detail": "Enabled colleagues to retrieve latest drawing PDFs by email instantly",
+    "tagline": true
    },
    {
     "title": "Emails: 37 received, 9 sent",
@@ -620,34 +740,45 @@
   "2026-09-01": [
    {
     "time": "12:08",
-    "title": "Updated Compound Drawing Watcher 1.3"
+    "title": "Updated Compound Drawing Watcher 1.3",
+    "detail": "Organise drawing PDFs by reference so each drawing's history stays together",
+    "tagline": true
    },
    {
     "time": "12:09",
     "title": "Updated Ken Agent V9.3",
-    "detail": "Drawing PDFs found in their new per-reference folders"
+    "detail": "Assistant now finds drawing PDFs in their new per-reference folders",
+    "tagline": true
    },
    {
     "time": "13:32",
-    "title": "Updated BigChange Credential Setup 1.2"
+    "title": "Updated BigChange Credential Setup 1.2",
+    "detail": "Set up secure job system access with verification before saving",
+    "tagline": true
    },
    {
     "time": "13:49",
-    "title": "Updated Big Change API Probe 1.2"
+    "title": "Updated Big Change API Probe 1.2",
+    "detail": "Map where invoices sit and trace invoice-to-job-to-purchase-order links",
+    "tagline": true
    },
    {
     "time": "14:44",
-    "title": "Built MCS PO Probe 1.0"
+    "title": "Built MCS PO Probe 1.0",
+    "detail": "Gather purchase order detail evidence to prepare rehire detection",
+    "tagline": true
    },
    {
     "time": "14:52",
     "title": "Updated Ken Agent V9.4",
-    "detail": "Ken can produce the Big Change reconciliation report on request"
+    "detail": "Produce on-demand reconciliation reports comparing invoices and purchase orders",
+    "tagline": true
    },
    {
     "time": "16:06",
     "title": "Updated Ken Agent V9.5",
-    "detail": "Ken can search every quote in MCS by customer and by date"
+    "detail": "Search all quotes by customer and date with clear nil or fault answers",
+    "tagline": true
    },
    {
     "title": "Emails: 86 received, 33 sent",
@@ -657,7 +788,9 @@
   "2026-09-02": [
    {
     "time": "11:29",
-    "title": "Updated Big Change Reconciliation Worker 2.3"
+    "title": "Updated Big Change Reconciliation Worker 2.3",
+    "detail": "Added raw invoice data export to cross-check reconciliations more reliably",
+    "tagline": true
    },
    {
     "title": "Emails: 93 received, 31 sent",
@@ -668,122 +801,151 @@
    {
     "time": "10:19",
     "title": "Updated Ken Agent V9.6",
-    "detail": "The quote search says why it failed, and tries more than one door"
+    "detail": "Quote search now explains failures and tries multiple report paths",
+    "tagline": true
    },
    {
     "time": "10:26",
     "title": "Updated Ken Agent V9.7",
-    "detail": "The quote pull knocks on the doors MCS actually opens"
+    "detail": "Quote retrieval now works across formats and reports useful errors",
+    "tagline": true
    },
    {
     "time": "15:53",
     "title": "Updated Ken Agent V9.8",
-    "detail": "The door is open, now the parse has to learn the room"
+    "detail": "Quote data parsing now handles spreadsheet formats and dates correctly",
+    "tagline": true
    },
    {
     "time": "16:25",
     "title": "Updated Ken Agent V9.9",
-    "detail": "Ken searches quotes, for real, tested against the real report"
+    "detail": "Quote search now returns accurate results with revisions and statuses",
+    "tagline": true
    },
    {
     "time": "16:45",
     "title": "Updated Ken Agent V10.0",
-    "detail": "A probe for proof of delivery from Big Change, before any tool"
+    "detail": "Read-only probe maps available proof-of-delivery data before building tool",
+    "tagline": true
    },
    {
     "time": "16:51",
     "title": "Updated Ken Agent V10.1",
-    "detail": "The POD probe finds a job by our PO number"
+    "detail": "Proof-of-delivery probe can find jobs by internal order number",
+    "tagline": true
    },
    {
     "time": "17:05",
     "title": "Updated Ken Agent V10.2",
-    "detail": "The POD probe goes down a level"
+    "detail": "Proof-of-delivery probe now explores worksheets for signatures and photos",
+    "tagline": true
    },
    {
     "time": "17:09",
     "title": "Updated Ken Agent V10.3",
-    "detail": "The POD probe reaches the photos"
+    "detail": "Proof-of-delivery probe can locate photo attachments on worksheets",
+    "tagline": true
    },
    {
     "time": "17:14",
     "title": "Updated Ken Agent V10.4",
-    "detail": "The POD probe asks the API how to ask it"
+    "detail": "Proof-of-delivery probe discovers correct API parameters automatically",
+    "tagline": true
    },
    {
     "time": "17:19",
     "title": "Updated Ken Agent V10.5",
-    "detail": "Ken gives proof of delivery from Big Change"
+    "detail": "Assistant can answer proof-of-delivery requests with job and worksheet details",
+    "tagline": true
    },
    {
     "time": "20:30",
     "title": "Updated Ken Agent V10.6",
-    "detail": "The POD probe tries the last REST variations before Big Change are asked"
+    "detail": "Proof-of-delivery probe tests remaining API options for photo access",
+    "tagline": true
    },
    {
     "time": "20:39",
     "title": "Updated Ken Agent V10.7",
-    "detail": "Nothing"
+    "tagline": true
    },
    {
     "time": "20:39",
     "title": "Updated Ken Agent V10.8",
-    "detail": "Nathan can run a probe by email"
+    "detail": "Probes can be run remotely by email with correct access",
+    "tagline": true
    },
    {
     "time": "20:52",
     "title": "Updated Ken Agent V10.9",
-    "detail": "The photographs, through the door Nathan found: Big Change's older Web Services API,..."
+    "detail": "Proof-of-delivery can fetch photos once access is set up",
+    "tagline": true
    },
    {
     "time": "20:57",
-    "title": "Updated Ken Agent V11.0"
+    "title": "Updated Ken Agent V11.0",
+    "detail": "Access guidance now points to correct storage location",
+    "tagline": true
    },
    {
     "time": "21:11",
-    "title": "Updated Ken Agent V11.1"
+    "title": "Updated Ken Agent V11.1",
+    "detail": "Access details can be securely added by email without exposing them",
+    "tagline": true
    },
    {
     "time": "21:45",
     "title": "Updated Ken Agent V11.2",
-    "detail": "Ken judges a wish the way the business judges an AI use case"
+    "detail": "Wishlist and roadmap now prioritised by business value and proof",
+    "tagline": true
    },
    {
     "time": "22:56",
-    "title": "Updated Ken Mission Control 2.2"
+    "title": "Updated Ken Mission Control 2.2",
+    "detail": "Dashboard now measures time saved based on actual work performed",
+    "tagline": true
    },
    {
     "time": "22:57",
     "title": "Updated Ken Agent V11.3",
-    "detail": "Every reply records what Ken actually did in it"
+    "detail": "Activity tracking now records tools used per reply for accurate time savings",
+    "tagline": true
    },
    {
     "time": "23:05",
-    "title": "Updated Ken Mission Control 2.3"
+    "title": "Updated Ken Mission Control 2.3",
+    "detail": "Dashboard values daily tasks once per day rather than per run",
+    "tagline": true
    },
    {
     "time": "23:24",
     "title": "Updated Ken Agent V11.4",
-    "detail": "The dashboard follows its newest version, and Ken makes sure of it"
+    "detail": "Dashboard automatically updates to newest version without manual restart",
+    "tagline": true
    },
    {
     "time": "23:28",
     "title": "Updated Ken Agent V11.5",
-    "detail": "The dashboard server check runs every ten minutes, not only at start, because at the..."
+    "detail": "Dashboard server starts late-arriving or dead server within ten minutes",
+    "tagline": true
    },
    {
     "time": "23:31",
-    "title": "Updated Ken Dashboard Server 1.1"
+    "title": "Updated Ken Dashboard Server 1.1",
+    "detail": "Dashboard server reliably runs newest dashboard and self-updates",
+    "tagline": true
    },
    {
     "time": "23:32",
     "title": "Updated Ken Agent V11.6",
-    "detail": "The dashboard server's lock port was the Task Runner's (58733), so every server left..."
+    "detail": "Dashboard server lock conflict resolved so it starts correctly",
+    "tagline": true
    },
    {
     "time": "23:38",
     "title": "Updated Ken Agent V11.7",
-    "detail": "A dashboard probe: who holds each lock port and 8501, the newest Mission Control on..."
+    "detail": "Dashboard probe diagnoses server status and can start it manually",
+    "tagline": true
    },
    {
     "title": "Emails: 93 received, 45 sent",
@@ -805,82 +967,99 @@
   "2026-09-06": [
    {
     "time": "16:28",
-    "title": "Updated Ken Mission Control 2.4"
+    "title": "Updated Ken Mission Control 2.4",
+    "detail": "Fixed dashboard crash so activity and estate records load and group by day",
+    "tagline": true
    },
    {
     "time": "17:17",
     "title": "Updated Ken Agent V11.8",
-    "detail": "Ken raises quotes in MCS, from a list of fleet codes or from a Site Builder drawing"
+    "detail": "Enabled AI to raise quotes from fleet codes and turn drawings into bills of quantities",
+    "tagline": true
    },
    {
     "time": "17:42",
     "title": "Updated Ken Agent V11.9",
-    "detail": "Quotes from everyday words, with the words on the line"
+    "detail": "Let quotes be built from everyday words with clear descriptions and unknown phrases flagged",
+    "tagline": true
    },
    {
     "time": "17:56",
     "title": "Updated Ken Agent V12.0",
-    "detail": "Ken asks for what a quote needs, and keeps his own pipeline"
+    "detail": "Made quote requests complete by asking for missing details and tracking every request",
+    "tagline": true
    },
    {
     "time": "18:09",
     "title": "Updated Ken Agent V12.1",
-    "detail": "Ken reads the request himself before asking: postcode, the street beside it, weeks and..."
+    "detail": "Improved quote assistant to read details from the request before asking for them",
+    "tagline": true
    },
    {
     "time": "18:21",
     "title": "Updated Ken Agent V12.2",
-    "detail": "Fleet codes with asset numbers are found: the equipment search now asks for itemised..."
+    "detail": "Fixed equipment search so codes match correctly and failures explain what went wrong",
+    "tagline": true
    },
    {
     "time": "18:27",
     "title": "Updated Ken Agent V12.3",
-    "detail": "The equipment probe saves the page MCS returns, lists its links and the text around..."
+    "detail": "Added diagnostic view so equipment search failures can be fixed from evidence",
+    "tagline": true
    },
    {
     "time": "21:03",
     "title": "Updated Ken Agent V12.4",
-    "detail": "SS20 is a subgroup (/Equipment/Subgroup/218), as every itemised fleet code is; Ken..."
+    "detail": "Taught assistant to recognise subgroup records and explain them instead of reporting missing",
+    "tagline": true
    },
    {
     "time": "21:10",
     "title": "Updated Ken Agent V12.5",
-    "detail": "Ken quotes fleet subgroups: LineType Subgroup (1, from MCS's own shared.js) with the..."
+    "detail": "Enabled quoting of fleet subgroups alongside individual items in the same quote",
+    "tagline": true
    },
    {
     "time": "21:25",
     "title": "Updated Ken Agent V12.6",
-    "detail": "\"can you quote ...\" from the trusted circle is the go ahead: the sender's own words..."
+    "detail": "Let trusted requests raise quotes directly while proposed quotes still need approval",
+    "tagline": true
    },
    {
     "time": "21:35",
     "title": "Updated Ken Agent V12.7",
-    "detail": "Rates read for the line itself from MCS's NewLine reply, and an unpriced line said to..."
+    "detail": "Fixed first quote issues with pricing, duplicate items and address reporting",
+    "tagline": true
    },
    {
     "time": "21:41",
     "title": "Updated Ken Agent V12.8",
-    "detail": "\"SS20x2\" reads as two SS20s, not a code called SS20X2"
+    "detail": "Fixed line parsing so quantity notation like two items is read correctly",
+    "tagline": true
    },
    {
     "time": "21:49",
     "title": "Updated Ken Agent V12.9",
-    "detail": "Lines priced through MCS's own RecalcLineRates before saving (the NewLine reply is..."
+    "detail": "Improved quote pricing and address handling using evidence from the quoting system",
+    "tagline": true
    },
    {
     "time": "22:02",
     "title": "Updated Ken Agent V13.0",
-    "detail": "Transport lines on every quote (one INTDELHIAB and INTCOLHIAB per cabin, one more pair..."
+    "detail": "Added transport lines to every quote and corrected address formatting",
+    "tagline": true
    },
    {
     "time": "22:30",
     "title": "Updated Ken Agent V13.1",
-    "detail": "Unpriced hire lines take the STD price list's weekly rate (STD Price List.json in..."
+    "detail": "Added fallback pricing and uplifts, removed duplicate accessories and fixed transport lines",
+    "tagline": true
    },
    {
     "time": "22:54",
     "title": "Updated Ken Agent V13.2",
-    "detail": "The 32ft 3+1 split unit at Nathan's fixed £110 a week, £122.50 with a shower, on the..."
+    "detail": "Added fixed pricing for a split unit whether requested in words or drawings",
+    "tagline": true
    },
    {
     "title": "Emails: 20 received, 18 sent",
@@ -897,73 +1076,98 @@
    {
     "time": "11:00",
     "title": "Updated Ken Agent V13.3",
-    "detail": "Ken amends existing quotes through MCS's own editor session: add or remove lines,..."
+    "detail": "Lets quotes be amended safely without repricing untouched lines",
+    "tagline": true
    },
    {
     "time": "11:05",
     "title": "Updated Ken Agent V13.4",
-    "detail": "Quoteedit probe saves the quote's Details page and lists its edit, copy and revise..."
+    "detail": "Finds the real edit route for quotes before relying on amendments",
+    "tagline": true
    },
    {
     "time": "11:10",
     "title": "Updated Ken Agent V13.5",
-    "detail": "Quotes opened for editing through GET /QuickQuote/EditToSession/?id=ref (the Edit..."
+    "detail": "Enables safe quote editing with lock and identity checks",
+    "tagline": true
    },
    {
     "time": "13:09",
-    "title": "Updated Big Change Reconciliation Worker 2.4"
+    "title": "Updated Big Change Reconciliation Worker 2.4",
+    "detail": "Matches purchase orders to contract lines for clearer revenue checks",
+    "tagline": true
    },
    {
     "time": "13:29",
-    "title": "Updated Big Change Reconciliation Worker 2.5"
+    "title": "Updated Big Change Reconciliation Worker 2.5",
+    "detail": "Allocates invoice revenue to the exact purchase order lines",
+    "tagline": true
    },
    {
     "time": "13:50",
     "title": "Updated Ken Agent V13.6",
-    "detail": "The Big Change Reconciliation Worker reloads when its file changes, so a worker update..."
+    "detail": "Applies worker updates automatically without restarting the system",
+    "tagline": true
    },
    {
     "time": "14:01",
     "title": "Updated Ken Agent V13.7",
-    "detail": "Amendment lines matched by id, code key or description (accessories too); a code..."
+    "detail": "Ensures quote changes hit the right lines without duplicates",
+    "tagline": true
    },
    {
     "time": "14:10",
-    "title": "Updated Big Change Reconciliation Worker 2.6"
+    "title": "Updated Big Change Reconciliation Worker 2.6",
+    "detail": "Matches invoices without purchase orders using site and date",
+    "tagline": true
    },
    {
     "time": "14:17",
     "title": "Updated Ken Agent V13.8",
-    "detail": "Line names compared with only letters and digits (\"Double Stack/ Erect Staircase\" is..."
+    "detail": "Finds quote lines despite small differences in naming",
+    "tagline": true
    },
    {
     "time": "15:50",
     "title": "Updated Ken Agent V13.9",
-    "detail": "Amendments point at lines: CODE, CODE~words, ~words or #number; a show_quote_lines..."
+    "detail": "Targets individual quote lines instead of changing every matching code",
+    "tagline": true
    },
    {
     "time": "17:19",
-    "title": "Updated Big Change Reconciliation Worker 2.7"
+    "title": "Updated Big Change Reconciliation Worker 2.7",
+    "detail": "Calculates weekly service revenue from live dates and site",
+    "tagline": true
    },
    {
     "time": "17:27",
-    "title": "Updated Big Change Reconciliation Worker 2.8"
+    "title": "Updated Big Change Reconciliation Worker 2.8",
+    "detail": "Settles each visit against the correct weekly service line",
+    "tagline": true
    },
    {
     "time": "20:17",
-    "title": "Updated Big Change Reconciliation Worker 2.9"
+    "title": "Updated Big Change Reconciliation Worker 2.9",
+    "detail": "Ties chemical toilet visits to contract units for break-even",
+    "tagline": true
    },
    {
     "time": "20:40",
-    "title": "Updated Big Change Reconciliation Worker 3.0"
+    "title": "Updated Big Change Reconciliation Worker 3.0",
+    "detail": "Matches billed chemical toilet units to units on hire",
+    "tagline": true
    },
    {
     "time": "21:08",
-    "title": "Updated Big Change Reconciliation Worker 3.1"
+    "title": "Updated Big Change Reconciliation Worker 3.1",
+    "detail": "Flags missing purchase orders and tells the desk what to do",
+    "tagline": true
    },
    {
     "time": "21:40",
-    "title": "Updated Big Change Reconciliation Worker 3.2"
+    "title": "Updated Big Change Reconciliation Worker 3.2",
+    "detail": "Checks contracts more widely to resolve unmatched visits",
+    "tagline": true
    },
    {
     "title": "Emails: 106 received, 53 sent",
@@ -974,67 +1178,80 @@
    {
     "time": "14:58",
     "title": "Updated Ken Agent V14.0",
-    "detail": "Guests, and Big Change invoices"
+    "detail": "Enabled safe invoice queries for outside guests, isolated from all other company records",
+    "tagline": true
    },
    {
     "time": "15:01",
     "title": "Updated Ken Agent V14.1",
-    "detail": "The startup log names every guest and the abilities each one really grants, alongside..."
+    "detail": "Made guest access and permissions visible at startup for quick checking",
+    "tagline": true
    },
    {
     "time": "15:14",
     "title": "Updated Ken Agent V14.2",
-    "detail": "POD photographs revisited"
+    "detail": "Moved closer to automatic proof-of-delivery photo retrieval",
+    "tagline": true
    },
    {
     "time": "20:09",
     "title": "Updated Ken Agent V14.3",
-    "detail": "Whats_on_hire counts what is out"
+    "detail": "Enabled counting of hired equipment by site, customer and source",
+    "tagline": true
    },
    {
     "time": "20:29",
     "title": "Updated Ken Agent V14.4",
-    "detail": "Cross hire read off BOTH codes on a live hire line (the REHIRE subgroup and the..."
+    "detail": "Corrected hired-in equipment counts so cross-hire and owned kit are told apart",
+    "tagline": true
    },
    {
     "time": "20:47",
     "title": "Updated Ken Agent V14.5",
-    "detail": "The rehire PO, not just any PO"
+    "detail": "Identified true rehire suppliers and flagged missing cost records on contracts",
+    "tagline": true
    },
    {
     "time": "20:57",
     "title": "Updated Ken Agent V14.6",
-    "detail": "A purchase order is read from its own block, never the whole page: RM-web's menu..."
+    "detail": "Stopped page menus being mistaken for purchase order details",
+    "tagline": true
    },
    {
     "time": "21:05",
     "title": "Updated Ken Agent V14.7",
-    "detail": "A purchase order's addresses and its supplier's name are stripped before its words are..."
+    "detail": "Prevented supplier names from causing false purchase order classifications",
+    "tagline": true
    },
    {
     "time": "21:23",
     "title": "Updated Ken Agent V14.8",
-    "detail": "New probe pofinder CONTRACT [PO]: every filter the purchase order search offers, the..."
+    "detail": "Exposed gaps in purchase order search and made uncertainty explicit",
+    "tagline": true
    },
    {
     "time": "21:37",
     "title": "Updated Ken Agent V14.9",
-    "detail": "MCS's own Source field decides a rehire PO (\"Source: Rehire - <contract>\" against..."
+    "detail": "Found the reliable marker that identifies rehire purchase orders",
+    "tagline": true
    },
    {
     "time": "21:43",
     "title": "Updated Ken Agent V15.0",
-    "detail": "The rehirepo probe runs the candidate search Ken actually uses, and shows the contract..."
+    "detail": "Located the correct area for finding rehire purchase orders",
+    "tagline": true
    },
    {
     "time": "21:57",
     "title": "Updated Ken Agent V15.1",
-    "detail": "Rehire POs found at last, through MCS's own Rehire Search..."
+    "detail": "Gathered all contract purchase orders from both correct sources",
+    "tagline": true
    },
    {
     "time": "22:05",
     "title": "Updated Ken Agent V15.2",
-    "detail": "The rehire search is asked first and its orders are the only ones opened when it finds..."
+    "detail": "Made rehire sourcing answers efficient and flagged cancelled orders",
+    "tagline": true
    },
    {
     "title": "Emails: 88 received, 31 sent",
@@ -1044,20 +1261,27 @@
   "2026-09-10": [
    {
     "time": "09:42",
-    "title": "Updated Big Change Reconciliation Worker 3.4"
+    "title": "Updated Big Change Reconciliation Worker 3.4",
+    "detail": "Categorised invoices by margin and match status with live summary totals",
+    "tagline": true
    },
    {
     "time": "10:50",
-    "title": "Updated Big Change Reconciliation Worker 3.5"
+    "title": "Updated Big Change Reconciliation Worker 3.5",
+    "detail": "Recovered missing revenue on loss-making invoices without double-counting paid contract lines",
+    "tagline": true
    },
    {
     "time": "10:55",
-    "title": "Updated Big Change Reconciliation Worker 3.7"
+    "title": "Updated Big Change Reconciliation Worker 3.7",
+    "detail": "Matched purchase orders to correct customer contracts instead of falling back to postcode",
+    "tagline": true
    },
    {
     "time": "12:29",
     "title": "Updated Ken Agent V15.3",
-    "detail": "Every job on a purchase order gets its POD (bc_find_jobs, fetch_pods, summarise_pods),..."
+    "detail": "Delivered every proof of delivery for a purchase order, not just the newest",
+    "tagline": true
    },
    {
     "title": "Emails: 73 received, 30 sent",
@@ -1068,12 +1292,14 @@
    {
     "time": "14:53",
     "title": "Updated Ken Agent V15.4",
-    "detail": "The Site Builder keepalive rebuilt after I overwrote the V15.3 that carried it:..."
+    "detail": "Keeps a web app awake and alerts when it sleeps",
+    "tagline": true
    },
    {
     "time": "15:13",
     "title": "Updated Ken Agent V15.5",
-    "detail": "Photographs that do not fit on the reply are sent in follow up emails on the same..."
+    "detail": "Sends all photos in follow-up emails when attachment limits are hit",
+    "tagline": true
    },
    {
     "title": "Emails: 83 received, 34 sent",
@@ -1096,12 +1322,14 @@
    {
     "time": "21:48",
     "title": "Updated Ken Agent V15.6",
-    "detail": "Ken can log AI project ideas onto the MTCO Group AI Roadmap"
+    "detail": "Staff can submit AI ideas by email and have them added to the roadmap",
+    "tagline": true
    },
    {
     "time": "21:59",
     "title": "Updated Ken Agent V15.7",
-    "detail": "Ken can move, edit and delete entries on the MTCO Group AI Roadmap, not only propose them"
+    "detail": "Roadmap entries can now be moved, edited or deleted, keeping timelines accurate",
+    "tagline": true
    },
    {
     "title": "Emails: 62 received, 5 sent",
@@ -1111,49 +1339,69 @@
   "2026-09-16": [
    {
     "time": "11:02",
-    "title": "Updated Push Roadmap Data 1.1"
+    "title": "Updated Push Roadmap Data 1.1",
+    "detail": "Made automated publishing runs traceable by logging version and output",
+    "tagline": true
    },
    {
     "time": "11:37",
-    "title": "Built Publish App Files 1.0"
+    "title": "Built Publish App Files 1.0",
+    "detail": "Enabled app file publishing from simple launchers while protecting locally changed files",
+    "tagline": true
    },
    {
     "time": "11:58",
     "title": "Updated Ken Agent V15.8",
-    "detail": "The live hire site postcode, found by looking for a postcode rather than by a column..."
+    "detail": "Corrected site counts by using postcodes, so reports show true locations",
+    "tagline": true
    },
    {
     "time": "21:25",
-    "title": "Updated Daily Deliveries and Collections 2.4"
+    "title": "Updated Daily Deliveries and Collections 2.4",
+    "detail": "Fixed delivery filtering and made failed sends alert instead of silently missing",
+    "tagline": true
    },
    {
     "time": "21:29",
-    "title": "Updated Kensite Task Runner 1.2"
+    "title": "Updated Kensite Task Runner 1.2",
+    "detail": "Made task scheduling resilient and alerting so one failure cannot stop all automations",
+    "tagline": true
    },
    {
     "time": "21:30",
-    "title": "Updated AES Capacity Watcher 1.6"
+    "title": "Updated AES Capacity Watcher 1.6",
+    "detail": "Ensured capacity alerts retry and failures are reported instead of lost",
+    "tagline": true
    },
    {
     "time": "21:31",
-    "title": "Updated Copy Invoice Worker 2.6"
+    "title": "Updated Copy Invoice Worker 2.6",
+    "detail": "Consolidated document handling into one shared rule to prevent false invoice errors",
+    "tagline": true
    },
    {
     "time": "21:55",
-    "title": "Updated Live Hire Report Worker 1.9"
+    "title": "Updated Live Hire Report Worker 1.9",
+    "detail": "Prevented customer data being sent under the wrong name by requiring unambiguous matches",
+    "tagline": true
    },
    {
     "time": "21:55",
-    "title": "Updated Quote Request Worker 3.5"
+    "title": "Updated Quote Request Worker 3.5",
+    "detail": "Prevented duplicate quotes and lost references by tracking each request immediately",
+    "tagline": true
    },
    {
     "time": "21:57",
-    "title": "Updated Master IMS Register Task Reminders 2.0"
+    "title": "Updated Master IMS Register Task Reminders 2.0",
+    "detail": "Sped up register reading and stopped temporary file leaks",
+    "tagline": true
    },
    {
     "time": "22:49",
     "title": "Updated Ken Agent V15.9",
-    "detail": "Every request to OpenRouter now refuses providers that keep or train on what is sent"
+    "detail": "Ensured AI requests avoid providers that store or train on sensitive data",
+    "tagline": true
    },
    {
     "title": "Emails: 75 received, 19 sent",
@@ -1164,22 +1412,26 @@
    {
     "time": "11:29",
     "title": "Updated Ken Agent V16.0",
-    "detail": "The H&S committee agenda on demand: hs_committee_agenda asks for the date, time and..."
+    "detail": "Automates health and safety committee agendas, ready to fill in on the day",
+    "tagline": true
    },
    {
     "time": "11:52",
     "title": "Updated Ken Agent V16.1",
-    "detail": "The H&S committee meeting, not just its agenda"
+    "detail": "Automates scheduling and follow-up for health and safety committee meetings",
+    "tagline": true
    },
    {
     "time": "12:55",
     "title": "Updated Ken Agent V16.2",
-    "detail": "The door is the domain, and control of Ken is not behind it"
+    "detail": "Opens the assistant to all staff while restricting behaviour changes to a named few",
+    "tagline": true
    },
    {
     "time": "13:00",
     "title": "Updated Ken Agent V16.3",
-    "detail": "A config change no longer waits for a version of Ken"
+    "detail": "Applies settings changes live without restarting the assistant",
+    "tagline": true
    },
    {
     "title": "Emails: 66 received, 26 sent",
@@ -1190,7 +1442,8 @@
    {
     "time": "10:08",
     "title": "Updated Ken Agent V16.4",
-    "detail": "Ken watches the Enquiries mailbox for off hires"
+    "detail": "Adds read-only off-hire detection from public enquiries without disrupting desk workflow",
+    "tagline": true
    },
    {
     "title": "Emails: 65 received, 26 sent",
@@ -1201,81 +1454,98 @@
    {
     "time": "12:02",
     "title": "Updated Ken Agent V16.5",
-    "detail": "Ken can install a package on his own machine, from a list"
+    "detail": "Let AI assistant install approved packages safely without running emailed code",
+    "tagline": true
    },
    {
     "time": "12:12",
     "title": "Updated Ken Agent V16.6",
-    "detail": "Ken draws up a customer SLA on demand"
+    "detail": "Generate branded customer SLA documents on demand from a controlled template",
+    "tagline": true
    },
    {
     "time": "12:32",
     "title": "Updated Ken Agent V16.7",
-    "detail": "The keepalive covers every app, not just the Site Builder"
+    "detail": "Keep every web app awake automatically so links never hit sleeping pages",
+    "tagline": true
    },
    {
     "time": "13:15",
     "title": "Updated Ken Agent V16.8",
-    "detail": "Ken checks whether an idea is already on the AI roadmap before filing it, and asks..."
+    "detail": "Prevent duplicate ideas by checking substance across all companies and asking how to proceed",
+    "tagline": true
    },
    {
     "time": "14:44",
     "title": "Updated Ken Agent V16.9",
-    "detail": "Ken runs the AI Summit Barcelona follow ups"
+    "detail": "Automate summit session follow-ups and collect notes into the roadmap",
+    "tagline": true
    },
    {
     "time": "14:56",
     "title": "Updated Ken Agent V17.0",
-    "detail": "The summit ask could not be sent at all"
+    "detail": "Fix broken summit email tool and add safeguard against similar naming faults",
+    "tagline": true
    },
    {
     "time": "15:29",
     "title": "Updated Ken Agent V17.1",
-    "detail": "A planner you can tick, and the sessions in your diary"
+    "detail": "Provide a working session planner with clash alerts and calendar export",
+    "tagline": true
    },
    {
     "time": "19:25",
     "title": "Updated Ken Agent V17.2",
-    "detail": "Session descriptions stopped ending mid word"
+    "detail": "Keep session descriptions complete and readable by trimming whole sentences",
+    "tagline": true
    },
    {
     "time": "20:01",
     "title": "Updated Ken Agent V17.3",
-    "detail": "Picks in, diary out, in one step"
+    "detail": "Make session picks and calendar delivery happen together reliably",
+    "tagline": true
    },
    {
     "time": "20:15",
     "title": "Updated Ken Agent V17.4",
-    "detail": "A route for the picks that cannot fail"
+    "detail": "Add a reliable reply route for sending session picks",
+    "tagline": true
    },
    {
     "time": "20:26",
     "title": "Updated Ken Agent V17.5",
-    "detail": "The Junk Email folder is read too"
+    "detail": "Ensure internal mail misfiled as junk still gets answered",
+    "tagline": true
    },
    {
     "time": "20:53",
     "title": "Updated Ken Agent V17.6",
-    "detail": "Tick the sessions in the email itself"
+    "detail": "Let attendees choose sessions by ticking boxes in a reply",
+    "tagline": true
    },
    {
     "time": "21:46",
-    "title": "Updated Publish App To GitHub 1.5"
+    "title": "Updated Publish App To GitHub 1.5",
+    "detail": "Publish app files safely without overwriting user picks",
+    "tagline": true
    },
    {
     "time": "21:47",
     "title": "Updated Ken Agent V17.7",
-    "detail": "The picker is a widget on the MTCO tracker"
+    "detail": "Move session picking to a simple widget and sync choices automatically",
+    "tagline": true
    },
    {
     "time": "22:21",
     "title": "Updated Ken Agent V17.8",
-    "detail": "The summit emails to Nathan's brief, plus a score out of 10"
+    "detail": "Ask for roadmap ideas and session ratings after each summit session",
+    "tagline": true
    },
    {
     "time": "22:37",
     "title": "Updated Ken Agent V17.9",
-    "detail": "Summit_send_ask(fresh=True)"
+    "detail": "Allow summit invitation to be resent after updates",
+    "tagline": true
    },
    {
     "title": "Emails: 26 received, 27 sent",
@@ -1292,22 +1562,26 @@
    {
     "time": "11:20",
     "title": "Updated Ken Agent V18.0",
-    "detail": "Ken emails recurring Live Hire Reports straight to customers"
+    "detail": "Enabled scheduled hire reports to be emailed directly to clients automatically",
+    "tagline": true
    },
    {
     "time": "16:25",
     "title": "Updated Ken Agent V18.1",
-    "detail": "Diary-from-Email: forward a meeting, get a calendar file back"
+    "detail": "Turn forwarded meeting emails into calendar invites ready to send",
+    "tagline": true
    },
    {
     "time": "16:44",
     "title": "Updated Ken Agent V18.2",
-    "detail": "Email_colleague, and who reads a reply"
+    "detail": "Allow replies to reach colleagues not on the original email thread",
+    "tagline": true
    },
    {
     "time": "17:14",
     "title": "Updated Ken Agent V18.3",
-    "detail": "Zahara conversationally, on the documented api"
+    "detail": "Enabled conversational answers on orders, invoices, approvals and full documents",
+    "tagline": true
    },
    {
     "title": "Emails: 80 received, 24 sent",
@@ -1318,35 +1592,44 @@
    {
     "time": "07:02",
     "title": "Updated Ken Agent V18.4",
-    "detail": "Summit_send_ask(only=...) and summit_people"
+    "detail": "Send summit asks to one named person and view the full attendee list",
+    "tagline": true
    },
    {
     "time": "07:09",
     "title": "Updated Ken Agent V18.5",
-    "detail": "Roadmap_filing on a guest entry"
+    "detail": "File a guest's roadmap ideas under a company with their own tag",
+    "tagline": true
    },
    {
     "time": "13:25",
     "title": "Updated Ken Agent V18.6",
-    "detail": "Financials at OpenRouter's actual charge"
+    "detail": "Show the real cost of each AI reply instead of a flat estimate",
+    "tagline": true
    },
    {
     "time": "13:25",
-    "title": "Updated Ken Mission Control 2.5"
+    "title": "Updated Ken Mission Control 2.5",
+    "detail": "Display actual AI charges and the model used in the dashboard",
+    "tagline": true
    },
    {
     "time": "13:47",
     "title": "Updated Ken Agent V18.7",
-    "detail": "RAMS on demand"
+    "detail": "Produce a compliant RAMS document on demand from a job description",
+    "tagline": true
    },
    {
     "time": "14:27",
-    "title": "Built Check Repo Access 1.0"
+    "title": "Built Check Repo Access 1.0",
+    "detail": "Prove repository access and log the result without pushing changes",
+    "tagline": true
    },
    {
     "time": "15:22",
     "title": "Updated Ken Agent V18.8",
-    "detail": "The SLA takes the requester's own sections, and the Kensite contacts come from config"
+    "detail": "Let requesters add their own SLA sections and keep contacts up to date",
+    "tagline": true
    },
    {
     "title": "Emails: 60 received, 11 sent",
@@ -1357,7 +1640,8 @@
    {
     "time": "15:27",
     "title": "Updated Ken Agent V18.9",
-    "detail": "A probe for the AES planner feed, before any feed"
+    "detail": "Added a read-only probe to test transport job feeds before going live",
+    "tagline": true
    },
    {
     "title": "Emails: 79 received, 24 sent",
@@ -1392,63 +1676,80 @@
    {
     "time": "10:55",
     "title": "Updated Ken Agent V19.0",
-    "detail": "The Live Hire report as Excel"
+    "detail": "Live hire reports can now be delivered as spreadsheets as well as branded PDFs",
+    "tagline": true
    },
    {
     "time": "12:06",
     "title": "Updated Ken Agent V19.1",
-    "detail": "The AES planner feed from Big Change"
+    "detail": "Transport jobs now flow automatically onto the planner, ready for the office to allocate",
+    "tagline": true
    },
    {
     "time": "13:14",
     "title": "Updated Ken Agent V19.2",
-    "detail": "_aes_planner_enquiries reads the \"enquiries\" list that Planner V2.0 writes to..."
+    "detail": "Planner enquiries are matched correctly again after the planner upgrade",
+    "tagline": true
    },
    {
     "time": "14:13",
     "title": "Updated Ken Agent V19.3",
-    "detail": "Aes_write_heartbeat writes data/feed_heartbeat.json to the Planner repo after every..."
+    "detail": "Planner now shows how recently transport jobs were checked, ending stale-feed confusion",
+    "tagline": true
    },
    {
     "time": "14:38",
     "title": "Updated Ken Agent V19.4",
-    "detail": "Aes_add_miles puts one way road miles from the depot (M46 9BE) on every feed card:..."
+    "detail": "Every planner card now shows road miles from the depot to site",
+    "tagline": true
    },
    {
     "time": "14:53",
     "title": "Updated Ken Agent V19.5",
-    "detail": "Aes_miles_matrix measures every pair of postcodes in the feed window (OSRM table,..."
+    "detail": "Run and driver mileage totals now include site-to-site distances",
+    "tagline": true
    },
    {
     "time": "16:35",
-    "title": "Built Reconciliation AI Review August 1.0"
+    "title": "Built Reconciliation AI Review August 1.0",
+    "detail": "A month of reconciliation exceptions can now be reviewed by AI in one run",
+    "tagline": true
    },
    {
     "time": "16:41",
-    "title": "Updated Big Change Reconciliation Reasoner 1.1"
+    "title": "Updated Big Change Reconciliation Reasoner 1.1",
+    "detail": "AI reconciliation reviews now complete reliably instead of failing on empty answers",
+    "tagline": true
    },
    {
     "time": "17:24",
-    "title": "Updated Big Change Reconciliation Worker 3.8"
+    "title": "Updated Big Change Reconciliation Worker 3.8",
+    "detail": "Reconciliation now logs cleanly, reads columns safely and handles nil-charge invoices correctly",
+    "tagline": true
    },
    {
     "time": "20:52",
-    "title": "Updated Big Change Reconciliation Worker 3.9"
+    "title": "Updated Big Change Reconciliation Worker 3.9",
+    "detail": "More invoices now match correctly, including late hires and near-miss references",
+    "tagline": true
    },
    {
     "time": "21:04",
     "title": "Updated Ken Agent V19.6",
-    "detail": "Ken no longer crashes when the model invents an argument for a tool that takes none"
+    "detail": "Assistant no longer crashes when the model invents a tool argument",
+    "tagline": true
    },
    {
     "time": "21:39",
     "title": "Updated Ken Agent V19.7",
-    "detail": "Ken builds the Site Visit report from a Site Agent's emails"
+    "detail": "Site visit reports are now built automatically from the site agent's emails and photos",
+    "tagline": true
    },
    {
     "time": "21:52",
     "title": "Updated Ken Agent V19.8",
-    "detail": "The Site Visit report restyled to Kensite Brand Guidelines V1 2025: stacked black and..."
+    "detail": "Site visit reports now follow the company's brand guidelines",
+    "tagline": true
    },
    {
     "title": "Emails: 104 received, 34 sent",
@@ -1459,60 +1760,74 @@
    {
     "time": "09:27",
     "title": "Updated Ken Agent V19.9",
-    "detail": "Web addresses in emails are links"
+    "detail": "Made web addresses in outgoing emails clickable links",
+    "tagline": true
    },
    {
     "time": "09:49",
     "title": "Updated Ken Agent V20.0",
-    "detail": "New Site Builder drawings Ken creates carry \"boundary\": False, as Site Builder 5.0's..."
+    "detail": "New site drawings now start without the boundary shown",
+    "tagline": true
    },
    {
     "time": "10:31",
-    "title": "Updated Prep Schedule MCS Discrepancy Check 4.2"
+    "title": "Updated Prep Schedule MCS Discrepancy Check 4.2",
+    "detail": "Collections now move automatically to match scheduled dates, unless manually placed",
+    "tagline": true
    },
    {
     "time": "11:35",
     "title": "Updated Ken Agent V20.1",
-    "detail": "Probe_aes_types lists Big Change categories and job types with counts over the feed..."
+    "detail": "Identified how fuel deliveries are labelled in the planning system",
+    "tagline": true
    },
    {
     "time": "14:12",
     "title": "Updated Ken Agent V20.2",
-    "detail": "Aes_is_fuel puts Big Change \"Fuel Delivery\" jobs on the planner feed as kind FUEL..."
+    "detail": "Fuel deliveries now appear on the planner as their own card type",
+    "tagline": true
    },
    {
     "time": "19:31",
     "title": "Updated Ken Agent V20.3",
-    "detail": "Ken can read and change the Cloudflare account"
+    "detail": "Enabled safe automated management of web domains and settings",
+    "tagline": true
    },
    {
     "time": "19:35",
     "title": "Updated Ken Agent V20.4",
-    "detail": "Probe_aes_price tries job price endpoints and builds a median price per job type from..."
+    "detail": "Investigated where job pricing lives to support revenue reporting",
+    "tagline": true
    },
    {
     "time": "19:42",
     "title": "Updated Ken Agent V20.5",
-    "detail": "Pictures in an email reach the model"
+    "detail": "Enabled the assistant to read pictures in emails",
+    "tagline": true
    },
    {
     "time": "19:43",
     "title": "Updated Ken Agent V20.6",
-    "detail": "Aes_invoice_index pulls 120 days of /finance/invoices hourly and builds the rate card..."
+    "detail": "Added revenue figures to each load on the planner feed",
+    "tagline": true
    },
    {
     "time": "20:38",
     "title": "Updated Ken Agent V20.7",
-    "detail": "Probe_aes_api reads Big Change's OpenAPI document for anything money related and tries..."
+    "detail": "Traced where a job's price is held before invoicing",
+    "tagline": true
    },
    {
     "time": "20:42",
     "title": "Updated Ken Agent V20.8",
-    "detail": "Aes_job_price reads /jobs/{id}/lineItems (cached an hour) and aes_add_prices uses it:..."
+    "detail": "Planner now shows each job's own price from its line items",
+    "tagline": true
    },
    {
     "time": "21:31",
-    "title": "Updated Big Change Reconciliation Worker 4.0"
+    "title": "Updated Big Change Reconciliation Worker 4.0",
+    "detail": "Sharpened reconciliation so more contracts match and credits are flagged",
+    "tagline": true
    },
    {
     "title": "Emails: 112 received, 48 sent",
@@ -1523,16 +1838,20 @@
    {
     "time": "10:16",
     "title": "Updated Ken Agent V20.9",
-    "detail": "Aes_archive_merge keeps every past card the pull no longer returns (AES Feed..."
+    "detail": "Keeps completed jobs on the planner so past work stays visible",
+    "tagline": true
    },
    {
     "time": "11:42",
     "title": "Updated Ken Agent V21.0",
-    "detail": "Raise_purchase_order and raise_purchase_order_now"
+    "detail": "Adds ability to raise purchase orders for invoices without them",
+    "tagline": true
    },
    {
     "time": "14:37",
-    "title": "Updated Big Change Reconciliation Worker 4.1"
+    "title": "Updated Big Change Reconciliation Worker 4.1",
+    "detail": "Fixes reconciliation errors so invoices and purchase orders match correctly",
+    "tagline": true
    },
    {
     "title": "Emails: 98 received, 46 sent",
@@ -1543,61 +1862,80 @@
    {
     "time": "11:13",
     "title": "Updated Ken Agent V21.1",
-    "detail": "_PO_RAISE_LOCK around raise_purchase_order_now (check, create, read back, audit) plus..."
+    "detail": "Stops duplicate purchase order numbers when several orders are raised together",
+    "tagline": true
    },
    {
     "time": "12:52",
-    "title": "Updated Site Builder App 5.6"
+    "title": "Updated Site Builder App 5.6",
+    "detail": "Linked units now align flush and complexes can be rotated to any angle",
+    "tagline": true
    },
    {
     "time": "12:52",
-    "title": "Updated Kensite Compound Drawing Generator 4.7"
+    "title": "Updated Kensite Compound Drawing Generator 4.7",
+    "detail": "Linked complexes now print correctly at any angle",
+    "tagline": true
    },
    {
     "time": "12:52",
-    "title": "Updated Kensite Compound DXF Converter 3.5"
+    "title": "Updated Kensite Compound DXF Converter 3.5",
+    "detail": "Linked complexes export correctly at any angle",
+    "tagline": true
    },
    {
     "time": "12:58",
-    "title": "Built MCS Quote Check 1.0"
+    "title": "Built MCS Quote Check 1.0",
+    "detail": "Checks whether a failed quote was actually created",
+    "tagline": true
    },
    {
     "time": "13:05",
     "title": "Updated Ken Agent V21.2",
-    "detail": "Build_mcs_quote switches to mcs_no_retry(s) before the first post when it made its own..."
+    "detail": "Confirms whether a failed quote was created before retrying",
+    "tagline": true
    },
    {
     "time": "13:21",
-    "title": "Updated MCS Quote Rehearsal 1.1"
+    "title": "Updated MCS Quote Rehearsal 1.1",
+    "detail": "Tests a quote build without creating it and flags problems",
+    "tagline": true
    },
    {
     "time": "13:28",
     "title": "Updated Ken Agent V21.3",
-    "detail": "_qq_placeholder; qq_site_address treats \"-\" style site values as blank and fills a..."
+    "detail": "Fixes quote site details and accessory charges",
+    "tagline": true
    },
    {
     "time": "13:28",
-    "title": "Built MCS Quote Attempts 1.0"
+    "title": "Built MCS Quote Attempts 1.0",
+    "detail": "Tries quote variants until one succeeds",
+    "tagline": true
    },
    {
     "time": "14:17",
     "title": "Updated Ken Agent V21.4",
-    "detail": "Po_raise_refusal with purchase_orders.raisers (\"kensite\", a list, or absent for the..."
+    "detail": "Lets all staff raise purchase orders through the assistant",
+    "tagline": true
    },
    {
     "time": "14:39",
     "title": "Updated Ken Agent V21.5",
-    "detail": "_po_wide_refusal shared by po_raise_refusal and po_update_refusal;..."
+    "detail": "Lets all staff update purchase orders through the assistant",
+    "tagline": true
    },
    {
     "time": "17:16",
     "title": "Updated Ken Agent V21.6",
-    "detail": "MailDispatcher, start_lane, _background_services, _drawing_services; _one_at_a_time..."
+    "detail": "Runs emails, drawings and background tasks in parallel and caches job list",
+    "tagline": true
    },
    {
     "time": "22:11",
     "title": "Updated Ken Agent V21.7",
-    "detail": "Ken reports what each AES service driver charged per week for the planner's Mission..."
+    "detail": "Provides weekly service driver charges for the dashboard",
+    "tagline": true
    },
    {
     "title": "Emails: 112 received, 67 sent",
@@ -1608,57 +1946,74 @@
    {
     "time": "20:14",
     "title": "Updated Ken Agent V21.8",
-    "detail": "Email_html_to_text and email_body_for_model: the model reads the email as text (no..."
+    "detail": "AI assistant now reads whole emails, so event details are not missed",
+    "tagline": true
    },
    {
     "time": "20:20",
-    "title": "Updated Weekly Check Up Builder 2.4"
+    "title": "Updated Weekly Check Up Builder 2.4",
+    "detail": "Weekly dashboard builder now files to the right folder and counts quarters correctly",
+    "tagline": true
    },
    {
     "time": "20:21",
-    "title": "Updated Weekly Check Up Offline Test 1.1"
+    "title": "Updated Weekly Check Up Offline Test 1.1",
+    "detail": "Offline test checks the builder before release, catching missing functions early",
+    "tagline": true
    },
    {
     "time": "20:21",
-    "title": "Built Weekly Check Up Rebuild WE 021026 1.0"
+    "title": "Built Weekly Check Up Rebuild WE 021026 1.0",
+    "detail": "One-off rebuild of a week's check-up using the updated builder",
+    "tagline": true
    },
    {
     "time": "21:23",
-    "title": "Built Big Change Scheduling Endpoints 1.0"
+    "title": "Built Big Change Scheduling Endpoints 1.0",
+    "detail": "Read-only scan of scheduling API shows which endpoints can set routes",
+    "tagline": true
    },
    {
     "time": "21:32",
-    "title": "Built Big Change Schedule Readiness 1.0"
+    "title": "Built Big Change Schedule Readiness 1.0",
+    "detail": "Read-only check shows scheduling system readiness before job order syncing",
+    "tagline": true
    },
    {
     "time": "21:41",
     "title": "Updated Ken Agent V21.9",
-    "detail": "Aes_schedule_config, aes_plan_day, aes_schedule_changes, aes_resource_ids,..."
+    "detail": "AI assistant can set job order from planner, trialled safely with daily reports",
+    "tagline": true
    },
    {
     "time": "21:54",
     "title": "Updated Ken Agent V22.0",
-    "detail": "Aes_schedule_changes holds any job whose planner run day is not its day in Big Change..."
+    "detail": "Job order sync no longer moves jobs back to days they have left",
+    "tagline": true
    },
    {
     "time": "22:02",
     "title": "Updated Ken Agent V22.1",
-    "detail": "Aes_schedule_report rebuilt (day, driver, coloured jobs in order); aes_plan_day..."
+    "detail": "Trial email now reads like the planner, with clear times and colours",
+    "tagline": true
    },
    {
     "time": "22:15",
     "title": "Updated Ken Agent V22.2",
-    "detail": "Aes_route_miles, aes_better_order (permutations within run sizes, promised times..."
+    "detail": "Job order email names runs and loads, and suggests shorter routes",
+    "tagline": true
    },
    {
     "time": "22:27",
     "title": "Updated Ken Agent V22.3",
-    "detail": "Report laid out per day with \"Run n - Job n:\" cells and a verdict line; suggestions..."
+    "detail": "Job order email now formatted for easy reading, with suggestions applied by reply",
+    "tagline": true
    },
    {
     "time": "22:35",
     "title": "Updated Ken Agent V22.4",
-    "detail": "Aes_schedule_changes groups a run entry under the job's Big Change day (aes_job_day),..."
+    "detail": "Jobs moved in scheduling system keep their planner driver on the new day",
+    "tagline": true
    },
    {
     "title": "Emails: 52 received, 4 sent",
@@ -1669,12 +2024,14 @@
    {
     "time": "",
     "title": "Updated Ken Agent V22.5",
-    "detail": "Aes_schedule_report's HTML is a bordered grid per day with a Run n - Job n header row;..."
+    "detail": "Make daily job orders easier to read with a table layout",
+    "tagline": true
    },
    {
     "time": "",
     "title": "Updated Ken Agent V22.6",
-    "detail": "Aes_depot_between; aes_plan_day, aes_route_miles (literal_runs for the comparison),..."
+    "detail": "Reduce unnecessary depot trips by visiting only when loads require it",
+    "tagline": true
    }
   ],
   "2026-10-04": [
@@ -1687,94 +2044,120 @@
    {
     "time": "09:04",
     "title": "Updated Ken Agent V22.7",
-    "detail": "Aes_plan_day times a depot trip at every run boundary again (literal); the bed rule..."
+    "detail": "Ken now challenges unnecessary depot trips and suggests run amendments, saving miles",
+    "tagline": true
    },
    {
     "time": "09:41",
-    "title": "Updated Net2 Online Probe 1.4"
+    "title": "Updated Net2 Online Probe 1.4",
+    "detail": "Prints full door list, event types and recent access events with all fields",
+    "tagline": true
    },
    {
     "time": "09:54",
-    "title": "Updated Ken Agent V22.8"
+    "title": "Updated Ken Agent V22.8",
+    "detail": "Generates weekly clocking report from depot turnstile data, replacing manual system",
+    "tagline": true
    },
    {
     "time": "09:55",
     "title": "Built Net2 Online integration for Ken",
-    "detail": "Depot turnstile events read every two minutes; Monday clocking report replaces InfoTime"
+    "detail": "Reads depot turnstile events every two minutes for automated Monday clocking report",
+    "tagline": true
    },
    {
     "time": "10:15",
     "title": "Updated Ken Agent V22.9",
-    "detail": "Net2.report_names and net2_report_people; net2_timesheet gives the first In and the..."
+    "detail": "Clocking report now shows first in and last out, flagging missing swipes",
+    "tagline": true
    },
    {
     "time": "10:27",
     "title": "Updated Ken Agent V23.0",
-    "detail": "Net2_swipes: direction by alternation from the day's first swipe, repeats merged, the..."
+    "detail": "Determines swipe direction by common sense, improving accuracy of in/out records",
+    "tagline": true
    },
    {
     "time": "11:03",
     "title": "Updated Ken Agent V23.1",
-    "detail": "NET2_ABSENT, NET2_CHECK_OUT, NET2_CHECK_IN; net2_absent_days;..."
+    "detail": "Clocking report now flags gaps with actions like annual leave or missing clock",
+    "tagline": true
    },
    {
     "time": "12:00",
-    "title": "Updated Big Change Reconciliation Worker 4.3"
+    "title": "Updated Big Change Reconciliation Worker 4.3",
+    "detail": "Fixes error so reconciliation workbook builds even with no exceptions",
+    "tagline": true
    },
    {
     "time": "12:24",
     "title": "Updated Ken Agent V23.2",
-    "detail": "Ken can build an Excel workbook on demand"
+    "detail": "Enables on-demand Excel workbook creation and attachment to replies",
+    "tagline": true
    },
    {
     "time": "12:30",
     "title": "Updated Ken Agent V23.3",
-    "detail": "Build_excel_workbook one_row_per: a line of several assets split into one row per..."
+    "detail": "Splits multi-asset lines into one row per asset in workbooks",
+    "tagline": true
    },
    {
     "time": "14:01",
-    "title": "Updated AES Planner App 4.5"
+    "title": "Updated AES Planner App 4.5",
+    "detail": "Shows individual job codes for each load on a run in day view",
+    "tagline": true
    },
    {
     "time": "15:12",
-    "title": "Connected Breathe HR API to Ken"
+    "title": "Connected Breathe HR API to Ken",
+    "tagline": true
    },
    {
     "time": "15:27",
     "title": "Updated Ken Agent V23.4",
-    "detail": "The Breathe block (breathe_get /absences only, breathe_absences, breathe_leave_days,..."
+    "detail": "Clocking report now automatically explains blank days, reducing manual checks",
+    "tagline": true
    },
    {
     "time": "15:37",
     "title": "Retired InfoTime Weekly Clocking Report",
-    "detail": "Removed from the Task Runner; replaced by the Net2 clocking report"
+    "detail": "Retires old weekly clocking report, replaced by automated turnstile-based report",
+    "tagline": true
    },
    {
     "time": "15:56",
-    "title": "Updated Ken Agent V23.5"
+    "title": "Updated Ken Agent V23.5",
+    "detail": "Clocking report now automatically explains all blank days, removing ambiguous flags",
+    "tagline": true
    },
    {
     "time": "16:02",
-    "title": "Updated Breathe HR Probe 1.3"
+    "title": "Updated Breathe HR Probe 1.3",
+    "detail": "Tests whether date queries return records starting before the window",
+    "tagline": true
    },
    {
     "time": "16:08",
-    "title": "Updated Ken Agent V23.6"
+    "title": "Updated Ken Agent V23.6",
+    "detail": "Clocking report now includes ongoing cases that started before the week",
+    "tagline": true
    },
    {
     "time": "16:19",
     "title": "Updated Ken Agent V23.7",
-    "detail": "Net2_timesheet adds \"minutes\" (rounded up to 5); the workbook writes hours as a..."
+    "detail": "Clocking report now shows hours in hours and minutes with clearer flag colours",
+    "tagline": true
    },
    {
     "time": "17:08",
     "title": "Updated Ken Agent V23.8",
-    "detail": "Breathe_report_leave keeps Monday to Friday only; the email's Breathe line no longer..."
+    "detail": "Clocking report no longer shows non-work entries on weekends",
+    "tagline": true
    },
    {
     "time": "17:12",
     "title": "Updated Ken Agent V23.9",
-    "detail": "The clocking workbook gains a Notes column; a full day off in Breathe with swipes..."
+    "tagline": true
    },
    {
     "title": "Emails: 89 received, 44 sent",
@@ -1784,25 +2167,32 @@
   "2026-10-06": [
    {
     "time": "11:16",
-    "title": "Updated MTCO AI Roadmap App 2.3"
+    "title": "Updated MTCO AI Roadmap App 2.3",
+    "detail": "Plan and view daily work entries on a calendar",
+    "tagline": true
    },
    {
     "time": "11:16",
-    "title": "Updated MTCO AI Roadmap Planner 1.2"
+    "title": "Updated MTCO AI Roadmap Planner 1.2",
+    "detail": "See workflow entries on a read-only planning calendar",
+    "tagline": true
    },
    {
     "time": "11:26",
     "title": "Updated Ken Agent V24.0",
-    "detail": "Ken can count a subgroup's quotes and why they were lost"
+    "detail": "Ask how many quotes by subgroup, who for, and why lost",
+    "tagline": true
    },
    {
     "time": "11:34",
     "title": "Updated Ken Agent V24.1",
-    "detail": "Parse_quote_subgroup_rows joins wrapped reason text as well as a wrapped subgroup name"
+    "detail": "Read full quote rejection reasons instead of cut-off text",
+    "tagline": true
    },
    {
     "title": "Built New Report Quote Outcomes by SubGroup",
-    "detail": "MCS user report 67: one row per quote per subgroup with outcome and rejection reason"
+    "detail": "Report each quote's outcome and rejection reason by subgroup",
+    "tagline": true
    },
    {
     "title": "Emails: 48 received, 17 sent",
