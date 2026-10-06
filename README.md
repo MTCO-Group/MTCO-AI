@@ -63,6 +63,10 @@ widget: a month calendar, Monday first, where clicking a day slides out that day
 entries. Keyboard: arrow keys move between days, Enter opens one, Page Up and Page Down
 change month, Escape closes the day and then the Work Diary.
 
+Under the calendar a trend shows each day of the month: emails (blue, from the
+"Emails: N received, M sent" entry) and work entries (green), on one date axis
+in two panels. Hover a day for its numbers; click to open it.
+
 Entries are read from `data/Nathan Workflow.json` in the repo. That file does not exist
 yet, so every day opens blank. Whatever writes the work logs later only needs to create it:
 
