@@ -1,6 +1,14 @@
 """
 MTCO AI Roadmap planner component
-Version 1.4
+Version 1.5
+
+1.5: a GitHub activity heatmap in the Work Diary header, between the title
+and the Back button. One small block per month (up to six, from the first
+month with commits to this month), Monday to Sunday down and weeks across,
+like GitHub's own graph. The shade is the day's build commits summed across
+repos in four steps (1 to 3, 4 to 9, 10 to 19, 20 and over); commits Ken and
+the apps make on their own show in the tooltip only. Click a day to open it,
+click a month name to jump the calendar there. Hidden under 900px wide.
 
 1.4: project pills. A diary entry Ken has linked to a live roadmap project
 ("project": id, set by Diary Taglines 1.1) shows that project as a small pill
