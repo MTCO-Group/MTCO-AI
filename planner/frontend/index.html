@@ -118,73 +118,83 @@
   .readonly .card{cursor:default}
   .empty{font-size:12px;color:#b0b2b8;text-align:center;padding:14px 8px}
 
-  /* ── the AI Summit widget: a floating button, and the picker it opens ── */
-  #summitBtn{
-    position:absolute; right:22px; top:16px; display:none; align-items:center; gap:10px;
-    padding:12px 18px 12px 14px; border-radius:999px; border:1px solid #0d823b;
-    background:#0d823b; color:#fff; font:inherit; font-size:13.5px; font-weight:700;
-    cursor:pointer; box-shadow:0 10px 26px -10px rgba(13,130,59,.7); z-index:40;
-    transition:transform .16s, box-shadow .16s
+  /* ── the Planner, opened from What's Next; first widget: Nathan Workflow ── */
+  .btn.icon{display:inline-flex;align-items:center;gap:8px}
+  .btn.icon svg{width:16px;height:16px;flex:none;color:#0d823b}
+  #wf{
+    position:absolute;inset:0;background:#faf9f5;display:none;flex-direction:column;z-index:30;
+    animation:rise .22s cubic-bezier(.22,.9,.28,1) both
   }
-  #summitBtn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(13,130,59,.8)}
-  #summitBtn:focus-visible{outline:2px solid #0d823b;outline-offset:3px}
-  #summitBtn svg{width:18px;height:18px;flex:none}
-  #summitBtn .sub{font-size:11px;font-weight:600;opacity:.85;display:block;margin-top:1px}
-  #summit{
-    position:absolute; inset:0; display:none; align-items:flex-start; justify-content:center;
-    background:rgba(20,24,22,.42); z-index:60; padding:18px
+  #wf.show{display:flex}
+  #wf ::selection{background:rgba(13,130,59,.18)}
+  .wfback{display:inline-flex;align-items:center;gap:6px}
+  .wfback svg{width:16px;height:16px;flex:none}
+  .wfsec{flex:1;min-height:0;display:flex;flex-direction:column;padding:4px 30px 24px;gap:12px}
+  .wfbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;flex:none}
+  .wfbar h2{margin:0;font-size:17px;font-weight:800;letter-spacing:-.01em}
+  .wfbar .hint{margin-right:auto;color:#6b6e76;font-size:12.5px}
+  .wfnav{display:flex;align-items:center;gap:6px}
+  .wfmonth{font-size:14px;font-weight:700;min-width:132px;text-align:center;font-variant-numeric:tabular-nums}
+  .iconbtn{
+    font:inherit;width:34px;height:34px;display:inline-grid;place-items:center;border-radius:999px;
+    border:1px solid #cfd3cf;background:#fff;color:#1a1b1e;cursor:pointer;transition:border-color .15s
   }
-  #summit.show{display:flex}
-  #summit.show ~ #summitBtn, #root:has(#summit.show) #summitBtn{display:none !important}
-  .sdlg{
-    width:min(880px,100%); max-height:min(100%, 720px); background:#faf9f5; border-radius:16px;
-    box-shadow:0 30px 80px -30px rgba(0,0,0,.6); display:flex; flex-direction:column;
-    overflow:hidden; animation:rise .22s cubic-bezier(.22,.9,.28,1) both
+  .iconbtn:hover{border-color:#8a8c94}
+  .iconbtn:focus-visible{outline:2px solid #0d823b;outline-offset:2px}
+  .iconbtn svg{width:16px;height:16px}
+  .wfbody{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr);gap:14px;position:relative}
+  .wfbody.open{grid-template-columns:minmax(0,1fr) 340px}
+  .cal{
+    min-height:0;display:grid;grid-template-rows:auto repeat(6,minmax(0,1fr));
+    border:1px solid #e6e5e1;border-radius:12px;background:#fff;overflow:hidden
   }
-  .shead{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:22px 26px 14px;flex:none}
-  .shead h1{margin:0;font-size:20px;font-weight:800;letter-spacing:-.02em}
-  .shead p{margin:4px 0 0;font-size:12.5px;color:#5c5e66}
-  .sclose{font:inherit;border:0;background:transparent;font-size:22px;line-height:1;color:#8a8c94;cursor:pointer;padding:4px 8px;border-radius:8px}
-  .sclose:hover{background:#eeede8;color:#1a1b1e}
-  .sstep{padding:0 26px 12px;flex:none}
-  .slabel{font-size:11.5px;font-weight:700;letter-spacing:.09em;color:#8a8c94;margin:0 0 8px}
-  .pills{display:flex;flex-wrap:wrap;gap:8px}
-  .pill{
-    font:inherit;font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;
-    border:1px solid #cfd3cf;background:#fff;color:#1a1b1e;cursor:pointer;transition:all .15s
+  .dow,.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+  .dow div{
+    font-size:11.5px;font-weight:700;letter-spacing:.06em;color:#6b6e76;padding:9px 10px;
+    border-bottom:1px solid #e6e5e1
   }
-  .pill:hover{border-color:#0d823b}
-  .pill.on{background:#0d823b;border-color:#0d823b;color:#fff}
-  .pill .n{font-size:11px;font-weight:700;margin-left:6px;opacity:.75}
-  .slist{flex:1;min-height:120px;overflow-y:auto;padding:4px 26px 12px;display:none}
-  .slist.show{display:block}
-  .slot{
-    position:sticky;top:0;background:#faf9f5;padding:12px 0 6px;font-size:11.5px;font-weight:800;
-    letter-spacing:.08em;color:#0d823b;z-index:1
+  .week + .week .day{border-top:1px solid #efeee9}
+  .day{
+    font:inherit;text-align:left;background:#fff;border:0;border-left:1px solid #efeee9;
+    padding:7px 8px 6px;display:flex;flex-direction:column;gap:4px;min-width:0;min-height:0;
+    cursor:pointer;color:#1a1b1e;position:relative;overflow:hidden;transition:background .12s
   }
-  .sess{
-    display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border:1px solid #e6e5e1;
-    border-radius:10px;background:#fff;margin-bottom:7px;cursor:pointer;transition:border-color .15s,background .15s
+  .week .day:first-child{border-left:0}
+  .day.wkend{background:#fbfaf7}
+  .day.out{color:#6b6e76;background:#f7f6f2}
+  .day:hover{background:#f2faf5}
+  .day:focus-visible{outline:2px solid #0d823b;outline-offset:-2px;z-index:1}
+  .day .num{
+    font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;width:26px;height:26px;
+    display:grid;place-items:center;border-radius:999px;flex:none
   }
-  .sess:hover{border-color:#8a8c94}
-  .sess.on{border-color:#0d823b;background:#f2faf5;box-shadow:inset 3px 0 0 #0d823b}
-  .sess.clash{border-color:#c9822e}
-  .sess input{margin:3px 0 0;width:18px;height:18px;flex:none;accent-color:#0d823b;cursor:pointer}
-  .sess .t{font-size:13.5px;font-weight:700;line-height:1.3}
-  .sess .m{font-size:11.5px;color:#6b6e76;margin-top:3px}
-  .sess .m b{color:#1a1b1e;font-weight:700}
-  .sess .d{font-size:12px;color:#53565e;margin-top:6px;display:none}
-  .sess.open .d{display:block}
-  .sess .more{font-size:11.5px;color:#0d823b;text-decoration:underline;cursor:pointer;margin-top:4px;display:inline-block}
-  .sess .warn{font-size:11.5px;color:#9a5a12;margin-top:4px;font-weight:600}
-  .sfoot{
-    display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 26px 20px;
-    border-top:1px solid #e6e5e1;flex:none;background:#faf9f5
+  .day.today .num{background:#0d823b;color:#fff}
+  .day.sel{background:#e9f5ee;box-shadow:inset 0 0 0 2px #0d823b}
+  .day .ent{font-size:11.5px;line-height:1.3;color:#40424a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .day .more{font-size:11px;font-weight:700;color:#0d823b}
+  .wfpanel{
+    display:none;flex-direction:column;min-height:0;border:1px solid #e6e5e1;border-radius:12px;
+    background:#fff;box-shadow:0 18px 40px -26px rgba(16,26,20,.45);
+    animation:popout .2s cubic-bezier(.16,1,.3,1) both
   }
-  .stally{font-size:13px;color:#5c5e66}
-  .stally b{color:#0d823b;font-size:15px}
-  .sacts{display:flex;gap:10px}
-  .sempty{font-size:13px;color:#8a8c94;padding:40px 0;text-align:center}
+  .wfbody.open .wfpanel{display:flex}
+  @keyframes popout{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+  .wfphead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:16px 16px 10px;border-bottom:1px solid #efeee9}
+  .wfphead h3{margin:0;font-size:16px;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
+  .wfphead p{margin:3px 0 0;font-size:12.5px;color:#6b6e76}
+  .wflist{flex:1;min-height:0;overflow-y:auto;padding:12px 16px 16px;display:flex;flex-direction:column;gap:12px}
+  .wfent{display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;padding-bottom:12px;border-bottom:1px solid #efeee9}
+  .wfent:last-child{border-bottom:0}
+  .wfent .tm{font-size:12.5px;font-weight:700;color:#0d823b;font-variant-numeric:tabular-nums}
+  .wfent .tt{font-size:13.5px;font-weight:700;line-height:1.3}
+  .wfent .dt{font-size:12.5px;color:#53565e;margin-top:3px;line-height:1.45}
+  .wfempty{margin:auto 0;text-align:center;padding:24px 10px;color:#6b6e76;font-size:13px}
+  .wfempty svg{width:28px;height:28px;color:#b9bcc2;display:block;margin:0 auto 8px}
+  @media (max-width:760px){
+    .wfbody.open{grid-template-columns:minmax(0,1fr)}
+    .wfbody.open .wfpanel{position:absolute;inset:0 0 0 auto;width:min(340px,100%);z-index:2}
+    .day .ent{display:none}
+  }
 
   #toast{
     position:absolute;left:50%;bottom:26px;transform:translateX(-50%) translateY(8px);
@@ -212,6 +222,10 @@
         <p>Drag the proposed ideas into the order they get built. This is the AI Manager's queue, so what sits in Now is what gets worked on next.</p>
       </div>
       <div class="pacts">
+        <button class="btn icon" id="wfOpen" type="button" aria-controls="wf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
+          Open planner
+        </button>
         <button class="btn" id="cancelBtn" type="button">Close</button>
         <button class="btn primary" id="saveBtn" type="button">Save plan</button>
       </div>
@@ -231,37 +245,44 @@
     <div class="axis" id="axis"></div>
   </div>
 
-  <button id="summitBtn" type="button" aria-haspopup="dialog">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path><path d="M8.5 15.5l2.2 2.2 4.8-4.8"></path></svg>
-    <span><span id="summitBtnTitle">AI Summit Barcelona</span><span class="sub" id="summitBtnSub">Pick your sessions</span></span>
-  </button>
-
-  <div id="summit" role="dialog" aria-modal="true" aria-labelledby="summitH1">
-    <div class="sdlg">
-      <div class="shead">
-        <div>
-          <h1 id="summitH1">AI Summit Barcelona</h1>
-          <p id="summitSub">Pick your name, then a day, then tick the sessions you are going to. Save, and Ken emails your diary entries within a couple of minutes.</p>
-        </div>
-        <button class="sclose" id="summitClose" type="button" aria-label="Close">&times;</button>
+  <div id="wf" role="region" aria-labelledby="wfH1">
+    <div class="phead">
+      <div>
+        <h1 id="wfH1">Planner</h1>
+        <p>Upcoming project work, day by day.</p>
       </div>
-      <div class="sstep">
-        <p class="slabel">WHO ARE YOU?</p>
-        <div class="pills" id="whoPills"></div>
-      </div>
-      <div class="sstep" id="dayStep" hidden>
-        <p class="slabel">WHICH DAY?</p>
-        <div class="pills" id="dayPills"></div>
-      </div>
-      <div class="slist" id="sessList"></div>
-      <div class="sfoot">
-        <div class="stally" id="stally">Pick your name to start.</div>
-        <div class="sacts">
-          <button class="btn" id="summitCancel" type="button">Close</button>
-          <button class="btn primary" id="summitSave" type="button" disabled>Save my sessions</button>
-        </div>
+      <div class="pacts">
+        <button class="btn wfback" id="wfBack" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12H7"></path><path d="M11 6l-6 6 6 6"></path></svg>
+          Back to What's next
+        </button>
       </div>
     </div>
+    <section class="wfsec" aria-labelledby="wfH2">
+      <div class="wfbar">
+        <h2 id="wfH2">Nathan Workflow</h2>
+        <span class="hint">Click a day to open its work entries.</span>
+        <div class="wfnav">
+          <button class="iconbtn" id="wfPrev" type="button" aria-label="Previous month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+          <div class="wfmonth" id="wfMonth" aria-live="polite"></div>
+          <button class="iconbtn" id="wfNext" type="button" aria-label="Next month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+          <button class="btn" id="wfToday" type="button">Today</button>
+        </div>
+      </div>
+      <div class="wfbody" id="wfBody">
+        <div class="cal" id="wfCal" role="grid" aria-labelledby="wfMonth"></div>
+        <aside class="wfpanel" id="wfPanel" aria-labelledby="wfPH" aria-live="polite">
+          <div class="wfphead">
+            <div>
+              <h3 id="wfPH"></h3>
+              <p id="wfPSub">Work entries</p>
+            </div>
+            <button class="iconbtn" id="wfPClose" type="button" aria-label="Close this day"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"></path></svg></button>
+          </div>
+          <div class="wflist" id="wfList"></div>
+        </aside>
+      </div>
+    </section>
   </div>
 
   <div id="toast"></div>
@@ -486,14 +507,14 @@ function openPlanner(){
   $("#planner").style.display = "flex";
   $("#board").style.visibility = "hidden";
   $("#whatsNext").style.display = "none";
-  $("#summitBtn").style.visibility = "hidden";
   try{ sessionStorage.setItem("mtco.planner.open", "1"); }catch(e){}
 }
 function closePlanner(){
+  $("#wf").classList.remove("show");
+  try{ const w = JSON.parse(sessionStorage.getItem("mtco.wf") || "null"); if(w){ w.open = false; sessionStorage.setItem("mtco.wf", JSON.stringify(w)); } }catch(e){}
   $("#planner").style.display = "none";
   $("#board").style.visibility = "";
   $("#whatsNext").style.display = "";
-  $("#summitBtn").style.visibility = "";
   try{ sessionStorage.removeItem("mtco.planner.open"); }catch(e){}
 }
 function toast(text){
@@ -520,175 +541,159 @@ document.addEventListener("pointerup", endDrag);
 document.addEventListener("pointercancel", endDrag);
 document.addEventListener("keydown", onKey);
 
-/* ── the AI Summit picker ─────────────────────────────────────────────────── */
-// Nathan: "a floating widget in the MTCO tracker ... select their name, then the
-// day, then the sessions ... click Save and it submits somewhere Ken can
-// retrieve it." Save writes data/summit_picks.json through the app; Ken reads
-// it every two minutes, emails the diary entries and books the follow ups.
-const SUM = {on:false, prog:null, picks:{}, who:"", day:"", chosen:new Set(), saved:new Set(), dirty:false};
+/* ── the Planner, and its first widget: Nathan Workflow ────────────────────
+   A month calendar, Monday first. Clicking a day slides out a panel of that
+   day's work entries. Entries arrive as args.workflow.entries keyed by
+   YYYY-MM-DD; nothing writes them yet, so every day opens blank. */
+const WF = {entries:{}, year:0, month:0, sel:"", focus:""};
+const WF_DOW = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const WF_DOW_LONG = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+const WF_MON = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-function sumSlot(a,b){ return a.date===b.date && a.start<b.end && b.start<a.end; }
-
-function sumOpen(){
-  if(!SUM.prog) return;
-  $("#summit").classList.add("show");
-  try{ sessionStorage.setItem("mtco.summit.open","1"); }catch(e){}
-  sumRender();
-}
-function sumClose(){
-  if(SUM.dirty && !confirm("Close without saving? The sessions you ticked will not reach Ken.")) return;
-  $("#summit").classList.remove("show");
-  SUM.dirty = false;
-  try{ sessionStorage.removeItem("mtco.summit.open"); }catch(e){}
+function wfKey(d){ return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); }
+function wfDate(key){ const [y,m,d] = key.split("-").map(Number); return new Date(y, m-1, d); }
+function wfDow(d){ return (d.getDay() + 6) % 7; }
+function wfLong(d){ return WF_DOW_LONG[wfDow(d)] + " " + d.getDate() + " " + WF_MON[d.getMonth()] + " " + d.getFullYear(); }
+function wfList(key){ const e = WF.entries[key]; return Array.isArray(e) ? e : []; }
+function wfSave(){
+  try{ sessionStorage.setItem("mtco.wf", JSON.stringify({y:WF.year, m:WF.month, sel:WF.sel, open:$("#wf").classList.contains("show")})); }catch(e){}
 }
 
-function sumPickWho(name){
-  if(SUM.who === name) return;
-  if(SUM.dirty && !confirm("Switch person without saving? The sessions you ticked will not reach Ken.")) return;
-  SUM.who = name;
-  SUM.saved = new Set(((SUM.picks[name]||{}).keys)||[]);
-  SUM.chosen = new Set(SUM.saved);
-  SUM.dirty = false;
-  if(!SUM.day) SUM.day = sumDays()[0] || "";
-  try{ sessionStorage.setItem("mtco.summit.who", name); }catch(e){}
-  sumRender();
-}
-function sumDays(){
-  const seen = [], got = {};
-  (SUM.prog.sessions||[]).forEach(s => { if(s.date && !got[s.date]){ got[s.date]=1; seen.push(s.date); } });
-  return seen.sort();
-}
-function sumDayLabel(date){
-  const s = (SUM.prog.sessions||[]).find(x => x.date===date);
-  return s ? (s.day + " " + parseInt(date.slice(-2),10)) : date;
+function wfRender(){
+  $("#wfMonth").textContent = WF_MON[WF.month] + " " + WF.year;
+  const cal = $("#wfCal"); cal.innerHTML = "";
+  const head = el("div","dow"); head.setAttribute("role","row");
+  WF_DOW.forEach(n => { const c = el("div"); c.setAttribute("role","columnheader"); c.textContent = n; head.appendChild(c); });
+  cal.appendChild(head);
+
+  const first = new Date(WF.year, WF.month, 1);
+  const start = new Date(WF.year, WF.month, 1 - wfDow(first));
+  const today = wfKey(new Date());
+  if(!WF.focus || wfDate(WF.focus).getMonth() !== WF.month || wfDate(WF.focus).getFullYear() !== WF.year){
+    WF.focus = (WF.sel && wfDate(WF.sel).getMonth() === WF.month && wfDate(WF.sel).getFullYear() === WF.year) ? WF.sel
+             : (today.slice(0,7) === wfKey(first).slice(0,7) ? today : wfKey(first));
+  }
+  for(let w = 0; w < 6; w += 1){
+    const row = el("div","week"); row.setAttribute("role","row");
+    for(let i = 0; i < 7; i += 1){
+      const d = new Date(start.getFullYear(), start.getMonth(), start.getDate() + w*7 + i);
+      const key = wfKey(d);
+      const items = wfList(key);
+      const b = el("button","day");
+      b.type = "button"; b.dataset.key = key; b.setAttribute("role","gridcell");
+      if(d.getMonth() !== WF.month) b.classList.add("out");
+      if(i >= 5) b.classList.add("wkend");
+      if(key === today){ b.classList.add("today"); b.setAttribute("aria-current","date"); }
+      if(key === WF.sel){ b.classList.add("sel"); b.setAttribute("aria-selected","true"); }
+      b.tabIndex = key === WF.focus ? 0 : -1;
+      b.setAttribute("aria-label", wfLong(d) + (items.length ? ", " + items.length + " work entr" + (items.length === 1 ? "y" : "ies") : ", no work entries"));
+      const num = el("span","num"); num.textContent = d.getDate(); b.appendChild(num);
+      items.slice(0,2).forEach(it => { const e = el("span","ent"); e.textContent = (it.time ? it.time + "  " : "") + (it.title || ""); b.appendChild(e); });
+      if(items.length > 2){ const m = el("span","more"); m.textContent = "+" + (items.length - 2) + " more"; b.appendChild(m); }
+      b.addEventListener("click", () => wfSelect(key));
+      row.appendChild(b);
+    }
+    cal.appendChild(row);
+  }
+  wfPanel();
 }
 
-function sumRender(){
-  const p = SUM.prog;
-  // who
-  const who = $("#whoPills"); who.innerHTML = "";
-  (p.attendees||[]).forEach(n => {
-    const b = el("button","pill" + (SUM.who===n ? " on":"")); b.type="button";
-    const cnt = ((SUM.picks[n]||{}).keys||[]).length;
-    b.innerHTML = `<span></span>${cnt ? `<span class="n">${cnt} saved</span>` : ""}`;
-    b.firstChild.textContent = n;
-    b.addEventListener("click", () => sumPickWho(n));
-    who.appendChild(b);
+function wfPanel(){
+  const open = !!WF.sel;
+  $("#wfBody").classList.toggle("open", open);
+  if(!open) return;
+  const d = wfDate(WF.sel);
+  const items = wfList(WF.sel);
+  $("#wfPH").textContent = wfLong(d);
+  $("#wfPSub").textContent = items.length ? items.length + " work entr" + (items.length === 1 ? "y" : "ies") : "Work entries";
+  const list = $("#wfList"); list.innerHTML = "";
+  if(!items.length){
+    const e = el("div","wfempty");
+    e.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg><span></span>';
+    e.querySelector("span").textContent = "No work entries for this day yet.";
+    list.appendChild(e);
+    return;
+  }
+  items.forEach(it => {
+    const r = el("div","wfent");
+    r.innerHTML = '<div class="tm"></div><div><div class="tt"></div><div class="dt"></div></div>';
+    r.querySelector(".tm").textContent = it.time || "";
+    r.querySelector(".tt").textContent = it.title || "";
+    if(it.detail) r.querySelector(".dt").textContent = it.detail; else r.querySelector(".dt").remove();
+    list.appendChild(r);
   });
-  // day
-  const dayStep = $("#dayStep"); dayStep.hidden = !SUM.who;
-  const dp = $("#dayPills"); dp.innerHTML = "";
-  if(SUM.who){
-    sumDays().forEach(d => {
-      const b = el("button","pill" + (SUM.day===d ? " on":"")); b.type="button";
-      const cnt = [...SUM.chosen].filter(k => (p.sessions.find(s=>s.key===k)||{}).date===d).length;
-      b.innerHTML = `<span></span>${cnt ? `<span class="n">${cnt} ticked</span>` : ""}`;
-      b.firstChild.textContent = sumDayLabel(d);
-      b.addEventListener("click", () => { SUM.day = d; sumRender(); });
-      dp.appendChild(b);
-    });
-  }
-  // sessions
-  const list = $("#sessList"); list.innerHTML = "";
-  list.classList.toggle("show", !!(SUM.who && SUM.day));
-  if(SUM.who && SUM.day){
-    const chosenSess = p.sessions.filter(s => SUM.chosen.has(s.key));
-    const todays = p.sessions.filter(s => s.date===SUM.day).sort((a,b) => (a.start+a.stage).localeCompare(b.start+b.stage));
-    let last = "";
-    if(!todays.length){ const e = el("div","sempty"); e.textContent = "Nothing on this day."; list.appendChild(e); }
-    todays.forEach(s => {
-      if(s.start !== last){ const h = el("div","slot"); h.textContent = s.start; list.appendChild(h); last = s.start; }
-      const on = SUM.chosen.has(s.key);
-      const clashes = on ? chosenSess.filter(o => o.key!==s.key && sumSlot(o,s)) : [];
-      const row = el("label","sess" + (on?" on":"") + (clashes.length?" clash":""));
-      row.innerHTML =
-        `<input type="checkbox"${on?" checked":""}>
-         <div style="flex:1;min-width:0">
-           <div class="t"></div>
-           <div class="m"><b></b> &middot; <span class="st"></span><span class="tr"></span><span class="sp"></span></div>
-           ${clashes.length ? `<div class="warn">Clashes with ${clashes.map(c=>c.key).join(", ")}. You can only be at one.</div>` : ""}
-           ${s.brief ? `<span class="more">What it covers</span><div class="d"></div>` : ""}
-         </div>`;
-      row.querySelector(".t").textContent = s.title;
-      row.querySelector(".m b").textContent = s.start + " to " + s.end;
-      row.querySelector(".st").textContent = s.stage + (s.format ? " · " + s.format : "");
-      row.querySelector(".tr").textContent = s.track ? " · " + s.track : "";
-      row.querySelector(".sp").textContent = s.speakers ? " · " + s.speakers : "";
-      if(s.brief) row.querySelector(".d").textContent = s.brief;
-      row.querySelector("input").addEventListener("change", ev => {
-        if(ev.target.checked) SUM.chosen.add(s.key); else SUM.chosen.delete(s.key);
-        SUM.dirty = true; sumRender();
-      });
-      const more = row.querySelector(".more");
-      if(more) more.addEventListener("click", ev => { ev.preventDefault(); ev.stopPropagation(); row.classList.toggle("open"); });
-      list.appendChild(row);
-    });
-  }
-  // tally and save
-  const t = $("#stally");
-  if(!SUM.who) t.textContent = "Pick your name to start.";
-  else {
-    const byDay = {};
-    p.sessions.filter(s => SUM.chosen.has(s.key)).forEach(s => { byDay[s.day] = (byDay[s.day]||0)+1; });
-    const bits = Object.keys(byDay).map(d => `${d.slice(0,3)} ${byDay[d]}`).join(", ");
-    t.innerHTML = `<b>${SUM.chosen.size}</b> session${SUM.chosen.size===1?"":"s"} ticked${bits ? " (" + bits + ")" : ""}` +
-                  (SUM.dirty ? " &middot; not saved yet" : (SUM.saved.size ? " &middot; saved" : ""));
-  }
-  const same = SUM.chosen.size===SUM.saved.size && [...SUM.chosen].every(k => SUM.saved.has(k));
-  $("#summitSave").disabled = !SUM.on || !SUM.who || same;
 }
 
-function sumSave(){
-  if(!SUM.on || !SUM.who) return;
-  try{ sessionStorage.setItem("mtco.summit.saving", SUM.who); sessionStorage.removeItem("mtco.summit.open"); }catch(e){}
-  SUM.dirty = false;
-  $("#summitSave").disabled = true;
-  $("#stally").textContent = "Saving…";
-  Streamlit.value({kind:"summit", name:SUM.who, keys:[...SUM.chosen], nonce:Date.now()});
+function wfSelect(key){
+  const d = wfDate(key);
+  WF.sel = key; WF.focus = key;
+  if(d.getMonth() !== WF.month || d.getFullYear() !== WF.year){ WF.year = d.getFullYear(); WF.month = d.getMonth(); }
+  wfRender(); wfSave();
+  const b = document.querySelector(`.day[data-key="${key}"]`); if(b) b.focus();
+}
+function wfCloseDay(){
+  const key = WF.sel; WF.sel = ""; wfRender(); wfSave();
+  const b = document.querySelector(`.day[data-key="${key}"]`); if(b) b.focus();
+}
+function wfShift(months){
+  const d = new Date(WF.year, WF.month + months, 1);
+  WF.year = d.getFullYear(); WF.month = d.getMonth(); WF.focus = "";
+  wfRender(); wfSave();
+}
+function wfOpen(){
+  $("#wf").classList.add("show");
+  wfRender(); wfSave();
+  const b = document.querySelector(".day[tabindex='0']"); if(b) b.focus();
+}
+function wfClose(){
+  $("#wf").classList.remove("show"); wfSave();
+  $("#wfOpen").focus();
 }
 
-$("#summitBtn").addEventListener("click", sumOpen);
-$("#summitClose").addEventListener("click", sumClose);
-$("#summitCancel").addEventListener("click", sumClose);
-$("#summitSave").addEventListener("click", sumSave);
-$("#summit").addEventListener("click", ev => { if(ev.target.id==="summit") sumClose(); });
-document.addEventListener("keydown", ev => { if(ev.key==="Escape" && $("#summit").classList.contains("show")) sumClose(); });
+$("#wfOpen").addEventListener("click", wfOpen);
+$("#wfBack").addEventListener("click", wfClose);
+$("#wfPrev").addEventListener("click", () => wfShift(-1));
+$("#wfNext").addEventListener("click", () => wfShift(1));
+$("#wfToday").addEventListener("click", () => { const t = new Date(); WF.year = t.getFullYear(); WF.month = t.getMonth(); WF.focus = wfKey(t); wfRender(); wfSave(); const b = document.querySelector(".day[tabindex='0']"); if(b) b.focus(); });
+$("#wfPClose").addEventListener("click", wfCloseDay);
 
-function sumRenderArgs(args){
-  const sm = args.summit;
-  const btn = $("#summitBtn");
-  if(!sm || !sm.programme || !(sm.programme.sessions||[]).length){ btn.style.display = "none"; SUM.prog = null; return; }
-  SUM.prog = sm.programme;
-  SUM.picks = (sm.picks && sm.picks.picks) || sm.picks || {};
-  SUM.on = !!args.can_save;
-  btn.style.display = "inline-flex";
-  $("#summitBtnTitle").textContent = sm.programme.event || "AI Summit";
-  const total = Object.values(SUM.picks).reduce((n,v) => n + ((v&&v.keys)||[]).length, 0);
-  $("#summitBtnSub").textContent = total ? `${total} session${total===1?"":"s"} picked so far` : "Pick your sessions";
-  $("#summitSub").textContent = SUM.on
-    ? "Pick your name, then a day, then tick the sessions you are going to. Save, and Ken emails your diary entries within a couple of minutes."
-    : "Read only: live saving is not switched on for this app yet.";
-  let who = "", saving = "", wasOpen = false;
-  try{
-    who = sessionStorage.getItem("mtco.summit.who") || "";
-    saving = sessionStorage.getItem("mtco.summit.saving") || "";
-    wasOpen = sessionStorage.getItem("mtco.summit.open") === "1";
-    if(saving) sessionStorage.removeItem("mtco.summit.saving");
-  }catch(e){}
-  if(who && (SUM.prog.attendees||[]).includes(who)){
-    SUM.who = who;
-    SUM.saved = new Set(((SUM.picks[who]||{}).keys)||[]);
-    SUM.chosen = new Set(SUM.saved);
+// keyboard: arrows walk the days, Page Up and Page Down change month, Escape
+// closes the day panel and then the Planner
+$("#wfCal").addEventListener("keydown", ev => {
+  const b = ev.target.closest(".day"); if(!b) return;
+  const step = {ArrowLeft:-1, ArrowRight:1, ArrowUp:-7, ArrowDown:7}[ev.key];
+  let next = null;
+  if(step){ const d = wfDate(b.dataset.key); next = new Date(d.getFullYear(), d.getMonth(), d.getDate() + step); }
+  else if(ev.key === "Home"){ const d = wfDate(b.dataset.key); next = new Date(d.getFullYear(), d.getMonth(), d.getDate() - wfDow(d)); }
+  else if(ev.key === "End"){ const d = wfDate(b.dataset.key); next = new Date(d.getFullYear(), d.getMonth(), d.getDate() + 6 - wfDow(d)); }
+  else if(ev.key === "PageUp" || ev.key === "PageDown"){
+    const d = wfDate(b.dataset.key);
+    next = new Date(d.getFullYear(), d.getMonth() + (ev.key === "PageDown" ? 1 : -1), 1);
+    next.setDate(Math.min(d.getDate(), new Date(next.getFullYear(), next.getMonth() + 1, 0).getDate()));
   }
-  if(saving){
-    $("#summit").classList.remove("show");
-    toast(args.summit_saved_at
-      ? `Saved for ${saving} at ${args.summit_saved_at}. Ken will email the diary entries shortly.`
-      : `Saved for ${saving}. Ken will email the diary entries shortly.`);
-  } else if(wasOpen){
-    $("#summit").classList.add("show");
+  if(!next) return;
+  ev.preventDefault();
+  const key = wfKey(next);
+  if(next.getMonth() !== WF.month || next.getFullYear() !== WF.year){ WF.year = next.getFullYear(); WF.month = next.getMonth(); }
+  WF.focus = key; wfRender(); wfSave();
+  const nb = document.querySelector(`.day[data-key="${key}"]`); if(nb) nb.focus();
+});
+document.addEventListener("keydown", ev => {
+  if(ev.key !== "Escape" || !$("#wf").classList.contains("show")) return;
+  if(WF.sel) wfCloseDay(); else wfClose();
+});
+
+function wfRenderArgs(args){
+  const wf = args.workflow || {};
+  WF.entries = (wf.entries && typeof wf.entries === "object") ? wf.entries : {};
+  if(!WF.year){
+    const t = new Date(); WF.year = t.getFullYear(); WF.month = t.getMonth();
+    let saved = null;
+    try{ saved = JSON.parse(sessionStorage.getItem("mtco.wf") || "null"); }catch(e){}
+    if(saved && saved.y){ WF.year = saved.y; WF.month = saved.m; WF.sel = saved.sel || ""; }
+    if(saved && saved.open) $("#wf").classList.add("show");
   }
-  if($("#summit").classList.contains("show")) sumRender();
+  if($("#wf").classList.contains("show")) wfRender();
 }
 
 /* ── render from Streamlit ────────────────────────────────────────────────── */
@@ -738,7 +743,7 @@ function render(args){
   }
 
   renderCards();
-  sumRenderArgs(args);
+  wfRenderArgs(args);
   Streamlit.height(args.height || 900);
 
   let wasSaving = false, wasOpen = false;
