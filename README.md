@@ -56,3 +56,20 @@ Without it the planner still opens, read only, and says so on screen. Note the a
 public, so with the token in place anyone who has the link can rearrange the plan.
 Every save is a commit, so the history in GitHub is the audit trail and any change can
 be reverted.
+
+## Planner and Nathan Workflow
+The What's Next view has an Open planner button. The Planner holds the Nathan Workflow
+widget: a month calendar, Monday first, where clicking a day slides out that day's work
+entries. Keyboard: arrow keys move between days, Enter opens one, Page Up and Page Down
+change month, Escape closes the day and then the Planner.
+
+Entries are read from `data/Nathan Workflow.json` in the repo. That file does not exist
+yet, so every day opens blank. Whatever writes the work logs later only needs to create it:
+
+    {"entries": {"2026-10-06": [{"time": "09:30", "title": "...", "detail": "..."}]}}
+
+`time` and `detail` are optional. The app is public, so anything in that file can be seen
+by anyone with the link.
+
+The AI Summit Barcelona picker was retired in app 2.3. Its data files
+(`data/summit_programme.json`, `data/summit_picks.json`) are left in the repo untouched.
