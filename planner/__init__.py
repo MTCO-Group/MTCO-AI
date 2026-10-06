@@ -1,6 +1,14 @@
 """
 MTCO AI Roadmap planner component
-Version 1.5
+Version 1.6
+
+1.6: click a card in What's Next (or press Enter on it) to expand it into a
+detail sheet: company, category, lane, owner and date proposed, then what it
+does (scope), how it works and who it helps. A click that was really a drag
+does not open it. With saving on, the sheet can place the card in Not placed,
+Now, Next or Later (the same as dragging; Save plan still keeps it). Arrows
+step through the cards, Escape closes and returns focus to the card. Read
+only viewers can still open it. The proposer's email is never shown.
 
 1.5: a GitHub activity heatmap in the Work Diary header, between the title
 and the Back button. One small block per month (up to six, from the first
