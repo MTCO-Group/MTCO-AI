@@ -7,7 +7,7 @@
     "kind": "github",
     "repo": "Nathanjmcg/prep-schedule",
     "tagline": true,
-    "detail": "Add files via upload. Plus 11 automated commits by Ken and the apps"
+    "detail": "Add files via upload. Plus 11 commits made by Ken and the apps"
    },
    {
     "time": "22:59",
@@ -35,7 +35,7 @@
     "kind": "github",
     "repo": "Nathanjmcg/prep-schedule",
     "tagline": true,
-    "detail": "Add files via upload. Plus 29 automated commits by Ken and the apps"
+    "detail": "Add files via upload. Plus 29 commits made by Ken and the apps"
    },
    {
     "time": "11:57",
@@ -137,7 +137,7 @@
     "kind": "github",
     "repo": "Nathanjmcg/prep-schedule",
     "tagline": true,
-    "detail": "Add files via upload. Plus 11 automated commits by Ken and the apps"
+    "detail": "Add files via upload. Plus 11 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 34 received, 18 sent",
@@ -179,7 +179,7 @@
     "kind": "github",
     "repo": "Nathanjmcg/prep-schedule",
     "tagline": true,
-    "detail": "Update app.py from Automations folder. Plus 22 automated commits by Ken and the apps"
+    "detail": "Update app.py from Automations folder. Plus 22 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 58 received, 42 sent",
@@ -196,11 +196,11 @@
    },
    {
     "time": "15:10",
-    "title": "GitHub: 8 commits to prep-schedule",
+    "title": "GitHub: 4 commits to prep-schedule",
     "kind": "github",
     "repo": "Nathanjmcg/prep-schedule",
     "tagline": true,
-    "detail": "Update app.py from Automations folder; Copy invoice log cleared. Plus 39 automated commits by Ken and the apps"
+    "detail": "Update app.py from Automations folder. Plus 43 commits made by Ken and the apps"
    },
    {
     "time": "15:13",
@@ -216,14 +216,6 @@
   ],
   "2026-08-12": [
    {
-    "time": "10:05",
-    "title": "GitHub: 1 commit to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Copy invoice log cleared. Plus 33 automated commits by Ken and the apps"
-   },
-   {
     "title": "Emails: 48 received, 29 sent",
     "kind": "email"
    }
@@ -235,7 +227,7 @@
     "kind": "github",
     "repo": "Nathanjmcg/prep-schedule",
     "tagline": true,
-    "detail": "Update app.py from Automations folder. Plus 39 automated commits by Ken and the apps"
+    "detail": "Update app.py from Automations folder. Plus 39 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 80 received, 65 sent",
@@ -259,11 +251,11 @@
    },
    {
     "time": "21:40",
-    "title": "GitHub: 13 commits to prep-schedule",
+    "title": "GitHub: 8 commits to prep-schedule",
     "kind": "github",
     "repo": "Nathanjmcg/prep-schedule",
     "tagline": true,
-    "detail": "Update app.py from Automations folder; Materials PO worker update; Quote worker update. Plus 28 automated commits by Ken and the apps"
+    "detail": "Update app.py from Automations folder. Plus 33 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 62 received, 28 sent",
@@ -292,19 +284,19 @@
     "project": "kensite-ken-operations-agent"
    },
    {
+    "time": "15:13",
+    "title": "GitHub: 2 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Update app.py from Automations folder. Plus 31 commits made by Ken and the apps"
+   },
+   {
     "time": "15:36",
     "title": "Updated Quote Worker Bisect 2.0",
     "detail": "Pinpoint which quote field breaks rendering by testing root values one at a time",
     "tagline": true,
     "project": "kensite-ken-operations-agent"
-   },
-   {
-    "time": "20:11",
-    "title": "GitHub: 20 commits to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Quote log cleared; Quote worker update; Quote request added. Plus 13 automated commits by Ken and the apps"
    },
    {
     "title": "Emails: 10 received, 11 sent",
@@ -321,11 +313,11 @@
    },
    {
     "time": "16:06",
-    "title": "GitHub: 11 commits to prep-schedule",
+    "title": "GitHub: 4 commits to prep-schedule",
     "kind": "github",
     "repo": "Nathanjmcg/prep-schedule",
     "tagline": true,
-    "detail": "Update app.py from Automations folder; Materials PO worker update; Repair lost PO stamps. Plus 23 automated commits by Ken and the apps"
+    "detail": "Update app.py from Automations folder. Plus 30 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 83 received, 51 sent",
@@ -334,41 +326,17 @@
   ],
   "2026-08-18": [
    {
-    "time": "14:24",
-    "title": "GitHub: 2 commits to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Materials PO worker update. Plus 11 automated commits by Ken and the apps"
-   },
-   {
     "title": "Emails: 61 received, 16 sent",
     "kind": "email"
    }
   ],
   "2026-08-19": [
    {
-    "time": "12:27",
-    "title": "GitHub: 2 commits to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Materials PO worker update. Plus 19 automated commits by Ken and the apps"
-   },
-   {
     "title": "Emails: 70 received, 36 sent",
     "kind": "email"
    }
   ],
   "2026-08-20": [
-   {
-    "time": "13:00",
-    "title": "GitHub: 3 commits to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Materials PO worker update. Plus 22 automated commits by Ken and the apps"
-   },
    {
     "title": "Emails: 90 received, 60 sent",
     "kind": "email"
@@ -553,14 +521,6 @@
     "detail": "Fix probe arguments and report errors properly",
     "tagline": true,
     "project": "kensite-ken-operations-agent"
-   },
-   {
-    "time": "13:59",
-    "title": "GitHub: 1 commit to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Materials PO worker update. Plus 13 automated commits by Ken and the apps"
    },
    {
     "time": "14:11",
@@ -793,14 +753,6 @@
     "project": "kensite-materials-po-worker"
    },
    {
-    "time": "14:38",
-    "title": "GitHub: 7 commits to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Materials PO worker update. Plus 16 automated commits by Ken and the apps"
-   },
-   {
     "time": "15:01",
     "title": "Updated Ken Agent V8.7",
     "detail": "Orders blocked by budget limits now save with the price written on the line",
@@ -843,19 +795,19 @@
     "project": "kensite-site-builder"
    },
    {
+    "time": "22:03",
+    "title": "GitHub: 4 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…; Add files via upload. Plus 9 commits made by Ken and the apps"
+   },
+   {
     "time": "22:05",
     "title": "Updated Compound Drawing Watcher 1.1",
     "detail": "Fixed an ordering fault so drawings are never marked issued without their PDF",
     "tagline": true,
     "project": "kensite-site-builder"
-   },
-   {
-    "time": "22:11",
-    "title": "GitHub: 13 commits to Compound-Builder",
-    "kind": "github",
-    "repo": "Nathanjmcg/Compound-Builder",
-    "tagline": true,
-    "detail": "Issue 12345-JGM-SK53F7 v1.1; 12345-JGM-SK53F7 v1.1; 12345-JGM-SK53F7 v1.0"
    },
    {
     "title": "Emails: 88 received, 53 sent",
@@ -878,20 +830,12 @@
     "project": "kensite-site-builder"
    },
    {
-    "time": "10:14",
-    "title": "GitHub: 2 commits to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Materials PO worker update. Plus 13 automated commits by Ken and the apps"
-   },
-   {
-    "time": "14:41",
-    "title": "GitHub: 65 commits to Compound-Builder",
+    "time": "12:02",
+    "title": "GitHub: 36 commits to Compound-Builder",
     "kind": "github",
     "repo": "Nathanjmcg/Compound-Builder",
     "tagline": true,
-    "detail": "12588-ACONNOLY-ZTF5ZJ v1.5; 12588-ACONNOLY-ZTF5ZJ v1.4; 12588-ACONNOLY-ZTF5ZJ v1.3. Plus 22 automated commits by Ken and the apps"
+    "detail": "Site Builder Deploy: update generator/Kensite Compound Drawing Generat…; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…; Site Builder Deploy: update builder/index.html. Plus 51 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 54 received, 10 sent",
@@ -935,14 +879,6 @@
     "project": "kensite-weekly-check-up"
    },
    {
-    "time": "15:43",
-    "title": "GitHub: 11 commits to Compound-Builder",
-    "kind": "github",
-    "repo": "Nathanjmcg/Compound-Builder",
-    "tagline": true,
-    "detail": "31163-NCHESTERANDC-EBES4F v1.0; Issue 31912-TERMRIM-22JMUV v1.2; 31912-TERMRIM-22JMUV v1.2. Plus 7 automated commits by Ken and the apps"
-   },
-   {
     "time": "",
     "title": "Updated Ken Agent V8.9",
     "detail": "Document reads now work reliably ending false claims that invoices are missing",
@@ -956,14 +892,6 @@
   ],
   "2026-08-28": [
    {
-    "time": "13:30",
-    "title": "GitHub: 5 commits to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Materials PO worker update. Plus 32 automated commits by Ken and the apps"
-   },
-   {
     "time": "15:25",
     "title": "Updated Ken Agent V9.0",
     "detail": "Automated drawing requests so customers receive references and links by email",
@@ -971,19 +899,19 @@
     "project": "kensite-site-builder"
    },
    {
+    "time": "15:31",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Site Builder Deploy: update streamlit_app.py. Plus 12 commits made by Ken and the apps"
+   },
+   {
     "time": "15:38",
     "title": "Updated Ken Agent V9.1",
     "detail": "Sped up drawing request turnaround by checking more frequently",
     "tagline": true,
     "project": "kensite-site-builder"
-   },
-   {
-    "time": "15:47",
-    "title": "GitHub: 5 commits to Compound-Builder",
-    "kind": "github",
-    "repo": "Nathanjmcg/Compound-Builder",
-    "tagline": true,
-    "detail": "Drawing request from Kensite; Drawing request from ACME; Site Builder Deploy: update streamlit_app.py. Plus 8 automated commits by Ken and the apps"
    },
    {
     "time": "16:04",
@@ -999,14 +927,6 @@
   ],
   "2026-08-29": [
    {
-    "time": "11:16",
-    "title": "GitHub: 2 commits to Compound-Builder",
-    "kind": "github",
-    "repo": "Nathanjmcg/Compound-Builder",
-    "tagline": true,
-    "detail": "Issue 00001-ACONNOLLY-A25H3V v1.1; Drawing request from City Fm. Plus 7 automated commits by Ken and the apps"
-   },
-   {
     "title": "Emails: 8 received, 3 sent",
     "kind": "email"
    }
@@ -1014,11 +934,11 @@
   "2026-08-30": [
    {
     "time": "21:32",
-    "title": "GitHub: 7 commits to Compound-Builder",
+    "title": "GitHub: 6 commits to Compound-Builder",
     "kind": "github",
     "repo": "Nathanjmcg/Compound-Builder",
     "tagline": true,
-    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; 31501-MWH-J7FR2X v2.2. Plus 3 automated commits by Ken and the apps"
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…. Plus 4 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 2 received, 0 sent",
@@ -1032,6 +952,14 @@
    }
   ],
   "2026-09-01": [
+   {
+    "time": "11:33",
+    "title": "GitHub: 15 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…. Plus 32 commits made by Ken and the apps"
+   },
    {
     "time": "12:08",
     "title": "Updated Compound Drawing Watcher 1.3",
@@ -1059,14 +987,6 @@
     "detail": "Map where invoices sit and trace invoice-to-job-to-purchase-order links",
     "tagline": true,
     "project": "kensite-big-change-reconciliation"
-   },
-   {
-    "time": "13:50",
-    "title": "GitHub: 19 commits to Compound-Builder",
-    "kind": "github",
-    "repo": "Nathanjmcg/Compound-Builder",
-    "tagline": true,
-    "detail": "Drawing request from JRCE; Issue 31501-MWH-J7FR2X v2.2; Site Builder Deploy: update streamlit_app.py. Plus 28 automated commits by Ken and the apps"
    },
    {
     "time": "14:44",
@@ -1104,19 +1024,11 @@
    },
    {
     "time": "11:36",
-    "title": "GitHub: 5 commits to Compound-Builder",
+    "title": "GitHub: 4 commits to Compound-Builder",
     "kind": "github",
     "repo": "Nathanjmcg/Compound-Builder",
     "tagline": true,
-    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…. Plus 8 automated commits by Ken and the apps"
-   },
-   {
-    "time": "16:19",
-    "title": "GitHub: 2 commits to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Materials PO worker update. Plus 14 automated commits by Ken and the apps"
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…. Plus 9 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 93 received, 31 sent",
@@ -1137,14 +1049,6 @@
     "detail": "Quote retrieval now works across formats and reports useful errors",
     "tagline": true,
     "project": "kensite-quote-trends"
-   },
-   {
-    "time": "14:11",
-    "title": "GitHub: 1 commit to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Materials PO worker update. Plus 7 automated commits by Ken and the apps"
    },
    {
     "time": "15:53",
@@ -1277,7 +1181,7 @@
     "kind": "github",
     "repo": "Nathanjmcg/Compound-Builder",
     "tagline": true,
-    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html. Plus 6 automated commits by Ken and the apps"
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html. Plus 6 commits made by Ken and the apps"
    },
    {
     "time": "23:24",
@@ -1321,12 +1225,12 @@
   ],
   "2026-09-04": [
    {
-    "time": "15:08",
-    "title": "GitHub: 25 commits to Compound-Builder",
+    "time": "10:08",
+    "title": "GitHub: 22 commits to Compound-Builder",
     "kind": "github",
     "repo": "Nathanjmcg/Compound-Builder",
     "tagline": true,
-    "detail": "Drawing request from Andmore Homes; Drawing request from MCI Development DEMO; Site Builder Deploy: update streamlit_app.py. Plus 39 automated commits by Ken and the apps"
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…; Site Builder Deploy: update builder/index.html. Plus 42 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 74 received, 20 sent",
@@ -1446,14 +1350,6 @@
     "project": "kensite-ken-operations-agent"
    },
    {
-    "time": "22:34",
-    "title": "GitHub: 1 commit to Compound-Builder",
-    "kind": "github",
-    "repo": "Nathanjmcg/Compound-Builder",
-    "tagline": true,
-    "detail": "Drawing request from ACME Civils. Plus 5 automated commits by Ken and the apps"
-   },
-   {
     "time": "22:54",
     "title": "Updated Ken Agent V13.2",
     "detail": "Added fixed pricing for a split unit whether requested in words or drawings",
@@ -1467,14 +1363,6 @@
   ],
   "2026-09-07": [
    {
-    "time": "11:07",
-    "title": "GitHub: 3 commits to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Materials PO worker update. Plus 16 automated commits by Ken and the apps"
-   },
-   {
     "time": "11:08",
     "title": "GitHub: 2 commits to Planner",
     "kind": "github",
@@ -1483,12 +1371,12 @@
     "detail": "Add files via upload"
    },
    {
-    "time": "12:56",
-    "title": "GitHub: 9 commits to Compound-Builder",
+    "time": "12:26",
+    "title": "GitHub: 8 commits to Compound-Builder",
     "kind": "github",
     "repo": "Nathanjmcg/Compound-Builder",
     "tagline": true,
-    "detail": "Drawing request from A Connolly; Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…. Plus 6 automated commits by Ken and the apps"
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…. Plus 7 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 75 received, 24 sent",
@@ -1616,11 +1504,11 @@
   "2026-09-09": [
    {
     "time": "12:28",
-    "title": "GitHub: 11 commits to Compound-Builder",
+    "title": "GitHub: 10 commits to Compound-Builder",
     "kind": "github",
     "repo": "Nathanjmcg/Compound-Builder",
     "tagline": true,
-    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…. Plus 13 automated commits by Ken and the apps"
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…. Plus 14 commits made by Ken and the apps"
    },
    {
     "time": "14:58",
@@ -1741,14 +1629,6 @@
     "project": "kensite-big-change-reconciliation"
    },
    {
-    "time": "12:22",
-    "title": "GitHub: 1 commit to Compound-Builder",
-    "kind": "github",
-    "repo": "Nathanjmcg/Compound-Builder",
-    "tagline": true,
-    "detail": "Drawing request from MC Construction. Plus 10 automated commits by Ken and the apps"
-   },
-   {
     "time": "12:29",
     "title": "Updated Ken Agent V15.3",
     "detail": "Delivered every proof of delivery for a purchase order, not just the newest",
@@ -1777,11 +1657,11 @@
    },
    {
     "time": "16:03",
-    "title": "GitHub: 17 commits to Compound-Builder",
+    "title": "GitHub: 16 commits to Compound-Builder",
     "kind": "github",
     "repo": "Nathanjmcg/Compound-Builder",
     "tagline": true,
-    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…. Plus 26 automated commits by Ken and the apps"
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…. Plus 27 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 83 received, 34 sent",
@@ -1808,7 +1688,7 @@
     "kind": "github",
     "repo": "Nathanjmcg/Compound-Builder",
     "tagline": true,
-    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html. Plus 4 automated commits by Ken and the apps"
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html. Plus 4 commits made by Ken and the apps"
    },
    {
     "time": "21:48",
@@ -1823,7 +1703,7 @@
     "kind": "github",
     "repo": "Nathanjmcg/MTCO-AI",
     "tagline": true,
-    "detail": "Update README.md from Automations folder; Update dashboard.html from Automations folder; Update app.py from Automations folder. Plus 2 automated commits by Ken and the apps"
+    "detail": "Update README.md from Automations folder; Update dashboard.html from Automations folder; Update app.py from Automations folder. Plus 2 commits made by Ken and the apps"
    },
    {
     "time": "21:59",
@@ -1865,15 +1745,7 @@
     "kind": "github",
     "repo": "Nathanjmcg/MTCO-AI",
     "tagline": true,
-    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update README.md from Automations folder. Plus 6 automated commits by Ken and the apps"
-   },
-   {
-    "time": "13:05",
-    "title": "GitHub: 1 commit to Compound-Builder",
-    "kind": "github",
-    "repo": "Nathanjmcg/Compound-Builder",
-    "tagline": true,
-    "detail": "Drawing request from Bethell. Plus 6 automated commits by Ken and the apps"
+    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update README.md from Automations folder. Plus 6 commits made by Ken and the apps"
    },
    {
     "time": "21:25",
@@ -1938,6 +1810,14 @@
   ],
   "2026-09-17": [
    {
+    "time": "11:18",
+    "title": "GitHub: 4 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html. Plus 16 commits made by Ken and the apps"
+   },
+   {
     "time": "11:29",
     "title": "Updated Ken Agent V16.0",
     "detail": "Automates health and safety committee agendas, ready to fill in on the day",
@@ -1964,14 +1844,6 @@
     "detail": "Applies settings changes live without restarting the assistant",
     "tagline": true,
     "project": "kensite-ken-operations-agent"
-   },
-   {
-    "time": "14:56",
-    "title": "GitHub: 5 commits to Compound-Builder",
-    "kind": "github",
-    "repo": "Nathanjmcg/Compound-Builder",
-    "tagline": true,
-    "detail": "Drawing request from Kensite; Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html. Plus 15 automated commits by Ken and the apps"
    },
    {
     "title": "Emails: 66 received, 26 sent",
@@ -2091,12 +1963,12 @@
     "project": "mtco-ai-roadmap-tracker"
    },
    {
-    "time": "22:11",
-    "title": "GitHub: 7 commits to MTCO-AI",
+    "time": "22:01",
+    "title": "GitHub: 5 commits to MTCO-AI",
     "kind": "github",
     "repo": "Nathanjmcg/MTCO-AI",
     "tagline": true,
-    "detail": "AI Summit: Nathan saved 11 session(s) from the dashboard; Update planner/frontend/index.html from Automations folder; Update app.py from Automations folder. Plus 7 automated commits by Ken and the apps"
+    "detail": "Update planner/frontend/index.html from Automations folder; Update app.py from Automations folder; Update planner/__init__.py from Automations folder. Plus 9 commits made by Ken and the apps"
    },
    {
     "time": "22:21",
@@ -2119,14 +1991,6 @@
   ],
   "2026-09-20": [
    {
-    "time": "00:14",
-    "title": "GitHub: 2 commits to MTCO-AI",
-    "kind": "github",
-    "repo": "Nathanjmcg/MTCO-AI",
-    "tagline": true,
-    "detail": "AI Summit: Chloe saved 15 session(s) from the dashboard; AI Summit: Chloe saved 8 session(s) from the dashboard. Plus 1 automated commit by Ken and the apps"
-   },
-   {
     "title": "Emails: 3 received, 3 sent",
     "kind": "email"
    }
@@ -2138,14 +2002,6 @@
     "detail": "Enabled scheduled hire reports to be emailed directly to clients automatically",
     "tagline": true,
     "project": "kensite-live-hire-report-worker"
-   },
-   {
-    "time": "12:05",
-    "title": "GitHub: 3 commits to MTCO-AI",
-    "kind": "github",
-    "repo": "Nathanjmcg/MTCO-AI",
-    "tagline": true,
-    "detail": "AI Summit: Lee saved 8 session(s) from the dashboard; AI Summit: Lee saved 1 session(s) from the dashboard; Update the What's Next plan from the dashboard. Plus 3 automated commits by Ken and the apps"
    },
    {
     "time": "16:25",
@@ -2174,14 +2030,6 @@
    }
   ],
   "2026-09-22": [
-   {
-    "time": "06:35",
-    "title": "GitHub: 1 commit to MTCO-AI",
-    "kind": "github",
-    "repo": "Nathanjmcg/MTCO-AI",
-    "tagline": true,
-    "detail": "Update data/summit_programme.json from Automations folder. Plus 7 automated commits by Ken and the apps"
-   },
    {
     "time": "07:02",
     "title": "Updated Ken Agent V18.4",
@@ -2218,27 +2066,11 @@
     "project": "kensite-rams-on-demand-agent"
    },
    {
-    "time": "14:10",
-    "title": "GitHub: 1 commit to prep-schedule",
-    "kind": "github",
-    "repo": "Nathanjmcg/prep-schedule",
-    "tagline": true,
-    "detail": "Materials PO worker update. Plus 9 automated commits by Ken and the apps"
-   },
-   {
     "time": "14:27",
     "title": "Built Check Repo Access 1.0",
     "detail": "Prove repository access and log the result without pushing changes",
     "tagline": true,
     "project": ""
-   },
-   {
-    "time": "14:34",
-    "title": "GitHub: 1 commit to Planner",
-    "kind": "github",
-    "repo": "LeeMcConvilleAES/Planner",
-    "tagline": true,
-    "detail": "Update app.py from Kensite Automations (AES Transport Planner)"
    },
    {
     "time": "15:22",
@@ -2259,14 +2091,6 @@
     "detail": "Added a read-only probe to test transport job feeds before going live",
     "tagline": true,
     "project": "aes-auto-updating-schedule-for-aes"
-   },
-   {
-    "time": "17:20",
-    "title": "GitHub: 1 commit to Compound-Builder",
-    "kind": "github",
-    "repo": "Nathanjmcg/Compound-Builder",
-    "tagline": true,
-    "detail": "Drawing request from RB Health. Plus 7 automated commits by Ken and the apps"
    },
    {
     "title": "Emails: 79 received, 24 sent",
@@ -2342,11 +2166,11 @@
    },
    {
     "time": "15:08",
-    "title": "GitHub: 55 commits to Planner",
+    "title": "GitHub: 9 commits to Planner",
     "kind": "github",
     "repo": "LeeMcConvilleAES/Planner",
     "tagline": true,
-    "detail": "Planner V2.8: mileage in the day view only, one visit per postcode per…; Planner V2.7: run and driver mileage in the day view; Planner V2.6: road miles from the depot on every card. Plus 76 automated commits by Ken and the apps"
+    "detail": "Planner V2.8: mileage in the day view only, one visit per postcode per…; Planner V2.7: run and driver mileage in the day view; Planner V2.6: road miles from the depot on every card. Plus 122 commits made by Ken and the apps"
    },
    {
     "time": "16:35",
@@ -2419,11 +2243,11 @@
    },
    {
     "time": "10:24",
-    "title": "GitHub: 13 commits to Compound-Builder",
+    "title": "GitHub: 11 commits to Compound-Builder",
     "kind": "github",
     "repo": "Nathanjmcg/Compound-Builder",
     "tagline": true,
-    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; Drawing request from HSS ProService. Plus 31 automated commits by Ken and the apps"
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…. Plus 33 commits made by Ken and the apps"
    },
    {
     "time": "10:31",
@@ -2475,14 +2299,6 @@
     "project": "aes-auto-updating-schedule-for-aes"
    },
    {
-    "time": "19:53",
-    "title": "GitHub: 1 commit to MTCO-AI",
-    "kind": "github",
-    "repo": "Nathanjmcg/MTCO-AI",
-    "tagline": true,
-    "detail": "Update the What's Next plan from the dashboard. Plus 3 automated commits by Ken and the apps"
-   },
-   {
     "time": "20:38",
     "title": "Updated Ken Agent V20.7",
     "detail": "Traced where a job's price is held before invoicing",
@@ -2498,11 +2314,11 @@
    },
    {
     "time": "21:02",
-    "title": "GitHub: 72 commits to Planner",
+    "title": "GitHub: 9 commits to Planner",
     "kind": "github",
     "repo": "LeeMcConvilleAES/Planner",
     "tagline": true,
-    "detail": "Planner V4.2: fleet revenue over every booked job; Planner V4.0: profit per job on the MD dashboard; Planner: planned load from card. Plus 493 automated commits by Ken and the apps"
+    "detail": "Planner V4.2: fleet revenue over every booked job; Planner V4.0: profit per job on the MD dashboard; Planner V3.8: revenue from the job price in Big Change. Plus 556 commits made by Ken and the apps"
    },
    {
     "time": "21:31",
@@ -2539,14 +2355,6 @@
     "project": "kensite-big-change-reconciliation"
    },
    {
-    "time": "15:38",
-    "title": "GitHub: 35 commits to Planner",
-    "kind": "github",
-    "repo": "LeeMcConvilleAES/Planner",
-    "tagline": true,
-    "detail": "Planner: planned load from card. Plus 487 automated commits by Ken and the apps"
-   },
-   {
     "title": "Emails: 98 received, 46 sent",
     "kind": "email"
    }
@@ -2561,11 +2369,11 @@
    },
    {
     "time": "12:41",
-    "title": "GitHub: 8 commits to Compound-Builder",
+    "title": "GitHub: 5 commits to Compound-Builder",
     "kind": "github",
     "repo": "Nathanjmcg/Compound-Builder",
     "tagline": true,
-    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…. Plus 40 automated commits by Ken and the apps"
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…. Plus 43 commits made by Ken and the apps"
    },
    {
     "time": "12:52",
@@ -2646,11 +2454,11 @@
    },
    {
     "time": "21:59",
-    "title": "GitHub: 27 commits to Planner",
+    "title": "GitHub: 2 commits to Planner",
     "kind": "github",
     "repo": "LeeMcConvilleAES/Planner",
     "tagline": true,
-    "detail": "Planner V4.3: Mission Control; Planner: planned load from card; Planner: moved load. Plus 405 automated commits by Ken and the apps"
+    "detail": "Planner V4.3: Mission Control. Plus 430 commits made by Ken and the apps"
    },
    {
     "time": "22:11",
@@ -2665,14 +2473,6 @@
    }
   ],
   "2026-10-02": [
-   {
-    "time": "16:33",
-    "title": "GitHub: 29 commits to Planner",
-    "kind": "github",
-    "repo": "LeeMcConvilleAES/Planner",
-    "tagline": true,
-    "detail": "Planner: planned load from card; Planner: deleted enquiry; Planner: edited enquiry. Plus 732 automated commits by Ken and the apps"
-   },
    {
     "time": "20:14",
     "title": "Updated Ken Agent V21.8",
@@ -2876,6 +2676,14 @@
     "project": "kensite-infotime-weekly-clocking"
    },
    {
+    "time": "15:36",
+    "title": "GitHub: 4 commits to Planner",
+    "kind": "github",
+    "repo": "LeeMcConvilleAES/Planner",
+    "tagline": true,
+    "detail": "Planner V4.5: job code on every run pill; Planner V4.4: codes are job order in the day; Planner V4.3: runs split on bed space. Plus 505 commits made by Ken and the apps"
+   },
+   {
     "time": "15:37",
     "title": "Retired InfoTime Weekly Clocking Report",
     "detail": "Retires old weekly clocking report, replaced by automated turnstile-based report",
@@ -2924,14 +2732,6 @@
     "project": "kensite-infotime-weekly-clocking"
    },
    {
-    "time": "20:01",
-    "title": "GitHub: 31 commits to Planner",
-    "kind": "github",
-    "repo": "LeeMcConvilleAES/Planner",
-    "tagline": true,
-    "detail": "Planner: planned load from card; Planner V4.5: job code on every run pill; Planner: moved load. Plus 478 automated commits by Ken and the apps"
-   },
-   {
     "title": "Emails: 89 received, 44 sent",
     "kind": "email"
    }
@@ -2971,15 +2771,7 @@
     "kind": "github",
     "repo": "Nathanjmcg/MTCO-AI",
     "tagline": true,
-    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update README.md from Automations folder. Plus 8 automated commits by Ken and the apps"
-   },
-   {
-    "time": "15:16",
-    "title": "GitHub: 11 commits to Planner",
-    "kind": "github",
-    "repo": "LeeMcConvilleAES/Planner",
-    "tagline": true,
-    "detail": "Planner: planned load from card; Planner: edited enquiry. Plus 483 automated commits by Ken and the apps"
+    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update README.md from Automations folder. Plus 9 commits made by Ken and the apps"
    },
    {
     "title": "Built New Report Quote Outcomes by SubGroup",
