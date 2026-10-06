@@ -1,6 +1,10 @@
 """
 MTCO AI Roadmap planner component
-Version 1.1
+Version 1.2
+
+1.2: the AI Summit picker is gone; workflow carries the Nathan Workflow
+entries ({"entries": {"YYYY-MM-DD": [...]}}) to the Planner calendar. The
+calendar is read only, so the only value coming back is still the plan.
 
 1.1: the AI Summit picker rides in the same component. summit carries the
 programme and everyone's saved picks in; a save comes back as
@@ -22,11 +26,10 @@ _component = components.declare_component("mtco_planner", path=str(_FRONTEND))
 
 
 def planner(dashboard_html, roadmap, plan, can_save, saved_at="", height=900, key=None,
-            summit=None, summit_saved_at=""):
-    """Render the board. Returns None until someone saves, then either the plan
-    {"kind": "plan", "lanes": {"now": [...], "next": [...], "later": [...]}, "nonce": n}
-    or a summit pick {"kind": "summit", "name": ..., "keys": [...], "nonce": n}."""
+            workflow=None):
+    """Render the board. Returns None until someone saves, then the plan
+    {"kind": "plan", "lanes": {"now": [...], "next": [...], "later": [...]}, "nonce": n}."""
     return _component(dashboard_html=dashboard_html, roadmap=roadmap, plan=plan,
                       can_save=bool(can_save), saved_at=saved_at, height=height,
-                      summit=summit, summit_saved_at=summit_saved_at,
+                      workflow=workflow or {"entries": {}},
                       key=key, default=None)
