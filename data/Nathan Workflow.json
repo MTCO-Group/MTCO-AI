@@ -8,18 +8,114 @@
    {
     "time": "23:41",
     "title": "Updated Big Change Fetch 1.1"
+   },
+   {
+    "title": "Emails: 69 received, 31 sent",
+    "kind": "email"
    }
   ],
   "2026-07-22": [
    {
     "time": "13:34",
     "title": "Updated Store AES Key 1.2"
+   },
+   {
+    "title": "Emails: 88 received, 52 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-07-23": [
+   {
+    "title": "Emails: 31 received, 0 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-07-24": [
+   {
+    "title": "Emails: 51 received, 41 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-07-26": [
+   {
+    "title": "Emails: 1 received, 0 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-07-27": [
+   {
+    "title": "Emails: 8 received, 0 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-07-28": [
+   {
+    "title": "Emails: 0 received, 27 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-07-29": [
+   {
+    "title": "Emails: 0 received, 9 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-07-30": [
+   {
+    "title": "Emails: 0 received, 23 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-07-31": [
+   {
+    "title": "Emails: 0 received, 3 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-01": [
+   {
+    "title": "Emails: 0 received, 3 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-05": [
+   {
+    "title": "Emails: 10 received, 20 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-06": [
+   {
+    "title": "Emails: 31 received, 0 sent",
+    "kind": "email"
    }
   ],
   "2026-08-07": [
    {
     "time": "11:35",
     "title": "Built Update MCS Credentials 1.0"
+   },
+   {
+    "title": "Emails: 34 received, 18 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-08": [
+   {
+    "title": "Emails: 2 received, 2 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-09": [
+   {
+    "title": "Emails: 7 received, 9 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-10": [
+   {
+    "title": "Emails: 58 received, 42 sent",
+    "kind": "email"
    }
   ],
   "2026-08-11": [
@@ -30,6 +126,22 @@
    {
     "time": "15:13",
     "title": "Updated MCS Contact Enrichment 1.3"
+   },
+   {
+    "title": "Emails: 62 received, 34 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-12": [
+   {
+    "title": "Emails: 48 received, 29 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-13": [
+   {
+    "title": "Emails: 80 received, 65 sent",
+    "kind": "email"
    }
   ],
   "2026-08-14": [
@@ -40,12 +152,20 @@
    {
     "time": "16:38",
     "title": "Updated Danfast Catalogue Sync 1.2"
+   },
+   {
+    "title": "Emails: 62 received, 28 sent",
+    "kind": "email"
    }
   ],
   "2026-08-15": [
    {
     "time": "20:49",
     "title": "Updated Publish App To GitHub 1.1"
+   },
+   {
+    "title": "Emails: 1 received, 1 sent",
+    "kind": "email"
    }
   ],
   "2026-08-16": [
@@ -56,12 +176,38 @@
    {
     "time": "15:36",
     "title": "Updated Quote Worker Bisect 2.0"
+   },
+   {
+    "title": "Emails: 10 received, 11 sent",
+    "kind": "email"
    }
   ],
   "2026-08-17": [
    {
     "time": "15:08",
     "title": "Built Repair Lost PO Stamps 1.0"
+   },
+   {
+    "title": "Emails: 83 received, 51 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-18": [
+   {
+    "title": "Emails: 61 received, 16 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-19": [
+   {
+    "title": "Emails: 70 received, 36 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-20": [
+   {
+    "title": "Emails: 90 received, 60 sent",
+    "kind": "email"
    }
   ],
   "2026-08-21": [
@@ -104,6 +250,16 @@
     "time": "",
     "title": "Updated Ken Agent V4.6",
     "detail": "Log review fixes, 21/08/2026"
+   },
+   {
+    "title": "Emails: 57 received, 27 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-22": [
+   {
+    "title": "Emails: 1 received, 0 sent",
+    "kind": "email"
    }
   ],
   "2026-08-23": [
@@ -115,6 +271,10 @@
     "time": "",
     "title": "Updated Ken Agent V4.8",
     "detail": "Ken gets a proper email signature, built to match the Kensite staff signature and the..."
+   },
+   {
+    "title": "Emails: 3 received, 5 sent",
+    "kind": "email"
    }
   ],
   "2026-08-24": [
@@ -218,6 +378,10 @@
     "time": "16:52",
     "title": "Updated Ken Agent V6.5",
     "detail": "Findreport only ever received its first word"
+   },
+   {
+    "title": "Emails: 75 received, 33 sent",
+    "kind": "email"
    }
   ],
   "2026-08-25": [
@@ -362,6 +526,10 @@
    {
     "time": "22:05",
     "title": "Updated Compound Drawing Watcher 1.1"
+   },
+   {
+    "title": "Emails: 88 received, 53 sent",
+    "kind": "email"
    }
   ],
   "2026-08-26": [
@@ -372,6 +540,10 @@
    {
     "time": "09:27",
     "title": "Updated Site Builder Deploy 1.1"
+   },
+   {
+    "title": "Emails: 54 received, 10 sent",
+    "kind": "email"
    }
   ],
   "2026-08-27": [
@@ -400,6 +572,10 @@
     "time": "",
     "title": "Updated Ken Agent V8.9",
     "detail": "The invoice fetch"
+   },
+   {
+    "title": "Emails: 46 received, 27 sent",
+    "kind": "email"
    }
   ],
   "2026-08-28": [
@@ -417,6 +593,28 @@
     "time": "16:04",
     "title": "Updated Ken Agent V9.2",
     "detail": "Ken sends Site Builder drawing PDFs to Kensite colleagues"
+   },
+   {
+    "title": "Emails: 37 received, 9 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-29": [
+   {
+    "title": "Emails: 8 received, 3 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-30": [
+   {
+    "title": "Emails: 2 received, 0 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-08-31": [
+   {
+    "title": "Emails: 5 received, 0 sent",
+    "kind": "email"
    }
   ],
   "2026-09-01": [
@@ -450,12 +648,20 @@
     "time": "16:06",
     "title": "Updated Ken Agent V9.5",
     "detail": "Ken can search every quote in MCS by customer and by date"
+   },
+   {
+    "title": "Emails: 86 received, 33 sent",
+    "kind": "email"
    }
   ],
   "2026-09-02": [
    {
     "time": "11:29",
     "title": "Updated Big Change Reconciliation Worker 2.3"
+   },
+   {
+    "title": "Emails: 93 received, 31 sent",
+    "kind": "email"
    }
   ],
   "2026-09-03": [
@@ -578,6 +784,22 @@
     "time": "23:38",
     "title": "Updated Ken Agent V11.7",
     "detail": "A dashboard probe: who holds each lock port and 8501, the newest Mission Control on..."
+   },
+   {
+    "title": "Emails: 93 received, 45 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-09-04": [
+   {
+    "title": "Emails: 74 received, 20 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-09-05": [
+   {
+    "title": "Emails: 1 received, 0 sent",
+    "kind": "email"
    }
   ],
   "2026-09-06": [
@@ -659,6 +881,16 @@
     "time": "22:54",
     "title": "Updated Ken Agent V13.2",
     "detail": "The 32ft 3+1 split unit at Nathan's fixed £110 a week, £122.50 with a shower, on the..."
+   },
+   {
+    "title": "Emails: 20 received, 18 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-09-07": [
+   {
+    "title": "Emails: 75 received, 24 sent",
+    "kind": "email"
    }
   ],
   "2026-09-08": [
@@ -732,6 +964,10 @@
    {
     "time": "21:40",
     "title": "Updated Big Change Reconciliation Worker 3.2"
+   },
+   {
+    "title": "Emails: 106 received, 53 sent",
+    "kind": "email"
    }
   ],
   "2026-09-09": [
@@ -799,6 +1035,10 @@
     "time": "22:05",
     "title": "Updated Ken Agent V15.2",
     "detail": "The rehire search is asked first and its orders are the only ones opened when it finds..."
+   },
+   {
+    "title": "Emails: 88 received, 31 sent",
+    "kind": "email"
    }
   ],
   "2026-09-10": [
@@ -818,6 +1058,10 @@
     "time": "12:29",
     "title": "Updated Ken Agent V15.3",
     "detail": "Every job on a purchase order gets its POD (bc_find_jobs, fetch_pods, summarise_pods),..."
+   },
+   {
+    "title": "Emails: 73 received, 30 sent",
+    "kind": "email"
    }
   ],
   "2026-09-11": [
@@ -830,6 +1074,22 @@
     "time": "15:13",
     "title": "Updated Ken Agent V15.5",
     "detail": "Photographs that do not fit on the reply are sent in follow up emails on the same..."
+   },
+   {
+    "title": "Emails: 83 received, 34 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-09-13": [
+   {
+    "title": "Emails: 4 received, 0 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-09-14": [
+   {
+    "title": "Emails: 59 received, 24 sent",
+    "kind": "email"
    }
   ],
   "2026-09-15": [
@@ -842,6 +1102,10 @@
     "time": "21:59",
     "title": "Updated Ken Agent V15.7",
     "detail": "Ken can move, edit and delete entries on the MTCO Group AI Roadmap, not only propose them"
+   },
+   {
+    "title": "Emails: 62 received, 5 sent",
+    "kind": "email"
    }
   ],
   "2026-09-16": [
@@ -890,6 +1154,10 @@
     "time": "22:49",
     "title": "Updated Ken Agent V15.9",
     "detail": "Every request to OpenRouter now refuses providers that keep or train on what is sent"
+   },
+   {
+    "title": "Emails: 75 received, 19 sent",
+    "kind": "email"
    }
   ],
   "2026-09-17": [
@@ -912,6 +1180,10 @@
     "time": "13:00",
     "title": "Updated Ken Agent V16.3",
     "detail": "A config change no longer waits for a version of Ken"
+   },
+   {
+    "title": "Emails: 66 received, 26 sent",
+    "kind": "email"
    }
   ],
   "2026-09-18": [
@@ -919,6 +1191,10 @@
     "time": "10:08",
     "title": "Updated Ken Agent V16.4",
     "detail": "Ken watches the Enquiries mailbox for off hires"
+   },
+   {
+    "title": "Emails: 65 received, 26 sent",
+    "kind": "email"
    }
   ],
   "2026-09-19": [
@@ -1000,6 +1276,16 @@
     "time": "22:37",
     "title": "Updated Ken Agent V17.9",
     "detail": "Summit_send_ask(fresh=True)"
+   },
+   {
+    "title": "Emails: 26 received, 27 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-09-20": [
+   {
+    "title": "Emails: 3 received, 3 sent",
+    "kind": "email"
    }
   ],
   "2026-09-21": [
@@ -1022,6 +1308,10 @@
     "time": "17:14",
     "title": "Updated Ken Agent V18.3",
     "detail": "Zahara conversationally, on the documented api"
+   },
+   {
+    "title": "Emails: 80 received, 24 sent",
+    "kind": "email"
    }
   ],
   "2026-09-22": [
@@ -1057,6 +1347,10 @@
     "time": "15:22",
     "title": "Updated Ken Agent V18.8",
     "detail": "The SLA takes the requester's own sections, and the Kensite contacts come from config"
+   },
+   {
+    "title": "Emails: 60 received, 11 sent",
+    "kind": "email"
    }
   ],
   "2026-09-23": [
@@ -1064,6 +1358,34 @@
     "time": "15:27",
     "title": "Updated Ken Agent V18.9",
     "detail": "A probe for the AES planner feed, before any feed"
+   },
+   {
+    "title": "Emails: 79 received, 24 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-09-24": [
+   {
+    "title": "Emails: 61 received, 2 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-09-25": [
+   {
+    "title": "Emails: 70 received, 0 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-09-26": [
+   {
+    "title": "Emails: 2 received, 0 sent",
+    "kind": "email"
+   }
+  ],
+  "2026-09-27": [
+   {
+    "title": "Emails: 4 received, 4 sent",
+    "kind": "email"
    }
   ],
   "2026-09-28": [
@@ -1127,6 +1449,10 @@
     "time": "21:52",
     "title": "Updated Ken Agent V19.8",
     "detail": "The Site Visit report restyled to Kensite Brand Guidelines V1 2025: stacked black and..."
+   },
+   {
+    "title": "Emails: 104 received, 34 sent",
+    "kind": "email"
    }
   ],
   "2026-09-29": [
@@ -1187,6 +1513,10 @@
    {
     "time": "21:31",
     "title": "Updated Big Change Reconciliation Worker 4.0"
+   },
+   {
+    "title": "Emails: 112 received, 48 sent",
+    "kind": "email"
    }
   ],
   "2026-09-30": [
@@ -1203,6 +1533,10 @@
    {
     "time": "14:37",
     "title": "Updated Big Change Reconciliation Worker 4.1"
+   },
+   {
+    "title": "Emails: 98 received, 46 sent",
+    "kind": "email"
    }
   ],
   "2026-10-01": [
@@ -1264,6 +1598,10 @@
     "time": "22:11",
     "title": "Updated Ken Agent V21.7",
     "detail": "Ken reports what each AES service driver charged per week for the planner's Mission..."
+   },
+   {
+    "title": "Emails: 112 received, 67 sent",
+    "kind": "email"
    }
   ],
   "2026-10-02": [
@@ -1321,6 +1659,10 @@
     "time": "22:35",
     "title": "Updated Ken Agent V22.4",
     "detail": "Aes_schedule_changes groups a run entry under the job's Big Change day (aes_job_day),..."
+   },
+   {
+    "title": "Emails: 52 received, 4 sent",
+    "kind": "email"
    }
   ],
   "2026-10-03": [
@@ -1333,6 +1675,12 @@
     "time": "",
     "title": "Updated Ken Agent V22.6",
     "detail": "Aes_depot_between; aes_plan_day, aes_route_miles (literal_runs for the comparison),..."
+   }
+  ],
+  "2026-10-04": [
+   {
+    "title": "Emails: 4 received, 1 sent",
+    "kind": "email"
    }
   ],
   "2026-10-05": [
@@ -1427,6 +1775,10 @@
     "time": "17:12",
     "title": "Updated Ken Agent V23.9",
     "detail": "The clocking workbook gains a Notes column; a full day off in Breathe with swipes..."
+   },
+   {
+    "title": "Emails: 89 received, 44 sent",
+    "kind": "email"
    }
   ],
   "2026-10-06": [
@@ -1451,6 +1803,10 @@
    {
     "title": "Built New Report Quote Outcomes by SubGroup",
     "detail": "MCS user report 67: one row per quote per subgroup with outcome and rejection reason"
+   },
+   {
+    "title": "Emails: 48 received, 17 sent",
+    "kind": "email"
    }
   ]
  },
