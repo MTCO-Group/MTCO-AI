@@ -2,6 +2,14 @@
  "entries": {
   "2026-07-21": [
    {
+    "time": "20:23",
+    "title": "GitHub: 12 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Live hire report log cleared; Live hire report worker update; Live hire report request added"
+   },
+   {
     "time": "22:59",
     "title": "Updated Store BigChange Credentials 1.1",
     "detail": "Enables secure, hands-free sign-in for automated tools",
@@ -29,17 +37,41 @@
     "project": "aes-auto-updating-schedule-for-aes"
    },
    {
+    "time": "15:41",
+    "title": "GitHub: 30 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Update schedule; Live hire report log cleared"
+   },
+   {
     "title": "Emails: 88 received, 52 sent",
     "kind": "email"
    }
   ],
   "2026-07-23": [
    {
+    "time": "16:38",
+    "title": "GitHub: 10 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Update schedule; Live hire report request added"
+   },
+   {
     "title": "Emails: 31 received, 0 sent",
     "kind": "email"
    }
   ],
   "2026-07-24": [
+   {
+    "time": "15:01",
+    "title": "GitHub: 36 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Update schedule; MCS auto-move: 1 delivery date(s)"
+   },
    {
     "title": "Emails: 51 received, 41 sent",
     "kind": "email"
@@ -53,11 +85,27 @@
   ],
   "2026-07-27": [
    {
+    "time": "09:21",
+    "title": "GitHub: 2 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Update schedule; Live hire report request added"
+   },
+   {
     "title": "Emails: 8 received, 0 sent",
     "kind": "email"
    }
   ],
   "2026-07-28": [
+   {
+    "time": "16:21",
+    "title": "GitHub: 14 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Update schedule; MCS auto-add: 2 missing jobs"
+   },
    {
     "title": "Emails: 0 received, 27 sent",
     "kind": "email"
@@ -65,17 +113,41 @@
   ],
   "2026-07-29": [
    {
+    "time": "10:31",
+    "title": "GitHub: 4 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; MCS auto-move: 7 delivery date(s)"
+   },
+   {
     "title": "Emails: 0 received, 9 sent",
     "kind": "email"
    }
   ],
   "2026-07-30": [
    {
+    "time": "16:01",
+    "title": "GitHub: 14 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; MCS auto-add: 2 missing jobs; Update schedule"
+   },
+   {
     "title": "Emails: 0 received, 23 sent",
     "kind": "email"
    }
   ],
   "2026-07-31": [
+   {
+    "time": "12:20",
+    "title": "GitHub: 1 commit to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 3 missing jobs"
+   },
    {
     "title": "Emails: 0 received, 3 sent",
     "kind": "email"
@@ -87,13 +159,39 @@
     "kind": "email"
    }
   ],
+  "2026-08-03": [
+   {
+    "time": "14:19",
+    "title": "GitHub: 1 commit to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Live hire report request added"
+   }
+  ],
   "2026-08-05": [
+   {
+    "time": "12:23",
+    "title": "GitHub: 4 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Live hire report request added; Live hire report worker update"
+   },
    {
     "title": "Emails: 10 received, 20 sent",
     "kind": "email"
    }
   ],
   "2026-08-06": [
+   {
+    "time": "15:24",
+    "title": "GitHub: 23 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Update schedule; Live hire report request added"
+   },
    {
     "title": "Emails: 31 received, 0 sent",
     "kind": "email"
@@ -107,11 +205,27 @@
     "project": ""
    },
    {
+    "time": "21:42",
+    "title": "GitHub: 12 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 3 missing jobs; Update schedule; MCS auto-add: 1 missing jobs"
+   },
+   {
     "title": "Emails: 34 received, 18 sent",
     "kind": "email"
    }
   ],
   "2026-08-08": [
+   {
+    "time": "12:23",
+    "title": "GitHub: 1 commit to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Add files via upload"
+   },
    {
     "title": "Emails: 2 received, 2 sent",
     "kind": "email"
@@ -125,6 +239,22 @@
   ],
   "2026-08-10": [
    {
+    "time": "14:25",
+    "title": "GitHub: 1 commit to Kensite-Hire-Dashboard",
+    "kind": "github",
+    "repo": "Nathanjmcg/Kensite-Hire-Dashboard",
+    "tagline": true,
+    "detail": "Add files via upload"
+   },
+   {
+    "time": "22:04",
+    "title": "GitHub: 42 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Update app.py from Automations folder; Update schedule; MCS auto-add: 1 missing jobs"
+   },
+   {
     "title": "Emails: 58 received, 42 sent",
     "kind": "email"
    }
@@ -136,6 +266,14 @@
     "detail": "Shows which accounts lack contact email or phone details in a branded report",
     "tagline": true,
     "project": "kensite-mcs-contact-enrichment"
+   },
+   {
+    "time": "15:10",
+    "title": "GitHub: 47 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Update app.py from Automations folder; MCS auto-add: 1 missing jobs; Copy invoice request c1cde2fbef: done"
    },
    {
     "time": "15:13",
@@ -151,11 +289,27 @@
   ],
   "2026-08-12": [
    {
+    "time": "16:30",
+    "title": "GitHub: 34 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Copy invoice request 00b131cd49: done; Copy invoice request 00b131cd49: sending"
+   },
+   {
     "title": "Emails: 48 received, 29 sent",
     "kind": "email"
    }
   ],
   "2026-08-13": [
+   {
+    "time": "16:51",
+    "title": "GitHub: 41 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Update schedule; MCS auto-add: 1 missing jobs; Auto-clear live hire report log"
+   },
    {
     "title": "Emails: 80 received, 65 sent",
     "kind": "email"
@@ -175,6 +329,14 @@
     "detail": "Catalogue sync now keeps product codes and list prices ready for purchase orders",
     "tagline": true,
     "project": "kensite-materials-po-worker"
+   },
+   {
+    "time": "21:44",
+    "title": "GitHub: 41 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Update schedule; Update app.py from Automations folder; Materials PO worker update"
    },
    {
     "title": "Emails: 62 received, 28 sent",
@@ -210,6 +372,14 @@
     "project": "kensite-ken-operations-agent"
    },
    {
+    "time": "20:11",
+    "title": "GitHub: 33 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Live hire report log cleared; Quote log cleared; Quote worker update"
+   },
+   {
     "title": "Emails: 10 received, 11 sent",
     "kind": "email"
    }
@@ -223,11 +393,27 @@
     "project": "kensite-materials-po-worker"
    },
    {
+    "time": "16:09",
+    "title": "GitHub: 34 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Update schedule; Update app.py from Automations folder; Materials PO worker update"
+   },
+   {
     "title": "Emails: 83 received, 51 sent",
     "kind": "email"
    }
   ],
   "2026-08-18": [
+   {
+    "time": "14:24",
+    "title": "GitHub: 13 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Materials PO worker update; Update schedule; MCS auto-add: 3 missing jobs"
+   },
    {
     "title": "Emails: 61 received, 16 sent",
     "kind": "email"
@@ -235,11 +421,27 @@
   ],
   "2026-08-19": [
    {
+    "time": "13:40",
+    "title": "GitHub: 21 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Auto-clear live hire report log; Live hire report worker update; Live hire report request added"
+   },
+   {
     "title": "Emails: 70 received, 36 sent",
     "kind": "email"
    }
   ],
   "2026-08-20": [
+   {
+    "time": "20:11",
+    "title": "GitHub: 25 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 2 missing jobs; MCS auto-add: 1 missing jobs; Update schedule"
+   },
    {
     "title": "Emails: 90 received, 60 sent",
     "kind": "email"
@@ -280,6 +482,14 @@
     "detail": "Refreshes dashboard layout with clearer wishlist and quick reload",
     "tagline": true,
     "project": "kensite-ken-operations-agent"
+   },
+   {
+    "time": "15:31",
+    "title": "GitHub: 5 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs"
    },
    {
     "time": "",
@@ -424,6 +634,14 @@
     "detail": "Fix probe arguments and report errors properly",
     "tagline": true,
     "project": "kensite-ken-operations-agent"
+   },
+   {
+    "time": "13:59",
+    "title": "GitHub: 14 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Materials PO worker update; Update schedule; MCS auto-add: 1 missing jobs"
    },
    {
     "time": "14:11",
@@ -684,6 +902,14 @@
     "project": "kensite-materials-po-worker"
    },
    {
+    "time": "15:32",
+    "title": "GitHub: 23 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-move: 1 delivery date(s); MCS auto-add: 1 missing jobs; Materials PO worker update"
+   },
+   {
     "time": "20:55",
     "title": "Built Site Builder Deploy 1.0",
     "detail": "App updates can be published without logging in, with drawings and deletions protected",
@@ -705,6 +931,14 @@
     "project": "kensite-site-builder"
    },
    {
+    "time": "22:11",
+    "title": "GitHub: 13 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Issue 12345-JGM-SK53F7 v1.1; 12345-JGM-SK53F7 v1.1; 12345-JGM-SK53F7 v1.0"
+   },
+   {
     "title": "Emails: 88 received, 53 sent",
     "kind": "email"
    }
@@ -723,6 +957,22 @@
     "detail": "Push app updates without logging in, keeping customer drawings untouched",
     "tagline": true,
     "project": "kensite-site-builder"
+   },
+   {
+    "time": "14:44",
+    "title": "GitHub: 87 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log 12588-ACONNOLY-ZTF5ZJ; 12588-ACONNOLY-ZTF5ZJ v1.5; 12588-ACONNOLY-ZTF5ZJ v1.4"
+   },
+   {
+    "time": "16:03",
+    "title": "GitHub: 15 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-move: 1 delivery date(s); MCS auto-add: 1 missing jobs; MCS auto-add: 2 missing jobs"
    },
    {
     "title": "Emails: 54 received, 10 sent",
@@ -766,6 +1016,22 @@
     "project": "kensite-weekly-check-up"
    },
    {
+    "time": "15:12",
+    "title": "GitHub: 12 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Update schedule; MCS auto-move: 1 delivery date(s)"
+   },
+   {
+    "time": "15:43",
+    "title": "GitHub: 18 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log 31163-NCHESTERANDC-EBES4F; 31163-NCHESTERANDC-EBES4F v1.0; Issue 31912-TERMRIM-22JMUV v1.2"
+   },
+   {
     "time": "",
     "title": "Updated Ken Agent V8.9",
     "detail": "Document reads now work reliably ending false claims that invoices are missing",
@@ -786,11 +1052,27 @@
     "project": "kensite-site-builder"
    },
    {
+    "time": "15:34",
+    "title": "GitHub: 37 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Update schedule; Materials PO worker update"
+   },
+   {
     "time": "15:38",
     "title": "Updated Ken Agent V9.1",
     "detail": "Sped up drawing request turnaround by checking more frequently",
     "tagline": true,
     "project": "kensite-site-builder"
+   },
+   {
+    "time": "15:48",
+    "title": "GitHub: 13 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ2808-KENSITE-6ABNFG; Ken: request 20260828-144737-KENSITE.json done; Ken: drawing for Kensite (20260828-144737-KENSITE.json)"
    },
    {
     "time": "16:04",
@@ -806,11 +1088,35 @@
   ],
   "2026-08-29": [
    {
+    "time": "12:08",
+    "title": "GitHub: 9 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ2908-CITYFM-ZJWWB5; Issue ENQ2908-CITYFM-ZJWWB5 v1.1; Issue 00001-ACONNOLLY-A25H3V v1.1"
+   },
+   {
+    "time": "15:16",
+    "title": "GitHub: 3 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Update schedule"
+   },
+   {
     "title": "Emails: 8 received, 3 sent",
     "kind": "email"
    }
   ],
   "2026-08-30": [
+   {
+    "time": "21:32",
+    "title": "GitHub: 10 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log 31501-MWH-J7FR2X; Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html"
+   },
    {
     "title": "Emails: 2 received, 0 sent",
     "kind": "email"
@@ -866,6 +1172,22 @@
     "project": "kensite-big-change-reconciliation"
    },
    {
+    "time": "15:11",
+    "title": "GitHub: 47 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ0109-JRCE-4Z5FMW; Issue ENQ0109-JRCE-4Z5FMW v1.1; ENQ0109-JRCE-4Z5FMW v1.1"
+   },
+   {
+    "time": "15:24",
+    "title": "GitHub: 12 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Copy invoice request c3de76b35f: done; Copy invoice request c3de76b35f: sending"
+   },
+   {
     "time": "16:06",
     "title": "Updated Ken Agent V9.5",
     "detail": "Search all quotes by customer and date with clear nil or fault answers",
@@ -884,6 +1206,22 @@
     "detail": "Added raw invoice data export to cross-check reconciliations more reliably",
     "tagline": true,
     "project": "kensite-big-change-reconciliation"
+   },
+   {
+    "time": "13:30",
+    "title": "GitHub: 13 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ0209-SILVERGLIDE-9MHYBW; Issue ENQ0209-SILVERGLIDE-9MHYBW v1.2; ENQ0209-SILVERGLIDE-9MHYBW v1.2"
+   },
+   {
+    "time": "16:57",
+    "title": "GitHub: 16 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Materials PO worker update; Update schedule"
    },
    {
     "title": "Emails: 93 received, 31 sent",
@@ -918,6 +1256,14 @@
     "detail": "Quote search now returns accurate results with revisions and statuses",
     "tagline": true,
     "project": "kensite-quote-trends"
+   },
+   {
+    "time": "16:25",
+    "title": "GitHub: 8 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Update schedule; Materials PO worker update"
    },
    {
     "time": "16:45",
@@ -1031,6 +1377,14 @@
     "project": "kensite-ken-operations-agent"
    },
    {
+    "time": "23:11",
+    "title": "GitHub: 10 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log 31501-MWH-J7FR2X; Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html"
+   },
+   {
     "time": "23:24",
     "title": "Updated Ken Agent V11.4",
     "detail": "Dashboard automatically updates to newest version without manual restart",
@@ -1071,6 +1425,22 @@
    }
   ],
   "2026-09-04": [
+   {
+    "time": "16:26",
+    "title": "GitHub: 18 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-move: 1 delivery date(s); Copy invoice request 78729d8d94: done; Copy invoice request 78729d8d94: sending"
+   },
+   {
+    "time": "16:32",
+    "title": "GitHub: 64 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log _INVALID; Issue ENQ0409-MCIDEVELOPME-XQ22BC v1.1; Issue ENQ0409-ANDMOREHOMES-9PJDCM v1.1"
+   },
    {
     "title": "Emails: 74 received, 20 sent",
     "kind": "email"
@@ -1189,6 +1559,14 @@
     "project": "kensite-ken-operations-agent"
    },
    {
+    "time": "22:44",
+    "title": "GitHub: 6 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Issue ENQ0609-ACMECIVILS-UVG7U7 v1.1; ENQ0609-ACMECIVILS-UVG7U7 v1.1; Access log ENQ0609-ACMECIVILS-UVG7U7"
+   },
+   {
     "time": "22:54",
     "title": "Updated Ken Agent V13.2",
     "detail": "Added fixed pricing for a split unit whether requested in words or drawings",
@@ -1202,11 +1580,35 @@
   ],
   "2026-09-07": [
    {
+    "time": "13:06",
+    "title": "GitHub: 15 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "ENQ0709-ACONNOLLY-UG9H8Q v1.1; Access log ENQ0709-ACONNOLLY-UG9H8Q; Ken: request 20260907-115647-ACONNOLLY.json done"
+   },
+   {
+    "time": "16:26",
+    "title": "GitHub: 19 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 2 missing jobs; Auto-clear live hire report log; Copy invoice request 02990fd706: done"
+   },
+   {
     "title": "Emails: 75 received, 24 sent",
     "kind": "email"
    }
   ],
   "2026-09-08": [
+   {
+    "time": "10:40",
+    "title": "GitHub: 3 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Issue ENQ0709-ACONNOLLY-UG9H8Q v1.2; ENQ0709-ACONNOLLY-UG9H8Q v1.2; Access log ENQ0709-ACONNOLLY-UG9H8Q"
+   },
    {
     "time": "11:00",
     "title": "Updated Ken Agent V13.3",
@@ -1271,6 +1673,14 @@
     "project": "kensite-ken-operations-agent"
    },
    {
+    "time": "15:23",
+    "title": "GitHub: 7 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Auto-clear live hire report log; Live hire report worker update"
+   },
+   {
     "time": "15:50",
     "title": "Updated Ken Agent V13.9",
     "detail": "Targets individual quote lines instead of changing every matching code",
@@ -1325,6 +1735,22 @@
    }
   ],
   "2026-09-09": [
+   {
+    "time": "12:56",
+    "title": "GitHub: 24 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Issue ENQ0909-TERMRIMCONST-4BPAKS v1.4; ENQ0909-TERMRIMCONST-4BPAKS v1.4; Access log ENQ0909-TERMRIMCONST-4BPAKS"
+   },
+   {
+    "time": "12:58",
+    "title": "GitHub: 11 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Auto-clear copy invoice log; Copy invoice request f41259c68f: done"
+   },
    {
     "time": "14:58",
     "title": "Updated Ken Agent V14.0",
@@ -1451,6 +1877,22 @@
     "project": "kensite-ken-operations-agent"
    },
    {
+    "time": "16:04",
+    "title": "GitHub: 20 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-move: 1 delivery date(s); MCS auto-add: 1 missing jobs; Auto-clear live hire report log"
+   },
+   {
+    "time": "16:11",
+    "title": "GitHub: 11 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "ENQ0209-SILVERGLIDE-9MHYBW v1.4; Access log ENQ0209-SILVERGLIDE-9MHYBW; Access log ENQ1009-MCCONSTRUCTI-H9E5XP"
+   },
+   {
     "title": "Emails: 73 received, 30 sent",
     "kind": "email"
    }
@@ -1471,11 +1913,45 @@
     "project": "kensite-ken-operations-agent"
    },
    {
+    "time": "16:27",
+    "title": "GitHub: 43 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ1109-MCIDEVELOPME-XTN9MZ; ENQ1109-MCIDEVELOPME-XTN9MZ v1.6; Site Builder Deploy: update streamlit_app.py"
+   },
+   {
+    "time": "16:58",
+    "title": "GitHub: 23 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; MCS auto-add: 2 missing jobs; MCS auto-move: 1 delivery date(s)"
+   },
+   {
     "title": "Emails: 83 received, 34 sent",
     "kind": "email"
    }
   ],
+  "2026-09-12": [
+   {
+    "time": "02:55",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   }
+  ],
   "2026-09-13": [
+   {
+    "time": "01:29",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
    {
     "title": "Emails: 4 received, 0 sent",
     "kind": "email"
@@ -1483,11 +1959,43 @@
   ],
   "2026-09-14": [
    {
+    "time": "07:36",
+    "title": "GitHub: 5 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Issue ENQ1109-MCIDEVELOPME-XTN9MZ v1.6; Issue ENQ1009-MCCONSTRUCTI-H9E5XP v1.1; Issue ENQ0209-SILVERGLIDE-9MHYBW v1.4"
+   },
+   {
+    "time": "14:11",
+    "title": "GitHub: 16 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Auto-clear live hire report log; Copy invoice request fbf2f115ba: done; Copy invoice request fbf2f115ba: sending"
+   },
+   {
     "title": "Emails: 59 received, 24 sent",
     "kind": "email"
    }
   ],
   "2026-09-15": [
+   {
+    "time": "11:53",
+    "title": "GitHub: 6 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ1109-MCIDEVELOPME-XTN9MZ; Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html"
+   },
+   {
+    "time": "16:35",
+    "title": "GitHub: 11 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 2 missing jobs; MCS auto-move: 1 delivery date(s); MCS auto-add: 1 missing jobs"
+   },
    {
     "time": "21:48",
     "title": "Updated Ken Agent V15.6",
@@ -1501,6 +2009,22 @@
     "detail": "Roadmap entries can now be moved, edited or deleted, keeping timelines accurate",
     "tagline": true,
     "project": "mtco-ai-roadmap-tracker"
+   },
+   {
+    "time": "22:06",
+    "title": "GitHub: 8 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: propose Auto Updating Schedule for AES (aes); Update data/roadmap.json from Automations folder; Update README.md from Automations folder"
+   },
+   {
+    "time": "22:06",
+    "title": "GitHub: 8 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: propose Auto Updating Schedule for AES (aes); Update data/roadmap.json from Automations folder; Update README.md from Automations folder"
    },
    {
     "title": "Emails: 62 received, 5 sent",
@@ -1528,6 +2052,38 @@
     "detail": "Corrected site counts by using postcodes, so reports show true locations",
     "tagline": true,
     "project": "kensite-live-hire-report-worker"
+   },
+   {
+    "time": "12:44",
+    "title": "GitHub: 13 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update README.md from Automations folder"
+   },
+   {
+    "time": "12:44",
+    "title": "GitHub: 13 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update README.md from Automations folder"
+   },
+   {
+    "time": "13:40",
+    "title": "GitHub: 7 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "ENQ1609-BETHELL-XZVMEZ v1.1; Access log ENQ1609-BETHELL-XZVMEZ; Ken: request 20260916-120546-BETHELL.json done"
+   },
+   {
+    "time": "16:47",
+    "title": "GitHub: 17 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Live hire report request added; Copy invoice request 875888b7ee: done"
    },
    {
     "time": "21:25",
@@ -1620,11 +2176,51 @@
     "project": "kensite-ken-operations-agent"
    },
    {
+    "time": "14:53",
+    "title": "GitHub: 2 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: propose Off-Hire Inbox Monitor & Daily Summary (kensite); Ken: propose ESG & Compliance Dashboard for Site Setups (kensite)"
+   },
+   {
+    "time": "14:53",
+    "title": "GitHub: 2 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: propose Off-Hire Inbox Monitor & Daily Summary (kensite); Ken: propose ESG & Compliance Dashboard for Site Setups (kensite)"
+   },
+   {
+    "time": "14:58",
+    "title": "GitHub: 20 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ1709-KENSITE-HUJCT7; Ken: request 20260917-135602-KENSITE.json done; Ken: drawing for Kensite (20260917-135602-KENSITE.json)"
+   },
+   {
+    "time": "16:57",
+    "title": "GitHub: 28 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; MCS auto-move: 1 delivery date(s); Update schedule"
+   },
+   {
     "title": "Emails: 66 received, 26 sent",
     "kind": "email"
    }
   ],
   "2026-09-18": [
+   {
+    "time": "01:19",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
    {
     "time": "10:08",
     "title": "Updated Ken Agent V16.4",
@@ -1633,11 +2229,27 @@
     "project": "kensite-ken-operations-agent"
    },
    {
+    "time": "15:44",
+    "title": "GitHub: 18 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; MCS auto-add: 2 missing jobs; MCS auto-move: 1 delivery date(s)"
+   },
+   {
     "title": "Emails: 65 received, 26 sent",
     "kind": "email"
    }
   ],
   "2026-09-19": [
+   {
+    "time": "01:23",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
    {
     "time": "12:02",
     "title": "Updated Ken Agent V16.5",
@@ -1737,6 +2349,22 @@
     "project": "mtco-ai-roadmap-tracker"
    },
    {
+    "time": "22:11",
+    "title": "GitHub: 14 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "AI Summit: Nathan saved 11 session(s) from the dashboard; Update planner/frontend/index.html from Automations folder; Update app.py from Automations folder"
+   },
+   {
+    "time": "22:11",
+    "title": "GitHub: 14 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "AI Summit: Nathan saved 11 session(s) from the dashboard; Update planner/frontend/index.html from Automations folder; Update app.py from Automations folder"
+   },
+   {
     "time": "22:21",
     "title": "Updated Ken Agent V17.8",
     "detail": "Ask for roadmap ideas and session ratings after each summit session",
@@ -1757,6 +2385,30 @@
   ],
   "2026-09-20": [
    {
+    "time": "01:04",
+    "title": "GitHub: 3 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: keepalive; AI Summit: Chloe saved 15 session(s) from the dashboard; AI Summit: Chloe saved 8 session(s) from the dashboard"
+   },
+   {
+    "time": "01:04",
+    "title": "GitHub: 3 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: keepalive; AI Summit: Chloe saved 15 session(s) from the dashboard; AI Summit: Chloe saved 8 session(s) from the dashboard"
+   },
+   {
+    "time": "01:28",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
     "title": "Emails: 3 received, 3 sent",
     "kind": "email"
    }
@@ -1770,11 +2422,35 @@
     "project": "kensite-live-hire-report-worker"
    },
    {
+    "time": "15:43",
+    "title": "GitHub: 11 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; MCS auto-add: 2 missing jobs; Auto-clear live hire report log"
+   },
+   {
     "time": "16:25",
     "title": "Updated Ken Agent V18.1",
     "detail": "Turn forwarded meeting emails into calendar invites ready to send",
     "tagline": true,
     "project": "kensite-diary-from-email-forward-to-calendar-agent"
+   },
+   {
+    "time": "16:32",
+    "title": "GitHub: 6 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: move Diary-from-Email - Forward-to-Calendar Agent (kensite); Ken: propose Diary-from-Email - Forward-to-Calendar Agent (kensite); AI Summit: Lee saved 8 session(s) from the dashboard"
+   },
+   {
+    "time": "16:32",
+    "title": "GitHub: 6 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: move Diary-from-Email - Forward-to-Calendar Agent (kensite); Ken: propose Diary-from-Email - Forward-to-Calendar Agent (kensite); AI Summit: Lee saved 8 session(s) from the dashboard"
    },
    {
     "time": "16:44",
@@ -1789,6 +2465,14 @@
     "detail": "Enabled conversational answers on orders, invoices, approvals and full documents",
     "tagline": true,
     "project": "kensite-ken-operations-agent"
+   },
+   {
+    "time": "17:43",
+    "title": "GitHub: 4 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ0409-ANDMOREHOMES-9PJDCM; Access log ENQ1009-MCCONSTRUCTI-H9E5XP; Ken: keepalive"
    },
    {
     "title": "Emails: 80 received, 24 sent",
@@ -1832,6 +2516,22 @@
     "project": "kensite-rams-on-demand-agent"
    },
    {
+    "time": "14:08",
+    "title": "GitHub: 8 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: propose Business ESG Reporting for AES Fleet (aes); Update data/roadmap.json from Automations folder; Ken: propose AI Organisational Tree - Sub-Agent Architecture (kensite)"
+   },
+   {
+    "time": "14:08",
+    "title": "GitHub: 8 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: propose Business ESG Reporting for AES Fleet (aes); Update data/roadmap.json from Automations folder; Ken: propose AI Organisational Tree - Sub-Agent Architecture (kensite)"
+   },
+   {
     "time": "14:27",
     "title": "Built Check Repo Access 1.0",
     "detail": "Prove repository access and log the result without pushing changes",
@@ -1839,11 +2539,27 @@
     "project": ""
    },
    {
+    "time": "14:44",
+    "title": "GitHub: 4 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "ENQ1109-MCIDEVELOPME-XTN9MZ v1.7; Access log ENQ1109-MCIDEVELOPME-XTN9MZ; Ken: keepalive"
+   },
+   {
     "time": "15:22",
     "title": "Updated Ken Agent V18.8",
     "detail": "Let requesters add their own SLA sections and keep contacts up to date",
     "tagline": true,
     "project": "kensite-sla-request-agent"
+   },
+   {
+    "time": "16:14",
+    "title": "GitHub: 10 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Auto-clear live hire report log; Live hire request 7c9c362f5a: done; Live hire request 7c9c362f5a: running"
    },
    {
     "title": "Emails: 60 received, 11 sent",
@@ -1859,11 +2575,75 @@
     "project": "aes-auto-updating-schedule-for-aes"
    },
    {
+    "time": "16:27",
+    "title": "GitHub: 20 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; MCS auto-move: 1 delivery date(s); Copy invoice request 216822289c: done"
+   },
+   {
+    "time": "17:25",
+    "title": "GitHub: 8 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Issue ENQ2309-RBHEALTH-34GXEG v1.1; Issue ENQ1109-MCIDEVELOPME-XTN9MZ v1.7; ENQ2309-RBHEALTH-34GXEG v1.1"
+   },
+   {
+    "time": "19:37",
+    "title": "GitHub: 14 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: propose Shared AI Knowledge Repository (Event Transcripts) (mtco); Ken: propose Abnormal Load and Movement Notifications (aes); Ken: propose Cross-Hire Invoice Reconciliation (kensite)"
+   },
+   {
+    "time": "19:37",
+    "title": "GitHub: 14 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: propose Shared AI Knowledge Repository (Event Transcripts) (mtco); Ken: propose Abnormal Load and Movement Notifications (aes); Ken: propose Cross-Hire Invoice Reconciliation (kensite)"
+   },
+   {
     "title": "Emails: 79 received, 24 sent",
     "kind": "email"
    }
   ],
   "2026-09-24": [
+   {
+    "time": "09:32",
+    "title": "GitHub: 3 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ1109-MCIDEVELOPME-XTN9MZ; Ken: keepalive"
+   },
+   {
+    "time": "16:57",
+    "title": "GitHub: 19 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Auto-clear copy invoice log; Copy invoice request 6fe1c55596: done"
+   },
+   {
+    "time": "20:41",
+    "title": "GitHub: 3 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: move Auto Updating Schedule for AES (aes); Ken: edit Auto Updating Schedule for AES (aes); Ken: keepalive"
+   },
+   {
+    "time": "20:41",
+    "title": "GitHub: 3 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: move Auto Updating Schedule for AES (aes); Ken: edit Auto Updating Schedule for AES (aes); Ken: keepalive"
+   },
    {
     "title": "Emails: 61 received, 2 sent",
     "kind": "email"
@@ -1871,11 +2651,67 @@
   ],
   "2026-09-25": [
    {
+    "time": "01:21",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "01:27",
+    "title": "GitHub: 1 commit to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "01:27",
+    "title": "GitHub: 1 commit to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "16:14",
+    "title": "GitHub: 26 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Update schedule; Copy invoice request d8e2ebb7e0: done"
+   },
+   {
     "title": "Emails: 70 received, 0 sent",
     "kind": "email"
    }
   ],
   "2026-09-26": [
+   {
+    "time": "01:02",
+    "title": "GitHub: 1 commit to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "01:02",
+    "title": "GitHub: 1 commit to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "10:23",
+    "title": "GitHub: 2 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ0909-TERMRIMCONST-4BPAKS; Ken: keepalive"
+   },
    {
     "title": "Emails: 2 received, 0 sent",
     "kind": "email"
@@ -1883,11 +2719,59 @@
   ],
   "2026-09-27": [
    {
+    "time": "01:01",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "01:07",
+    "title": "GitHub: 1 commit to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "01:07",
+    "title": "GitHub: 1 commit to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
     "title": "Emails: 4 received, 4 sent",
     "kind": "email"
    }
   ],
   "2026-09-28": [
+   {
+    "time": "01:04",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "01:10",
+    "title": "GitHub: 1 commit to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "01:10",
+    "title": "GitHub: 1 commit to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
    {
     "time": "10:55",
     "title": "Updated Ken Agent V19.0",
@@ -1929,6 +2813,14 @@
     "detail": "Run and driver mileage totals now include site-to-site distances",
     "tagline": true,
     "project": "aes-auto-updating-schedule-for-aes"
+   },
+   {
+    "time": "16:06",
+    "title": "GitHub: 14 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; Auto-clear copy invoice log; Copy invoice request 46faa2f617: done"
    },
    {
     "time": "16:35",
@@ -2021,6 +2913,14 @@
     "project": "aes-auto-updating-schedule-for-aes"
    },
    {
+    "time": "16:36",
+    "title": "GitHub: 29 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; MCS auto-move: 0 delivery and 1 collection date(s); Auto-clear copy invoice log"
+   },
+   {
     "time": "19:31",
     "title": "Updated Ken Agent V20.3",
     "detail": "Enabled safe automated management of web domains and settings",
@@ -2049,6 +2949,22 @@
     "project": "aes-auto-updating-schedule-for-aes"
    },
    {
+    "time": "19:57",
+    "title": "GitHub: 4 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: propose Quarterly Must-Dos 'What's Next' Window (kensite); Update the What's Next plan from the dashboard; Ken: propose AI Dynamic Pricing and Self-Serve Quoting Tool (AES) (aes…"
+   },
+   {
+    "time": "19:57",
+    "title": "GitHub: 4 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: propose Quarterly Must-Dos 'What's Next' Window (kensite); Update the What's Next plan from the dashboard; Ken: propose AI Dynamic Pricing and Self-Serve Quoting Tool (AES) (aes…"
+   },
+   {
     "time": "20:38",
     "title": "Updated Ken Agent V20.7",
     "detail": "Traced where a job's price is held before invoicing",
@@ -2063,6 +2979,14 @@
     "project": "aes-auto-updating-schedule-for-aes"
    },
    {
+    "time": "21:01",
+    "title": "GitHub: 44 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ2909-HSSPROSERVIC-KZJ9BS; Issue ENQ2909-HSSPROSERVIC-EMEUNC v1.8; ENQ2909-HSSPROSERVIC-EMEUNC v1.8"
+   },
+   {
     "time": "21:31",
     "title": "Updated Big Change Reconciliation Worker 4.0",
     "detail": "Sharpened reconciliation so more contracts match and credits are flagged",
@@ -2070,11 +2994,43 @@
     "project": "kensite-big-change-reconciliation"
    },
    {
+    "time": "23:59",
+    "title": "GitHub: 269 commits to Planner",
+    "kind": "github",
+    "repo": "LeeMcConvilleAES/Planner",
+    "tagline": true,
+    "detail": "Ken: Big Change checked 2026-09-29 23:59:08; Ken: Big Change checked 2026-09-29 23:57:00; Ken: Big Change checked 2026-09-29 23:54:56"
+   },
+   {
     "title": "Emails: 112 received, 48 sent",
     "kind": "email"
    }
   ],
   "2026-09-30": [
+   {
+    "time": "01:16",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "01:20",
+    "title": "GitHub: 1 commit to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "01:20",
+    "title": "GitHub: 1 commit to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
    {
     "time": "10:16",
     "title": "Updated Ken Agent V20.9",
@@ -2097,11 +3053,43 @@
     "project": "kensite-big-change-reconciliation"
    },
    {
+    "time": "15:22",
+    "title": "GitHub: 7 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-move: 0 delivery and 2 collection date(s); MCS auto-add: 1 missing jobs; MCS auto-move: 0 delivery and 1 collection date(s)"
+   },
+   {
+    "time": "16:20",
+    "title": "GitHub: 522 commits to Planner",
+    "kind": "github",
+    "repo": "LeeMcConvilleAES/Planner",
+    "tagline": true,
+    "detail": "Ken: Big Change checked 2026-09-30 16:20:06; Ken: Big Change checked 2026-09-30 16:17:54; Ken: Big Change checked 2026-09-30 16:15:48"
+   },
+   {
     "title": "Emails: 98 received, 46 sent",
     "kind": "email"
    }
   ],
   "2026-10-01": [
+   {
+    "time": "10:29",
+    "title": "GitHub: 1 commit to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "10:29",
+    "title": "GitHub: 1 commit to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
    {
     "time": "11:13",
     "title": "Updated Ken Agent V21.1",
@@ -2152,6 +3140,14 @@
     "project": "kensite-ken-operations-agent"
    },
    {
+    "time": "13:25",
+    "title": "GitHub: 48 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Issue ENQ0110-ARTIUM-5JX7S4 v1.4; ENQ0110-ARTIUM-5JX7S4 v1.4; Access log ENQ0110-ARTIUM-5JX7S4"
+   },
+   {
     "time": "13:28",
     "title": "Updated Ken Agent V21.3",
     "detail": "Fixes quote site details and accessory charges",
@@ -2180,6 +3176,14 @@
     "project": "kensite-materials-po-worker"
    },
    {
+    "time": "15:24",
+    "title": "GitHub: 19 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "Auto-clear copy invoice log; Copy invoice request 7b2e94caee: done; Copy invoice request 7b2e94caee: sending"
+   },
+   {
     "time": "17:16",
     "title": "Updated Ken Agent V21.6",
     "detail": "Runs emails, drawings and background tasks in parallel and caches job list",
@@ -2194,11 +3198,51 @@
     "project": "aes-auto-updating-schedule-for-aes"
    },
    {
+    "time": "23:59",
+    "title": "GitHub: 432 commits to Planner",
+    "kind": "github",
+    "repo": "LeeMcConvilleAES/Planner",
+    "tagline": true,
+    "detail": "Ken: Big Change checked 2026-10-01 23:59:53; Ken: Big Change checked 2026-10-01 23:57:46; Ken: Big Change checked 2026-10-01 23:55:41"
+   },
+   {
     "title": "Emails: 112 received, 67 sent",
     "kind": "email"
    }
   ],
   "2026-10-02": [
+   {
+    "time": "01:09",
+    "title": "GitHub: 1 commit to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "01:09",
+    "title": "GitHub: 1 commit to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "01:09",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "15:57",
+    "title": "GitHub: 5 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; MCS auto-move: 0 delivery and 1 collection date(s)"
+   },
    {
     "time": "20:14",
     "title": "Updated Ken Agent V21.8",
@@ -2284,11 +3328,27 @@
     "project": "aes-auto-updating-schedule-for-aes"
    },
    {
+    "time": "23:58",
+    "title": "GitHub: 761 commits to Planner",
+    "kind": "github",
+    "repo": "LeeMcConvilleAES/Planner",
+    "tagline": true,
+    "detail": "Ken: Big Change checked 2026-10-02 23:58:33; Ken: Big Change checked 2026-10-02 23:56:27; Ken: Big Change checked 2026-10-02 23:54:21"
+   },
+   {
     "title": "Emails: 52 received, 4 sent",
     "kind": "email"
    }
   ],
   "2026-10-03": [
+   {
+    "time": "00:42",
+    "title": "GitHub: 22 commits to Planner",
+    "kind": "github",
+    "repo": "LeeMcConvilleAES/Planner",
+    "tagline": true,
+    "detail": "Ken: Big Change checked 2026-10-03 00:42:33; Ken: Big Change checked 2026-10-03 00:40:27; Ken: Big Change checked 2026-10-03 00:38:51"
+   },
    {
     "time": "",
     "title": "Updated Ken Agent V22.5",
@@ -2317,6 +3377,30 @@
     "detail": "Ken now challenges unnecessary depot trips and suggests run amendments, saving miles",
     "tagline": true,
     "project": "aes-auto-updating-schedule-for-aes"
+   },
+   {
+    "time": "09:04",
+    "title": "GitHub: 1 commit to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "09:04",
+    "title": "GitHub: 1 commit to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Ken: keepalive"
+   },
+   {
+    "time": "09:04",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Ken: keepalive"
    },
    {
     "time": "09:41",
@@ -2409,6 +3493,14 @@
     "project": "kensite-infotime-weekly-clocking"
    },
    {
+    "time": "15:51",
+    "title": "GitHub: 26 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-move: 1 delivery and 0 collection date(s); Auto-clear live hire report log; MCS auto-add: 2 missing jobs"
+   },
+   {
     "time": "15:56",
     "title": "Updated Ken Agent V23.5",
     "detail": "Clocking report now automatically explains all blank days, removing ambiguous flags",
@@ -2450,11 +3542,27 @@
     "project": "kensite-infotime-weekly-clocking"
    },
    {
+    "time": "23:59",
+    "title": "GitHub: 509 commits to Planner",
+    "kind": "github",
+    "repo": "LeeMcConvilleAES/Planner",
+    "tagline": true,
+    "detail": "Ken: Big Change checked 2026-10-05 23:59:25; Ken: Big Change checked 2026-10-05 23:57:17; Ken: Big Change checked 2026-10-05 23:55:10"
+   },
+   {
     "title": "Emails: 89 received, 44 sent",
     "kind": "email"
    }
   ],
   "2026-10-06": [
+   {
+    "time": "09:38",
+    "title": "GitHub: 4 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "Nathanjmcg/Compound-Builder",
+    "tagline": true,
+    "detail": "Access log ENQ1109-MCIDEVELOPME-XTN9MZ; Ken: keepalive"
+   },
    {
     "time": "11:16",
     "title": "Updated MTCO AI Roadmap App 2.3",
@@ -2482,6 +3590,38 @@
     "detail": "Read full quote rejection reasons instead of cut-off text",
     "tagline": true,
     "project": "kensite-quote-trends"
+   },
+   {
+    "time": "14:41",
+    "title": "GitHub: 18 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Work Diary: 2 project link correction(s); Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder"
+   },
+   {
+    "time": "14:41",
+    "title": "GitHub: 18 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Work Diary: 2 project link correction(s); Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder"
+   },
+   {
+    "time": "15:09",
+    "title": "GitHub: 485 commits to Planner",
+    "kind": "github",
+    "repo": "LeeMcConvilleAES/Planner",
+    "tagline": true,
+    "detail": "Ken: Big Change checked 2026-10-06 15:09:21; Ken: Big Change jobs 2026-09-29 to 2027-01-29; Ken: Big Change checked 2026-10-06 15:07:11"
+   },
+   {
+    "time": "15:11",
+    "title": "GitHub: 8 commits to prep-schedule",
+    "kind": "github",
+    "repo": "Nathanjmcg/prep-schedule",
+    "tagline": true,
+    "detail": "MCS auto-add: 1 missing jobs; MCS auto-move: 1 delivery and 0 collection date(s); Update schedule"
    },
    {
     "title": "Built New Report Quote Outcomes by SubGroup",
