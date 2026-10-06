@@ -187,7 +187,7 @@
     "title": "Updated Publish App To GitHub 1.1",
     "detail": "Publish app updates safely without overwriting someone else's manual changes",
     "tagline": true,
-    "project": "aes-transport-capacity-watcher"
+    "project": "kensite-prep-schedule-app"
    },
    {
     "title": "Emails: 1 received, 1 sent",
@@ -220,7 +220,7 @@
     "title": "Built Repair Lost PO Stamps 1.0",
     "detail": "Repaired lost purchase order links so affected requests could proceed",
     "tagline": true,
-    "project": "kensite-prep-schedule-app"
+    "project": "kensite-materials-po-worker"
    },
    {
     "title": "Emails: 83 received, 51 sent",
