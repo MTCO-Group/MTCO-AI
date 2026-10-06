@@ -57,11 +57,11 @@ public, so with the token in place anyone who has the link can rearrange the pla
 Every save is a commit, so the history in GitHub is the audit trail and any change can
 be reverted.
 
-## Planner and Nathan Workflow
-The What's Next view has an Open planner button. The Planner holds the Nathan Workflow
+## Work Diary and Nathan Workflow
+The What's Next view has a Work Diary button. The Work Diary holds the Nathan Workflow
 widget: a month calendar, Monday first, where clicking a day slides out that day's work
 entries. Keyboard: arrow keys move between days, Enter opens one, Page Up and Page Down
-change month, Escape closes the day and then the Planner.
+change month, Escape closes the day and then the Work Diary.
 
 Entries are read from `data/Nathan Workflow.json` in the repo. That file does not exist
 yet, so every day opens blank. Whatever writes the work logs later only needs to create it:
