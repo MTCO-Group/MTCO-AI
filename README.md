@@ -57,6 +57,10 @@ public, so with the token in place anyone who has the link can rearrange the pla
 Every save is a commit, so the history in GitHub is the audit trail and any change can
 be reverted.
 
+Click any card (or focus it and press Enter) to expand it: the sheet shows the
+full scope, how it works and who it helps, with buttons to place it in a lane
+and arrows to step to the next card. A drag does not open it.
+
 ## Work Diary and Nathan Workflow
 The What's Next view has a Work Diary button. The Work Diary holds the Nathan Workflow
 widget: a month calendar, Monday first, where clicking a day slides out that day's work
