@@ -73,6 +73,12 @@ Under the calendar a trend shows each day of the month: emails (blue, from the
 "Emails: N received, M sent" entry) and work entries (green), on one date axis
 in two panels. Hover a day for its numbers; click to open it.
 
+The Work Diary header carries a GitHub activity heatmap: one block per month,
+Monday to Sunday down and weeks across, shaded by the day's build commits
+(from the "kind": "github" entries Diary GitHub Commits.py writes). Hover a
+day for the repos and counts, click it to open the day, click a month name to
+show that month.
+
 Entries are read from `data/Nathan Workflow.json` in the repo. That file does not exist
 yet, so every day opens blank. Whatever writes the work logs later only needs to create it:
 
