@@ -1269,6 +1269,34 @@
         }
       ],
       "proposed_at": "2026-09-29"
+    },
+    {
+      "id": "kensite-work-diary-tool-self-filling-workload-log",
+      "company": "kensite",
+      "name": "Work Diary Tool - Self-Filling Workload Log",
+      "stage": "Proposed",
+      "category": "People and HR",
+      "owner": "Nathan McGuinness",
+      "proposed_by": "chloe.ainscough@kensite.co.uk",
+      "date": "Oct 2026",
+      "summary": "Gives each person a private, self-filling logbook of their working day as one simple timeline, so nobody ha...",
+      "scope": "Gives each person a private, self-filling logbook of their working day as one simple timeline, so nobody has to piece together \"what did I do last week\" from memory. It shows where time is actually going, which helps people direct their priorities, spot where time is being wasted, and gives a real sense of what has moved forward across many projects.",
+      "how": "It collects everyday work automatically: the user's Microsoft 365 mailbox (date, recipients, subject and a short snippet only, every 15 minutes), their calendar meetings (title, time, length, attendees, declined meetings excluded) and Dialpad calls (time, length, direction, contact and Dialpad's AI summary, with recordings and transcripts left in Dialpad). Anything a computer cannot see, such as site chats and problem solving, is added by the user as a typed or spoken note with optional tags and time spent, and it all sits on one timeline in a phone-and-laptop web app. Each diary belongs to the person it is about, is encrypted and UK hosted, and the AI stage (weekly summaries, plain-English search, later a chat coach) only plugs in once there is diary history, the DPIA is updated and the user opts in.",
+      "who": [
+        {
+          "who": "Chloe",
+          "how": "clear sight of workload and schedule so she can direct priorities and see where time is being wasted, and R&D time is evidenced for the accountants' AI tax claim"
+        },
+        {
+          "who": "Staff",
+          "how": "less admin and a visible record of progress"
+        },
+        {
+          "who": "Managers",
+          "how": "the same build could be replicated across the group to monitor and manage people's workloads."
+        }
+      ],
+      "proposed_at": "2026-10-06"
     }
   ],
   "plan": {
