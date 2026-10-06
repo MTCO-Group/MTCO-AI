@@ -1,6 +1,15 @@
 """
 MTCO AI Roadmap planner component
-Version 1.3
+Version 1.4
+
+1.4: project pills. A diary entry Ken has linked to a live roadmap project
+("project": id, set by Diary Taglines 1.1) shows that project as a small pill
+to the right of its title in the day panel, tinted in its company's colour.
+The foot of the day panel holds the week's pen: one pill per project linked
+Monday to Sunday of that day's week, with its count, most first; clicking one
+highlights that project's entries. The calendar itself is unchanged and no
+new view or route is added. Project names come from the roadmap the app
+already passes in.
 
 1.3: the Work Diary gains a trend under the calendar: emails (blue) and work
 entries (green) for each day of the month shown, as two slim panels on one
