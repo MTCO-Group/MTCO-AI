@@ -189,6 +189,26 @@
   .wfent .tt{font-size:13.5px;font-weight:700;line-height:1.3}
   .wfent .dt{font-size:12.5px;color:#53565e;margin-top:3px;line-height:1.45}
   .wfempty{margin:auto 0;text-align:center;padding:24px 10px;color:#6b6e76;font-size:13px}
+  /* project pills: the live project an entry served, and the week's pen of them */
+  .wfent .ttrow{display:flex;align-items:flex-start;gap:8px}
+  .wfent .ttrow .tt{flex:1 1 auto;min-width:0}
+  .wfent .ttrow .ppill{flex:0 1 auto;max-width:45%;margin-top:-1px}
+  .ppill{
+    flex:none;display:inline-flex;align-items:center;gap:5px;height:20px;padding:0 8px;border-radius:999px;
+    font-size:11px;font-weight:700;color:#1a1b1e;white-space:nowrap;max-width:190px;min-width:0;
+    border:1px solid transparent;line-height:1;font-family:inherit
+  }
+  .ppill .t{overflow:hidden;text-overflow:ellipsis;min-width:0}
+  .ppill i{width:6px;height:6px;border-radius:999px;flex:none}
+  .ppill .n{flex:none;font-variant-numeric:tabular-nums;color:#53565e;font-weight:600}
+  .wfent.dim{opacity:.35}
+  .wfpen{flex:none;border-top:1px solid #efeee9;padding:10px 16px 12px}
+  .wfpen h4{margin:0 0 7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;color:#6b6e76;text-transform:uppercase}
+  .wfpen .row{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+  .wfpen .row .ppill{flex:none;max-width:170px}
+  .wfpen button.ppill{cursor:pointer}
+  .wfpen button.ppill:focus-visible{outline:2px solid #0d823b;outline-offset:1px}
+  .wfpen button.ppill.on{box-shadow:0 0 0 2px #1a1b1e inset}
   /* the month's trend under the calendar: emails and work, two slim panels on one date axis */
   .wftrend{flex:none;height:168px;position:relative;border:1px solid #e6e5e1;border-radius:12px;background:#fff;padding:10px 14px 6px}
   .wftrend svg{display:block;width:100%;height:100%;overflow:visible}
@@ -295,6 +315,7 @@
             <button class="iconbtn" id="wfPClose" type="button" aria-label="Close this day"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"></path></svg></button>
           </div>
           <div class="wflist" id="wfList"></div>
+          <div class="wfpen" id="wfPen" hidden></div>
         </aside>
       </div>
       <div class="wftrend" id="wfTrend" role="img" aria-label="Emails and work entries through the month">
@@ -564,7 +585,7 @@ document.addEventListener("keydown", onKey);
    A month calendar, Monday first. Clicking a day slides out a panel of that
    day's work entries. Entries arrive as args.workflow.entries keyed by
    YYYY-MM-DD; nothing writes them yet, so every day opens blank. */
-const WF = {entries:{}, year:0, month:0, sel:"", focus:""};
+const WF = {entries:{}, year:0, month:0, sel:"", focus:"", projects:{}, hl:""};
 const WF_DOW = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 const WF_DOW_LONG = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 const WF_MON = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -574,6 +595,20 @@ function wfDate(key){ const [y,m,d] = key.split("-").map(Number); return new Dat
 function wfDow(d){ return (d.getDay() + 6) % 7; }
 function wfLong(d){ return WF_DOW_LONG[wfDow(d)] + " " + d.getDate() + " " + WF_MON[d.getMonth()] + " " + d.getFullYear(); }
 function wfList(key){ const e = WF.entries[key]; return Array.isArray(e) ? e : []; }
+// a pill for a roadmap project id; null when the id is unknown or empty
+function wfPill(pid, count, tag){
+  const p = WF.projects[pid]; if(!p) return null;
+  const hue = COMPANY_HUE[p.company] != null ? COMPANY_HUE[p.company] : 220;
+  const b = el(tag || "span", "ppill");
+  b.style.background = `oklch(0.955 0.035 ${hue})`; b.style.borderColor = `oklch(0.87 0.06 ${hue})`;
+  const nm = p.name;
+  b.innerHTML = '<i></i><span class="t"></span>' + (count != null ? '<span class="n"></span>' : "");
+  b.querySelector("i").style.background = `oklch(0.62 0.17 ${hue})`;
+  b.querySelector(".t").textContent = nm;
+  if(count != null) b.querySelector(".n").textContent = count;
+  b.title = p.name + (count != null ? ": " + count + " entr" + (count === 1 ? "y" : "ies") + " this week" : "");
+  return b;
+}
 // the work done that day, without the email count line
 function wfWork(key){ return wfList(key).filter(e => e && e.kind !== "email"); }
 // {r, s} from that day's "Emails: N received, M sent" line, or null
@@ -730,15 +765,56 @@ function wfPanel(){
     e.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg><span></span>';
     e.querySelector("span").textContent = "No work entries for this day yet.";
     list.appendChild(e);
+    wfPen();
     return;
   }
   items.forEach(it => {
     const r = el("div","wfent");
-    r.innerHTML = '<div class="tm"></div><div><div class="tt"></div><div class="dt"></div></div>';
+    r.innerHTML = '<div class="tm"></div><div><div class="ttrow"><div class="tt"></div></div><div class="dt"></div></div>';
     r.querySelector(".tm").textContent = it.time || "";
     r.querySelector(".tt").textContent = it.title || "";
+    const pill = it.project ? wfPill(it.project) : null;
+    if(pill) r.querySelector(".ttrow").appendChild(pill);
+    r.dataset.project = it.project || "";
+    if(WF.hl && it.kind !== "email" && (it.project || "") !== WF.hl) r.classList.add("dim");
     if(it.detail) r.querySelector(".dt").textContent = it.detail; else r.querySelector(".dt").remove();
     list.appendChild(r);
+  });
+  wfPen();
+}
+
+/* the week's pen: one pill per project linked Monday to Sunday of the open
+   day's week, most entries first. Clicking one highlights its entries. */
+function wfPen(){
+  const pen = $("#wfPen");
+  const d = wfDate(WF.sel);
+  const mon = new Date(d.getFullYear(), d.getMonth(), d.getDate() - wfDow(d));
+  const counts = {};
+  for(let i = 0; i < 7; i += 1){
+    const key = wfKey(new Date(mon.getFullYear(), mon.getMonth(), mon.getDate() + i));
+    wfWork(key).forEach(e => { if(e.project && WF.projects[e.project]) counts[e.project] = (counts[e.project] || 0) + 1; });
+  }
+  const ids = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || WF.projects[a].name.localeCompare(WF.projects[b].name));
+  if(WF.hl && !counts[WF.hl]) WF.hl = "";
+  pen.innerHTML = "";
+  if(!ids.length){ pen.hidden = true; return; }
+  pen.hidden = false;
+  const h = el("h4"); h.textContent = "Week of " + WF_DOW[0] + " " + mon.getDate() + " " + WF_MON[mon.getMonth()].slice(0, 3); pen.appendChild(h);
+  const row = el("div", "row"); pen.appendChild(row);
+  ids.forEach(id => {
+    const b = wfPill(id, counts[id], "button"); if(!b) return;
+    b.type = "button";
+    b.setAttribute("aria-pressed", WF.hl === id ? "true" : "false");
+    if(WF.hl === id) b.classList.add("on");
+    b.addEventListener("click", () => {
+      WF.hl = WF.hl === id ? "" : id;
+      document.querySelectorAll("#wfList .wfent").forEach(r => {
+        const em = !r.querySelector(".tt") || /^Emails:/.test(r.querySelector(".tt").textContent);
+        r.classList.toggle("dim", !!WF.hl && !em && r.dataset.project !== WF.hl);
+      });
+      row.querySelectorAll("button.ppill").forEach(x => { const on = x === b && !!WF.hl; x.classList.toggle("on", on); x.setAttribute("aria-pressed", on ? "true" : "false"); });
+    });
+    row.appendChild(b);
   });
 }
 
@@ -804,6 +880,8 @@ document.addEventListener("keydown", ev => {
 function wfRenderArgs(args){
   const wf = args.workflow || {};
   WF.entries = (wf.entries && typeof wf.entries === "object") ? wf.entries : {};
+  WF.projects = {};
+  ((args.roadmap || {}).projects || []).forEach(p => { if(p && p.id) WF.projects[p.id] = {name: p.name || p.id, company: p.company}; });
   if(!WF.year){
     const t = new Date(); WF.year = t.getFullYear(); WF.month = t.getMonth();
     let saved = null;
