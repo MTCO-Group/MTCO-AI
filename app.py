@@ -1,6 +1,16 @@
 """
 MTCO AI Roadmap
-Version 2.2
+Version 2.3
+
+2.3: the AI Summit Barcelona picker is retired from the board, and the
+What's Next view gains a Planner. Its first widget is Nathan Workflow: a
+month calendar where each day opens a panel of that day's work entries.
+The entries are read from "data/Nathan Workflow.json" in this repo (live
+copy first, deployed copy second) in the shape
+    {"entries": {"2026-10-06": [{"time": "09:30", "title": "...", "detail": "..."}]}}
+The file does not exist yet, so every day opens blank; whatever writes the
+work logs later only has to create it. The summit data files stay in the
+repo untouched; nothing here reads or writes them any more.
 
 2.2: the board comes up whatever order the files land in. The publisher pushes
 one commit per file and Streamlit Cloud redeployed between app.py and the
@@ -47,8 +57,7 @@ REPO = "Nathanjmcg/mtco-ai"
 BRANCH = "main"
 DATA_PATH = "data/roadmap.json"
 API = f"https://api.github.com/repos/{REPO}/contents/{DATA_PATH}"
-SUMMIT_PROGRAMME = "data/summit_programme.json"
-SUMMIT_PICKS = "data/summit_picks.json"
+WORKFLOW = "data/Nathan Workflow.json"
 FALLBACK = {"active": ["mtco", "kensite", "aes"], "categories": [], "projects": []}
 
 st.set_page_config(page_title="MTCO AI Project Dashboard", layout="wide",
@@ -124,34 +133,6 @@ def load_json(tok, path):
         return None, None
 
 
-def save_summit_picks(tok, name, keys):
-    """Write ONE person's picks. The file is re-read first and everyone else's
-    entry is carried over untouched, so two people saving a minute apart
-    cannot lose each other's sessions. saved_at is what Ken watches."""
-    current, sha = load_json(tok, SUMMIT_PICKS)
-    if sha is None:
-        return False, "the picks file could not be read back, so nothing was written"
-    if not isinstance(current, dict):
-        current = {}
-    picks = current.setdefault("picks", {})
-    prev = picks.get(name) or {}
-    picks[name] = {"keys": [str(k) for k in keys],
-                   "saved_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-                   "seq": int(prev.get("seq") or 0) + 1}
-    body = (json.dumps(current, indent=1, ensure_ascii=False) + "\n").encode("utf-8")
-    payload = {"message": f"AI Summit: {name} saved {len(keys)} session(s) from the dashboard",
-               "content": base64.b64encode(body).decode(), "branch": BRANCH, "sha": sha}
-    try:
-        w = requests.put(f"https://api.github.com/repos/{REPO}/contents/{SUMMIT_PICKS}",
-                         headers=headers(tok), json=payload, timeout=30)
-        if w.status_code in (409, 422):
-            return False, "someone else saved at the same moment, so nothing was written; try again"
-        w.raise_for_status()
-    except Exception as e:  # noqa: BLE001
-        return False, f"the write failed ({type(e).__name__})"
-    return True, ""
-
-
 def save_plan(tok, lanes):
     """Write ONLY the plan back. The file is re-read first and every other key
     is carried over untouched, so a proposal Ken filed a second ago cannot be
@@ -185,12 +166,11 @@ if remote is None and tok:
 plan = roadmap.get("plan") or {"lanes": {"now": [], "next": [], "later": []}}
 saved_at = st.session_state.get("saved_at", "")
 
-# the AI Summit picker: the programme and everyone's saved picks. Shown only
-# while there is a programme to show; the button disappears with the file.
-summit_prog, _ = load_json(tok, SUMMIT_PROGRAMME)
-summit_picks, _ = load_json(tok, SUMMIT_PICKS)
-summit = ({"programme": summit_prog, "picks": (summit_picks or {}).get("picks", {})}
-          if summit_prog else None)
+# Nathan Workflow: the day by day work entries behind the Planner calendar.
+# Absent until something starts writing them, which means every day is blank.
+workflow, _ = load_json(tok, WORKFLOW)
+if not isinstance(workflow, dict) or not isinstance(workflow.get("entries"), dict):
+    workflow = {"entries": {}}
 
 html = (HERE / "dashboard.html").read_text(encoding="utf-8")
 
@@ -209,12 +189,12 @@ board = html.replace(PLACEHOLDER, encode_for_template(roadmap))
 try:
     result = planner(dashboard_html=board, roadmap=roadmap, plan=plan,
                      can_save=bool(tok), saved_at=saved_at, height=900, key="board",
-                     summit=summit, summit_saved_at=st.session_state.get("summit_saved_at", ""))
+                     workflow=workflow)
 except TypeError:
-    # 2.1.1: the files are pushed one commit apiece and Streamlit Cloud can
-    # redeploy between them, so this file can briefly run against a component
-    # that does not know the summit yet. The board must still come up; the
-    # picker appears on the next redeploy.
+    # The publisher pushes one commit per file and Streamlit Cloud can redeploy
+    # between them, so this file can briefly run against a component wrapper
+    # that does not take workflow yet. The board must still come up; the
+    # calendar fills in on the next redeploy.
     result = planner(dashboard_html=board, roadmap=roadmap, plan=plan,
                      can_save=bool(tok), saved_at=saved_at, height=900, key="board")
 
@@ -222,19 +202,7 @@ if result and result.get("nonce") and result["nonce"] != st.session_state.get("n
     st.session_state["nonce"] = result["nonce"]
     if not tok:
         pass
-    elif result.get("kind") == "summit":
-        name = str(result.get("name") or "").strip()
-        allowed = set((summit_prog or {}).get("attendees") or [])
-        if name not in allowed:
-            st.error("That name is not on the attendee list, so nothing was saved.")
-        else:
-            ok, why = save_summit_picks(tok, name, result.get("keys") or [])
-            if ok:
-                st.session_state["summit_saved_at"] = datetime.now(timezone.utc).strftime("%H:%M UTC")
-                st.rerun()
-            else:
-                st.error(f"Your sessions were not saved: {why}.")
-    else:
+    elif result.get("kind", "plan") == "plan":
         ok, why = save_plan(tok, result.get("lanes") or {})
         if ok:
             st.session_state["saved_at"] = datetime.now(timezone.utc).strftime("%H:%M UTC")
