@@ -115,7 +115,45 @@
     position:fixed;z-index:999;pointer-events:none;cursor:grabbing;width:236px;
     box-shadow:0 18px 36px -14px rgba(16,26,20,.45);transform:rotate(-1.5deg)
   }
-  .readonly .card{cursor:default}
+  .readonly .card{cursor:pointer}
+  .card:hover{border-color:#cfd3cf}
+  .card.open{border-color:#0d823b;box-shadow:0 0 0 1px #0d823b}
+
+  /* project detail: a card expands into a sheet over the planner */
+  #pd{position:absolute;inset:0;z-index:20;display:none;align-items:center;justify-content:center;padding:28px;
+      background:rgba(26,27,30,.32);animation:pdfade .16s ease-out both}
+  #pd.show{display:flex}
+  @keyframes pdfade{from{opacity:0}to{opacity:1}}
+  @keyframes pdgrow{from{opacity:.4;transform:translate(var(--dx,0),var(--dy,0)) scale(.35)}to{opacity:1;transform:none}}
+  .pdsheet{position:relative;width:min(680px,100%);max-height:100%;display:flex;flex-direction:column;background:#fff;
+      border:1px solid #e6e5e1;border-radius:16px;box-shadow:0 30px 70px -30px rgba(16,26,20,.55);
+      animation:pdgrow .24s cubic-bezier(.22,.9,.28,1) both;overflow:hidden}
+  .pdtop{display:flex;align-items:flex-start;gap:14px;padding:20px 22px 14px;border-bottom:1px solid #efeee9;flex:none}
+  .pdtop .tx{flex:1;min-width:0}
+  .pdco{display:flex;align-items:center;gap:8px;font-size:12px;color:#6b6e76;flex-wrap:wrap}
+  .pdco i{width:8px;height:8px;border-radius:50%;flex:none}
+  .pdco .dot{color:#c4c6cb}
+  .pdtop h2{margin:6px 0 0;font-size:20px;font-weight:800;letter-spacing:-.015em;line-height:1.25;text-wrap:balance}
+  .pdmeta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .pdmeta span{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:999px;background:#f3f2ee;color:#3d3f45}
+  .pdmeta span.lane{color:#000}
+  .pdbody{overflow-y:auto;padding:16px 22px 18px;display:flex;flex-direction:column;gap:16px}
+  .pdbody h3{margin:0 0 5px;font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#6b6e76}
+  .pdbody p{margin:0;font-size:13.5px;line-height:1.6;color:#1a1b1e;max-width:68ch;white-space:pre-line}
+  .pdwho{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+  .pdwho li{font-size:13.5px;line-height:1.55;padding:9px 12px;border-radius:10px;background:#f7f7f4}
+  .pdwho b{font-weight:700}
+  .pdfoot{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 22px;border-top:1px solid #efeee9;flex:none}
+  .pdfoot .lbl{font-size:12px;color:#6b6e76;margin-right:2px}
+  .pdfoot .seg{display:inline-flex;border:1px solid #cfd3cf;border-radius:999px;overflow:hidden}
+  .pdfoot .seg button{font:inherit;font-size:12.5px;font-weight:600;padding:7px 13px;border:0;background:#fff;color:#1a1b1e;cursor:pointer}
+  .pdfoot .seg button+button{border-left:1px solid #e6e5e1}
+  .pdfoot .seg button:hover{background:#f3f2ee}
+  .pdfoot .seg button[aria-pressed="true"]{background:#0d823b;color:#fff}
+  .pdfoot .seg button:focus-visible{outline:2px solid #0d823b;outline-offset:-2px}
+  .pdfoot .sp{flex:1}
+  .pdnav{display:inline-flex;gap:6px}
+  @media (max-width:600px){#pd{padding:10px}.pdtop,.pdbody,.pdfoot{padding-left:16px;padding-right:16px}}
   .empty{font-size:12px;color:#b0b2b8;text-align:center;padding:14px 8px}
 
   /* ── the Planner, opened from What's Next; first widget: Nathan Workflow ── */
@@ -356,6 +394,28 @@
     </section>
   </div>
 
+  <div id="pd" aria-hidden="true">
+    <div class="pdsheet" role="dialog" aria-modal="true" aria-labelledby="pdName">
+      <div class="pdtop">
+        <div class="tx">
+          <div class="pdco"><i id="pdDot"></i><span id="pdCo"></span><span class="dot" aria-hidden="true">·</span><span id="pdCat"></span></div>
+          <h2 id="pdName"></h2>
+          <div class="pdmeta" id="pdMeta"></div>
+        </div>
+        <button class="iconbtn" id="pdClose" type="button" aria-label="Close project detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"></path></svg></button>
+      </div>
+      <div class="pdbody" id="pdBody"></div>
+      <div class="pdfoot">
+        <span class="lbl" id="pdMoveLbl">Place in</span>
+        <div class="seg" id="pdSeg" role="group" aria-labelledby="pdMoveLbl"></div>
+        <span class="sp"></span>
+        <div class="pdnav">
+          <button class="iconbtn" id="pdPrev" type="button" aria-label="Previous project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+          <button class="iconbtn" id="pdNext" type="button" aria-label="Next project"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="toast"></div>
 </div>
 
@@ -425,7 +485,9 @@ function card(p){
   c.querySelector(".nm").textContent = p.name;
   c.querySelector(".con").textContent = p.companyName;
   c.querySelector(".cat").textContent = p.category || "";
-  c.title = p.summary || p.name;
+  c.title = (p.summary || p.name) + "\nClick to see the full detail";
+  c.setAttribute("aria-haspopup", "dialog");
+  if(PD.id === p.id) c.classList.add("open");
   return c;
 }
 
@@ -541,6 +603,7 @@ function endDrag(){
     readDom();
     renderCards();
     STATE.dirty = true;
+    PD.justDragged = true;
   }
   drag = null;
 }
@@ -548,10 +611,12 @@ function endDrag(){
 /* ── keyboard: arrows move a card between lanes and within one ────────────── */
 const ORDER = ["tray", "now", "next", "later"];
 function onKey(ev){
-  if(!STATE.canSave) return;
+  if($("#pd").classList.contains("show")) return;
+  if(!STATE.canSave){ const c = ev.target.closest(".card"); if(c && (ev.key === "Enter" || ev.key === " ")){ ev.preventDefault(); pdOpen(c.dataset.id, c); } return; }
   const c = ev.target.closest(".card");
   if(!c) return;
   const id = c.dataset.id;
+  if(ev.key === "Enter" || ev.key === " "){ ev.preventDefault(); pdOpen(id, c); return; }
   const from = ORDER.find(k => STATE.lanes[k].includes(id));
   if(!from) return;
   let moved = false;
@@ -573,6 +638,114 @@ function onKey(ev){
   }
 }
 
+/* ── project detail: click a card (or Enter on it) to expand it ─────────────
+   A click that was really a drag is ignored. The sheet shows the full scope,
+   how it works and who it helps, and when saving is on it can place the card
+   in a lane (the same as dragging; still needs Save plan). Arrows step
+   through the cards in board order; Escape closes and returns focus. */
+const PD = {id:"", justDragged:false};
+const PD_LANES = [{id:"tray", label:"Not placed", hue:25}].concat(LANES.map(l => ({id:l.id, label:l.label[0] + l.label.slice(1).toLowerCase(), hue:l.hue})));
+function pdOrder(){ return ORDER.flatMap(k => STATE.lanes[k]); }
+function pdLaneOf(id){ return ORDER.find(k => STATE.lanes[k].includes(id)) || "tray"; }
+function pdFill(){
+  const p = STATE.projects[PD.id]; if(!p) return pdClose();
+  const hue = COMPANY_HUE[p.company] != null ? COMPANY_HUE[p.company] : 220;
+  $("#pdDot").style.background = `oklch(0.62 0.17 ${hue})`;
+  $("#pdCo").textContent = p.companyName || "";
+  $("#pdCat").textContent = p.category || "";
+  $("#pdName").textContent = p.name;
+  const meta = $("#pdMeta"); meta.innerHTML = "";
+  const lane = PD_LANES.find(l => l.id === pdLaneOf(p.id));
+  const ls = el("span", "lane"); ls.textContent = lane.label;
+  ls.style.background = `oklch(0.93 0.07 ${lane.hue})`; ls.style.boxShadow = `inset 0 0 0 1px oklch(0.78 0.14 ${lane.hue})`;
+  meta.appendChild(ls);
+  if(p.owner){ const o = el("span"); o.textContent = "Owner: " + p.owner; meta.appendChild(o); }
+  const when = p.proposed_at ? wfLong(wfDate(p.proposed_at)).replace(/^\w+ /, "") : (p.date || "");
+  if(when){ const w = el("span"); w.textContent = "Proposed " + when; meta.appendChild(w); }
+  const body = $("#pdBody"); body.innerHTML = "";
+  const sec = (h, text) => { if(!text) return; const d = el("section"); const t = el("h3"); t.textContent = h; const q = el("p"); q.textContent = text; d.append(t, q); body.appendChild(d); };
+  sec("What it does", p.scope || p.summary);
+  sec("How it works", p.how);
+  const who = (p.who || []).filter(w => w && (w.who || w.how));
+  if(who.length){
+    const d = el("section"); const t = el("h3"); t.textContent = "Who it helps"; d.appendChild(t);
+    const ul = el("ul", "pdwho");
+    who.forEach(w => { const li = el("li"); if(w.who){ const b = el("b"); b.textContent = w.who; li.appendChild(b); } if(w.how) li.appendChild(document.createTextNode((w.who ? ": " : "") + w.how)); ul.appendChild(li); });
+    d.appendChild(ul); body.appendChild(d);
+  }
+  if(!body.children.length){ const e = el("p"); e.textContent = "No further detail has been written for this idea yet."; body.appendChild(e); }
+  body.scrollTop = 0;
+  const seg = $("#pdSeg"); seg.innerHTML = "";
+  $("#pdMoveLbl").parentElement.querySelectorAll(".lbl,.seg").forEach(x => { x.style.display = STATE.canSave ? "" : "none"; });
+  PD_LANES.forEach(l => {
+    const b = el("button"); b.type = "button"; b.textContent = l.label;
+    b.setAttribute("aria-pressed", l.id === lane.id ? "true" : "false");
+    b.addEventListener("click", () => pdMove(l.id));
+    seg.appendChild(b);
+  });
+  const order = pdOrder(), i = order.indexOf(PD.id);
+  $("#pdPrev").disabled = i <= 0; $("#pdNext").disabled = i < 0 || i >= order.length - 1;
+  document.querySelectorAll(".card.open").forEach(c => c.classList.remove("open"));
+  const c = document.querySelector(`.card[data-id="${CSS.escape(PD.id)}"]`); if(c) c.classList.add("open");
+}
+function pdOpen(id, from){
+  if(!STATE.projects[id]) return;
+  PD.id = id;
+  const pd = $("#pd"), sheet = pd.querySelector(".pdsheet");
+  pd.classList.add("show"); pd.setAttribute("aria-hidden", "false");
+  if(from){
+    const r = from.getBoundingClientRect(), v = pd.getBoundingClientRect();
+    sheet.style.setProperty("--dx", Math.round(r.left + r.width/2 - (v.left + v.width/2)) + "px");
+    sheet.style.setProperty("--dy", Math.round(r.top + r.height/2 - (v.top + v.height/2)) + "px");
+  }
+  sheet.style.animation = "none"; void sheet.offsetWidth; sheet.style.animation = "";
+  pdFill();
+  $("#pdClose").focus();
+}
+function pdClose(){
+  const id = PD.id; PD.id = "";
+  const pd = $("#pd"); pd.classList.remove("show"); pd.setAttribute("aria-hidden", "true");
+  document.querySelectorAll(".card.open").forEach(c => c.classList.remove("open"));
+  const c = id && document.querySelector(`.card[data-id="${CSS.escape(id)}"]`); if(c) c.focus();
+}
+function pdMove(to){
+  if(!STATE.canSave) return;
+  const id = PD.id, from = pdLaneOf(id);
+  if(from === to) return;
+  STATE.lanes[from] = STATE.lanes[from].filter(x => x !== id);
+  STATE.lanes[to].push(id);
+  STATE.dirty = true;
+  renderCards(); pdFill();
+  toast("Moved to " + PD_LANES.find(l => l.id === to).label + ". Save plan to keep it.");
+}
+function pdStep(n){
+  const order = pdOrder(), i = order.indexOf(PD.id);
+  const j = i + n; if(j < 0 || j >= order.length) return;
+  PD.id = order[j]; pdFill();
+}
+document.addEventListener("click", ev => {
+  const c = ev.target.closest && ev.target.closest(".card");
+  if(!c || c.classList.contains("flying") || !$("#planner").contains(c)) return;
+  if(PD.justDragged){ PD.justDragged = false; return; }
+  pdOpen(c.dataset.id, c);
+});
+document.addEventListener("pointerdown", () => { PD.justDragged = false; }, true);
+$("#pd").addEventListener("click", ev => { if(ev.target.id === "pd") pdClose(); });
+$("#pdClose").addEventListener("click", pdClose);
+$("#pdPrev").addEventListener("click", () => pdStep(-1));
+$("#pdNext").addEventListener("click", () => pdStep(1));
+$("#pd").addEventListener("keydown", ev => {
+  if(ev.key === "Escape"){ ev.preventDefault(); ev.stopPropagation(); pdClose(); return; }
+  if(ev.key === "ArrowLeft" && !ev.target.closest(".seg")){ ev.preventDefault(); pdStep(-1); }
+  if(ev.key === "ArrowRight" && !ev.target.closest(".seg")){ ev.preventDefault(); pdStep(1); }
+  if(ev.key === "Tab"){
+    const f = [...$("#pd").querySelectorAll("button:not([disabled]):not([hidden])")].filter(b => b.offsetParent);
+    if(!f.length) return;
+    if(ev.shiftKey && document.activeElement === f[0]){ ev.preventDefault(); f[f.length-1].focus(); }
+    else if(!ev.shiftKey && document.activeElement === f[f.length-1]){ ev.preventDefault(); f[0].focus(); }
+  }
+});
+
 /* ── open, close, save ────────────────────────────────────────────────────── */
 function openPlanner(){
   $("#planner").style.display = "flex";
@@ -581,6 +754,7 @@ function openPlanner(){
   try{ sessionStorage.setItem("mtco.planner.open", "1"); }catch(e){}
 }
 function closePlanner(){
+  if(PD.id) pdClose();
   $("#wf").classList.remove("show");
   try{ const w = JSON.parse(sessionStorage.getItem("mtco.wf") || "null"); if(w){ w.open = false; sessionStorage.setItem("mtco.wf", JSON.stringify(w)); } }catch(e){}
   $("#planner").style.display = "none";
@@ -1019,7 +1193,9 @@ function render(args){
   proposed.forEach(p => {
     STATE.projects[p.id] = {id:p.id, name:p.name, company:p.company,
                             companyName: names[p.company] || p.company,
-                            category:p.category, summary:p.summary};
+                            category:p.category, summary:p.summary,
+                            scope:p.scope, how:p.how, who:Array.isArray(p.who) ? p.who : [],
+                            owner:p.owner, date:p.date, proposed_at:p.proposed_at};
   });
 
   const saved = (args.plan && args.plan.lanes) || {};
