@@ -1,0 +1,1458 @@
+{
+ "entries": {
+  "2026-07-21": [
+   {
+    "time": "22:59",
+    "title": "Updated Store BigChange Credentials 1.1"
+   },
+   {
+    "time": "23:41",
+    "title": "Updated Big Change Fetch 1.1"
+   }
+  ],
+  "2026-07-22": [
+   {
+    "time": "13:34",
+    "title": "Updated Store AES Key 1.2"
+   }
+  ],
+  "2026-08-07": [
+   {
+    "time": "11:35",
+    "title": "Built Update MCS Credentials 1.0"
+   }
+  ],
+  "2026-08-11": [
+   {
+    "time": "09:28",
+    "title": "Built MCS Contact Audit 1.0"
+   },
+   {
+    "time": "15:13",
+    "title": "Updated MCS Contact Enrichment 1.3"
+   }
+  ],
+  "2026-08-14": [
+   {
+    "time": "11:15",
+    "title": "Updated Zahara Invoice Analysis 1.3"
+   },
+   {
+    "time": "16:38",
+    "title": "Updated Danfast Catalogue Sync 1.2"
+   }
+  ],
+  "2026-08-15": [
+   {
+    "time": "20:49",
+    "title": "Updated Publish App To GitHub 1.1"
+   }
+  ],
+  "2026-08-16": [
+   {
+    "time": "15:04",
+    "title": "Built Quote Worker Probe 1.0"
+   },
+   {
+    "time": "15:36",
+    "title": "Updated Quote Worker Bisect 2.0"
+   }
+  ],
+  "2026-08-17": [
+   {
+    "time": "15:08",
+    "title": "Built Repair Lost PO Stamps 1.0"
+   }
+  ],
+  "2026-08-21": [
+   {
+    "time": "10:52",
+    "title": "Updated InfoTime Weekly Clocking Report 2.1"
+   },
+   {
+    "time": "11:10",
+    "title": "Updated Ken Credential Transfer 1.2"
+   },
+   {
+    "time": "12:40",
+    "title": "Updated Ken Launcher 1.2"
+   },
+   {
+    "time": "13:24",
+    "title": "Updated Ken Mission Control 1.6"
+   },
+   {
+    "time": "13:35",
+    "title": "Updated Ken Mission Control 1.7"
+   },
+   {
+    "time": "",
+    "title": "Updated Ken Agent V4.3",
+    "detail": "Customer order references and braver triage"
+   },
+   {
+    "time": "",
+    "title": "Updated Ken Agent V4.4",
+    "detail": "One Ken, enforced"
+   },
+   {
+    "time": "",
+    "title": "Updated Ken Agent V4.5",
+    "detail": "The tidy folder"
+   },
+   {
+    "time": "",
+    "title": "Updated Ken Agent V4.6",
+    "detail": "Log review fixes, 21/08/2026"
+   }
+  ],
+  "2026-08-23": [
+   {
+    "time": "",
+    "title": "Updated Ken Agent V4.7"
+   },
+   {
+    "time": "",
+    "title": "Updated Ken Agent V4.8",
+    "detail": "Ken gets a proper email signature, built to match the Kensite staff signature and the..."
+   }
+  ],
+  "2026-08-24": [
+   {
+    "time": "10:21",
+    "title": "Updated Ken Mission Control 1.8"
+   },
+   {
+    "time": "10:50",
+    "title": "Updated Ken Mission Control 1.9"
+   },
+   {
+    "time": "11:10",
+    "title": "Built Ken Dashboard Launcher 1.0"
+   },
+   {
+    "time": "11:40",
+    "title": "Updated Ken Agent V4.9",
+    "detail": "Ken can now be seen from anywhere"
+   },
+   {
+    "time": "11:40",
+    "title": "Updated Ken Agent V5.0",
+    "detail": "Taking the cause out rather than surviving it"
+   },
+   {
+    "time": "11:40",
+    "title": "Updated Ken Agent V5.1",
+    "detail": "A probe for the missing contract document"
+   },
+   {
+    "time": "11:40",
+    "title": "Updated Ken Agent V5.2",
+    "detail": "One sign off, always"
+   },
+   {
+    "time": "11:40",
+    "title": "Updated Ken Agent V5.3",
+    "detail": "Ken keeps his own version history, and the estate emails come back into the fold"
+   },
+   {
+    "time": "11:40",
+    "title": "Updated Ken Mission Control 2.0"
+   },
+   {
+    "time": "12:37",
+    "title": "Updated Ken Agent V5.4",
+    "detail": "A probe for the MCS report list"
+   },
+   {
+    "time": "12:43",
+    "title": "Updated Ken Agent V5.5",
+    "detail": "The second half of that job"
+   },
+   {
+    "time": "13:31",
+    "title": "Updated Ken Agent V5.6",
+    "detail": "Two faults in 5.5, both found the first time it was used for real"
+   },
+   {
+    "time": "14:11",
+    "title": "Updated Ken Agent V5.7",
+    "detail": "The report list probe stops guessing"
+   },
+   {
+    "time": "14:19",
+    "title": "Updated Ken Agent V5.8",
+    "detail": "The report numbers, found and written down"
+   },
+   {
+    "time": "14:42",
+    "title": "Updated Ken Agent V5.9",
+    "detail": "The probe was reading the envelope, not the letter"
+   },
+   {
+    "time": "15:06",
+    "title": "Updated Ken Agent V6.0",
+    "detail": "The check up reports read properly, and what they hold is worth recording"
+   },
+   {
+    "time": "15:54",
+    "title": "Updated Ken Agent V6.1",
+    "detail": "Fleet readiness has a source after all"
+   },
+   {
+    "time": "16:03",
+    "title": "Updated Ken Agent V6.2",
+    "detail": "Every probe now writes what it found to a file as well as the screen"
+   },
+   {
+    "time": "16:15",
+    "title": "Updated Ken Agent V6.3",
+    "detail": "\"No records were found\" is not data"
+   },
+   {
+    "time": "16:46",
+    "title": "Updated Ken Agent V6.4",
+    "detail": "Finding a report that has just been added"
+   },
+   {
+    "time": "16:52",
+    "title": "Updated Ken Agent V6.5",
+    "detail": "Findreport only ever received its first word"
+   }
+  ],
+  "2026-08-25": [
+   {
+    "time": "08:50",
+    "title": "Updated Ken Agent V6.6",
+    "detail": "Three faults, all of them shown by one run of \"--probe report 61\""
+   },
+   {
+    "time": "08:55",
+    "title": "Updated Ken Agent V6.7",
+    "detail": "The list of probes is written once"
+   },
+   {
+    "time": "08:58",
+    "title": "Updated Ken Agent V6.8",
+    "detail": "The report 61 bug, diagnosed"
+   },
+   {
+    "time": "09:04",
+    "title": "Updated Ken Agent V6.9",
+    "detail": "The report 61 fix, and it is one character"
+   },
+   {
+    "time": "09:57",
+    "title": "Updated Weekly Check Up Preview 1.2"
+   },
+   {
+    "time": "10:12",
+    "title": "Updated Ken Agent V7.0",
+    "detail": "Ken can now see everything about a Zahara purchase order, and can see which parts of..."
+   },
+   {
+    "time": "10:28",
+    "title": "Updated Ken Agent V7.1",
+    "detail": "Ken can work out a purchase order edit in full, and Chris can now ask him for one"
+   },
+   {
+    "time": "10:39",
+    "title": "Updated Ken Agent V7.2",
+    "detail": "Ken learns who we buy what from, by asking"
+   },
+   {
+    "time": "10:44",
+    "title": "Updated Ken Agent V7.3",
+    "detail": "The endpoint probe asks Zahara a better question"
+   },
+   {
+    "time": "10:49",
+    "title": "Updated Ken Agent V7.4",
+    "detail": "Zahara answered, and it told us something nobody had said: there is a DRAFT LIFECYCLE"
+   },
+   {
+    "time": "11:02",
+    "title": "Updated Ken Agent V7.5",
+    "detail": "Ken can change a purchase order"
+   },
+   {
+    "time": "11:07",
+    "title": "Updated Ken Agent V7.6",
+    "detail": "The three things that follow from Nathan saying these orders are almost always sitting..."
+   },
+   {
+    "time": "11:20",
+    "title": "Updated Ken Agent V7.7",
+    "detail": "Ken was reading the wrong config, and had been all afternoon"
+   },
+   {
+    "time": "11:29",
+    "title": "Updated Ken Agent V7.8",
+    "detail": "The one line fix for \"name 'preview_only' is not defined\", and the check that stops..."
+   },
+   {
+    "time": "11:29",
+    "title": "Built Name Check 1.0"
+   },
+   {
+    "time": "11:40",
+    "title": "Updated Ken Agent V7.9",
+    "detail": "\"Pilkington Oils Ltd\" and \"Pilkington Oils\" are the same firm, and Ken refused to..."
+   },
+   {
+    "time": "11:48",
+    "title": "Updated Ken Agent V8.0",
+    "detail": "Zahara answered 500 to the edit, and Ken could only say \"500 Server Error\""
+   },
+   {
+    "time": "11:53",
+    "title": "Updated Ken Agent V8.1",
+    "detail": "The diagnostic asks four questions instead of one, for the same single run of the probe"
+   },
+   {
+    "time": "12:01",
+    "title": "Updated Ken Agent V8.2",
+    "detail": "All four payload variants were rejected, so the problem is not what the request SAYS"
+   },
+   {
+    "time": "12:15",
+    "title": "Updated Ken Agent V8.3",
+    "detail": "There are TWO Zahara apis and I spent the afternoon on the wrong one"
+   },
+   {
+    "time": "13:03",
+    "title": "Updated Ken Agent V8.4",
+    "detail": "One command to prove the key works before anybody trusts it"
+   },
+   {
+    "time": "13:20",
+    "title": "Updated Ken Agent V8.5",
+    "detail": "Two things Nathan asked for once the write started working"
+   },
+   {
+    "time": "14:21",
+    "title": "Updated Ken Agent V8.6",
+    "detail": "He asks in words, not in function names"
+   },
+   {
+    "time": "15:01",
+    "title": "Updated Ken Agent V8.7",
+    "detail": "A budget refusal no longer stops the order dead"
+   },
+   {
+    "time": "15:04",
+    "title": "Updated Materials PO Worker 3.2"
+   },
+   {
+    "time": "15:04",
+    "title": "Updated Materials PO Worker 3.3"
+   },
+   {
+    "time": "15:06",
+    "title": "Updated Materials PO Worker Routing Test 1.1"
+   },
+   {
+    "time": "20:55",
+    "title": "Built Site Builder Deploy 1.0"
+   },
+   {
+    "time": "21:30",
+    "title": "Built Compound Drawing Watcher 1.0"
+   },
+   {
+    "time": "22:05",
+    "title": "Updated Compound Drawing Watcher 1.1"
+   }
+  ],
+  "2026-08-26": [
+   {
+    "time": "09:06",
+    "title": "Updated Compound Drawing Watcher 1.2"
+   },
+   {
+    "time": "09:27",
+    "title": "Updated Site Builder Deploy 1.1"
+   }
+  ],
+  "2026-08-27": [
+   {
+    "time": "09:49",
+    "title": "Updated Ken Agent V8.8",
+    "detail": "Ken told Nathan 27 invoices were not in MCS"
+   },
+   {
+    "time": "14:10",
+    "title": "Updated Big Change Reconciliation Worker 1.5"
+   },
+   {
+    "time": "14:10",
+    "title": "Updated Kensite Quote Trends 1.1"
+   },
+   {
+    "time": "14:11",
+    "title": "Updated Kensite Shared Toolbox 1.4"
+   },
+   {
+    "time": "14:11",
+    "title": "Updated Weekly Check Up Sources 2.2"
+   },
+   {
+    "time": "",
+    "title": "Updated Ken Agent V8.9",
+    "detail": "The invoice fetch"
+   }
+  ],
+  "2026-08-28": [
+   {
+    "time": "15:25",
+    "title": "Updated Ken Agent V9.0",
+    "detail": "Ken issues Site Builder drawing references"
+   },
+   {
+    "time": "15:38",
+    "title": "Updated Ken Agent V9.1",
+    "detail": "Drawing requests every three minutes"
+   },
+   {
+    "time": "16:04",
+    "title": "Updated Ken Agent V9.2",
+    "detail": "Ken sends Site Builder drawing PDFs to Kensite colleagues"
+   }
+  ],
+  "2026-09-01": [
+   {
+    "time": "12:08",
+    "title": "Updated Compound Drawing Watcher 1.3"
+   },
+   {
+    "time": "12:09",
+    "title": "Updated Ken Agent V9.3",
+    "detail": "Drawing PDFs found in their new per-reference folders"
+   },
+   {
+    "time": "13:32",
+    "title": "Updated BigChange Credential Setup 1.2"
+   },
+   {
+    "time": "13:49",
+    "title": "Updated Big Change API Probe 1.2"
+   },
+   {
+    "time": "14:44",
+    "title": "Built MCS PO Probe 1.0"
+   },
+   {
+    "time": "14:52",
+    "title": "Updated Ken Agent V9.4",
+    "detail": "Ken can produce the Big Change reconciliation report on request"
+   },
+   {
+    "time": "16:06",
+    "title": "Updated Ken Agent V9.5",
+    "detail": "Ken can search every quote in MCS by customer and by date"
+   }
+  ],
+  "2026-09-02": [
+   {
+    "time": "11:29",
+    "title": "Updated Big Change Reconciliation Worker 2.3"
+   }
+  ],
+  "2026-09-03": [
+   {
+    "time": "10:19",
+    "title": "Updated Ken Agent V9.6",
+    "detail": "The quote search says why it failed, and tries more than one door"
+   },
+   {
+    "time": "10:26",
+    "title": "Updated Ken Agent V9.7",
+    "detail": "The quote pull knocks on the doors MCS actually opens"
+   },
+   {
+    "time": "15:53",
+    "title": "Updated Ken Agent V9.8",
+    "detail": "The door is open, now the parse has to learn the room"
+   },
+   {
+    "time": "16:25",
+    "title": "Updated Ken Agent V9.9",
+    "detail": "Ken searches quotes, for real, tested against the real report"
+   },
+   {
+    "time": "16:45",
+    "title": "Updated Ken Agent V10.0",
+    "detail": "A probe for proof of delivery from Big Change, before any tool"
+   },
+   {
+    "time": "16:51",
+    "title": "Updated Ken Agent V10.1",
+    "detail": "The POD probe finds a job by our PO number"
+   },
+   {
+    "time": "17:05",
+    "title": "Updated Ken Agent V10.2",
+    "detail": "The POD probe goes down a level"
+   },
+   {
+    "time": "17:09",
+    "title": "Updated Ken Agent V10.3",
+    "detail": "The POD probe reaches the photos"
+   },
+   {
+    "time": "17:14",
+    "title": "Updated Ken Agent V10.4",
+    "detail": "The POD probe asks the API how to ask it"
+   },
+   {
+    "time": "17:19",
+    "title": "Updated Ken Agent V10.5",
+    "detail": "Ken gives proof of delivery from Big Change"
+   },
+   {
+    "time": "20:30",
+    "title": "Updated Ken Agent V10.6",
+    "detail": "The POD probe tries the last REST variations before Big Change are asked"
+   },
+   {
+    "time": "20:39",
+    "title": "Updated Ken Agent V10.7",
+    "detail": "Nothing"
+   },
+   {
+    "time": "20:39",
+    "title": "Updated Ken Agent V10.8",
+    "detail": "Nathan can run a probe by email"
+   },
+   {
+    "time": "20:52",
+    "title": "Updated Ken Agent V10.9",
+    "detail": "The photographs, through the door Nathan found: Big Change's older Web Services API,..."
+   },
+   {
+    "time": "20:57",
+    "title": "Updated Ken Agent V11.0"
+   },
+   {
+    "time": "21:11",
+    "title": "Updated Ken Agent V11.1"
+   },
+   {
+    "time": "21:45",
+    "title": "Updated Ken Agent V11.2",
+    "detail": "Ken judges a wish the way the business judges an AI use case"
+   },
+   {
+    "time": "22:56",
+    "title": "Updated Ken Mission Control 2.2"
+   },
+   {
+    "time": "22:57",
+    "title": "Updated Ken Agent V11.3",
+    "detail": "Every reply records what Ken actually did in it"
+   },
+   {
+    "time": "23:05",
+    "title": "Updated Ken Mission Control 2.3"
+   },
+   {
+    "time": "23:24",
+    "title": "Updated Ken Agent V11.4",
+    "detail": "The dashboard follows its newest version, and Ken makes sure of it"
+   },
+   {
+    "time": "23:28",
+    "title": "Updated Ken Agent V11.5",
+    "detail": "The dashboard server check runs every ten minutes, not only at start, because at the..."
+   },
+   {
+    "time": "23:31",
+    "title": "Updated Ken Dashboard Server 1.1"
+   },
+   {
+    "time": "23:32",
+    "title": "Updated Ken Agent V11.6",
+    "detail": "The dashboard server's lock port was the Task Runner's (58733), so every server left..."
+   },
+   {
+    "time": "23:38",
+    "title": "Updated Ken Agent V11.7",
+    "detail": "A dashboard probe: who holds each lock port and 8501, the newest Mission Control on..."
+   }
+  ],
+  "2026-09-06": [
+   {
+    "time": "16:28",
+    "title": "Updated Ken Mission Control 2.4"
+   },
+   {
+    "time": "17:17",
+    "title": "Updated Ken Agent V11.8",
+    "detail": "Ken raises quotes in MCS, from a list of fleet codes or from a Site Builder drawing"
+   },
+   {
+    "time": "17:42",
+    "title": "Updated Ken Agent V11.9",
+    "detail": "Quotes from everyday words, with the words on the line"
+   },
+   {
+    "time": "17:56",
+    "title": "Updated Ken Agent V12.0",
+    "detail": "Ken asks for what a quote needs, and keeps his own pipeline"
+   },
+   {
+    "time": "18:09",
+    "title": "Updated Ken Agent V12.1",
+    "detail": "Ken reads the request himself before asking: postcode, the street beside it, weeks and..."
+   },
+   {
+    "time": "18:21",
+    "title": "Updated Ken Agent V12.2",
+    "detail": "Fleet codes with asset numbers are found: the equipment search now asks for itemised..."
+   },
+   {
+    "time": "18:27",
+    "title": "Updated Ken Agent V12.3",
+    "detail": "The equipment probe saves the page MCS returns, lists its links and the text around..."
+   },
+   {
+    "time": "21:03",
+    "title": "Updated Ken Agent V12.4",
+    "detail": "SS20 is a subgroup (/Equipment/Subgroup/218), as every itemised fleet code is; Ken..."
+   },
+   {
+    "time": "21:10",
+    "title": "Updated Ken Agent V12.5",
+    "detail": "Ken quotes fleet subgroups: LineType Subgroup (1, from MCS's own shared.js) with the..."
+   },
+   {
+    "time": "21:25",
+    "title": "Updated Ken Agent V12.6",
+    "detail": "\"can you quote ...\" from the trusted circle is the go ahead: the sender's own words..."
+   },
+   {
+    "time": "21:35",
+    "title": "Updated Ken Agent V12.7",
+    "detail": "Rates read for the line itself from MCS's NewLine reply, and an unpriced line said to..."
+   },
+   {
+    "time": "21:41",
+    "title": "Updated Ken Agent V12.8",
+    "detail": "\"SS20x2\" reads as two SS20s, not a code called SS20X2"
+   },
+   {
+    "time": "21:49",
+    "title": "Updated Ken Agent V12.9",
+    "detail": "Lines priced through MCS's own RecalcLineRates before saving (the NewLine reply is..."
+   },
+   {
+    "time": "22:02",
+    "title": "Updated Ken Agent V13.0",
+    "detail": "Transport lines on every quote (one INTDELHIAB and INTCOLHIAB per cabin, one more pair..."
+   },
+   {
+    "time": "22:30",
+    "title": "Updated Ken Agent V13.1",
+    "detail": "Unpriced hire lines take the STD price list's weekly rate (STD Price List.json in..."
+   },
+   {
+    "time": "22:54",
+    "title": "Updated Ken Agent V13.2",
+    "detail": "The 32ft 3+1 split unit at Nathan's fixed £110 a week, £122.50 with a shower, on the..."
+   }
+  ],
+  "2026-09-08": [
+   {
+    "time": "11:00",
+    "title": "Updated Ken Agent V13.3",
+    "detail": "Ken amends existing quotes through MCS's own editor session: add or remove lines,..."
+   },
+   {
+    "time": "11:05",
+    "title": "Updated Ken Agent V13.4",
+    "detail": "Quoteedit probe saves the quote's Details page and lists its edit, copy and revise..."
+   },
+   {
+    "time": "11:10",
+    "title": "Updated Ken Agent V13.5",
+    "detail": "Quotes opened for editing through GET /QuickQuote/EditToSession/?id=ref (the Edit..."
+   },
+   {
+    "time": "13:09",
+    "title": "Updated Big Change Reconciliation Worker 2.4"
+   },
+   {
+    "time": "13:29",
+    "title": "Updated Big Change Reconciliation Worker 2.5"
+   },
+   {
+    "time": "13:50",
+    "title": "Updated Ken Agent V13.6",
+    "detail": "The Big Change Reconciliation Worker reloads when its file changes, so a worker update..."
+   },
+   {
+    "time": "14:01",
+    "title": "Updated Ken Agent V13.7",
+    "detail": "Amendment lines matched by id, code key or description (accessories too); a code..."
+   },
+   {
+    "time": "14:10",
+    "title": "Updated Big Change Reconciliation Worker 2.6"
+   },
+   {
+    "time": "14:17",
+    "title": "Updated Ken Agent V13.8",
+    "detail": "Line names compared with only letters and digits (\"Double Stack/ Erect Staircase\" is..."
+   },
+   {
+    "time": "15:50",
+    "title": "Updated Ken Agent V13.9",
+    "detail": "Amendments point at lines: CODE, CODE~words, ~words or #number; a show_quote_lines..."
+   },
+   {
+    "time": "17:19",
+    "title": "Updated Big Change Reconciliation Worker 2.7"
+   },
+   {
+    "time": "17:27",
+    "title": "Updated Big Change Reconciliation Worker 2.8"
+   },
+   {
+    "time": "20:17",
+    "title": "Updated Big Change Reconciliation Worker 2.9"
+   },
+   {
+    "time": "20:40",
+    "title": "Updated Big Change Reconciliation Worker 3.0"
+   },
+   {
+    "time": "21:08",
+    "title": "Updated Big Change Reconciliation Worker 3.1"
+   },
+   {
+    "time": "21:40",
+    "title": "Updated Big Change Reconciliation Worker 3.2"
+   }
+  ],
+  "2026-09-09": [
+   {
+    "time": "14:58",
+    "title": "Updated Ken Agent V14.0",
+    "detail": "Guests, and Big Change invoices"
+   },
+   {
+    "time": "15:01",
+    "title": "Updated Ken Agent V14.1",
+    "detail": "The startup log names every guest and the abilities each one really grants, alongside..."
+   },
+   {
+    "time": "15:14",
+    "title": "Updated Ken Agent V14.2",
+    "detail": "POD photographs revisited"
+   },
+   {
+    "time": "20:09",
+    "title": "Updated Ken Agent V14.3",
+    "detail": "Whats_on_hire counts what is out"
+   },
+   {
+    "time": "20:29",
+    "title": "Updated Ken Agent V14.4",
+    "detail": "Cross hire read off BOTH codes on a live hire line (the REHIRE subgroup and the..."
+   },
+   {
+    "time": "20:47",
+    "title": "Updated Ken Agent V14.5",
+    "detail": "The rehire PO, not just any PO"
+   },
+   {
+    "time": "20:57",
+    "title": "Updated Ken Agent V14.6",
+    "detail": "A purchase order is read from its own block, never the whole page: RM-web's menu..."
+   },
+   {
+    "time": "21:05",
+    "title": "Updated Ken Agent V14.7",
+    "detail": "A purchase order's addresses and its supplier's name are stripped before its words are..."
+   },
+   {
+    "time": "21:23",
+    "title": "Updated Ken Agent V14.8",
+    "detail": "New probe pofinder CONTRACT [PO]: every filter the purchase order search offers, the..."
+   },
+   {
+    "time": "21:37",
+    "title": "Updated Ken Agent V14.9",
+    "detail": "MCS's own Source field decides a rehire PO (\"Source: Rehire - <contract>\" against..."
+   },
+   {
+    "time": "21:43",
+    "title": "Updated Ken Agent V15.0",
+    "detail": "The rehirepo probe runs the candidate search Ken actually uses, and shows the contract..."
+   },
+   {
+    "time": "21:57",
+    "title": "Updated Ken Agent V15.1",
+    "detail": "Rehire POs found at last, through MCS's own Rehire Search..."
+   },
+   {
+    "time": "22:05",
+    "title": "Updated Ken Agent V15.2",
+    "detail": "The rehire search is asked first and its orders are the only ones opened when it finds..."
+   }
+  ],
+  "2026-09-10": [
+   {
+    "time": "09:42",
+    "title": "Updated Big Change Reconciliation Worker 3.4"
+   },
+   {
+    "time": "10:50",
+    "title": "Updated Big Change Reconciliation Worker 3.5"
+   },
+   {
+    "time": "10:55",
+    "title": "Updated Big Change Reconciliation Worker 3.7"
+   },
+   {
+    "time": "12:29",
+    "title": "Updated Ken Agent V15.3",
+    "detail": "Every job on a purchase order gets its POD (bc_find_jobs, fetch_pods, summarise_pods),..."
+   }
+  ],
+  "2026-09-11": [
+   {
+    "time": "14:53",
+    "title": "Updated Ken Agent V15.4",
+    "detail": "The Site Builder keepalive rebuilt after I overwrote the V15.3 that carried it:..."
+   },
+   {
+    "time": "15:13",
+    "title": "Updated Ken Agent V15.5",
+    "detail": "Photographs that do not fit on the reply are sent in follow up emails on the same..."
+   }
+  ],
+  "2026-09-15": [
+   {
+    "time": "21:48",
+    "title": "Updated Ken Agent V15.6",
+    "detail": "Ken can log AI project ideas onto the MTCO Group AI Roadmap"
+   },
+   {
+    "time": "21:59",
+    "title": "Updated Ken Agent V15.7",
+    "detail": "Ken can move, edit and delete entries on the MTCO Group AI Roadmap, not only propose them"
+   }
+  ],
+  "2026-09-16": [
+   {
+    "time": "11:02",
+    "title": "Updated Push Roadmap Data 1.1"
+   },
+   {
+    "time": "11:37",
+    "title": "Built Publish App Files 1.0"
+   },
+   {
+    "time": "11:58",
+    "title": "Updated Ken Agent V15.8",
+    "detail": "The live hire site postcode, found by looking for a postcode rather than by a column..."
+   },
+   {
+    "time": "21:25",
+    "title": "Updated Daily Deliveries and Collections 2.4"
+   },
+   {
+    "time": "21:29",
+    "title": "Updated Kensite Task Runner 1.2"
+   },
+   {
+    "time": "21:30",
+    "title": "Updated AES Capacity Watcher 1.6"
+   },
+   {
+    "time": "21:31",
+    "title": "Updated Copy Invoice Worker 2.6"
+   },
+   {
+    "time": "21:55",
+    "title": "Updated Live Hire Report Worker 1.9"
+   },
+   {
+    "time": "21:55",
+    "title": "Updated Quote Request Worker 3.5"
+   },
+   {
+    "time": "21:57",
+    "title": "Updated Master IMS Register Task Reminders 2.0"
+   },
+   {
+    "time": "22:49",
+    "title": "Updated Ken Agent V15.9",
+    "detail": "Every request to OpenRouter now refuses providers that keep or train on what is sent"
+   }
+  ],
+  "2026-09-17": [
+   {
+    "time": "11:29",
+    "title": "Updated Ken Agent V16.0",
+    "detail": "The H&S committee agenda on demand: hs_committee_agenda asks for the date, time and..."
+   },
+   {
+    "time": "11:52",
+    "title": "Updated Ken Agent V16.1",
+    "detail": "The H&S committee meeting, not just its agenda"
+   },
+   {
+    "time": "12:55",
+    "title": "Updated Ken Agent V16.2",
+    "detail": "The door is the domain, and control of Ken is not behind it"
+   },
+   {
+    "time": "13:00",
+    "title": "Updated Ken Agent V16.3",
+    "detail": "A config change no longer waits for a version of Ken"
+   }
+  ],
+  "2026-09-18": [
+   {
+    "time": "10:08",
+    "title": "Updated Ken Agent V16.4",
+    "detail": "Ken watches the Enquiries mailbox for off hires"
+   }
+  ],
+  "2026-09-19": [
+   {
+    "time": "12:02",
+    "title": "Updated Ken Agent V16.5",
+    "detail": "Ken can install a package on his own machine, from a list"
+   },
+   {
+    "time": "12:12",
+    "title": "Updated Ken Agent V16.6",
+    "detail": "Ken draws up a customer SLA on demand"
+   },
+   {
+    "time": "12:32",
+    "title": "Updated Ken Agent V16.7",
+    "detail": "The keepalive covers every app, not just the Site Builder"
+   },
+   {
+    "time": "13:15",
+    "title": "Updated Ken Agent V16.8",
+    "detail": "Ken checks whether an idea is already on the AI roadmap before filing it, and asks..."
+   },
+   {
+    "time": "14:44",
+    "title": "Updated Ken Agent V16.9",
+    "detail": "Ken runs the AI Summit Barcelona follow ups"
+   },
+   {
+    "time": "14:56",
+    "title": "Updated Ken Agent V17.0",
+    "detail": "The summit ask could not be sent at all"
+   },
+   {
+    "time": "15:29",
+    "title": "Updated Ken Agent V17.1",
+    "detail": "A planner you can tick, and the sessions in your diary"
+   },
+   {
+    "time": "19:25",
+    "title": "Updated Ken Agent V17.2",
+    "detail": "Session descriptions stopped ending mid word"
+   },
+   {
+    "time": "20:01",
+    "title": "Updated Ken Agent V17.3",
+    "detail": "Picks in, diary out, in one step"
+   },
+   {
+    "time": "20:15",
+    "title": "Updated Ken Agent V17.4",
+    "detail": "A route for the picks that cannot fail"
+   },
+   {
+    "time": "20:26",
+    "title": "Updated Ken Agent V17.5",
+    "detail": "The Junk Email folder is read too"
+   },
+   {
+    "time": "20:53",
+    "title": "Updated Ken Agent V17.6",
+    "detail": "Tick the sessions in the email itself"
+   },
+   {
+    "time": "21:46",
+    "title": "Updated Publish App To GitHub 1.5"
+   },
+   {
+    "time": "21:47",
+    "title": "Updated Ken Agent V17.7",
+    "detail": "The picker is a widget on the MTCO tracker"
+   },
+   {
+    "time": "22:21",
+    "title": "Updated Ken Agent V17.8",
+    "detail": "The summit emails to Nathan's brief, plus a score out of 10"
+   },
+   {
+    "time": "22:37",
+    "title": "Updated Ken Agent V17.9",
+    "detail": "Summit_send_ask(fresh=True)"
+   }
+  ],
+  "2026-09-21": [
+   {
+    "time": "11:20",
+    "title": "Updated Ken Agent V18.0",
+    "detail": "Ken emails recurring Live Hire Reports straight to customers"
+   },
+   {
+    "time": "16:25",
+    "title": "Updated Ken Agent V18.1",
+    "detail": "Diary-from-Email: forward a meeting, get a calendar file back"
+   },
+   {
+    "time": "16:44",
+    "title": "Updated Ken Agent V18.2",
+    "detail": "Email_colleague, and who reads a reply"
+   },
+   {
+    "time": "17:14",
+    "title": "Updated Ken Agent V18.3",
+    "detail": "Zahara conversationally, on the documented api"
+   }
+  ],
+  "2026-09-22": [
+   {
+    "time": "07:02",
+    "title": "Updated Ken Agent V18.4",
+    "detail": "Summit_send_ask(only=...) and summit_people"
+   },
+   {
+    "time": "07:09",
+    "title": "Updated Ken Agent V18.5",
+    "detail": "Roadmap_filing on a guest entry"
+   },
+   {
+    "time": "13:25",
+    "title": "Updated Ken Agent V18.6",
+    "detail": "Financials at OpenRouter's actual charge"
+   },
+   {
+    "time": "13:25",
+    "title": "Updated Ken Mission Control 2.5"
+   },
+   {
+    "time": "13:47",
+    "title": "Updated Ken Agent V18.7",
+    "detail": "RAMS on demand"
+   },
+   {
+    "time": "14:27",
+    "title": "Built Check Repo Access 1.0"
+   },
+   {
+    "time": "15:22",
+    "title": "Updated Ken Agent V18.8",
+    "detail": "The SLA takes the requester's own sections, and the Kensite contacts come from config"
+   }
+  ],
+  "2026-09-23": [
+   {
+    "time": "15:27",
+    "title": "Updated Ken Agent V18.9",
+    "detail": "A probe for the AES planner feed, before any feed"
+   }
+  ],
+  "2026-09-28": [
+   {
+    "time": "10:55",
+    "title": "Updated Ken Agent V19.0",
+    "detail": "The Live Hire report as Excel"
+   },
+   {
+    "time": "12:06",
+    "title": "Updated Ken Agent V19.1",
+    "detail": "The AES planner feed from Big Change"
+   },
+   {
+    "time": "13:14",
+    "title": "Updated Ken Agent V19.2",
+    "detail": "_aes_planner_enquiries reads the \"enquiries\" list that Planner V2.0 writes to..."
+   },
+   {
+    "time": "14:13",
+    "title": "Updated Ken Agent V19.3",
+    "detail": "Aes_write_heartbeat writes data/feed_heartbeat.json to the Planner repo after every..."
+   },
+   {
+    "time": "14:38",
+    "title": "Updated Ken Agent V19.4",
+    "detail": "Aes_add_miles puts one way road miles from the depot (M46 9BE) on every feed card:..."
+   },
+   {
+    "time": "14:53",
+    "title": "Updated Ken Agent V19.5",
+    "detail": "Aes_miles_matrix measures every pair of postcodes in the feed window (OSRM table,..."
+   },
+   {
+    "time": "16:35",
+    "title": "Built Reconciliation AI Review August 1.0"
+   },
+   {
+    "time": "16:41",
+    "title": "Updated Big Change Reconciliation Reasoner 1.1"
+   },
+   {
+    "time": "17:24",
+    "title": "Updated Big Change Reconciliation Worker 3.8"
+   },
+   {
+    "time": "20:52",
+    "title": "Updated Big Change Reconciliation Worker 3.9"
+   },
+   {
+    "time": "21:04",
+    "title": "Updated Ken Agent V19.6",
+    "detail": "Ken no longer crashes when the model invents an argument for a tool that takes none"
+   },
+   {
+    "time": "21:39",
+    "title": "Updated Ken Agent V19.7",
+    "detail": "Ken builds the Site Visit report from a Site Agent's emails"
+   },
+   {
+    "time": "21:52",
+    "title": "Updated Ken Agent V19.8",
+    "detail": "The Site Visit report restyled to Kensite Brand Guidelines V1 2025: stacked black and..."
+   }
+  ],
+  "2026-09-29": [
+   {
+    "time": "09:27",
+    "title": "Updated Ken Agent V19.9",
+    "detail": "Web addresses in emails are links"
+   },
+   {
+    "time": "09:49",
+    "title": "Updated Ken Agent V20.0",
+    "detail": "New Site Builder drawings Ken creates carry \"boundary\": False, as Site Builder 5.0's..."
+   },
+   {
+    "time": "10:31",
+    "title": "Updated Prep Schedule MCS Discrepancy Check 4.2"
+   },
+   {
+    "time": "11:35",
+    "title": "Updated Ken Agent V20.1",
+    "detail": "Probe_aes_types lists Big Change categories and job types with counts over the feed..."
+   },
+   {
+    "time": "14:12",
+    "title": "Updated Ken Agent V20.2",
+    "detail": "Aes_is_fuel puts Big Change \"Fuel Delivery\" jobs on the planner feed as kind FUEL..."
+   },
+   {
+    "time": "19:31",
+    "title": "Updated Ken Agent V20.3",
+    "detail": "Ken can read and change the Cloudflare account"
+   },
+   {
+    "time": "19:35",
+    "title": "Updated Ken Agent V20.4",
+    "detail": "Probe_aes_price tries job price endpoints and builds a median price per job type from..."
+   },
+   {
+    "time": "19:42",
+    "title": "Updated Ken Agent V20.5",
+    "detail": "Pictures in an email reach the model"
+   },
+   {
+    "time": "19:43",
+    "title": "Updated Ken Agent V20.6",
+    "detail": "Aes_invoice_index pulls 120 days of /finance/invoices hourly and builds the rate card..."
+   },
+   {
+    "time": "20:38",
+    "title": "Updated Ken Agent V20.7",
+    "detail": "Probe_aes_api reads Big Change's OpenAPI document for anything money related and tries..."
+   },
+   {
+    "time": "20:42",
+    "title": "Updated Ken Agent V20.8",
+    "detail": "Aes_job_price reads /jobs/{id}/lineItems (cached an hour) and aes_add_prices uses it:..."
+   },
+   {
+    "time": "21:31",
+    "title": "Updated Big Change Reconciliation Worker 4.0"
+   }
+  ],
+  "2026-09-30": [
+   {
+    "time": "10:16",
+    "title": "Updated Ken Agent V20.9",
+    "detail": "Aes_archive_merge keeps every past card the pull no longer returns (AES Feed..."
+   },
+   {
+    "time": "11:42",
+    "title": "Updated Ken Agent V21.0",
+    "detail": "Raise_purchase_order and raise_purchase_order_now"
+   },
+   {
+    "time": "14:37",
+    "title": "Updated Big Change Reconciliation Worker 4.1"
+   }
+  ],
+  "2026-10-01": [
+   {
+    "time": "11:13",
+    "title": "Updated Ken Agent V21.1",
+    "detail": "_PO_RAISE_LOCK around raise_purchase_order_now (check, create, read back, audit) plus..."
+   },
+   {
+    "time": "12:52",
+    "title": "Updated Site Builder App 5.6"
+   },
+   {
+    "time": "12:52",
+    "title": "Updated Kensite Compound Drawing Generator 4.7"
+   },
+   {
+    "time": "12:52",
+    "title": "Updated Kensite Compound DXF Converter 3.5"
+   },
+   {
+    "time": "12:58",
+    "title": "Built MCS Quote Check 1.0"
+   },
+   {
+    "time": "13:05",
+    "title": "Updated Ken Agent V21.2",
+    "detail": "Build_mcs_quote switches to mcs_no_retry(s) before the first post when it made its own..."
+   },
+   {
+    "time": "13:21",
+    "title": "Updated MCS Quote Rehearsal 1.1"
+   },
+   {
+    "time": "13:28",
+    "title": "Updated Ken Agent V21.3",
+    "detail": "_qq_placeholder; qq_site_address treats \"-\" style site values as blank and fills a..."
+   },
+   {
+    "time": "13:28",
+    "title": "Built MCS Quote Attempts 1.0"
+   },
+   {
+    "time": "14:17",
+    "title": "Updated Ken Agent V21.4",
+    "detail": "Po_raise_refusal with purchase_orders.raisers (\"kensite\", a list, or absent for the..."
+   },
+   {
+    "time": "14:39",
+    "title": "Updated Ken Agent V21.5",
+    "detail": "_po_wide_refusal shared by po_raise_refusal and po_update_refusal;..."
+   },
+   {
+    "time": "17:16",
+    "title": "Updated Ken Agent V21.6",
+    "detail": "MailDispatcher, start_lane, _background_services, _drawing_services; _one_at_a_time..."
+   },
+   {
+    "time": "22:11",
+    "title": "Updated Ken Agent V21.7",
+    "detail": "Ken reports what each AES service driver charged per week for the planner's Mission..."
+   }
+  ],
+  "2026-10-02": [
+   {
+    "time": "20:14",
+    "title": "Updated Ken Agent V21.8",
+    "detail": "Email_html_to_text and email_body_for_model: the model reads the email as text (no..."
+   },
+   {
+    "time": "20:20",
+    "title": "Updated Weekly Check Up Builder 2.4"
+   },
+   {
+    "time": "20:21",
+    "title": "Updated Weekly Check Up Offline Test 1.1"
+   },
+   {
+    "time": "20:21",
+    "title": "Built Weekly Check Up Rebuild WE 021026 1.0"
+   },
+   {
+    "time": "21:23",
+    "title": "Built Big Change Scheduling Endpoints 1.0"
+   },
+   {
+    "time": "21:32",
+    "title": "Built Big Change Schedule Readiness 1.0"
+   },
+   {
+    "time": "21:41",
+    "title": "Updated Ken Agent V21.9",
+    "detail": "Aes_schedule_config, aes_plan_day, aes_schedule_changes, aes_resource_ids,..."
+   },
+   {
+    "time": "21:54",
+    "title": "Updated Ken Agent V22.0",
+    "detail": "Aes_schedule_changes holds any job whose planner run day is not its day in Big Change..."
+   },
+   {
+    "time": "22:02",
+    "title": "Updated Ken Agent V22.1",
+    "detail": "Aes_schedule_report rebuilt (day, driver, coloured jobs in order); aes_plan_day..."
+   },
+   {
+    "time": "22:15",
+    "title": "Updated Ken Agent V22.2",
+    "detail": "Aes_route_miles, aes_better_order (permutations within run sizes, promised times..."
+   },
+   {
+    "time": "22:27",
+    "title": "Updated Ken Agent V22.3",
+    "detail": "Report laid out per day with \"Run n - Job n:\" cells and a verdict line; suggestions..."
+   },
+   {
+    "time": "22:35",
+    "title": "Updated Ken Agent V22.4",
+    "detail": "Aes_schedule_changes groups a run entry under the job's Big Change day (aes_job_day),..."
+   }
+  ],
+  "2026-10-03": [
+   {
+    "time": "",
+    "title": "Updated Ken Agent V22.5",
+    "detail": "Aes_schedule_report's HTML is a bordered grid per day with a Run n - Job n header row;..."
+   },
+   {
+    "time": "",
+    "title": "Updated Ken Agent V22.6",
+    "detail": "Aes_depot_between; aes_plan_day, aes_route_miles (literal_runs for the comparison),..."
+   }
+  ],
+  "2026-10-05": [
+   {
+    "time": "09:04",
+    "title": "Updated Ken Agent V22.7",
+    "detail": "Aes_plan_day times a depot trip at every run boundary again (literal); the bed rule..."
+   },
+   {
+    "time": "09:41",
+    "title": "Updated Net2 Online Probe 1.4"
+   },
+   {
+    "time": "09:54",
+    "title": "Updated Ken Agent V22.8"
+   },
+   {
+    "time": "09:55",
+    "title": "Built Net2 Online integration for Ken",
+    "detail": "Depot turnstile events read every two minutes; Monday clocking report replaces InfoTime"
+   },
+   {
+    "time": "10:15",
+    "title": "Updated Ken Agent V22.9",
+    "detail": "Net2.report_names and net2_report_people; net2_timesheet gives the first In and the..."
+   },
+   {
+    "time": "10:27",
+    "title": "Updated Ken Agent V23.0",
+    "detail": "Net2_swipes: direction by alternation from the day's first swipe, repeats merged, the..."
+   },
+   {
+    "time": "11:03",
+    "title": "Updated Ken Agent V23.1",
+    "detail": "NET2_ABSENT, NET2_CHECK_OUT, NET2_CHECK_IN; net2_absent_days;..."
+   },
+   {
+    "time": "12:00",
+    "title": "Updated Big Change Reconciliation Worker 4.3"
+   },
+   {
+    "time": "12:24",
+    "title": "Updated Ken Agent V23.2",
+    "detail": "Ken can build an Excel workbook on demand"
+   },
+   {
+    "time": "12:30",
+    "title": "Updated Ken Agent V23.3",
+    "detail": "Build_excel_workbook one_row_per: a line of several assets split into one row per..."
+   },
+   {
+    "time": "14:01",
+    "title": "Updated AES Planner App 4.5"
+   },
+   {
+    "time": "15:12",
+    "title": "Connected Breathe HR API to Ken"
+   },
+   {
+    "time": "15:27",
+    "title": "Updated Ken Agent V23.4",
+    "detail": "The Breathe block (breathe_get /absences only, breathe_absences, breathe_leave_days,..."
+   },
+   {
+    "time": "15:37",
+    "title": "Retired InfoTime Weekly Clocking Report",
+    "detail": "Removed from the Task Runner; replaced by the Net2 clocking report"
+   },
+   {
+    "time": "15:56",
+    "title": "Updated Ken Agent V23.5"
+   },
+   {
+    "time": "16:02",
+    "title": "Updated Breathe HR Probe 1.3"
+   },
+   {
+    "time": "16:08",
+    "title": "Updated Ken Agent V23.6"
+   },
+   {
+    "time": "16:19",
+    "title": "Updated Ken Agent V23.7",
+    "detail": "Net2_timesheet adds \"minutes\" (rounded up to 5); the workbook writes hours as a..."
+   },
+   {
+    "time": "17:08",
+    "title": "Updated Ken Agent V23.8",
+    "detail": "Breathe_report_leave keeps Monday to Friday only; the email's Breathe line no longer..."
+   },
+   {
+    "time": "17:12",
+    "title": "Updated Ken Agent V23.9",
+    "detail": "The clocking workbook gains a Notes column; a full day off in Breathe with swipes..."
+   }
+  ],
+  "2026-10-06": [
+   {
+    "time": "11:16",
+    "title": "Updated MTCO AI Roadmap App 2.3"
+   },
+   {
+    "time": "11:16",
+    "title": "Updated MTCO AI Roadmap Planner 1.2"
+   },
+   {
+    "time": "11:26",
+    "title": "Updated Ken Agent V24.0",
+    "detail": "Ken can count a subgroup's quotes and why they were lost"
+   },
+   {
+    "time": "11:34",
+    "title": "Updated Ken Agent V24.1",
+    "detail": "Parse_quote_subgroup_rows joins wrapped reason text as well as a wrapped subgroup name"
+   },
+   {
+    "title": "Built New Report Quote Outcomes by SubGroup",
+    "detail": "MCS user report 67: one row per quote per subgroup with outcome and rejection reason"
+   }
+  ]
+ },
+ "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
+}
