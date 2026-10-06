@@ -1,6 +1,12 @@
 """
 MTCO AI Roadmap planner component
-Version 1.2
+Version 1.3
+
+1.3: the Work Diary gains a trend under the calendar: emails (blue) and work
+entries (green) for each day of the month shown, as two slim panels on one
+shared date axis (emails run near a hundred a day and work near ten, so one
+scale would flatten work and a second axis would mislead). Hover a day for
+its numbers, click to open it. Day counts no longer include the email line.
 
 1.2: the AI Summit picker is gone; workflow carries the Nathan Workflow
 entries ({"entries": {"YYYY-MM-DD": [...]}}) to the Planner calendar. The
