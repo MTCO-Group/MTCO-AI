@@ -224,6 +224,31 @@
   .wftip .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:baseline}
   .wftip .mut{color:#6b6e76}
   @media (max-width:760px){.wftrend{height:150px}}
+  /* GitHub activity: one small block per month, Mon to Sun rows, week columns */
+  .wfheat{position:relative;margin-left:auto;display:flex;flex-direction:column;gap:6px;min-width:0}
+  .wfheat .hh{display:flex;align-items:baseline;gap:10px;font-size:12px;color:#6b6e76}
+  .wfheat .hh b{color:#1a1b1e;font-weight:800;font-size:12.5px}
+  .wfheat .months{display:flex;gap:14px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+  .wfheat .mon{display:flex;flex-direction:column;gap:4px;flex:none}
+  .wfheat .mon button.ml{all:unset;cursor:pointer;font-size:11px;font-weight:600;color:#6b6e76;border-radius:4px;line-height:14px;height:14px}
+  .wfheat .mon button.ml:hover{color:#1a1b1e}
+  .wfheat .mon button.ml:focus-visible{outline:2px solid #0d823b;outline-offset:2px}
+  .wfheat .mon.cur button.ml{color:#1a1b1e;font-weight:800}
+  .wfheat .grid{display:grid;grid-template-rows:repeat(7,11px);grid-auto-flow:column;grid-auto-columns:11px;gap:3px}
+  .wfheat .grid.dls{grid-auto-columns:auto}
+  .wfheat .grid .dl{font-size:9.5px;color:#8a8c94;line-height:11px;text-align:right}
+  .wfheat .mon .sp{height:14px}
+  .wfheat .c{all:unset;width:11px;height:11px;border-radius:2.5px;background:#ebeae4;cursor:pointer;box-sizing:border-box}
+  .wfheat .c.l1{background:#6dbd86}.wfheat .c.l2{background:#36a05c}.wfheat .c.l3{background:#167b3d}.wfheat .c.l4{background:#0a5226}
+  .wfheat .c.fut{background:transparent;box-shadow:inset 0 0 0 1px #e6e5e1;cursor:default}
+  .wfheat .c.pad{visibility:hidden}
+  .wfheat .c.sel{box-shadow:0 0 0 1.5px #1a1b1e}
+  .wfheat .c:focus-visible{outline:2px solid #1a1b1e;outline-offset:1px}
+  .wfheat .leg{display:flex;align-items:center;gap:3px;font-size:11px;color:#6b6e76;justify-content:flex-end}
+  .wfheat .leg .c{cursor:default;margin:0 0}
+  .wfheat .leg span{margin:0 4px}
+  .wfheat .wftip{top:auto}
+  @media (max-width:900px){.wfheat{display:none}}
   .wfempty svg{width:28px;height:28px;color:#b9bcc2;display:block;margin:0 auto 8px}
   @media (max-width:760px){
     .wfbody.open{grid-template-columns:minmax(0,1fr)}
@@ -285,6 +310,12 @@
       <div>
         <h1 id="wfH1">Work Diary</h1>
         <p>Upcoming project work, day by day.</p>
+      </div>
+      <div class="wfheat" id="wfHeat" role="group" aria-label="GitHub activity by day">
+        <div class="hh"><b>GitHub activity</b><span id="wfHeatSum"></span></div>
+        <div class="months" id="wfHeatMonths"></div>
+        <div class="leg" aria-hidden="true"><span>Less</span><i class="c"></i><i class="c l1"></i><i class="c l2"></i><i class="c l3"></i><i class="c l4"></i><span>More</span></div>
+        <div class="wftip" id="wfHeatTip"></div>
       </div>
       <div class="pacts">
         <button class="btn wfback" id="wfBack" type="button">
@@ -660,6 +691,85 @@ function wfRender(){
   }
   wfPanel();
   wfTrend();
+  wfHeat();
+}
+
+/* ── GitHub activity heatmap in the header ─────────────────────────────────
+   One block per month (up to six, from the first month with commits to this
+   month), Monday to Sunday down, weeks across, like GitHub's own graph. The
+   shade is the day's build commits summed across repos; the commits Ken and
+   the apps make on their own show in the tooltip but do not shade the day.
+   Click a day to open it; click a month name to jump the calendar to it. */
+const WFH_STEPS = [1, 4, 10, 20];   // 1 to 3, 4 to 9, 10 to 19, 20 and over
+function wfGit(key){
+  const out = {n:0, auto:0, repos:[]};
+  wfList(key).forEach(e => {
+    if(!e || e.kind !== "github") return;
+    const m = /(\d+)\s+commit/.exec(e.title || ""); const n = m ? Number(m[1]) : 0;
+    const a = /Plus\s+(\d+)\s+commits?\s+made by Ken/i.exec(e.detail || "");
+    out.n += n; out.auto += a ? Number(a[1]) : 0;
+    out.repos.push({repo: String(e.repo || "").split("/").pop() || "repo", n});
+  });
+  return out;
+}
+function wfHeatLevel(n){ let l = 0; WFH_STEPS.forEach((t, i) => { if(n >= t) l = i + 1; }); return l; }
+function wfHeat(){
+  const host = $("#wfHeatMonths"), tip = $("#wfHeatTip"), wrap = $("#wfHeat");
+  if(!host) return;
+  host.innerHTML = ""; tip.style.display = "none";
+  const today = new Date(), tkey = wfKey(today);
+  const keys = Object.keys(WF.entries).filter(k => wfList(k).some(e => e && e.kind === "github")).sort();
+  const lastIdx = Math.max(today.getFullYear()*12 + today.getMonth(), WF.year*12 + WF.month);
+  let firstIdx = keys.length ? wfDate(keys[0]).getFullYear()*12 + wfDate(keys[0]).getMonth() : lastIdx;
+  firstIdx = Math.max(firstIdx, lastIdx - 5);
+  if(WF.year*12 + WF.month < firstIdx) firstIdx = WF.year*12 + WF.month;
+  let total = 0, active = 0;
+  const lab = el("div", "mon"); lab.setAttribute("aria-hidden", "true"); lab.appendChild(el("div", "sp"));
+  const lg = el("div", "grid dls");
+  ["Mon","","Wed","","Fri","",""].forEach(t => { const x = el("span", "dl"); x.textContent = t; lg.appendChild(x); });
+  lab.appendChild(lg); host.appendChild(lab);
+  for(let mi = firstIdx; mi <= lastIdx && mi - firstIdx < 6; mi += 1){
+    const y = Math.floor(mi / 12), m = mi % 12;
+    const mon = el("div", "mon" + (y === WF.year && m === WF.month ? " cur" : ""));
+    const ml = el("button", "ml"); ml.type = "button"; ml.textContent = WF_MON[m].slice(0,3) + (y !== today.getFullYear() ? " " + y : "");
+    ml.setAttribute("aria-label", "Show " + WF_MON[m] + " " + y);
+    ml.addEventListener("click", () => { WF.year = y; WF.month = m; WF.focus = ""; wfRender(); wfSave(); });
+    mon.appendChild(ml);
+    const g = el("div", "grid");
+    const first = new Date(y, m, 1), days = new Date(y, m + 1, 0).getDate();
+    for(let i = 0; i < wfDow(first); i += 1) g.appendChild(el("i", "c pad"));
+    for(let d = 1; d <= days; d += 1){
+      const dt = new Date(y, m, d), key = wfKey(dt), gi = wfGit(key);
+      const fut = key > tkey;
+      const c = el("button", "c" + (fut ? " fut" : (gi.n ? " l" + wfHeatLevel(gi.n) : "")) + (key === WF.sel ? " sel" : ""));
+      c.type = "button"; c.tabIndex = -1;
+      c.setAttribute("aria-label", wfLong(dt) + ": " + (gi.n ? gi.n + " build commit" + (gi.n === 1 ? "" : "s") : "no build commits"));
+      if(!fut){
+        total += gi.n; if(gi.n) active += 1;
+        c.addEventListener("click", () => wfSelect(key));
+        c.addEventListener("mouseenter", () => {
+          let h = "<b>" + wfLong(dt) + "</b>";
+          if(!gi.n && !gi.auto) h += '<span class="mut">No GitHub activity</span>';
+          else {
+            h += gi.n + " build commit" + (gi.n === 1 ? "" : "s");
+            gi.repos.filter(r => r.n).forEach(r => { h += "<br>" + '<span class="sw" style="background:#167b3d"></span>' + r.repo.replace(/[<>&]/g, "") + "  " + r.n; });
+            if(gi.auto) h += '<br><span class="mut">Plus ' + gi.auto + " made by Ken and the apps</span>";
+          }
+          tip.innerHTML = h; tip.style.display = "block";
+          const wr = wrap.getBoundingClientRect(), cr = c.getBoundingClientRect();
+          let left = cr.left - wr.left + cr.width / 2 - tip.offsetWidth / 2;
+          left = Math.max(-40, Math.min(left, wr.width - tip.offsetWidth));
+          tip.style.left = left + "px"; tip.style.top = (cr.bottom - wr.top + 8) + "px";
+        });
+        c.addEventListener("mouseleave", () => { tip.style.display = "none"; });
+      }
+      g.appendChild(c);
+    }
+    mon.appendChild(g);
+    host.appendChild(mon);
+  }
+  $("#wfHeatSum").textContent = total + " build commit" + (total === 1 ? "" : "s") + " on " + active + " day" + (active === 1 ? "" : "s");
+  host.scrollLeft = host.scrollWidth;
 }
 
 /* ── the month's trend: emails (blue) and work entries (green) ──────────────
