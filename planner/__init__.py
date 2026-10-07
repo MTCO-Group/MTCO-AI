@@ -1,6 +1,16 @@
 """
 MTCO AI Roadmap planner component
-Version 1.8
+Version 1.9
+
+1.9: parchment flaps with dark green figures, and a period roller. The
+leaves are warm paper with a fibre grain (an inline noise texture), the top
+catching the light and the bottom in its shadow. The line of text under the
+board and the This Week and This Month row are gone; instead a six sided
+drum beside the board turns through Today, This Week, This Month, This
+Quarter, This Year and All Time, on its own every eight seconds (held while
+the pointer or focus is on it) or at a click. Each turn shuffles the board:
+every flap flips rapidly through a run of digits, as if resetting, and
+lands on that period's figure. A period the data does not carry is skipped.
 
 1.8: the time saved board looks and moves like a real split flap display.
 Each tile is two halves on a hinge (a dark slot and a pin either side) in a
