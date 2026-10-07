@@ -79,8 +79,10 @@ in two panels. Hover a day for its numbers; click to open it.
 
 The Work Diary header also carries a split flap board of the time Ken and our AI
 have saved (hours and minutes all time, this week and this month). The numbers
-are in data/Time Saved.json, written hourly by Push Time Saved.py on Ken's
-machine from the Ken Time Saved Index, the same count as Ken Mission Control.
+are in data/Time Saved.json, written every minute by Push Time Saved.py on Ken's
+machine from the Ken Time Saved Index (the same count as Ken Mission Control)
+to the live-data branch, which the board reads every 90 seconds; main gets a
+copy at most hourly so Streamlit Cloud is not pulled every minute.
 
 The Work Diary header carries a GitHub activity heatmap: one block per month,
 Monday to Sunday down and weeks across, shaded by the day's build commits
