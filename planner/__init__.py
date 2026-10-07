@@ -1,6 +1,15 @@
 """
 MTCO AI Roadmap planner component
-Version 1.9
+Version 2.0
+
+2.0: the flaps read as parchment and the roller sits quietly with the rest
+of the page. Each leaf carries three layers of paper made in the browser
+(long fibres, soft age staining and a fine tooth) over a warm base, with
+burnt edges, and every tile is cut from a different part of the sheet so no
+two share a grain; the figures are printed dark green. The roller is now a
+plain pill like the page's own buttons (white, a 1px border, a green up and
+down mark): the drum still turns behind it, but only the front label is
+read and its neighbours fade out.
 
 1.9: parchment flaps with dark green figures, and a period roller. The
 leaves are warm paper with a fibre grain (an inline noise texture), the top
