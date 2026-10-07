@@ -1,6 +1,12 @@
 """
 MTCO AI Roadmap planner component
-Version 2.2
+Version 2.3
+
+2.3: the first entry in each calendar day no longer cuts off. Nathan: "move
+it slightly higher so it doesnt cut off". "+N more" now sits on the date's
+line, right aligned, so the first entry comes straight under the date; the
+cell's top padding drops from 7px to 5px, the gaps from 4px to 2px and the
+date circle from 26px to 24px, so the entry fits even a short row.
 
 2.2: the Work Diary as designed on the canvas. The header reads "Work
 Diary" with Diary in regular weight, and under it the Time Saved Clock: its
