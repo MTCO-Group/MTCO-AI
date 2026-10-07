@@ -1,6 +1,17 @@
 """
 MTCO AI Roadmap planner component
-Version 1.7
+Version 1.8
+
+1.8: the time saved board looks and moves like a real split flap display.
+Each tile is two halves on a hinge (a dark slot and a pin either side) in a
+dark housing, set in Oswald; a change drops the old top leaf to flat and
+lands the new bottom leaf over the old bottom, and a tile steps through
+every digit between its old and new value (the tens of minutes only 0 to
+5). The board fetches its own numbers every 90 seconds while the Work Diary
+is open and the tab is visible: data/Time Saved.json on the live-data
+branch through GitHub's API (conditional, so an unchanged file costs
+nothing), else the raw file. Push Time Saved 1.1 writes that branch every
+minute.
 
 1.7: a split flap board at the top of the Work Diary, in Kensite green,
 showing the time Ken and our AI have saved: hours and minutes all time,
