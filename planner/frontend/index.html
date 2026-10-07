@@ -277,20 +277,21 @@
   .fssep i{width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2a8f52,#0b4a25 60%,#062e15);
       box-shadow:0 1px 1px rgba(0,0,0,.35)}
   .fl{--w:40px;--h:60px;--fs:46px;position:relative;width:var(--w);height:var(--h);perspective:260px;
-      font:600 var(--fs)/var(--h) "Oswald","Figtree",system-ui,sans-serif;color:#0b4a25;text-align:center;
+      font:600 var(--fs)/var(--h) "Oswald","Figtree",system-ui,sans-serif;color:#0d4524;text-align:center;
       font-variant-numeric:tabular-nums}
-  .fl .h{position:absolute;left:0;right:0;height:calc(50% - 1px);overflow:hidden;backface-visibility:hidden}
-  .fl .h span{position:absolute;left:0;right:0;height:var(--h);text-shadow:0 1px 0 rgba(255,250,235,.55),0 -.5px 0 rgba(40,30,10,.25)}
+  .fl .h{position:absolute;left:0;right:0;height:calc(50% - 1px);overflow:hidden;backface-visibility:hidden;
+      background-position:var(--px,0) var(--py,0)}
+  .fl .h span{position:absolute;left:0;right:0;height:var(--h);opacity:.93;text-shadow:0 1px 0 rgba(255,248,228,.6),0 0 1px rgba(13,69,36,.35)}
   /* parchment leaves: warm paper with a fibre grain, the top catching the light, the bottom in the top's shadow */
   .fl .t{top:0;border-radius:5px 5px 2px 2px;
-      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .12 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"),linear-gradient(180deg,#f8f0dc 0%,#f1e6c9 50%,#e8dab7 100%);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.75),inset 0 -1px 0 rgba(90,70,30,.22),inset 1px 0 0 rgba(255,255,255,.35)}
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.004 .28' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .40 0 0 0 0 .29 0 0 0 0 .12 0 0 0 .95 -.30'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23p)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.022' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .52 0 0 0 0 .37 0 0 0 0 .14 0 0 0 1.25 -.42'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .30 0 0 0 0 .22 0 0 0 0 .10 0 0 0 .30 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23p)'/%3E%3C/svg%3E"),linear-gradient(180deg,#f6ead0 0%,#efe0bd 55%,#e7d4aa 100%);
+      box-shadow:inset 0 1px 0 rgba(255,250,235,.8),inset 0 -1px 0 rgba(90,70,30,.22),inset 0 0 7px rgba(140,100,40,.28)}
   .fl .t::after{content:"";position:absolute;inset:0;pointer-events:none;
       background:radial-gradient(120% 90% at 30% 0%,rgba(255,255,255,.35),rgba(255,255,255,0) 60%),
                  linear-gradient(180deg,rgba(0,0,0,0) 70%,rgba(110,85,40,.12))}
   .fl .b{bottom:0;border-radius:2px 2px 5px 5px;
-      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .12 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"),linear-gradient(180deg,#e2d2ab 0%,#e6d7b2 35%,#dccb9f 100%);
-      box-shadow:inset 0 4px 5px -3px rgba(60,45,15,.45),inset 0 -1px 0 rgba(90,70,30,.35),0 2px 2px rgba(0,0,0,.45)}
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.004 .28' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .40 0 0 0 0 .29 0 0 0 0 .12 0 0 0 .95 -.30'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23p)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.022' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .52 0 0 0 0 .37 0 0 0 0 .14 0 0 0 1.25 -.42'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .30 0 0 0 0 .22 0 0 0 0 .10 0 0 0 .30 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23p)'/%3E%3C/svg%3E"),linear-gradient(180deg,#e4d2a6 0%,#e9d8b0 35%,#dfc999 100%);
+      box-shadow:inset 0 4px 5px -3px rgba(60,45,15,.45),inset 0 -1px 0 rgba(90,70,30,.35),inset 0 0 7px rgba(140,100,40,.3),0 2px 2px rgba(0,0,0,.45)}
   .fl .b::after{content:"";position:absolute;inset:0;pointer-events:none;
       background:linear-gradient(180deg,rgba(80,60,20,.10),rgba(0,0,0,0) 40%,rgba(80,60,20,.08))}
   .fl .b span{top:calc(var(--h) / -2)}
@@ -302,30 +303,21 @@
   .fl i.pin{position:absolute;top:calc(50% - 5px);width:3px;height:10px;border-radius:1px;z-index:5;
       background:linear-gradient(90deg,#4a4d53,#1d1e22 60%,#0b0b0c);box-shadow:0 1px 1px rgba(0,0,0,.5)}
   .fl i.pin.l{left:-2px}.fl i.pin.r{right:-2px}
-  /* the period roller: a green drum in the same housing, turning one face per period */
-  .fsroll{all:unset;box-sizing:border-box;position:relative;width:148px;height:72px;margin-right:6px;cursor:pointer;
-      border-radius:11px;padding:6px;
-      background:linear-gradient(180deg,#2c2e33 0%,#1b1c20 55%,#111214 100%);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.09),inset 0 -2px 5px rgba(0,0,0,.7),inset 0 0 0 1px rgba(0,0,0,.55),
-                 0 1px 0 rgba(255,255,255,.7),0 16px 26px -14px rgba(10,20,14,.65),0 3px 6px -2px rgba(10,20,14,.35)}
-  .fsroll:focus-visible{outline:2px solid #0d823b;outline-offset:3px}
-  .fsroll .win{display:block;position:relative;width:100%;height:100%;overflow:hidden;border-radius:6px;perspective:420px;background:#2a2316}
+  /* the period roller: a quiet control in the dashboard's own style. A drum of six
+     labels turns behind a window; only the front label is read, its neighbours fade out */
+  .fsroll{all:unset;box-sizing:border-box;position:relative;align-self:center;width:128px;height:44px;margin:0 6px 20px 0;cursor:pointer;
+      border:1px solid #cfd3cf;border-radius:999px;background:#fff;transition:border-color .15s,background .15s}
+  .fsroll:hover{border-color:#8a8c94}
+  .fsroll:focus-visible{outline:2px solid #0d823b;outline-offset:2px}
+  .fsroll .win{display:block;position:absolute;inset:0 30px 0 14px;overflow:hidden;perspective:300px;
+      -webkit-mask-image:linear-gradient(180deg,transparent 18%,#000 40%,#000 60%,transparent 82%);
+              mask-image:linear-gradient(180deg,transparent 18%,#000 40%,#000 60%,transparent 82%)}
   .fsroll .drum{display:block;position:absolute;left:0;right:0;top:50%;height:0;transform-style:preserve-3d;
-      transition:transform .9s cubic-bezier(.2,.75,.25,1.08)}
-  .fsroll .face{position:absolute;left:0;right:0;top:-15px;height:30px;backface-visibility:hidden;
-      display:flex;align-items:center;justify-content:center;
-      font:600 17px/1 "Oswald","Figtree",system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b4a25;
-      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .12 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"),linear-gradient(180deg,#f6eed8 0%,#eee2c3 55%,#e3d4ae 100%);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -1px 0 rgba(90,70,30,.35);text-shadow:0 1px 0 rgba(255,250,235,.55)}
-  /* the curve: faces darken as they turn away, with a glint on the front */
-  .fsroll .win::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
-      background:linear-gradient(180deg,rgba(20,14,4,.82) 0%,rgba(40,30,10,.3) 26%,rgba(255,255,255,.12) 44%,rgba(255,255,255,0) 52%,rgba(40,30,10,.3) 74%,rgba(20,14,4,.85) 100%)}
-  .fsroll .win::before{content:"";position:absolute;left:0;right:0;top:calc(50% - 16px);height:32px;z-index:3;pointer-events:none;
-      border-top:1px solid rgba(0,0,0,.45);border-bottom:1px solid rgba(0,0,0,.45)}
-  .fsroll i.pin{position:absolute;top:calc(50% - 6px);width:4px;height:12px;border-radius:1px;z-index:4;
-      background:linear-gradient(90deg,#4a4d53,#1d1e22 60%,#0b0b0c)}
-  .fsroll i.pin.l{left:2px}.fsroll i.pin.r{right:2px}
-  .fsroll .lab{display:block;position:absolute;left:0;right:0;bottom:-21px;text-align:center;font:700 10.5px/1 "Figtree",system-ui,sans-serif;
+      transition:transform .7s cubic-bezier(.22,.9,.28,1)}
+  .fsroll .face{position:absolute;left:0;right:0;top:-10px;height:20px;backface-visibility:hidden;
+      display:flex;align-items:center;font:600 13px/1 "Figtree",system-ui,sans-serif;color:#1a1b1e;white-space:nowrap}
+  .fsroll .chev{position:absolute;right:11px;top:calc(50% - 8px);width:16px;height:16px;color:#0d823b}
+  .fsroll .lab{display:block;position:absolute;left:0;right:0;bottom:-20px;text-align:center;font:700 10.5px/1 "Figtree",system-ui,sans-serif;
       letter-spacing:.14em;text-transform:uppercase;color:#6b6e76}
   .fsmain{align-items:flex-start}
   .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -422,7 +414,7 @@
         <div class="fsmain">
           <button class="fsroll" id="fsRoll" type="button" aria-describedby="fsSay">
             <span class="win"><span class="drum" id="fsDrum"></span></span>
-            <i class="pin l" aria-hidden="true"></i><i class="pin r" aria-hidden="true"></i>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 10l4-4 4 4"></path><path d="M8 14l4 4 4-4"></path></svg>
             <span class="lab" aria-hidden="true">Time saved</span>
           </button>
           <div class="fsgrp" aria-hidden="true"><div class="fsdigits" id="fsH"></div><span class="fslab">Hours</span></div>
@@ -965,6 +957,9 @@ function fsTile(ch, word){
   if(word){ const g = el("span", "ghost"); g.textContent = ch; f.appendChild(g); }
   f.append(fsHalf("t", ch), fsHalf("b", ch), el("i", "pin l"), el("i", "pin r"));
   f.dataset.ch = ch;
+  // every leaf is cut from a different part of the sheet, so no two tiles share a grain
+  f.style.setProperty("--px", -Math.floor(Math.random() * 180) + "px");
+  f.style.setProperty("--py", -Math.floor(Math.random() * 180) + "px");
   return f;
 }
 /* one real flip: the new top shows at once, the old top leaf falls to
@@ -1035,7 +1030,7 @@ function fsPeriod(){ return FS_PERIODS[((FS.turn % 6) + 6) % 6]; }
 function fsValue(){ const t = WF.saved || {}, v = t[fsPeriod().key]; return typeof v === "number" ? v : null; }
 function fsBuildDrum(){
   const d = $("#fsDrum"); if(!d || d.children.length) return;
-  const r = 15 / Math.tan(Math.PI / 6);      // a 30px face on a six sided drum
+  const r = 10 / Math.tan(Math.PI / 6);      // a 20px face on a six sided drum
   FS_PERIODS.forEach((p, i) => {
     const f = el("span", "face"); f.textContent = p.label;
     f.style.transform = `rotateX(${-i * 60}deg) translateZ(${r.toFixed(2)}px)`;
