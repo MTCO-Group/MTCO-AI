@@ -78,7 +78,9 @@ Under the calendar a trend shows each day of the month: emails (blue, from the
 in two panels. Hover a day for its numbers; click to open it.
 
 The Work Diary header also carries a split flap board of the time Ken and our AI
-have saved (hours and minutes all time, this week and this month). The numbers
+have saved: parchment flaps with a roller beside them that turns through Today,
+This Week, This Month, This Quarter, This Year and All Time, shuffling the board
+onto each period's figure. The numbers
 are in data/Time Saved.json, written every minute by Push Time Saved.py on Ken's
 machine from the Ken Time Saved Index (the same count as Ken Mission Control)
 to the live-data branch, which the board reads every 90 seconds; main gets a
