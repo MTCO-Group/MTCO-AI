@@ -274,41 +274,61 @@
                  0 1px 0 rgba(255,255,255,.7),0 16px 26px -14px rgba(10,20,14,.65),0 3px 6px -2px rgba(10,20,14,.35)}
   .fslab{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6b6e76}
   .fssep{display:flex;flex-direction:column;gap:14px;padding-top:22px}
-  .fssep i{width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2fbf68,#0d823b 55%,#075226);
+  .fssep i{width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2a8f52,#0b4a25 60%,#062e15);
       box-shadow:0 1px 1px rgba(0,0,0,.35)}
   .fl{--w:40px;--h:60px;--fs:46px;position:relative;width:var(--w);height:var(--h);perspective:260px;
-      font:600 var(--fs)/var(--h) "Oswald","Figtree",system-ui,sans-serif;color:#f5f8f5;text-align:center;
+      font:600 var(--fs)/var(--h) "Oswald","Figtree",system-ui,sans-serif;color:#0b4a25;text-align:center;
       font-variant-numeric:tabular-nums}
   .fl .h{position:absolute;left:0;right:0;height:calc(50% - 1px);overflow:hidden;backface-visibility:hidden}
-  .fl .h span{position:absolute;left:0;right:0;height:var(--h);text-shadow:0 1px 1px rgba(0,0,0,.35)}
+  .fl .h span{position:absolute;left:0;right:0;height:var(--h);text-shadow:0 1px 0 rgba(255,250,235,.55),0 -.5px 0 rgba(40,30,10,.25)}
+  /* parchment leaves: warm paper with a fibre grain, the top catching the light, the bottom in the top's shadow */
   .fl .t{top:0;border-radius:5px 5px 2px 2px;
-      background:linear-gradient(180deg,#16a253 0%,#11924a 45%,#0e8642 100%);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 -1px 0 rgba(0,0,0,.18)}
-  .fl .t::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.13),rgba(255,255,255,0) 70%);pointer-events:none}
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .12 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"),linear-gradient(180deg,#f8f0dc 0%,#f1e6c9 50%,#e8dab7 100%);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.75),inset 0 -1px 0 rgba(90,70,30,.22),inset 1px 0 0 rgba(255,255,255,.35)}
+  .fl .t::after{content:"";position:absolute;inset:0;pointer-events:none;
+      background:radial-gradient(120% 90% at 30% 0%,rgba(255,255,255,.35),rgba(255,255,255,0) 60%),
+                 linear-gradient(180deg,rgba(0,0,0,0) 70%,rgba(110,85,40,.12))}
   .fl .b{bottom:0;border-radius:2px 2px 5px 5px;
-      background:linear-gradient(180deg,#0b7135 0%,#0c7a39 30%,#0b7034 100%);
-      box-shadow:inset 0 3px 4px -2px rgba(0,0,0,.45),inset 0 -1px 0 rgba(0,0,0,.35),0 2px 2px rgba(0,0,0,.45)}
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .12 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"),linear-gradient(180deg,#e2d2ab 0%,#e6d7b2 35%,#dccb9f 100%);
+      box-shadow:inset 0 4px 5px -3px rgba(60,45,15,.45),inset 0 -1px 0 rgba(90,70,30,.35),0 2px 2px rgba(0,0,0,.45)}
+  .fl .b::after{content:"";position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(180deg,rgba(80,60,20,.10),rgba(0,0,0,0) 40%,rgba(80,60,20,.08))}
   .fl .b span{top:calc(var(--h) / -2)}
   .fl .ft{z-index:3;transform-origin:50% 100%}
   .fl .fb{z-index:3;transform-origin:50% 0}
   .fl .fb span{top:calc(var(--h) / -2)}
   /* the hinge: a dark slot across the middle and a pin either side */
-  .fl::before{content:"";position:absolute;left:0;right:0;top:calc(50% - 1px);height:2px;background:#03180b;z-index:4}
+  .fl::before{content:"";position:absolute;left:0;right:0;top:calc(50% - 1px);height:2px;background:#16120a;z-index:4}
   .fl i.pin{position:absolute;top:calc(50% - 5px);width:3px;height:10px;border-radius:1px;z-index:5;
       background:linear-gradient(90deg,#4a4d53,#1d1e22 60%,#0b0b0c);box-shadow:0 1px 1px rgba(0,0,0,.5)}
   .fl i.pin.l{left:-2px}.fl i.pin.r{right:-2px}
-  .fsrow{display:flex;align-items:center;gap:7px}
-  .fsrow .fsdigits{padding:4px;gap:3px;border-radius:8px}
-  .fsrow .fl{--w:23px;--h:34px;--fs:25px;perspective:180px}
-  .fsrow .fl .t{border-radius:3px 3px 1px 1px}.fsrow .fl .b{border-radius:1px 1px 3px 3px}
-  .fsrow .fl i.pin{height:7px;top:calc(50% - 3.5px)}
-  .fsrow .fl.word{--w:auto;--fs:15px;padding:0 10px;letter-spacing:.12em;font-weight:500}
-  .fsrow .fl.word .h{position:absolute}
-  .fsrow .fl.word .ghost{visibility:hidden;font:inherit;line-height:var(--h);display:block}
-  .fsrow .gap{width:10px}
-  .fscap{margin:0;font-size:11.5px;color:#6b6e76;text-align:center;font-variant-numeric:tabular-nums}
-  .fscap b{color:#1a1b1e;font-weight:700}
-  @media (max-width:1440px){.fsrow{display:none}.wfsaved .fscap{max-width:300px}}
+  /* the period roller: a green drum in the same housing, turning one face per period */
+  .fsroll{all:unset;box-sizing:border-box;position:relative;width:148px;height:72px;margin-right:6px;cursor:pointer;
+      border-radius:11px;padding:6px;
+      background:linear-gradient(180deg,#2c2e33 0%,#1b1c20 55%,#111214 100%);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.09),inset 0 -2px 5px rgba(0,0,0,.7),inset 0 0 0 1px rgba(0,0,0,.55),
+                 0 1px 0 rgba(255,255,255,.7),0 16px 26px -14px rgba(10,20,14,.65),0 3px 6px -2px rgba(10,20,14,.35)}
+  .fsroll:focus-visible{outline:2px solid #0d823b;outline-offset:3px}
+  .fsroll .win{display:block;position:relative;width:100%;height:100%;overflow:hidden;border-radius:6px;perspective:420px;background:#2a2316}
+  .fsroll .drum{display:block;position:absolute;left:0;right:0;top:50%;height:0;transform-style:preserve-3d;
+      transition:transform .9s cubic-bezier(.2,.75,.25,1.08)}
+  .fsroll .face{position:absolute;left:0;right:0;top:-15px;height:30px;backface-visibility:hidden;
+      display:flex;align-items:center;justify-content:center;
+      font:600 17px/1 "Oswald","Figtree",system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b4a25;
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .12 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"),linear-gradient(180deg,#f6eed8 0%,#eee2c3 55%,#e3d4ae 100%);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -1px 0 rgba(90,70,30,.35);text-shadow:0 1px 0 rgba(255,250,235,.55)}
+  /* the curve: faces darken as they turn away, with a glint on the front */
+  .fsroll .win::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+      background:linear-gradient(180deg,rgba(20,14,4,.82) 0%,rgba(40,30,10,.3) 26%,rgba(255,255,255,.12) 44%,rgba(255,255,255,0) 52%,rgba(40,30,10,.3) 74%,rgba(20,14,4,.85) 100%)}
+  .fsroll .win::before{content:"";position:absolute;left:0;right:0;top:calc(50% - 16px);height:32px;z-index:3;pointer-events:none;
+      border-top:1px solid rgba(0,0,0,.45);border-bottom:1px solid rgba(0,0,0,.45)}
+  .fsroll i.pin{position:absolute;top:calc(50% - 6px);width:4px;height:12px;border-radius:1px;z-index:4;
+      background:linear-gradient(90deg,#4a4d53,#1d1e22 60%,#0b0b0c)}
+  .fsroll i.pin.l{left:2px}.fsroll i.pin.r{right:2px}
+  .fsroll .lab{display:block;position:absolute;left:0;right:0;bottom:-21px;text-align:center;font:700 10.5px/1 "Figtree",system-ui,sans-serif;
+      letter-spacing:.14em;text-transform:uppercase;color:#6b6e76}
+  .fsmain{align-items:flex-start}
+  .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   #wf .phead > div:first-child{flex:0 0 auto}
   @media (max-width:760px){.wfsaved{display:none}}
   /* GitHub activity: one small block per month, Mon to Sun rows, week columns */
@@ -398,20 +418,18 @@
         <h1 id="wfH1">Work Diary</h1>
         <p>Upcoming project work, day by day.</p>
       </div>
-      <div class="wfsaved" id="wfSaved" role="group" aria-labelledby="fsCap" hidden>
-        <div class="fsmain" aria-hidden="true">
-          <div class="fsgrp"><div class="fsdigits" id="fsH"></div><span class="fslab">Hours</span></div>
-          <div class="fssep"><i></i><i></i></div>
-          <div class="fsgrp"><div class="fsdigits" id="fsM"></div><span class="fslab">Minutes</span></div>
+      <div class="wfsaved" id="wfSaved" role="group" aria-label="Time saved by Ken and our AI" hidden>
+        <div class="fsmain">
+          <button class="fsroll" id="fsRoll" type="button" aria-describedby="fsSay">
+            <span class="win"><span class="drum" id="fsDrum"></span></span>
+            <i class="pin l" aria-hidden="true"></i><i class="pin r" aria-hidden="true"></i>
+            <span class="lab" aria-hidden="true">Time saved</span>
+          </button>
+          <div class="fsgrp" aria-hidden="true"><div class="fsdigits" id="fsH"></div><span class="fslab">Hours</span></div>
+          <div class="fssep" aria-hidden="true"><i></i><i></i></div>
+          <div class="fsgrp" aria-hidden="true"><div class="fsdigits" id="fsM"></div><span class="fslab">Minutes</span></div>
         </div>
-        <div class="fsrow" aria-hidden="true">
-          <div class="fsdigits" id="fsWl"></div>
-          <div class="fsdigits" id="fsW"></div>
-          <span class="gap"></span>
-          <div class="fsdigits" id="fsMol"></div>
-          <div class="fsdigits" id="fsMo"></div>
-        </div>
-        <p class="fscap" id="fsCap"></p>
+        <span class="vh" id="fsSay" aria-live="polite"></span>
       </div>
       <div class="wfheat" id="wfHeat" role="group" aria-label="GitHub activity by day">
         <div class="hh"><b>GitHub activity</b><span id="wfHeatSum"></span></div>
@@ -980,8 +998,8 @@ function fsRoll(f, target, delay){
   const go = async () => {
     if(!digits){ await fsFlip(f, target, 180); return; }
     let cur = Number(f.dataset.ch);
-    const mod = Number(f.dataset.mod || 10);
-    while(String(cur) !== target){ cur = (cur + 1) % mod; await fsFlip(f, String(cur), 150); }
+    const mod = Number(f.dataset.mod || 10), job = (f._job = (f._job || 0) + 1);
+    while(String(cur) !== target && f._job === job){ cur = (cur + 1) % mod; await fsFlip(f, String(cur), 150); }
   };
   setTimeout(go, delay);
 }
@@ -1002,30 +1020,99 @@ function fsSet(id, text, roll, word){
     if(f.dataset.ch !== ch) fsRoll(f, ch, i * 110);
   });
 }
+/* the roller: Today, This Week ... All Time, one face each on a six sided
+   drum. It turns on its own every eight seconds (held while the pointer or
+   focus is on it), and a click turns it at once. Each turn shuffles the
+   board: every flap flips rapidly through a run of digits, as if resetting,
+   and lands on that period's figure. */
+const FS_PERIODS = [
+  {key:"today_minutes", label:"Today"}, {key:"week_minutes", label:"This week"},
+  {key:"month_minutes", label:"This month"}, {key:"quarter_minutes", label:"This quarter"},
+  {key:"year_minutes", label:"This year"}, {key:"total_minutes", label:"All time"}];
+FS.turn = 5;                 // starts on All time
+FS.hold = false;
+function fsPeriod(){ return FS_PERIODS[((FS.turn % 6) + 6) % 6]; }
+function fsValue(){ const t = WF.saved || {}, v = t[fsPeriod().key]; return typeof v === "number" ? v : null; }
+function fsBuildDrum(){
+  const d = $("#fsDrum"); if(!d || d.children.length) return;
+  const r = 15 / Math.tan(Math.PI / 6);      // a 30px face on a six sided drum
+  FS_PERIODS.forEach((p, i) => {
+    const f = el("span", "face"); f.textContent = p.label;
+    f.style.transform = `rotateX(${-i * 60}deg) translateZ(${r.toFixed(2)}px)`;
+    d.appendChild(f);
+  });
+  FS.r = r;
+  d.style.transition = "none"; fsDrumPos(); void d.offsetWidth; d.style.transition = "";
+}
+function fsDrumPos(){ $("#fsDrum").style.transform = `translateZ(${-FS.r.toFixed(2)}px) rotateX(${FS.turn * 60}deg)`; }
+function fsDigits(){
+  const v = fsValue(); if(v == null) return null;
+  const total = Math.max(0, Math.round(v));
+  return [String(Math.floor(total / 60)).padStart(4, "0"), String(total % 60).padStart(2, "0")];
+}
+function fsShuffle(id, text){
+  const box = document.getElementById(id); if(!box) return;
+  FS.shown[id] = text;
+  while(box.children.length < text.length) box.insertBefore(fsTile("0"), box.firstChild);
+  while(box.children.length > text.length) box.removeChild(box.firstChild);
+  if(id === "fsM" && box.children[0]) box.children[0].dataset.mod = "6";
+  [...text].forEach((ch, i) => {
+    const f = box.children[i], job = (f._job = (f._job || 0) + 1);
+    if(fsReduce()){ fsFlip(f, ch, 0); return; }
+    const flips = 7 + i * 2 + Math.floor(Math.random() * 3);
+    const max = Number(f.dataset.mod || 10);
+    (async () => {
+      await new Promise(res => setTimeout(res, i * 45));
+      for(let k = 0; k < flips && f._job === job; k += 1){
+        let d; do{ d = String(Math.floor(Math.random() * max)); } while(d === f.dataset.ch);
+        await fsFlip(f, d, 64);
+      }
+      if(f._job === job) await fsFlip(f, ch, 110);
+    })();
+  });
+}
+function fsSpin(steps, said){
+  FS.turn += steps;
+  fsDrumPos();
+  const dg = fsDigits(); if(!dg) return;
+  setTimeout(() => { fsShuffle("fsH", dg[0]); fsShuffle("fsM", dg[1]); }, 120);
+  if(said) $("#fsSay").textContent = fsPeriod().label + ": " + Number(dg[0]) + " hours " + Number(dg[1]) + " minutes saved";
+}
+function fsAuto(){
+  clearInterval(FS.auto);
+  FS.auto = setInterval(() => {
+    if(FS.hold || document.hidden || !$("#wf").classList.contains("show") || $("#wfSaved").hidden) return;
+    let steps = 1, guard = 0;
+    while(guard++ < 6){ const t = WF.saved || {}; if(typeof t[FS_PERIODS[((FS.turn + steps) % 6 + 6) % 6].key] === "number") break; steps += 1; }
+    fsSpin(steps, false);
+  }, 8000);
+}
 function fsRender(){
   const t = WF.saved, box = $("#wfSaved");
   if(!box) return;
   if(!t || typeof t.total_minutes !== "number"){ box.hidden = true; return; }
   box.hidden = false;
+  fsBuildDrum();
+  // a period the data does not carry yet is skipped
+  let guard = 0;
+  while(fsValue() == null && guard++ < 6) FS.turn += 1;
+  if(guard) fsDrumPos();
   const first = !FS.started; FS.started = true;
-  const total = Math.max(0, Math.round(t.total_minutes));
-  const hours = Math.floor(total / 60), mins = total % 60;
-  fsSet("fsH", String(hours).padStart(4, "0"), first);
-  fsSet("fsM", String(mins).padStart(2, "0"), first);
-  fsSet("fsWl", "THIS WEEK", false, true);
-  fsSet("fsW", String(Math.round((t.week_minutes || 0) / 60)).padStart(3, "0"), first);
-  fsSet("fsMol", "THIS MONTH", false, true);
-  fsSet("fsMo", String(Math.round((t.month_minutes || 0) / 60)).padStart(3, "0"), first);
-  const since = t.since ? wfDate(t.since) : null;
-  let upd = "";
-  if(t.updated){ const u = new Date(t.updated); if(!isNaN(u)) upd = String(u.getHours()).padStart(2,"0") + ":" + String(u.getMinutes()).padStart(2,"0") + (wfKey(u) === wfKey(new Date()) ? "" : " on " + u.getDate() + " " + WF_MON[u.getMonth()].slice(0,3)); }
-  const cap = $("#fsCap"); cap.innerHTML = "";
-  const b = el("b"); b.textContent = hours.toLocaleString("en-GB") + " hours " + mins + " minutes";
-  cap.append("Time saved by Ken and our AI: ", b,
-             since ? " since " + since.getDate() + " " + WF_MON[since.getMonth()].slice(0,3) + " " + since.getFullYear() : "",
-             upd ? ". Updated " + upd + "." : ".");
+  const dg = fsDigits(); if(!dg) return;
+  fsSet("fsH", dg[0], first);
+  fsSet("fsM", dg[1], first);
+  $("#fsRoll").setAttribute("aria-label", "Time saved " + fsPeriod().label.toLowerCase() + ": " + Number(dg[0]) + " hours " + Number(dg[1]) + " minutes. Turn to the next period");
   box.title = "Counted from the Ken Time Saved Index, as Ken Mission Control counts it. Refreshed every 90 seconds.";
+  if(!FS.auto) fsAuto();
 }
+$("#fsRoll").addEventListener("click", () => {
+  let steps = 1, guard = 0;
+  while(guard++ < 6){ const t = WF.saved || {}; if(typeof t[FS_PERIODS[((FS.turn + steps) % 6 + 6) % 6].key] === "number") break; steps += 1; }
+  fsSpin(steps, true); fsAuto();
+});
+["mouseenter","focus"].forEach(e => $("#fsRoll").addEventListener(e, () => { FS.hold = true; }));
+["mouseleave","blur"].forEach(e => $("#fsRoll").addEventListener(e, () => { FS.hold = false; }));
+
 /* every 90 seconds while the Work Diary is open and the tab is visible:
    the live copy from GitHub's API (fresh, conditional so an unchanged file
    costs nothing), else the raw file (can be up to five minutes old). A
