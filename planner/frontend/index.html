@@ -262,47 +262,32 @@
   .wftip .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:baseline}
   .wftip .mut{color:#6b6e76}
   @media (max-width:760px){.wftrend{height:150px}}
-  /* time saved: a split flap board in Kensite green. Each tile is two halves on a
-     hinge in a dark housing; a change drops the top leaf over the bottom, like the real thing */
+  /* time saved: a split flap board in the dashboard's own style. White tiles with the
+     calendar's 1px keyline, a hairline hinge, Figtree figures; a change still drops the
+     top leaf over the bottom */
   .wfsaved{margin-left:auto;display:flex;flex-direction:column;align-items:center;gap:9px;flex:none}
   .wfsaved[hidden]{display:none}
   .fsmain{display:flex;align-items:flex-start;gap:10px}
   .fsgrp{display:flex;flex-direction:column;align-items:center;gap:6px}
-  .fsdigits{display:flex;gap:4px;padding:6px;border-radius:11px;
-      background:linear-gradient(180deg,#2c2e33 0%,#1b1c20 55%,#111214 100%);
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.09),inset 0 -2px 5px rgba(0,0,0,.7),inset 0 0 0 1px rgba(0,0,0,.55),
-                 0 1px 0 rgba(255,255,255,.7),0 16px 26px -14px rgba(10,20,14,.65),0 3px 6px -2px rgba(10,20,14,.35)}
+  .fsdigits{display:flex;gap:4px}
   .fslab{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6b6e76}
-  .fssep{display:flex;flex-direction:column;gap:14px;padding-top:22px}
-  .fssep i{width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2a8f52,#0b4a25 60%,#062e15);
-      box-shadow:0 1px 1px rgba(0,0,0,.35)}
-  .fl{--w:40px;--h:60px;--fs:46px;position:relative;width:var(--w);height:var(--h);perspective:260px;
-      font:600 var(--fs)/var(--h) "Oswald","Figtree",system-ui,sans-serif;color:#0d4524;text-align:center;
-      font-variant-numeric:tabular-nums}
-  .fl .h{position:absolute;left:0;right:0;height:calc(50% - 1px);overflow:hidden;backface-visibility:hidden;
-      background-position:var(--px,0) var(--py,0)}
-  .fl .h span{position:absolute;left:0;right:0;height:var(--h);opacity:.93;text-shadow:0 1px 0 rgba(255,248,228,.6),0 0 1px rgba(13,69,36,.35)}
-  /* parchment leaves: warm paper with a fibre grain, the top catching the light, the bottom in the top's shadow */
-  .fl .t{top:0;border-radius:5px 5px 2px 2px;
-      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.004 .28' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .40 0 0 0 0 .29 0 0 0 0 .12 0 0 0 .95 -.30'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23p)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.022' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .52 0 0 0 0 .37 0 0 0 0 .14 0 0 0 1.25 -.42'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .30 0 0 0 0 .22 0 0 0 0 .10 0 0 0 .30 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23p)'/%3E%3C/svg%3E"),linear-gradient(180deg,#f6ead0 0%,#efe0bd 55%,#e7d4aa 100%);
-      box-shadow:inset 0 1px 0 rgba(255,250,235,.8),inset 0 -1px 0 rgba(90,70,30,.22),inset 0 0 7px rgba(140,100,40,.28)}
-  .fl .t::after{content:"";position:absolute;inset:0;pointer-events:none;
-      background:radial-gradient(120% 90% at 30% 0%,rgba(255,255,255,.35),rgba(255,255,255,0) 60%),
-                 linear-gradient(180deg,rgba(0,0,0,0) 70%,rgba(110,85,40,.12))}
-  .fl .b{bottom:0;border-radius:2px 2px 5px 5px;
-      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.004 .28' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .40 0 0 0 0 .29 0 0 0 0 .12 0 0 0 .95 -.30'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23p)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.022' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .52 0 0 0 0 .37 0 0 0 0 .14 0 0 0 1.25 -.42'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .30 0 0 0 0 .22 0 0 0 0 .10 0 0 0 .30 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23p)'/%3E%3C/svg%3E"),linear-gradient(180deg,#e4d2a6 0%,#e9d8b0 35%,#dfc999 100%);
-      box-shadow:inset 0 4px 5px -3px rgba(60,45,15,.45),inset 0 -1px 0 rgba(90,70,30,.35),inset 0 0 7px rgba(140,100,40,.3),0 2px 2px rgba(0,0,0,.45)}
-  .fl .b::after{content:"";position:absolute;inset:0;pointer-events:none;
-      background:linear-gradient(180deg,rgba(80,60,20,.10),rgba(0,0,0,0) 40%,rgba(80,60,20,.08))}
+  .fssep{display:flex;flex-direction:column;gap:12px;padding-top:17px}
+  .fssep i{width:6px;height:6px;border-radius:50%;background:#0d823b}
+  .fl{--w:36px;--h:52px;--fs:34px;position:relative;width:var(--w);height:var(--h);perspective:260px;
+      font:800 var(--fs)/var(--h) "Figtree",system-ui,sans-serif;color:#1a1b1e;text-align:center;
+      font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .fl .h{box-sizing:border-box;position:absolute;left:0;right:0;height:50%;overflow:hidden;backface-visibility:hidden;background:#fff;
+      border:1px solid #e6e5e1}
+  .fl .h span{position:absolute;left:-1px;right:-1px;height:var(--h)}
+  .fl .t{top:0;border-radius:8px 8px 0 0;border-bottom:0}
+  .fl .b{bottom:0;border-radius:0 0 8px 8px;border-top:0;background:#fcfcfa}
+  .fl .t span{top:-1px}
   .fl .b span{top:calc(var(--h) / -2)}
   .fl .ft{z-index:3;transform-origin:50% 100%}
   .fl .fb{z-index:3;transform-origin:50% 0}
   .fl .fb span{top:calc(var(--h) / -2)}
-  /* the hinge: a dark slot across the middle and a pin either side */
-  .fl::before{content:"";position:absolute;left:0;right:0;top:calc(50% - 1px);height:2px;background:#16120a;z-index:4}
-  .fl i.pin{position:absolute;top:calc(50% - 5px);width:3px;height:10px;border-radius:1px;z-index:5;
-      background:linear-gradient(90deg,#4a4d53,#1d1e22 60%,#0b0b0c);box-shadow:0 1px 1px rgba(0,0,0,.5)}
-  .fl i.pin.l{left:-2px}.fl i.pin.r{right:-2px}
+  .fl::before{content:"";position:absolute;left:1px;right:1px;top:calc(50% - .5px);height:1px;background:#e6e5e1;z-index:4}
+  .fl i.pin{display:none}
   /* the period roller: a quiet control in the dashboard's own style. A drum of six
      labels turns behind a window; only the front label is read, its neighbours fade out */
   .fsroll{all:unset;box-sizing:border-box;position:relative;align-self:center;width:128px;height:44px;margin:0 6px 20px 0;cursor:pointer;
@@ -975,12 +960,12 @@ function fsFlip(f, to, ms){
   f.append(ft, fb);
   const half = ms / 2;
   const a1 = ft.animate([{transform:"rotateX(0deg)", filter:"brightness(1)"},
-                         {transform:"rotateX(-90deg)", filter:"brightness(.55)"}],
+                         {transform:"rotateX(-90deg)", filter:"brightness(.86)"}],
                         {duration:half, easing:"cubic-bezier(.55,.05,.85,.35)", fill:"forwards"});
   fb.style.transform = "rotateX(90deg)";
   return a1.finished.then(() => {
     ft.remove();
-    const a2 = fb.animate([{transform:"rotateX(90deg)", filter:"brightness(1.35)"},
+    const a2 = fb.animate([{transform:"rotateX(90deg)", filter:"brightness(.94)"},
                            {transform:"rotateX(0deg)", filter:"brightness(1)"}],
                           {duration:half, easing:"cubic-bezier(.2,.7,.3,1.15)", fill:"forwards"});
     return a2.finished;
