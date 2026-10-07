@@ -262,6 +262,37 @@
   .wftip .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:baseline}
   .wftip .mut{color:#6b6e76}
   @media (max-width:760px){.wftrend{height:150px}}
+  /* time saved: a split flap board in Kensite green, between the title and the heatmap */
+  .wfsaved{margin-left:auto;display:flex;flex-direction:column;align-items:center;gap:8px;flex:none}
+  .wfsaved[hidden]{display:none}
+  .fsmain{display:flex;align-items:flex-start;gap:8px}
+  .fsgrp{display:flex;flex-direction:column;align-items:center;gap:5px}
+  .fsdigits{display:flex;gap:3px;padding:4px;border-radius:9px;background:#1a1b1e;box-shadow:0 10px 22px -14px rgba(16,26,20,.6)}
+  .fslab{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6b6e76}
+  .fssep{display:flex;flex-direction:column;gap:12px;padding-top:17px}
+  .fssep i{width:6px;height:6px;border-radius:2px;background:#0d823b}
+  .fl{position:relative;width:30px;height:46px;border-radius:5px;display:grid;place-items:center;overflow:hidden;
+      background:linear-gradient(#0f8f42 0 50%,#0b7536 50% 100%);color:#fff;
+      font:800 31px/1 "Figtree",system-ui,sans-serif;font-variant-numeric:tabular-nums;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.25)}
+  .fl::before{content:"";position:absolute;left:0;right:0;top:calc(50% - 4px);height:8px;z-index:2;
+      background:linear-gradient(90deg,#062e15 0 3px,transparent 3px calc(100% - 3px),#062e15 calc(100% - 3px))}
+  .fl::after{content:"";position:absolute;left:0;right:0;top:calc(50% - .5px);height:1px;background:rgba(0,0,0,.42);z-index:2}
+  .fl span{display:block;transform-origin:50% 50%}
+  .fl.flip span{animation:fsflip .11s cubic-bezier(.22,.9,.28,1)}
+  @keyframes fsflip{from{transform:scaleY(.2)}to{transform:none}}
+  .fsrow{display:flex;align-items:center;gap:6px}
+  .fsrow .fsdigits{padding:3px;gap:2px;border-radius:7px}
+  .fsrow .fl{width:19px;height:28px;font-size:18px;border-radius:4px}
+  .fsrow .fl::before{top:calc(50% - 3px);height:6px;background:linear-gradient(90deg,#062e15 0 2px,transparent 2px calc(100% - 2px),#062e15 calc(100% - 2px))}
+  .fsrow .fl.word{width:auto;padding:0 8px;font-size:11.5px;letter-spacing:.1em}
+  .fsrow .gap{width:8px}
+  .fscap{margin:0;font-size:11.5px;color:#6b6e76;text-align:center;font-variant-numeric:tabular-nums}
+  .fscap b{color:#1a1b1e;font-weight:700}
+  @media (max-width:1440px){.fsrow{display:none}.wfsaved .fscap{max-width:280px}}
+  #wf .phead > div:first-child{flex:0 0 auto}
+  @media (max-width:760px){.wfsaved{display:none}}
+  @media (prefers-reduced-motion: reduce){.fl.flip span{animation:none}}
   /* GitHub activity: one small block per month, Mon to Sun rows, week columns */
   .wfheat{position:relative;margin-left:auto;display:flex;flex-direction:column;gap:6px;min-width:0}
   .wfheat .hh{display:flex;align-items:baseline;gap:10px;font-size:12px;color:#6b6e76}
@@ -286,7 +317,7 @@
   .wfheat .leg .c{cursor:default;margin:0 0}
   .wfheat .leg span{margin:0 4px}
   .wfheat .wftip{top:auto}
-  @media (max-width:900px){.wfheat{display:none}}
+  @media (max-width:1180px){.wfheat{display:none}}
   .wfempty svg{width:28px;height:28px;color:#b9bcc2;display:block;margin:0 auto 8px}
   @media (max-width:760px){
     .wfbody.open{grid-template-columns:minmax(0,1fr)}
@@ -348,6 +379,21 @@
       <div>
         <h1 id="wfH1">Work Diary</h1>
         <p>Upcoming project work, day by day.</p>
+      </div>
+      <div class="wfsaved" id="wfSaved" role="group" aria-labelledby="fsCap" hidden>
+        <div class="fsmain" aria-hidden="true">
+          <div class="fsgrp"><div class="fsdigits" id="fsH"></div><span class="fslab">Hours</span></div>
+          <div class="fssep"><i></i><i></i></div>
+          <div class="fsgrp"><div class="fsdigits" id="fsM"></div><span class="fslab">Minutes</span></div>
+        </div>
+        <div class="fsrow" aria-hidden="true">
+          <div class="fsdigits"><div class="fl word"><span>THIS WEEK</span></div></div>
+          <div class="fsdigits" id="fsW"></div>
+          <span class="gap"></span>
+          <div class="fsdigits"><div class="fl word"><span>THIS MONTH</span></div></div>
+          <div class="fsdigits" id="fsMo"></div>
+        </div>
+        <p class="fscap" id="fsCap"></p>
       </div>
       <div class="wfheat" id="wfHeat" role="group" aria-label="GitHub activity by day">
         <div class="hh"><b>GitHub activity</b><span id="wfHeatSum"></span></div>
@@ -868,6 +914,62 @@ function wfRender(){
   wfHeat();
 }
 
+/* ── time saved: the split flap board ─────────────────────────────────────
+   Totals from data/Time Saved.json (Push Time Saved.py on Ken's machine,
+   hourly), the same numbers as Ken Mission Control's Work Completed tab.
+   Each flap only moves when its digit changes; the first showing rolls every
+   digit up from 0, one authored moment. Reduced motion sets the digits
+   straight. Hidden until the file exists. */
+const FS = {shown:{}};
+function fsReduce(){ try{ return window.matchMedia("(prefers-reduced-motion: reduce)").matches; }catch(e){ return false; } }
+function fsSet(id, text, roll){
+  const box = document.getElementById(id); if(!box) return;
+  text = String(text);
+  if(FS.shown[id] === text) return;
+  const from = FS.shown[id] == null ? null : FS.shown[id].padStart(text.length, "0");
+  FS.shown[id] = text;
+  while(box.children.length < text.length){ const f = el("div","fl"); f.appendChild(el("span")); f.firstChild.textContent = "0"; box.insertBefore(f, box.firstChild); }
+  while(box.children.length > text.length) box.removeChild(box.firstChild);
+  [...text].forEach((ch, i) => {
+    const f = box.children[i], sp = f.firstChild;
+    const start = from ? from[i] : (roll ? "0" : ch);
+    if(fsReduce() || !/\d/.test(ch) || !/\d/.test(start)){ sp.textContent = ch; return; }
+    let cur = Number(start), target = Number(ch);
+    const step = () => {
+      sp.textContent = String(cur);
+      f.classList.remove("flip"); void f.offsetWidth; f.classList.add("flip");
+      if(cur === target) return;
+      cur = (cur + 1) % 10;
+      setTimeout(step, 70);
+    };
+    if(cur === target && from){ sp.textContent = ch; return; }
+    setTimeout(step, i * 90);
+  });
+}
+function fsRender(){
+  const t = WF.saved, box = $("#wfSaved");
+  if(!box) return;
+  if(!t || typeof t.total_minutes !== "number"){ box.hidden = true; return; }
+  box.hidden = false;
+  const first = !FS.started; FS.started = true;
+  const total = Math.max(0, Math.round(t.total_minutes));
+  const hours = Math.floor(total / 60), mins = total % 60;
+  fsSet("fsH", String(hours).padStart(4, "0"), first);
+  fsSet("fsM", String(mins).padStart(2, "0"), first);
+  fsSet("fsW", String(Math.round((t.week_minutes || 0) / 60)).padStart(3, "0"), first);
+  fsSet("fsMo", String(Math.round((t.month_minutes || 0) / 60)).padStart(3, "0"), first);
+  const since = t.since ? wfDate(t.since) : null;
+  let upd = "";
+  if(t.updated){ const u = new Date(t.updated); if(!isNaN(u)) upd = String(u.getHours()).padStart(2,"0") + ":" + String(u.getMinutes()).padStart(2,"0") + (wfKey(u) === wfKey(new Date()) ? "" : " on " + u.getDate() + " " + WF_MON[u.getMonth()].slice(0,3)); }
+  $("#fsCap").innerHTML = "";
+  const cap = $("#fsCap");
+  const b = el("b"); b.textContent = hours.toLocaleString("en-GB") + " hours " + mins + " minutes";
+  cap.append("Time saved by Ken and our AI: ", b,
+             since ? " since " + since.getDate() + " " + WF_MON[since.getMonth()].slice(0,3) + " " + since.getFullYear() : "",
+             upd ? ". Updated " + upd + "." : ".");
+  box.title = "Counted from the Ken Time Saved Index, as Ken Mission Control counts it. Updated hourly.";
+}
+
 /* ── GitHub activity heatmap in the header ─────────────────────────────────
    One block per month (up to six, from the first month with commits to this
    month), Monday to Sunday down, weeks across, like GitHub's own graph. The
@@ -1120,7 +1222,7 @@ function wfShift(months){
 }
 function wfOpen(){
   $("#wf").classList.add("show");
-  wfRender(); wfSave();
+  wfRender(); fsRender(); wfSave();
   const b = document.querySelector(".day[tabindex='0']"); if(b) b.focus();
 }
 function wfClose(){
@@ -1164,6 +1266,7 @@ document.addEventListener("keydown", ev => {
 function wfRenderArgs(args){
   const wf = args.workflow || {};
   WF.entries = (wf.entries && typeof wf.entries === "object") ? wf.entries : {};
+  WF.saved = (wf.time_saved && typeof wf.time_saved === "object") ? wf.time_saved : null;
   WF.projects = {};
   ((args.roadmap || {}).projects || []).forEach(p => { if(p && p.id) WF.projects[p.id] = {name: p.name || p.id, company: p.company}; });
   if(!WF.year){
@@ -1173,7 +1276,7 @@ function wfRenderArgs(args){
     if(saved && saved.y){ WF.year = saved.y; WF.month = saved.m; WF.sel = saved.sel || ""; }
     if(saved && saved.open) $("#wf").classList.add("show");
   }
-  if($("#wf").classList.contains("show")) wfRender();
+  if($("#wf").classList.contains("show")){ wfRender(); fsRender(); }
 }
 
 /* ── render from Streamlit ────────────────────────────────────────────────── */
