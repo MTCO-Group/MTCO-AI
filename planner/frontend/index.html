@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Oswald:wght@500;600&display=swap">
 <style>
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;height:100%;overflow:hidden}
@@ -262,37 +262,55 @@
   .wftip .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:baseline}
   .wftip .mut{color:#6b6e76}
   @media (max-width:760px){.wftrend{height:150px}}
-  /* time saved: a split flap board in Kensite green, between the title and the heatmap */
-  .wfsaved{margin-left:auto;display:flex;flex-direction:column;align-items:center;gap:8px;flex:none}
+  /* time saved: a split flap board in Kensite green. Each tile is two halves on a
+     hinge in a dark housing; a change drops the top leaf over the bottom, like the real thing */
+  .wfsaved{margin-left:auto;display:flex;flex-direction:column;align-items:center;gap:9px;flex:none}
   .wfsaved[hidden]{display:none}
-  .fsmain{display:flex;align-items:flex-start;gap:8px}
-  .fsgrp{display:flex;flex-direction:column;align-items:center;gap:5px}
-  .fsdigits{display:flex;gap:3px;padding:4px;border-radius:9px;background:#1a1b1e;box-shadow:0 10px 22px -14px rgba(16,26,20,.6)}
-  .fslab{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6b6e76}
-  .fssep{display:flex;flex-direction:column;gap:12px;padding-top:17px}
-  .fssep i{width:6px;height:6px;border-radius:2px;background:#0d823b}
-  .fl{position:relative;width:30px;height:46px;border-radius:5px;display:grid;place-items:center;overflow:hidden;
-      background:linear-gradient(#0f8f42 0 50%,#0b7536 50% 100%);color:#fff;
-      font:800 31px/1 "Figtree",system-ui,sans-serif;font-variant-numeric:tabular-nums;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.25)}
-  .fl::before{content:"";position:absolute;left:0;right:0;top:calc(50% - 4px);height:8px;z-index:2;
-      background:linear-gradient(90deg,#062e15 0 3px,transparent 3px calc(100% - 3px),#062e15 calc(100% - 3px))}
-  .fl::after{content:"";position:absolute;left:0;right:0;top:calc(50% - .5px);height:1px;background:rgba(0,0,0,.42);z-index:2}
-  .fl span{display:block;transform-origin:50% 50%}
-  .fl.flip span{animation:fsflip .11s cubic-bezier(.22,.9,.28,1)}
-  @keyframes fsflip{from{transform:scaleY(.2)}to{transform:none}}
-  .fsrow{display:flex;align-items:center;gap:6px}
-  .fsrow .fsdigits{padding:3px;gap:2px;border-radius:7px}
-  .fsrow .fl{width:19px;height:28px;font-size:18px;border-radius:4px}
-  .fsrow .fl::before{top:calc(50% - 3px);height:6px;background:linear-gradient(90deg,#062e15 0 2px,transparent 2px calc(100% - 2px),#062e15 calc(100% - 2px))}
-  .fsrow .fl.word{width:auto;padding:0 8px;font-size:11.5px;letter-spacing:.1em}
-  .fsrow .gap{width:8px}
+  .fsmain{display:flex;align-items:flex-start;gap:10px}
+  .fsgrp{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .fsdigits{display:flex;gap:4px;padding:6px;border-radius:11px;
+      background:linear-gradient(180deg,#2c2e33 0%,#1b1c20 55%,#111214 100%);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.09),inset 0 -2px 5px rgba(0,0,0,.7),inset 0 0 0 1px rgba(0,0,0,.55),
+                 0 1px 0 rgba(255,255,255,.7),0 16px 26px -14px rgba(10,20,14,.65),0 3px 6px -2px rgba(10,20,14,.35)}
+  .fslab{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6b6e76}
+  .fssep{display:flex;flex-direction:column;gap:14px;padding-top:22px}
+  .fssep i{width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2fbf68,#0d823b 55%,#075226);
+      box-shadow:0 1px 1px rgba(0,0,0,.35)}
+  .fl{--w:40px;--h:60px;--fs:46px;position:relative;width:var(--w);height:var(--h);perspective:260px;
+      font:600 var(--fs)/var(--h) "Oswald","Figtree",system-ui,sans-serif;color:#f5f8f5;text-align:center;
+      font-variant-numeric:tabular-nums}
+  .fl .h{position:absolute;left:0;right:0;height:calc(50% - 1px);overflow:hidden;backface-visibility:hidden}
+  .fl .h span{position:absolute;left:0;right:0;height:var(--h);text-shadow:0 1px 1px rgba(0,0,0,.35)}
+  .fl .t{top:0;border-radius:5px 5px 2px 2px;
+      background:linear-gradient(180deg,#16a253 0%,#11924a 45%,#0e8642 100%);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 -1px 0 rgba(0,0,0,.18)}
+  .fl .t::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.13),rgba(255,255,255,0) 70%);pointer-events:none}
+  .fl .b{bottom:0;border-radius:2px 2px 5px 5px;
+      background:linear-gradient(180deg,#0b7135 0%,#0c7a39 30%,#0b7034 100%);
+      box-shadow:inset 0 3px 4px -2px rgba(0,0,0,.45),inset 0 -1px 0 rgba(0,0,0,.35),0 2px 2px rgba(0,0,0,.45)}
+  .fl .b span{top:calc(var(--h) / -2)}
+  .fl .ft{z-index:3;transform-origin:50% 100%}
+  .fl .fb{z-index:3;transform-origin:50% 0}
+  .fl .fb span{top:calc(var(--h) / -2)}
+  /* the hinge: a dark slot across the middle and a pin either side */
+  .fl::before{content:"";position:absolute;left:0;right:0;top:calc(50% - 1px);height:2px;background:#03180b;z-index:4}
+  .fl i.pin{position:absolute;top:calc(50% - 5px);width:3px;height:10px;border-radius:1px;z-index:5;
+      background:linear-gradient(90deg,#4a4d53,#1d1e22 60%,#0b0b0c);box-shadow:0 1px 1px rgba(0,0,0,.5)}
+  .fl i.pin.l{left:-2px}.fl i.pin.r{right:-2px}
+  .fsrow{display:flex;align-items:center;gap:7px}
+  .fsrow .fsdigits{padding:4px;gap:3px;border-radius:8px}
+  .fsrow .fl{--w:23px;--h:34px;--fs:25px;perspective:180px}
+  .fsrow .fl .t{border-radius:3px 3px 1px 1px}.fsrow .fl .b{border-radius:1px 1px 3px 3px}
+  .fsrow .fl i.pin{height:7px;top:calc(50% - 3.5px)}
+  .fsrow .fl.word{--w:auto;--fs:15px;padding:0 10px;letter-spacing:.12em;font-weight:500}
+  .fsrow .fl.word .h{position:absolute}
+  .fsrow .fl.word .ghost{visibility:hidden;font:inherit;line-height:var(--h);display:block}
+  .fsrow .gap{width:10px}
   .fscap{margin:0;font-size:11.5px;color:#6b6e76;text-align:center;font-variant-numeric:tabular-nums}
   .fscap b{color:#1a1b1e;font-weight:700}
-  @media (max-width:1440px){.fsrow{display:none}.wfsaved .fscap{max-width:280px}}
+  @media (max-width:1440px){.fsrow{display:none}.wfsaved .fscap{max-width:300px}}
   #wf .phead > div:first-child{flex:0 0 auto}
   @media (max-width:760px){.wfsaved{display:none}}
-  @media (prefers-reduced-motion: reduce){.fl.flip span{animation:none}}
   /* GitHub activity: one small block per month, Mon to Sun rows, week columns */
   .wfheat{position:relative;margin-left:auto;display:flex;flex-direction:column;gap:6px;min-width:0}
   .wfheat .hh{display:flex;align-items:baseline;gap:10px;font-size:12px;color:#6b6e76}
@@ -387,10 +405,10 @@
           <div class="fsgrp"><div class="fsdigits" id="fsM"></div><span class="fslab">Minutes</span></div>
         </div>
         <div class="fsrow" aria-hidden="true">
-          <div class="fsdigits"><div class="fl word"><span>THIS WEEK</span></div></div>
+          <div class="fsdigits" id="fsWl"></div>
           <div class="fsdigits" id="fsW"></div>
           <span class="gap"></span>
-          <div class="fsdigits"><div class="fl word"><span>THIS MONTH</span></div></div>
+          <div class="fsdigits" id="fsMol"></div>
           <div class="fsdigits" id="fsMo"></div>
         </div>
         <p class="fscap" id="fsCap"></p>
@@ -920,30 +938,68 @@ function wfRender(){
    Each flap only moves when its digit changes; the first showing rolls every
    digit up from 0, one authored moment. Reduced motion sets the digits
    straight. Hidden until the file exists. */
-const FS = {shown:{}};
+const FS = {shown:{}, timer:null, etag:"", busy:false};
+const FS_REPO = "Nathanjmcg/mtco-ai", FS_BRANCH = "live-data", FS_PATH = "data/Time%20Saved.json";
 function fsReduce(){ try{ return window.matchMedia("(prefers-reduced-motion: reduce)").matches; }catch(e){ return false; } }
-function fsSet(id, text, roll){
+function fsHalf(cls, ch){ const h = el("div", "h " + cls), sp = el("span"); sp.textContent = ch; h.appendChild(sp); return h; }
+function fsTile(ch, word){
+  const f = el("div", "fl" + (word ? " word" : ""));
+  if(word){ const g = el("span", "ghost"); g.textContent = ch; f.appendChild(g); }
+  f.append(fsHalf("t", ch), fsHalf("b", ch), el("i", "pin l"), el("i", "pin r"));
+  f.dataset.ch = ch;
+  return f;
+}
+/* one real flip: the new top shows at once, the old top leaf falls to
+   flat, then the new bottom leaf lands over the old bottom */
+function fsFlip(f, to, ms){
+  const from = f.dataset.ch;
+  if(from === to) return Promise.resolve();
+  f.dataset.ch = to;
+  const t = f.querySelector(".h.t span"), b = f.querySelector(".h.b span");
+  if(fsReduce() || !f.animate){ t.textContent = to; b.textContent = to; return Promise.resolve(); }
+  const ft = fsHalf("t ft", from), fb = fsHalf("b fb", to);
+  t.textContent = to;
+  f.append(ft, fb);
+  const half = ms / 2;
+  const a1 = ft.animate([{transform:"rotateX(0deg)", filter:"brightness(1)"},
+                         {transform:"rotateX(-90deg)", filter:"brightness(.55)"}],
+                        {duration:half, easing:"cubic-bezier(.55,.05,.85,.35)", fill:"forwards"});
+  fb.style.transform = "rotateX(90deg)";
+  return a1.finished.then(() => {
+    ft.remove();
+    const a2 = fb.animate([{transform:"rotateX(90deg)", filter:"brightness(1.35)"},
+                           {transform:"rotateX(0deg)", filter:"brightness(1)"}],
+                          {duration:half, easing:"cubic-bezier(.2,.7,.3,1.15)", fill:"forwards"});
+    return a2.finished;
+  }).then(() => { b.textContent = to; fb.remove(); }).catch(() => { b.textContent = to; ft.remove(); fb.remove(); });
+}
+/* a tile steps through the digits between its old and new value, as a
+   real board does; tiles further right wait a beat so the row ripples */
+function fsRoll(f, target, delay){
+  const digits = /^\d$/.test(target) && /^\d$/.test(f.dataset.ch);
+  const go = async () => {
+    if(!digits){ await fsFlip(f, target, 180); return; }
+    let cur = Number(f.dataset.ch);
+    const mod = Number(f.dataset.mod || 10);
+    while(String(cur) !== target){ cur = (cur + 1) % mod; await fsFlip(f, String(cur), 150); }
+  };
+  setTimeout(go, delay);
+}
+function fsSet(id, text, roll, word){
   const box = document.getElementById(id); if(!box) return;
   text = String(text);
   if(FS.shown[id] === text) return;
-  const from = FS.shown[id] == null ? null : FS.shown[id].padStart(text.length, "0");
+  const first = FS.shown[id] == null;
   FS.shown[id] = text;
-  while(box.children.length < text.length){ const f = el("div","fl"); f.appendChild(el("span")); f.firstChild.textContent = "0"; box.insertBefore(f, box.firstChild); }
+  if(word){ box.innerHTML = ""; box.appendChild(fsTile(text, true)); return; }
+  while(box.children.length < text.length) box.insertBefore(fsTile(first && roll ? "0" : text[0]), box.firstChild);
   while(box.children.length > text.length) box.removeChild(box.firstChild);
+  // the tens of minutes only ever reads 0 to 5, so it rolls 5, 0 and never shows 70
+  if(id === "fsM" && box.children[0]) box.children[0].dataset.mod = "6";
   [...text].forEach((ch, i) => {
-    const f = box.children[i], sp = f.firstChild;
-    const start = from ? from[i] : (roll ? "0" : ch);
-    if(fsReduce() || !/\d/.test(ch) || !/\d/.test(start)){ sp.textContent = ch; return; }
-    let cur = Number(start), target = Number(ch);
-    const step = () => {
-      sp.textContent = String(cur);
-      f.classList.remove("flip"); void f.offsetWidth; f.classList.add("flip");
-      if(cur === target) return;
-      cur = (cur + 1) % 10;
-      setTimeout(step, 70);
-    };
-    if(cur === target && from){ sp.textContent = ch; return; }
-    setTimeout(step, i * 90);
+    const f = box.children[i];
+    if(first && !roll){ fsFlip(f, ch, 0); return; }
+    if(f.dataset.ch !== ch) fsRoll(f, ch, i * 110);
   });
 }
 function fsRender(){
@@ -956,19 +1012,49 @@ function fsRender(){
   const hours = Math.floor(total / 60), mins = total % 60;
   fsSet("fsH", String(hours).padStart(4, "0"), first);
   fsSet("fsM", String(mins).padStart(2, "0"), first);
+  fsSet("fsWl", "THIS WEEK", false, true);
   fsSet("fsW", String(Math.round((t.week_minutes || 0) / 60)).padStart(3, "0"), first);
+  fsSet("fsMol", "THIS MONTH", false, true);
   fsSet("fsMo", String(Math.round((t.month_minutes || 0) / 60)).padStart(3, "0"), first);
   const since = t.since ? wfDate(t.since) : null;
   let upd = "";
   if(t.updated){ const u = new Date(t.updated); if(!isNaN(u)) upd = String(u.getHours()).padStart(2,"0") + ":" + String(u.getMinutes()).padStart(2,"0") + (wfKey(u) === wfKey(new Date()) ? "" : " on " + u.getDate() + " " + WF_MON[u.getMonth()].slice(0,3)); }
-  $("#fsCap").innerHTML = "";
-  const cap = $("#fsCap");
+  const cap = $("#fsCap"); cap.innerHTML = "";
   const b = el("b"); b.textContent = hours.toLocaleString("en-GB") + " hours " + mins + " minutes";
   cap.append("Time saved by Ken and our AI: ", b,
              since ? " since " + since.getDate() + " " + WF_MON[since.getMonth()].slice(0,3) + " " + since.getFullYear() : "",
              upd ? ". Updated " + upd + "." : ".");
-  box.title = "Counted from the Ken Time Saved Index, as Ken Mission Control counts it. Updated hourly.";
+  box.title = "Counted from the Ken Time Saved Index, as Ken Mission Control counts it. Refreshed every 90 seconds.";
 }
+/* every 90 seconds while the Work Diary is open and the tab is visible:
+   the live copy from GitHub's API (fresh, conditional so an unchanged file
+   costs nothing), else the raw file (can be up to five minutes old). A
+   failed fetch keeps what is showing. */
+function fsAccept(d){
+  if(d && typeof d.total_minutes === "number" && (!WF.saved || d.updated !== WF.saved.updated || d.total_minutes !== WF.saved.total_minutes)){
+    WF.saved = d; fsRender();
+  }
+}
+async function fsPoll(){
+  if(FS.busy || document.hidden || !$("#wf").classList.contains("show")) return;
+  FS.busy = true;
+  try{
+    const h = {"Accept":"application/vnd.github+json"};
+    if(FS.etag) h["If-None-Match"] = FS.etag;
+    const r = await fetch(`https://api.github.com/repos/${FS_REPO}/contents/${FS_PATH}?ref=${FS_BRANCH}`, {headers:h, cache:"no-store"});
+    if(r.status === 200){
+      FS.etag = r.headers.get("ETag") || "";
+      const body = await r.json();
+      fsAccept(JSON.parse(atob(String(body.content || "").replace(/\s/g, ""))));
+    } else if(r.status !== 304){
+      const r2 = await fetch(`https://raw.githubusercontent.com/${FS_REPO}/${FS_BRANCH}/${FS_PATH}?t=${Date.now()}`, {cache:"no-store"});
+      if(r2.ok) fsAccept(await r2.json());
+    }
+  }catch(e){ /* keep what is showing */ }
+  FS.busy = false;
+}
+function fsStart(){ if(!FS.timer){ FS.timer = setInterval(fsPoll, 90000); } fsPoll(); }
+document.addEventListener("visibilitychange", () => { if(!document.hidden) fsPoll(); });
 
 /* ── GitHub activity heatmap in the header ─────────────────────────────────
    One block per month (up to six, from the first month with commits to this
@@ -1222,7 +1308,7 @@ function wfShift(months){
 }
 function wfOpen(){
   $("#wf").classList.add("show");
-  wfRender(); fsRender(); wfSave();
+  wfRender(); fsRender(); fsStart(); wfSave();
   const b = document.querySelector(".day[tabindex='0']"); if(b) b.focus();
 }
 function wfClose(){
@@ -1266,7 +1352,8 @@ document.addEventListener("keydown", ev => {
 function wfRenderArgs(args){
   const wf = args.workflow || {};
   WF.entries = (wf.entries && typeof wf.entries === "object") ? wf.entries : {};
-  WF.saved = (wf.time_saved && typeof wf.time_saved === "object") ? wf.time_saved : null;
+  const ts = (wf.time_saved && typeof wf.time_saved === "object") ? wf.time_saved : null;
+  if(ts && (!WF.saved || String(ts.updated || "") > String(WF.saved.updated || ""))) WF.saved = ts;
   WF.projects = {};
   ((args.roadmap || {}).projects || []).forEach(p => { if(p && p.id) WF.projects[p.id] = {name: p.name || p.id, company: p.company}; });
   if(!WF.year){
@@ -1276,7 +1363,7 @@ function wfRenderArgs(args){
     if(saved && saved.y){ WF.year = saved.y; WF.month = saved.m; WF.sel = saved.sel || ""; }
     if(saved && saved.open) $("#wf").classList.add("show");
   }
-  if($("#wf").classList.contains("show")){ wfRender(); fsRender(); }
+  if($("#wf").classList.contains("show")){ wfRender(); fsRender(); fsStart(); }
 }
 
 /* ── render from Streamlit ────────────────────────────────────────────────── */
