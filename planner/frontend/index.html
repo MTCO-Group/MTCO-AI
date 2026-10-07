@@ -120,7 +120,7 @@
   .card.open{border-color:#0d823b;box-shadow:0 0 0 1px #0d823b}
 
   /* project detail: a card expands into a sheet over the planner */
-  #pd{position:absolute;inset:0;z-index:20;display:none;align-items:center;justify-content:center;padding:28px;
+  #pd{position:absolute;inset:0;z-index:40;display:none;align-items:center;justify-content:center;padding:28px;
       background:rgba(26,27,30,.32);animation:pdfade .16s ease-out both}
   #pd.show{display:flex}
   @keyframes pdfade{from{opacity:0}to{opacity:1}}
@@ -138,7 +138,15 @@
   .pdmeta span{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:999px;background:#f3f2ee;color:#3d3f45}
   .pdmeta span.lane{color:#000}
   .pdbody{overflow-y:auto;padding:16px 22px 18px;display:flex;flex-direction:column;gap:16px}
-  .pdbody h3{margin:0 0 5px;font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#6b6e76}
+  .pdbody h3{margin:0 0 5px;font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#0d823b}
+  /* a live project's time spent, estimated from the Work Diary */
+  .pdtime{display:flex;align-items:center;gap:16px;padding:12px 14px;border:1px solid #e6e5e1;border-radius:12px;background:#fbfaf7}
+  .pdtime .big{display:flex;flex-direction:column;gap:2px;min-width:120px}
+  .pdtime .big h3{margin:0}
+  .pdtime .big b{font-size:26px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .pdtime .facts{flex:1;display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:#53565e}
+  .pdtime .facts b{color:#1a1b1e;font-variant-numeric:tabular-nums}
+  .pdfoot .live{font-size:12px;color:#6b6e76}
   .pdbody p{margin:0;font-size:13.5px;line-height:1.6;color:#1a1b1e;max-width:68ch;white-space:pre-line}
   .pdwho{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
   .pdwho li{font-size:13.5px;line-height:1.55;padding:9px 12px;border-radius:10px;background:#f7f7f4}
@@ -242,11 +250,13 @@
   .wfent.dim{opacity:.35}
   .wfpen{flex:none;border-top:1px solid #efeee9;padding:10px 16px 12px}
   .wfpen h4{margin:0 0 7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;color:#6b6e76;text-transform:uppercase}
-  .wfpen .row{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+  .wfpen .row{display:flex;flex-wrap:wrap;gap:6px}
   .wfpen .row .ppill{flex:none;max-width:170px}
   .wfpen button.ppill{cursor:pointer}
   .wfpen button.ppill:focus-visible{outline:2px solid #0d823b;outline-offset:1px}
-  .wfpen button.ppill.on{box-shadow:0 0 0 2px #1a1b1e inset}
+  .wfent button.ppill{cursor:pointer}
+  .wfent button.ppill:hover,.wfpen button.ppill:hover{border-color:#8a8c94 !important}
+  .wfent button.ppill:focus-visible{outline:2px solid #0d823b;outline-offset:1px}
   /* the month's trend under the calendar: emails and work, two slim panels on one date axis */
   .wftrend{flex:none;height:168px;position:relative;border:1px solid #e6e5e1;border-radius:12px;background:#fff;padding:10px 14px 6px}
   .wftrend svg{display:block;width:100%;height:100%;overflow:visible}
@@ -262,11 +272,26 @@
   .wftip .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:baseline}
   .wftip .mut{color:#6b6e76}
   @media (max-width:760px){.wftrend{height:150px}}
+  /* the Work Diary header: the Time Saved Clock under the title, then three
+     activity trackers in a row (AI Adoption, OpenRouter, GitHub), each with a
+     20px header line so they sit level */
+  #wf .phead.wfhead{justify-content:flex-start;gap:14px}
+  #wf .phead.wfhead > .wftitle{flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start}
+  .wfhead h1 span{font-weight:400}
+  .wfhead .pacts{margin-left:0}
+  .acth{display:flex;align-items:center;gap:10px;height:20px;font-size:12px;color:#6b6e76;white-space:nowrap}
+  .acth .nm{display:inline-flex;align-items:center;gap:6px;color:#1a1b1e;font-weight:800;font-size:12.5px;text-decoration:none}
+  .acth a.nm:hover{color:#0d823b}
+  .acth a.nm:focus-visible{outline:2px solid #0d823b;outline-offset:2px;border-radius:4px}
+  .acth .nm img{display:block;width:16px;height:16px}
+  .acth .nm svg.out{width:12px;height:12px;color:#6b6e76}
   /* time saved: a split flap board in the dashboard's own style. White tiles with the
      calendar's 1px keyline, a hairline hinge, Figtree figures; a change still drops the
      top leaf over the bottom */
-  .wfsaved{margin-left:auto;display:flex;flex-direction:column;align-items:center;gap:9px;flex:none}
+  .wfsaved{display:flex;flex-direction:column;align-items:stretch;gap:8px;margin-top:24px}
   .wfsaved[hidden]{display:none}
+  .fstop{display:flex;align-items:center;justify-content:space-between;gap:10px;height:22px}
+  .fsname{font-size:15px;font-weight:800;letter-spacing:-.01em;line-height:22px}
   .fsmain{display:flex;align-items:flex-start;gap:10px}
   .fsgrp{display:flex;flex-direction:column;align-items:center;gap:6px}
   .fsdigits{display:flex;gap:4px}
@@ -288,51 +313,81 @@
   .fl .fb span{top:calc(var(--h) / -2)}
   .fl::before{content:"";position:absolute;left:1px;right:1px;top:calc(50% - .5px);height:1px;background:#e6e5e1;z-index:4}
   .fl i.pin{display:none}
-  /* the period roller: a quiet control in the dashboard's own style. A drum of six
-     labels turns behind a window; only the front label is read, its neighbours fade out */
-  .fsroll{all:unset;box-sizing:border-box;position:relative;align-self:center;width:128px;height:44px;margin:0 6px 20px 0;cursor:pointer;
-      border:1px solid #cfd3cf;border-radius:999px;background:#fff;transition:border-color .15s,background .15s}
-  .fsroll:hover{border-color:#8a8c94}
+  /* the period roller: plain text beside the clock's name, no border, with the
+     green up and down mark. A drum of six labels turns behind a window; only
+     the front label is read, right aligned so it hugs the mark */
+  .fsroll{all:unset;box-sizing:border-box;position:relative;display:inline-flex;align-items:center;gap:5px;height:22px;cursor:pointer;border-radius:4px}
   .fsroll:focus-visible{outline:2px solid #0d823b;outline-offset:2px}
-  .fsroll .win{display:block;position:absolute;inset:0 30px 0 14px;overflow:hidden;perspective:300px;
-      -webkit-mask-image:linear-gradient(180deg,transparent 18%,#000 40%,#000 60%,transparent 82%);
-              mask-image:linear-gradient(180deg,transparent 18%,#000 40%,#000 60%,transparent 82%)}
+  .fsroll .win{display:block;position:relative;width:86px;height:22px;overflow:hidden;perspective:300px;
+      -webkit-mask-image:linear-gradient(180deg,transparent 4%,#000 34%,#000 66%,transparent 96%);
+              mask-image:linear-gradient(180deg,transparent 4%,#000 34%,#000 66%,transparent 96%)}
   .fsroll .drum{display:block;position:absolute;left:0;right:0;top:50%;height:0;transform-style:preserve-3d;
       transition:transform .7s cubic-bezier(.22,.9,.28,1)}
-  .fsroll .face{position:absolute;left:0;right:0;top:-10px;height:20px;backface-visibility:hidden;
-      display:flex;align-items:center;font:600 13px/1 "Figtree",system-ui,sans-serif;color:#1a1b1e;white-space:nowrap}
-  .fsroll .chev{position:absolute;right:11px;top:calc(50% - 8px);width:16px;height:16px;color:#0d823b}
-  .fsroll .lab{display:block;position:absolute;left:0;right:0;bottom:-20px;text-align:center;font:700 10.5px/1 "Figtree",system-ui,sans-serif;
-      letter-spacing:.14em;text-transform:uppercase;color:#6b6e76}
-  .fsmain{align-items:flex-start}
+  .fsroll .face{position:absolute;left:0;right:0;top:-11px;height:22px;backface-visibility:hidden;
+      display:flex;align-items:center;justify-content:flex-end;font:400 15px/22px "Figtree",system-ui,sans-serif;letter-spacing:-.01em;color:#1a1b1e;white-space:nowrap}
+  .fsroll .chev{width:14px;height:14px;flex:none;color:#0d823b}
+  .fsroll:hover .face{color:#0d823b}
   .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-  #wf .phead > div:first-child{flex:0 0 auto}
   @media (max-width:760px){.wfsaved{display:none}}
+  /* AI Adoption Activity: emails Ken answered each complete week, by company */
+  .wfadopt{flex:1 1 200px;min-width:170px;max-width:420px;margin-left:4px;display:flex;flex-direction:column;gap:6px}
+  .wfadopt[hidden]{display:none}
+  .wfadopt .stats{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:11px;color:#6b6e76;font-variant-numeric:tabular-nums}
+  .wfadopt .stats b{font-weight:800}
+  .wfadopt .plot{display:grid;grid-template-columns:minmax(0,1fr) 46px;gap:0 4px}
+  .wfadopt .plot svg{width:100%;height:92px;display:block;overflow:visible}
+  .acth .nm > svg:not(.out){width:15px;height:15px;flex:none}
+  .wfadopt .ends{position:relative;height:92px;font-size:10.5px;font-weight:700}
+  .wfadopt .ends span{position:absolute;left:0}
+  .wfadopt .ax{display:flex;justify-content:space-between;font-size:10px;color:#8a8c94;padding-top:3px;font-variant-numeric:tabular-nums}
+  /* OpenRouter Activity: model calls and charge per API key for the roller's period */
+  .wfor{margin:0 auto;display:flex;flex-direction:column;gap:6px;width:300px;flex:none}
+  .wfor[hidden]{display:none}
+  .wfor .tb{display:flex;flex-direction:column;font-size:12px}
+  .wfor .tr{display:grid;grid-template-columns:minmax(0,1fr) 64px 72px;gap:10px;padding:6px 10px;border-bottom:1px solid #f4f3ef;font-variant-numeric:tabular-nums}
+  .wfor .tr.hd{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b6e76;border-bottom-color:#efeee9}
+  .wfor .tr.tot{background:#f7f7f4;font-weight:800;border-bottom:0}
+  .wfor .tr .r{text-align:right}
+  .wfor .tr .k{display:inline-flex;align-items:center;gap:6px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+  .wfor .tr .k i{width:6px;height:6px;border-radius:50%;flex:none}
+  .wfor .tr.ph{color:#8a8c94}
   /* GitHub activity: one small block per month, Mon to Sun rows, week columns */
-  .wfheat{position:relative;margin-left:auto;display:flex;flex-direction:column;gap:6px;min-width:0}
-  .wfheat .hh{display:flex;align-items:baseline;gap:10px;font-size:12px;color:#6b6e76}
-  .wfheat .hh b{color:#1a1b1e;font-weight:800;font-size:12.5px}
-  .wfheat .months{display:flex;gap:14px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+  .wfheat{position:relative;display:flex;flex-direction:column;gap:6px;min-width:0;flex:none}
+  .wfheat .months{display:flex;gap:14px}
   .wfheat .mon{display:flex;flex-direction:column;gap:4px;flex:none}
-  .wfheat .mon button.ml{all:unset;cursor:pointer;font-size:11px;font-weight:600;color:#6b6e76;border-radius:4px;line-height:14px;height:14px}
+  .wfheat .mon button.ml{all:unset;cursor:pointer;font-size:11.5px;font-weight:600;color:#6b6e76;border-radius:4px;line-height:15px;height:15px}
   .wfheat .mon button.ml:hover{color:#1a1b1e}
   .wfheat .mon button.ml:focus-visible{outline:2px solid #0d823b;outline-offset:2px}
   .wfheat .mon.cur button.ml{color:#1a1b1e;font-weight:800}
-  .wfheat .grid{display:grid;grid-template-rows:repeat(7,11px);grid-auto-flow:column;grid-auto-columns:11px;gap:3px}
-  .wfheat .grid.dls{grid-auto-columns:auto}
-  .wfheat .grid .dl{font-size:9.5px;color:#8a8c94;line-height:11px;text-align:right}
-  .wfheat .mon .sp{height:14px}
-  .wfheat .c{all:unset;width:11px;height:11px;border-radius:2.5px;background:#ebeae4;cursor:pointer;box-sizing:border-box}
+  .wfheat .grid{display:grid;grid-template-rows:repeat(7,14px);grid-auto-flow:column;grid-auto-columns:14px;gap:3px}
+  .wfheat .c{all:unset;width:14px;height:14px;border-radius:3px;background:#ebeae4;cursor:pointer;box-sizing:border-box}
   .wfheat .c.l1{background:#6dbd86}.wfheat .c.l2{background:#36a05c}.wfheat .c.l3{background:#167b3d}.wfheat .c.l4{background:#0a5226}
   .wfheat .c.fut{background:transparent;box-shadow:inset 0 0 0 1px #e6e5e1;cursor:default}
   .wfheat .c.pad{visibility:hidden}
   .wfheat .c.sel{box-shadow:0 0 0 1.5px #1a1b1e}
   .wfheat .c:focus-visible{outline:2px solid #1a1b1e;outline-offset:1px}
-  .wfheat .leg{display:flex;align-items:center;gap:3px;font-size:11px;color:#6b6e76;justify-content:flex-end}
-  .wfheat .leg .c{cursor:default;margin:0 0}
-  .wfheat .leg span{margin:0 4px}
   .wfheat .wftip{top:auto}
-  @media (max-width:1180px){.wfheat{display:none}}
+  @media (max-width:1430px){.wfadopt{display:none !important}}
+  @media (max-width:1120px){.wfheat,.wfor{display:none !important}}
+  /* the day pop-out: every entry of a day, on hover or focus. Only opacity and
+     transform move, so it stays smooth; a white veil slides down off the card
+     so the entries surface from the top down */
+  .daypop{position:absolute;z-index:5;width:300px;padding:12px 14px 10px;background:#fff;border:1px solid #e6e5e1;border-radius:10px;
+      box-shadow:0 18px 40px -18px rgba(16,26,20,.45);overflow:hidden;transform-origin:50% 0;will-change:opacity,transform;pointer-events:none;
+      animation:dayPop 1.4s cubic-bezier(.22,1,.36,1) both}
+  .daypop[hidden]{display:none}
+  .daypop::after{content:"";position:absolute;left:0;right:0;top:-30%;bottom:0;pointer-events:none;
+      background:linear-gradient(180deg,rgba(255,255,255,0) 0%,#fff 26%);animation:dayVeil 2.2s cubic-bezier(.33,0,.15,1) both;will-change:transform}
+  .daypop .ph{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:6px}
+  .daypop .ph b{font-size:13px;font-weight:800}
+  .daypop .ph span{font-size:11.5px;font-weight:700;color:#0d823b}
+  .daypop .pr{display:grid;grid-template-columns:40px minmax(0,1fr);gap:6px;padding:4px 0;border-top:1px solid #f1f0ec;font-size:11.5px;line-height:1.35}
+  .daypop .pr .t{font-weight:700;color:#0d823b;font-variant-numeric:tabular-nums}
+  .daypop .pr.em{color:#6b6e76}
+  @keyframes dayPop{0%{opacity:0;transform:translateY(-6px) scaleY(.985)}45%{opacity:1}100%{opacity:1;transform:none}}
+  @keyframes dayVeil{0%{transform:translateY(0)}100%{transform:translateY(100%)}}
+  @media (prefers-reduced-motion: reduce){.daypop,.daypop::after{animation:none !important}.daypop::after{display:none}}
+  @media (max-width:760px){.daypop{display:none !important}}
   .wfempty svg{width:28px;height:28px;color:#b9bcc2;display:block;margin:0 auto 8px}
   @media (max-width:760px){
     .wfbody.open{grid-template-columns:minmax(0,1fr)}
@@ -390,41 +445,58 @@
   </div>
 
   <div id="wf" role="region" aria-labelledby="wfH1">
-    <div class="phead">
-      <div>
-        <h1 id="wfH1">Work Diary</h1>
-        <p>Upcoming project work, day by day.</p>
-      </div>
-      <div class="wfsaved" id="wfSaved" role="group" aria-label="Time saved by Ken and our AI" hidden>
-        <div class="fsmain">
-          <button class="fsroll" id="fsRoll" type="button" aria-describedby="fsSay">
-            <span class="win"><span class="drum" id="fsDrum"></span></span>
-            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 10l4-4 4 4"></path><path d="M8 14l4 4 4-4"></path></svg>
-            <span class="lab" aria-hidden="true">Time saved</span>
-          </button>
-          <div class="fsgrp" aria-hidden="true"><div class="fsdigits" id="fsH"></div><span class="fslab">Hours</span></div>
-          <div class="fssep" aria-hidden="true"><i></i><i></i></div>
-          <div class="fsgrp" aria-hidden="true"><div class="fsdigits" id="fsM"></div><span class="fslab">Minutes</span></div>
+    <div class="phead wfhead">
+      <div class="wftitle">
+        <h1 id="wfH1">Work <span>Diary</span></h1>
+        <div class="wfsaved" id="wfSaved" role="group" aria-label="Time Saved Clock: time saved by Ken and our AI" hidden>
+          <div class="fstop">
+            <span class="fsname">Time Saved Clock</span>
+            <button class="fsroll" id="fsRoll" type="button" aria-describedby="fsSay">
+              <span class="win"><span class="drum" id="fsDrum"></span></span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 10l4-4 4 4"></path><path d="M8 14l4 4 4-4"></path></svg>
+            </button>
+          </div>
+          <div class="fsmain">
+            <div class="fsgrp" aria-hidden="true"><div class="fsdigits" id="fsH"></div><span class="fslab">Hours</span></div>
+            <div class="fssep" aria-hidden="true"><i></i><i></i></div>
+            <div class="fsgrp" aria-hidden="true"><div class="fsdigits" id="fsM"></div><span class="fslab">Minutes</span></div>
+          </div>
+          <span class="vh" id="fsSay" aria-live="polite"></span>
         </div>
-        <span class="vh" id="fsSay" aria-live="polite"></span>
+      </div>
+      <div class="wfadopt" id="wfAdopt" role="group" aria-labelledby="wfAdH" hidden>
+        <div class="acth"><span class="nm" id="wfAdH"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l5-5 4 3 8-8"></path><path d="M14 7h6v6"></path></svg>AI Adoption Activity</span></div>
+        <div class="stats" id="wfAdStats"></div>
+        <div class="plot">
+          <svg id="wfAdSvg" viewBox="0 0 700 110" preserveAspectRatio="none" role="img"></svg>
+          <div class="ends" aria-hidden="true"><span id="wfAdK" style="color:#0d823b">Kensite</span><span id="wfAdA" style="color:#c2410c">AES</span></div>
+          <div class="ax" id="wfAdAx" aria-hidden="true"></div>
+          <span></span>
+        </div>
+      </div>
+      <div class="wfor" id="wfOr" role="group" aria-label="OpenRouter activity" hidden>
+        <div class="acth"><a class="nm" href="https://openrouter.ai/activity" target="_blank" rel="noopener" title="Open OpenRouter activity"><img src="data:image/png;base64,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" alt="" width="16" height="16">OpenRouter Activity<svg class="out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a><span id="wfOrSum"></span></div>
+        <div class="tb" role="table" aria-label="OpenRouter spend by API key">
+          <div class="tr hd" role="row"><span role="columnheader">API key</span><span class="r" role="columnheader">Calls</span><span class="r" role="columnheader">Cost</span></div>
+          <div id="wfOrRows" role="rowgroup"></div>
+          <div class="tr tot" role="row"><span role="cell">Total</span><span class="r" role="cell" id="wfOrCalls"></span><span class="r" role="cell" id="wfOrTotal" style="color:#0d823b"></span></div>
+        </div>
       </div>
       <div class="wfheat" id="wfHeat" role="group" aria-label="GitHub activity by day">
-        <div class="hh"><b>GitHub activity</b><span id="wfHeatSum"></span></div>
+        <div class="acth"><a class="nm" href="https://github.com/Nathanjmcg" target="_blank" rel="noopener" title="Open Nathan's GitHub"><img src="data:image/png;base64,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" alt="" width="16" height="16">GitHub Activity<svg class="out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a><span id="wfHeatSum"></span></div>
         <div class="months" id="wfHeatMonths"></div>
-        <div class="leg" aria-hidden="true"><span>Less</span><i class="c"></i><i class="c l1"></i><i class="c l2"></i><i class="c l3"></i><i class="c l4"></i><span>More</span></div>
         <div class="wftip" id="wfHeatTip"></div>
       </div>
       <div class="pacts">
         <button class="btn wfback" id="wfBack" type="button">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12H7"></path><path d="M11 6l-6 6 6 6"></path></svg>
-          Back to What's next
+          Back to What's Next
         </button>
       </div>
     </div>
     <section class="wfsec" aria-labelledby="wfH2">
       <div class="wfbar">
-        <h2 id="wfH2">Nathan Workflow</h2>
-        <span class="hint">Click a day to open its work entries.</span>
+        <h2 id="wfH2" style="margin-right:auto">Nathan's WorkFlow</h2>
         <div class="wfnav">
           <button class="iconbtn" id="wfPrev" type="button" aria-label="Previous month"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
           <div class="wfmonth" id="wfMonth" aria-live="polite"></div>
@@ -434,6 +506,7 @@
       </div>
       <div class="wfbody" id="wfBody">
         <div class="cal" id="wfCal" role="grid" aria-labelledby="wfMonth"></div>
+        <div class="daypop" id="wfPop" role="tooltip" hidden></div>
         <aside class="wfpanel" id="wfPanel" aria-labelledby="wfPH" aria-live="polite">
           <div class="wfphead">
             <div>
@@ -465,6 +538,7 @@
       </div>
       <div class="pdbody" id="pdBody"></div>
       <div class="pdfoot">
+        <span class="live" id="pdLive" hidden>Live project, so it is not queued in What's Next.</span>
         <span class="lbl" id="pdMoveLbl">Place in</span>
         <div class="seg" id="pdSeg" role="group" aria-labelledby="pdMoveLbl"></div>
         <span class="sp"></span>
@@ -702,26 +776,63 @@ function onKey(ev){
    how it works and who it helps, and when saving is on it can place the card
    in a lane (the same as dragging; still needs Save plan). Arrows step
    through the cards in board order; Escape closes and returns focus. */
-const PD = {id:"", justDragged:false};
+const PD = {id:"", justDragged:false, list:null, from:null};
+const PD_STAGE_HUE = {Shipped:150, Testing:95, Live:150};
+function pdProject(id){ return STATE.projects[id] || (STATE.all || {})[id] || null; }
+/* time spent on a project, estimated from the Work Diary: each entry linked
+   to it counts the gap since the previous timed entry that day, held between
+   10 and 90 minutes; the day's first timed entry counts 30 and an entry with
+   no time counts 20 */
+function pdTimeSpent(id){
+  let mins = 0, entries = 0, last = "";
+  const days = new Set();
+  Object.keys(WF.entries || {}).sort().forEach(key => {
+    let prev = null;
+    wfWork(key).forEach(e => {
+      const m = /^(\d{1,2}):(\d{2})$/.exec(String(e.time || "").trim());
+      const t = m ? Number(m[1]) * 60 + Number(m[2]) : null;
+      if(e.project === id){
+        entries += 1; days.add(key); last = key;
+        mins += t == null ? 20 : (prev == null ? 30 : Math.min(90, Math.max(10, t - prev)));
+      }
+      if(t != null) prev = t;
+    });
+  });
+  return {mins, entries, days: days.size, last};
+}
 const PD_LANES = [{id:"tray", label:"Not placed", hue:25}].concat(LANES.map(l => ({id:l.id, label:l.label[0] + l.label.slice(1).toLowerCase(), hue:l.hue})));
 function pdOrder(){ return ORDER.flatMap(k => STATE.lanes[k]); }
 function pdLaneOf(id){ return ORDER.find(k => STATE.lanes[k].includes(id)) || "tray"; }
 function pdFill(){
-  const p = STATE.projects[PD.id]; if(!p) return pdClose();
+  const p = pdProject(PD.id); if(!p) return pdClose();
+  const live = !STATE.projects[PD.id];
   const hue = COMPANY_HUE[p.company] != null ? COMPANY_HUE[p.company] : 220;
   $("#pdDot").style.background = `oklch(0.62 0.17 ${hue})`;
   $("#pdCo").textContent = p.companyName || "";
   $("#pdCat").textContent = p.category || "";
   $("#pdName").textContent = p.name;
   const meta = $("#pdMeta"); meta.innerHTML = "";
-  const lane = PD_LANES.find(l => l.id === pdLaneOf(p.id));
-  const ls = el("span", "lane"); ls.textContent = lane.label;
-  ls.style.background = `oklch(0.93 0.07 ${lane.hue})`; ls.style.boxShadow = `inset 0 0 0 1px oklch(0.78 0.14 ${lane.hue})`;
+  const lane = live ? null : PD_LANES.find(l => l.id === pdLaneOf(p.id));
+  const ls = el("span", "lane");
+  const stHue = live ? (PD_STAGE_HUE[p.stage] != null ? PD_STAGE_HUE[p.stage] : 150) : lane.hue;
+  ls.textContent = live ? [p.stage || "Live", (p.dates && p.stage && p.dates[p.stage]) || p.date || ""].join(" ").trim() : lane.label;
+  ls.style.background = `oklch(0.93 0.07 ${stHue})`; ls.style.boxShadow = `inset 0 0 0 1px oklch(0.78 0.14 ${stHue})`;
   meta.appendChild(ls);
   if(p.owner){ const o = el("span"); o.textContent = "Owner: " + p.owner; meta.appendChild(o); }
   const when = p.proposed_at ? wfLong(wfDate(p.proposed_at)).replace(/^\w+ /, "") : (p.date || "");
   if(when){ const w = el("span"); w.textContent = "Proposed " + when; meta.appendChild(w); }
   const body = $("#pdBody"); body.innerHTML = "";
+  const ts = pdTimeSpent(p.id);
+  if(ts.entries){
+    const d = el("section", "pdtime");
+    d.innerHTML = '<div class="big"><h3>Time spent</h3><b></b></div><div class="facts"><span><b class="e"></b> diary entr<span class="es"></span></span><span><b class="d"></b> day<span class="ds"></span> worked</span><span>Last worked <b class="l"></b></span></div>';
+    d.querySelector(".big b").textContent = "\u2248 " + Math.max(1, Math.round(ts.mins / 60)) + " hour" + (Math.round(ts.mins / 60) > 1 ? "s" : "");
+    d.querySelector(".e").textContent = ts.entries; d.querySelector(".es").textContent = ts.entries === 1 ? "y" : "ies";
+    d.querySelector(".d").textContent = ts.days; d.querySelector(".ds").textContent = ts.days === 1 ? "" : "s";
+    const ld = wfDate(ts.last); d.querySelector(".l").textContent = ld.getDate() + " " + WF_MON[ld.getMonth()];
+    d.title = "Estimated from the Work Diary: each linked entry counts the time since the previous entry that day, 10 to 90 minutes; the day's first entry counts 30 and an untimed entry 20.";
+    body.appendChild(d);
+  }
   const sec = (h, text) => { if(!text) return; const d = el("section"); const t = el("h3"); t.textContent = h; const q = el("p"); q.textContent = text; d.append(t, q); body.appendChild(d); };
   sec("What it does", p.scope || p.summary);
   sec("How it works", p.how);
@@ -732,24 +843,25 @@ function pdFill(){
     who.forEach(w => { const li = el("li"); if(w.who){ const b = el("b"); b.textContent = w.who; li.appendChild(b); } if(w.how) li.appendChild(document.createTextNode((w.who ? ": " : "") + w.how)); ul.appendChild(li); });
     d.appendChild(ul); body.appendChild(d);
   }
-  if(!body.children.length){ const e = el("p"); e.textContent = "No further detail has been written for this idea yet."; body.appendChild(e); }
+  if(body.children.length === (ts.entries ? 1 : 0)){ const e = el("p"); e.textContent = "No further detail has been written for this idea yet."; body.appendChild(e); }
   body.scrollTop = 0;
   const seg = $("#pdSeg"); seg.innerHTML = "";
-  $("#pdMoveLbl").parentElement.querySelectorAll(".lbl,.seg").forEach(x => { x.style.display = STATE.canSave ? "" : "none"; });
-  PD_LANES.forEach(l => {
+  $("#pdMoveLbl").parentElement.querySelectorAll(".lbl,.seg").forEach(x => { x.style.display = STATE.canSave && !live ? "" : "none"; });
+  $("#pdLive").hidden = !live;
+  if(!live) PD_LANES.forEach(l => {
     const b = el("button"); b.type = "button"; b.textContent = l.label;
     b.setAttribute("aria-pressed", l.id === lane.id ? "true" : "false");
     b.addEventListener("click", () => pdMove(l.id));
     seg.appendChild(b);
   });
-  const order = pdOrder(), i = order.indexOf(PD.id);
+  const order = PD.list || pdOrder(), i = order.indexOf(PD.id);
   $("#pdPrev").disabled = i <= 0; $("#pdNext").disabled = i < 0 || i >= order.length - 1;
   document.querySelectorAll(".card.open").forEach(c => c.classList.remove("open"));
   const c = document.querySelector(`.card[data-id="${CSS.escape(PD.id)}"]`); if(c) c.classList.add("open");
 }
-function pdOpen(id, from){
-  if(!STATE.projects[id]) return;
-  PD.id = id;
+function pdOpen(id, from, list){
+  if(!pdProject(id)) return;
+  PD.id = id; PD.list = list || null; PD.from = from || null;
   const pd = $("#pd"), sheet = pd.querySelector(".pdsheet");
   pd.classList.add("show"); pd.setAttribute("aria-hidden", "false");
   if(from){
@@ -765,7 +877,9 @@ function pdClose(){
   const id = PD.id; PD.id = "";
   const pd = $("#pd"); pd.classList.remove("show"); pd.setAttribute("aria-hidden", "true");
   document.querySelectorAll(".card.open").forEach(c => c.classList.remove("open"));
-  const c = id && document.querySelector(`.card[data-id="${CSS.escape(id)}"]`); if(c) c.focus();
+  const c = id && document.querySelector(`.card[data-id="${CSS.escape(id)}"]`);
+  if(c) c.focus(); else if(PD.from && PD.from.isConnected) PD.from.focus();
+  PD.list = null; PD.from = null;
 }
 function pdMove(to){
   if(!STATE.canSave) return;
@@ -778,7 +892,7 @@ function pdMove(to){
   toast("Moved to " + PD_LANES.find(l => l.id === to).label + ". Save plan to keep it.");
 }
 function pdStep(n){
-  const order = pdOrder(), i = order.indexOf(PD.id);
+  const order = PD.list || pdOrder(), i = order.indexOf(PD.id);
   const j = i + n; if(j < 0 || j >= order.length) return;
   PD.id = order[j]; pdFill();
 }
@@ -885,7 +999,41 @@ function wfSave(){
   try{ sessionStorage.setItem("mtco.wf", JSON.stringify({y:WF.year, m:WF.month, sel:WF.sel, open:$("#wf").classList.contains("show")})); }catch(e){}
 }
 
+/* the day pop-out: on hover or focus, every entry of that day in a card that
+   fades in from the top down. Thursday to Sunday open towards the left so the
+   card stays on the calendar; near the bottom it opens upwards. A click still
+   opens the day panel. */
+const WFP = {for:null};
+function wfPopShow(b, key, col){
+  const items = wfList(key);
+  const old = $("#wfPop");
+  if(!items.length || !old){ wfPopHide(); return; }
+  const pop = el("div", "daypop"); pop.id = "wfPop"; pop.setAttribute("role", "tooltip");
+  const head = el("div", "ph"), hb = el("b"), hs = el("span");
+  hb.textContent = wfLong(wfDate(key)).replace(/ \d{4}$/, "");
+  const n = wfWork(key).length; hs.textContent = n + (n === 1 ? " Entry" : " Entries");
+  head.append(hb, hs); pop.appendChild(head);
+  items.forEach(it => {
+    const r = el("div", "pr" + (it && it.kind === "email" ? " em" : "")), t = el("span", "t"), x = el("span");
+    t.textContent = it.time || ""; x.textContent = it.title || ""; r.append(t, x); pop.appendChild(r);
+  });
+  old.replaceWith(pop);
+  WFP.for = b;
+  const body = $("#wfBody").getBoundingClientRect(), c = b.getBoundingClientRect();
+  const left = col >= 4 ? c.right - body.left - 4 - 300 : c.left - body.left + 4;
+  pop.style.left = Math.max(0, left) + "px";
+  let top = c.top - body.top + 4;
+  const h = pop.offsetHeight;
+  if(top + h > body.height + 40) top = Math.max(0, c.bottom - body.top - 4 - h);
+  pop.style.top = top + "px";
+}
+function wfPopHide(b){
+  if(b && WFP.for !== b) return;
+  WFP.for = null;
+  const p = $("#wfPop"); if(p) p.hidden = true;
+}
 function wfRender(){
+  wfPopHide();
   $("#wfMonth").textContent = WF_MON[WF.month] + " " + WF.year;
   const cal = $("#wfCal"); cal.innerHTML = "";
   const head = el("div","dow"); head.setAttribute("role","row");
@@ -915,9 +1063,11 @@ function wfRender(){
       const nWork = wfWork(key).length;
       b.setAttribute("aria-label", wfLong(d) + (nWork ? ", " + nWork + " work entr" + (nWork === 1 ? "y" : "ies") : ", no work entries"));
       const num = el("span","num"); num.textContent = d.getDate(); b.appendChild(num);
-      items.slice(0,2).forEach(it => { const e = el("span","ent"); e.textContent = (it.time ? it.time + "  " : "") + (it.title || ""); b.appendChild(e); });
-      if(items.length > 2){ const m = el("span","more"); m.textContent = "+" + (items.length - 2) + " more"; b.appendChild(m); }
+      items.slice(0,1).forEach(it => { const e = el("span","ent"); e.textContent = (it.time ? it.time + "  " : "") + (it.title || ""); b.appendChild(e); });
+      if(items.length > 1){ const m = el("span","more"); m.textContent = "+" + (items.length - 1) + " more"; b.appendChild(m); }
       b.addEventListener("click", () => wfSelect(key));
+      ["mouseenter","focus"].forEach(t => b.addEventListener(t, () => wfPopShow(b, key, i)));
+      ["mouseleave","blur"].forEach(t => b.addEventListener(t, () => wfPopHide(b)));
       row.appendChild(b);
     }
     cal.appendChild(row);
@@ -1006,16 +1156,16 @@ function fsSet(id, text, roll, word){
    board: every flap flips rapidly through a run of digits, as if resetting,
    and lands on that period's figure. */
 const FS_PERIODS = [
-  {key:"today_minutes", label:"Today"}, {key:"week_minutes", label:"This week"},
-  {key:"month_minutes", label:"This month"}, {key:"quarter_minutes", label:"This quarter"},
-  {key:"year_minutes", label:"This year"}, {key:"total_minutes", label:"All time"}];
+  {key:"today_minutes", label:"Today"}, {key:"week_minutes", label:"This Week"},
+  {key:"month_minutes", label:"This Month"}, {key:"quarter_minutes", label:"This Quarter"},
+  {key:"year_minutes", label:"This Year"}, {key:"total_minutes", label:"All Time"}];
 FS.turn = 5;                 // starts on All time
 FS.hold = false;
 function fsPeriod(){ return FS_PERIODS[((FS.turn % 6) + 6) % 6]; }
 function fsValue(){ const t = WF.saved || {}, v = t[fsPeriod().key]; return typeof v === "number" ? v : null; }
 function fsBuildDrum(){
   const d = $("#fsDrum"); if(!d || d.children.length) return;
-  const r = 10 / Math.tan(Math.PI / 6);      // a 20px face on a six sided drum
+  const r = 11 / Math.tan(Math.PI / 6);      // a 22px face on a six sided drum
   FS_PERIODS.forEach((p, i) => {
     const f = el("span", "face"); f.textContent = p.label;
     f.style.transform = `rotateX(${-i * 60}deg) translateZ(${r.toFixed(2)}px)`;
@@ -1054,6 +1204,7 @@ function fsShuffle(id, text){
 function fsSpin(steps, said){
   FS.turn += steps;
   fsDrumPos();
+  orRender();
   const dg = fsDigits(); if(!dg) return;
   setTimeout(() => { fsShuffle("fsH", dg[0]); fsShuffle("fsM", dg[1]); }, 120);
   if(said) $("#fsSay").textContent = fsPeriod().label + ": " + Number(dg[0]) + " hours " + Number(dg[1]) + " minutes saved";
@@ -1070,6 +1221,7 @@ function fsAuto(){
 function fsRender(){
   const t = WF.saved, box = $("#wfSaved");
   if(!box) return;
+  orRender(); adRender();
   if(!t || typeof t.total_minutes !== "number"){ box.hidden = true; return; }
   box.hidden = false;
   fsBuildDrum();
@@ -1083,8 +1235,81 @@ function fsRender(){
   fsSet("fsM", dg[1], first);
   $("#fsRoll").setAttribute("aria-label", "Time saved " + fsPeriod().label.toLowerCase() + ": " + Number(dg[0]) + " hours " + Number(dg[1]) + " minutes. Turn to the next period");
   box.title = "Counted from the Ken Time Saved Index, as Ken Mission Control counts it. Refreshed every 90 seconds.";
+  $("#fsRoll").title = "Turn to the next period";
   if(!FS.auto) fsAuto();
 }
+/* ── OpenRouter Activity: model calls and the charge OpenRouter stated, for the
+   roller's period. Ken's row is real, from his audit via Push Time Saved; the
+   other keys are placeholders until their labels are settled. ── */
+const OR_PLACEHOLDERS = 2;
+function orRender(){
+  const box = $("#wfOr"); if(!box) return;
+  const all = (WF.saved || {}).openrouter;
+  const key = fsPeriod().key.replace("_minutes", "");
+  const v = all && all[key];
+  if(!v || typeof v.calls !== "number"){ box.hidden = true; return; }
+  box.hidden = false;
+  const usd = n => "$" + Number(n || 0).toFixed(2);
+  const rows = $("#wfOrRows"); rows.innerHTML = "";
+  const row = (label, calls, cost, dot, ph) => {
+    const r = el("div", "tr" + (ph ? " ph" : "")); r.setAttribute("role", "row");
+    r.innerHTML = '<span class="k" role="cell"><i></i><span></span></span><span class="r" role="cell"></span><span class="r" role="cell" style="font-weight:700"></span>';
+    r.querySelector("i").style.background = dot; r.querySelector(".k span").textContent = label;
+    r.children[1].textContent = calls; r.children[2].textContent = cost;
+    if(!ph) r.children[2].style.color = "#1a1b1e";
+    rows.appendChild(r);
+  };
+  row("Ken (agent)", String(v.calls), usd(v.usd), "#0d823b", false);
+  for(let i = 0; i < OR_PLACEHOLDERS; i += 1) row("[KEY LABEL]", "[N]", "[$0.00]", "#cfd3cf", true);
+  $("#wfOrCalls").textContent = String(v.calls);
+  $("#wfOrTotal").textContent = usd(v.usd);
+  $("#wfOrSum").textContent = usd(v.usd) + " " + fsPeriod().label.toLowerCase();
+}
+
+/* ── AI Adoption Activity: emails Ken answered each complete week, Kensite in
+   green and AES in orange. The week in progress is left off rather than drawn
+   as a guess. Week on week and month on month are on all contacts. ── */
+const AD_MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function adRender(){
+  const box = $("#wfAdopt"); if(!box) return;
+  const a = (WF.saved || {}).adoption;
+  const t = new Date(), mon = new Date(t.getFullYear(), t.getMonth(), t.getDate() - wfDow(t)), monKey = wfKey(mon);
+  const weeks = ((a && a.weeks) || []).filter(w => w && w.w < monKey).slice(-7);
+  if(weeks.length < 2){ box.hidden = true; return; }
+  box.hidden = false;
+  const lab = w => { const d = wfDate(w.w); return d.getDate() + " " + AD_MON[d.getMonth()]; };
+  const tot = w => (w.kensite || 0) + (w.aes || 0);
+  const pct = (x, y) => y ? (x >= y ? "+" : "\u2212") + Math.round(Math.abs(x - y) / y * 100) + "%" : "n/a";
+  const months = (a && a.months) || {};
+  const mk = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
+  const thisM = mk(t), lastD = new Date(t.getFullYear(), t.getMonth() - 1, 1), prevD = new Date(t.getFullYear(), t.getMonth() - 2, 1);
+  const lastM = mk(lastD), prevM = mk(prevD);
+  const w1 = weeks[weeks.length - 1], w0 = weeks[weeks.length - 2];
+  const stats = [
+    {v: pct(tot(w1), tot(w0)), s: "WoW", c: "#0d823b", n: "Week on week: " + tot(w0) + " to " + tot(w1) + ", w/c " + lab(w1)},
+    {v: pct(months[lastM] || 0, months[prevM] || 0), s: "MoM", c: "#0d823b", n: "Month on month: " + (months[prevM] || 0) + " in " + AD_MON[prevD.getMonth()] + " to " + (months[lastM] || 0) + " in " + AD_MON[lastD.getMonth()]},
+    {v: String(months[lastM] || 0), s: "contacts in " + AD_MON[lastD.getMonth()], c: "#1a1b1e", n: "Instances of contact with Ken in " + WF_MON[lastD.getMonth()]},
+    {v: String(months[thisM] || 0), s: "This Month", c: "#1a1b1e", n: "Instances of contact with Ken in " + WF_MON[t.getMonth()] + " so far"}];
+  const st = $("#wfAdStats"); st.innerHTML = "";
+  stats.forEach(x => { const sp = el("span"), b = el("b"); b.textContent = x.v; b.style.color = x.c; sp.append(b, document.createTextNode(" " + x.s)); sp.title = x.n; st.appendChild(sp); });
+  const max = Math.max(1, ...weeks.map(w => Math.max(w.kensite || 0, w.aes || 0)));
+  const ymax = Math.max(20, Math.ceil(max * 1.1 / 20) * 20);
+  const X = i => (i / (weeks.length - 1) * 700).toFixed(1), Y = v => (110 - v / ymax * 110).toFixed(1);
+  const path = k => weeks.map((w, i) => (i ? "L" : "M") + X(i) + "," + Y(w[k] || 0)).join(" ");
+  $("#wfAdSvg").innerHTML = '<line x1="0" y1="55" x2="700" y2="55" stroke="#efeee9" vector-effect="non-scaling-stroke"/>'
+    + '<line x1="0" y1="109.5" x2="700" y2="109.5" stroke="#e6e5e1" vector-effect="non-scaling-stroke"/>'
+    + '<path d="' + path("kensite") + '" fill="none" stroke="#0d823b" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>'
+    + '<path d="' + path("aes") + '" fill="none" stroke="#c2410c" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>';
+  $("#wfAdSvg").setAttribute("aria-label", "Emails Ken answered each week, Kensite and AES, complete weeks " + lab(weeks[0]) + " to " + lab(w1) + "; week on week " + stats[0].v);
+  const top = v => (110 - v / ymax * 110) * 92 / 110 - 7;
+  let kt = top(w1.kensite || 0), at = Math.min(80, top(w1.aes || 0));
+  if(Math.abs(kt - at) < 12){ if(at >= kt) at = Math.min(80, kt + 12); else kt = Math.min(80, at + 12); }
+  $("#wfAdK").style.top = kt.toFixed(0) + "px"; $("#wfAdA").style.top = at.toFixed(0) + "px";
+  const mid = weeks[Math.floor((weeks.length - 1) / 2)];
+  const ax = $("#wfAdAx"); ax.innerHTML = "";
+  [weeks[0], mid, w1].forEach(w => { const sp = el("span"); sp.textContent = lab(w); ax.appendChild(sp); });
+}
+
 $("#fsRoll").addEventListener("click", () => {
   let steps = 1, guard = 0;
   while(guard++ < 6){ const t = WF.saved || {}; if(typeof t[FS_PERIODS[((FS.turn + steps) % 6 + 6) % 6].key] === "number") break; steps += 1; }
@@ -1098,7 +1323,7 @@ $("#fsRoll").addEventListener("click", () => {
    costs nothing), else the raw file (can be up to five minutes old). A
    failed fetch keeps what is showing. */
 function fsAccept(d){
-  if(d && typeof d.total_minutes === "number" && (!WF.saved || d.updated !== WF.saved.updated || d.total_minutes !== WF.saved.total_minutes)){
+  if(d && typeof d.total_minutes === "number" && (!WF.saved || d.updated !== WF.saved.updated || d.total_minutes !== WF.saved.total_minutes || JSON.stringify(d.openrouter) !== JSON.stringify(WF.saved.openrouter) || JSON.stringify(d.adoption) !== JSON.stringify(WF.saved.adoption))){
     WF.saved = d; fsRender();
   }
 }
@@ -1150,14 +1375,10 @@ function wfHeat(){
   const keys = Object.keys(WF.entries).filter(k => wfList(k).some(e => e && e.kind === "github")).sort();
   const lastIdx = Math.max(today.getFullYear()*12 + today.getMonth(), WF.year*12 + WF.month);
   let firstIdx = keys.length ? wfDate(keys[0]).getFullYear()*12 + wfDate(keys[0]).getMonth() : lastIdx;
-  firstIdx = Math.max(firstIdx, lastIdx - 5);
+  firstIdx = Math.max(firstIdx, lastIdx - 3);
   if(WF.year*12 + WF.month < firstIdx) firstIdx = WF.year*12 + WF.month;
   let total = 0, active = 0;
-  const lab = el("div", "mon"); lab.setAttribute("aria-hidden", "true"); lab.appendChild(el("div", "sp"));
-  const lg = el("div", "grid dls");
-  ["Mon","","Wed","","Fri","",""].forEach(t => { const x = el("span", "dl"); x.textContent = t; lg.appendChild(x); });
-  lab.appendChild(lg); host.appendChild(lab);
-  for(let mi = firstIdx; mi <= lastIdx && mi - firstIdx < 6; mi += 1){
+  for(let mi = firstIdx; mi <= lastIdx && mi - firstIdx < 4; mi += 1){
     const y = Math.floor(mi / 12), m = mi % 12;
     const mon = el("div", "mon" + (y === WF.year && m === WF.month ? " cur" : ""));
     const ml = el("button", "ml"); ml.type = "button"; ml.textContent = WF_MON[m].slice(0,3) + (y !== today.getFullYear() ? " " + y : "");
@@ -1197,8 +1418,10 @@ function wfHeat(){
     mon.appendChild(g);
     host.appendChild(mon);
   }
-  $("#wfHeatSum").textContent = total + " build commit" + (total === 1 ? "" : "s") + " on " + active + " day" + (active === 1 ? "" : "s");
-  host.scrollLeft = host.scrollWidth;
+  let last30 = 0;
+  for(let i = 0; i < 30; i += 1) last30 += wfGit(wfKey(new Date(today.getFullYear(), today.getMonth(), today.getDate() - i))).n;
+  $("#wfHeatSum").textContent = last30 + " build commit" + (last30 === 1 ? "" : "s") + " in 30 days";
+  $("#wfHeat").title = total + " build commits on " + active + " days across these months";
 }
 
 /* ── the month's trend: emails (blue) and work entries (green) ──────────────
@@ -1297,7 +1520,7 @@ function wfPanel(){
   const items = wfList(WF.sel);
   $("#wfPH").textContent = wfLong(d);
   const nWork = wfWork(WF.sel).length;
-  $("#wfPSub").textContent = nWork ? nWork + " work entr" + (nWork === 1 ? "y" : "ies") : "Work entries";
+  $("#wfPSub").textContent = nWork + (nWork === 1 ? " Entry" : " Entries");
   const list = $("#wfList"); list.innerHTML = "";
   if(!items.length){
     const e = el("div","wfempty");
@@ -1312,8 +1535,12 @@ function wfPanel(){
     r.innerHTML = '<div class="tm"></div><div><div class="ttrow"><div class="tt"></div></div><div class="dt"></div></div>';
     r.querySelector(".tm").textContent = it.time || "";
     r.querySelector(".tt").textContent = it.title || "";
-    const pill = it.project ? wfPill(it.project) : null;
-    if(pill) r.querySelector(".ttrow").appendChild(pill);
+    const pill = it.project ? wfPill(it.project, null, "button") : null;
+    if(pill){
+      pill.type = "button"; pill.title = "Open " + WF.projects[it.project].name;
+      pill.addEventListener("click", () => pdOpen(it.project, pill, wfWeekIds()));
+      r.querySelector(".ttrow").appendChild(pill);
+    }
     r.dataset.project = it.project || "";
     if(WF.hl && it.kind !== "email" && (it.project || "") !== WF.hl) r.classList.add("dim");
     if(it.detail) r.querySelector(".dt").textContent = it.detail; else r.querySelector(".dt").remove();
@@ -1323,7 +1550,19 @@ function wfPanel(){
 }
 
 /* the week's pen: one pill per project linked Monday to Sunday of the open
-   day's week, most entries first. Clicking one highlights its entries. */
+   day's week, most entries first. Clicking one opens that project. */
+function wfWeekCounts(){
+  const d = wfDate(WF.sel);
+  const mon = new Date(d.getFullYear(), d.getMonth(), d.getDate() - wfDow(d));
+  const counts = {};
+  for(let i = 0; i < 7; i += 1){
+    const key = wfKey(new Date(mon.getFullYear(), mon.getMonth(), mon.getDate() + i));
+    wfWork(key).forEach(e => { if(e.project && WF.projects[e.project]) counts[e.project] = (counts[e.project] || 0) + 1; });
+  }
+  const ids = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || WF.projects[a].name.localeCompare(WF.projects[b].name));
+  return {mon, counts, ids};
+}
+function wfWeekIds(){ return wfWeekCounts().ids.filter(id => pdProject(id)); }
 function wfPen(){
   const pen = $("#wfPen");
   const d = wfDate(WF.sel);
@@ -1343,16 +1582,8 @@ function wfPen(){
   ids.forEach(id => {
     const b = wfPill(id, counts[id], "button"); if(!b) return;
     b.type = "button";
-    b.setAttribute("aria-pressed", WF.hl === id ? "true" : "false");
-    if(WF.hl === id) b.classList.add("on");
-    b.addEventListener("click", () => {
-      WF.hl = WF.hl === id ? "" : id;
-      document.querySelectorAll("#wfList .wfent").forEach(r => {
-        const em = !r.querySelector(".tt") || /^Emails:/.test(r.querySelector(".tt").textContent);
-        r.classList.toggle("dim", !!WF.hl && !em && r.dataset.project !== WF.hl);
-      });
-      row.querySelectorAll("button.ppill").forEach(x => { const on = x === b && !!WF.hl; x.classList.toggle("on", on); x.setAttribute("aria-pressed", on ? "true" : "false"); });
-    });
+    b.title = "Open " + WF.projects[id].name + ": " + counts[id] + " entr" + (counts[id] === 1 ? "y" : "ies") + " this week";
+    b.addEventListener("click", () => pdOpen(id, b, wfWeekIds()));
     row.appendChild(b);
   });
 }
@@ -1412,7 +1643,7 @@ $("#wfCal").addEventListener("keydown", ev => {
   const nb = document.querySelector(`.day[data-key="${key}"]`); if(nb) nb.focus();
 });
 document.addEventListener("keydown", ev => {
-  if(ev.key !== "Escape" || !$("#wf").classList.contains("show")) return;
+  if(ev.key !== "Escape" || !$("#wf").classList.contains("show") || PD.id) return;
   if(WF.sel) wfCloseDay(); else wfClose();
 });
 
@@ -1465,6 +1696,14 @@ function render(args){
   });
   proposed.forEach(p => { if(!placed.has(p.id)) lanes.tray.push(p.id); });
   STATE.lanes = lanes;
+  STATE.all = {};
+  (roadmap.projects || []).forEach(p => {
+    if(!p || !p.id) return;
+    STATE.all[p.id] = {id:p.id, name:p.name, company:p.company, companyName: names[p.company] || p.company,
+                       category:p.category, summary:p.summary, scope:p.scope, how:p.how,
+                       who:Array.isArray(p.who) ? p.who : [], owner:p.owner, date:p.date,
+                       proposed_at:p.proposed_at, stage:p.stage, dates:p.dates || {}};
+  });
   STATE.canSave = !!args.can_save;
   STATE.dirty = false;
 
