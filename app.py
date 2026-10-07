@@ -1,6 +1,12 @@
 """
 MTCO AI Roadmap
-Version 2.3
+Version 2.4
+
+2.4: the Work Diary shows the time Ken and our AI have saved, on a split
+flap board at the top. The totals are read from "data/Time Saved.json"
+(written hourly by Push Time Saved.py on Ken's machine: minutes only, no
+names) and ride to the Planner inside the workflow argument as
+"time_saved", so the component call is unchanged. No file, no board.
 
 2.3: the AI Summit Barcelona picker is retired from the board, and the
 What's Next view gains a Planner. Its first widget is Nathan Workflow: a
@@ -58,6 +64,7 @@ BRANCH = "main"
 DATA_PATH = "data/roadmap.json"
 API = f"https://api.github.com/repos/{REPO}/contents/{DATA_PATH}"
 WORKFLOW = "data/Nathan Workflow.json"
+TIME_SAVED = "data/Time Saved.json"
 FALLBACK = {"active": ["mtco", "kensite", "aes"], "categories": [], "projects": []}
 
 st.set_page_config(page_title="MTCO AI Project Dashboard", layout="wide",
@@ -171,6 +178,12 @@ saved_at = st.session_state.get("saved_at", "")
 workflow, _ = load_json(tok, WORKFLOW)
 if not isinstance(workflow, dict) or not isinstance(workflow.get("entries"), dict):
     workflow = {"entries": {}}
+
+# Time saved by Ken and our AI: totals for the split flap board (2.4).
+time_saved, _ = load_json(tok, TIME_SAVED)
+if isinstance(time_saved, dict) and isinstance(time_saved.get("total_minutes"), (int, float)):
+    workflow["time_saved"] = {k: time_saved.get(k) for k in
+                              ("total_minutes", "month_minutes", "week_minutes", "today_minutes", "since", "updated")}
 
 html = (HERE / "dashboard.html").read_text(encoding="utf-8")
 
