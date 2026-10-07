@@ -77,6 +77,11 @@ Under the calendar a trend shows each day of the month: emails (blue, from the
 "Emails: N received, M sent" entry) and work entries (green), on one date axis
 in two panels. Hover a day for its numbers; click to open it.
 
+The Work Diary header also carries a split flap board of the time Ken and our AI
+have saved (hours and minutes all time, this week and this month). The numbers
+are in data/Time Saved.json, written hourly by Push Time Saved.py on Ken's
+machine from the Ken Time Saved Index, the same count as Ken Mission Control.
+
 The Work Diary header carries a GitHub activity heatmap: one block per month,
 Monday to Sunday down and weeks across, shaded by the day's build commits
 (from the "kind": "github" entries Diary GitHub Commits.py writes). Hover a
