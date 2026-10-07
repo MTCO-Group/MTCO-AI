@@ -202,7 +202,7 @@
   .week + .week .day{border-top:1px solid #efeee9}
   .day{
     font:inherit;text-align:left;background:#fff;border:0;border-left:1px solid #efeee9;
-    padding:7px 8px 6px;display:flex;flex-direction:column;gap:4px;min-width:0;min-height:0;
+    padding:5px 8px 4px;display:flex;flex-direction:column;gap:2px;min-width:0;min-height:0;
     cursor:pointer;color:#1a1b1e;position:relative;overflow:hidden;transition:background .12s
   }
   .week .day:first-child{border-left:0}
@@ -211,13 +211,14 @@
   .day:hover{background:#f2faf5}
   .day:focus-visible{outline:2px solid #0d823b;outline-offset:-2px;z-index:1}
   .day .num{
-    font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;width:26px;height:26px;
+    font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;width:24px;height:24px;
     display:grid;place-items:center;border-radius:999px;flex:none
   }
   .day.today .num{background:#0d823b;color:#fff}
   .day.sel{background:#e9f5ee;box-shadow:inset 0 0 0 2px #0d823b}
-  .day .ent{font-size:11.5px;line-height:1.3;color:#40424a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .day .more{font-size:11px;font-weight:700;color:#0d823b}
+  .day .ent{flex:none;font-size:11.5px;line-height:1.3;color:#40424a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .day .hd{flex:none;display:flex;align-items:center;justify-content:space-between;gap:6px;min-width:0}
+  .day .more{flex:none;white-space:nowrap;font-size:11px;line-height:1.3;font-weight:700;color:#0d823b}
   .wfpanel{
     display:none;flex-direction:column;min-height:0;border:1px solid #e6e5e1;border-radius:12px;
     background:#fff;box-shadow:0 18px 40px -26px rgba(16,26,20,.45);
@@ -1062,9 +1063,11 @@ function wfRender(){
       b.tabIndex = key === WF.focus ? 0 : -1;
       const nWork = wfWork(key).length;
       b.setAttribute("aria-label", wfLong(d) + (nWork ? ", " + nWork + " work entr" + (nWork === 1 ? "y" : "ies") : ", no work entries"));
-      const num = el("span","num"); num.textContent = d.getDate(); b.appendChild(num);
+      // the date and "+N more" share the top line, so the first entry sits just under it
+      const hd = el("span","hd"), num = el("span","num"); num.textContent = d.getDate(); hd.appendChild(num);
+      if(items.length > 1){ const m = el("span","more"); m.textContent = "+" + (items.length - 1) + " more"; hd.appendChild(m); }
+      b.appendChild(hd);
       items.slice(0,1).forEach(it => { const e = el("span","ent"); e.textContent = (it.time ? it.time + "  " : "") + (it.title || ""); b.appendChild(e); });
-      if(items.length > 1){ const m = el("span","more"); m.textContent = "+" + (items.length - 1) + " more"; b.appendChild(m); }
       b.addEventListener("click", () => wfSelect(key));
       ["mouseenter","focus"].forEach(t => b.addEventListener(t, () => wfPopShow(b, key, i)));
       ["mouseleave","blur"].forEach(t => b.addEventListener(t, () => wfPopHide(b)));
