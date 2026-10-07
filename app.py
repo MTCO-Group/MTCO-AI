@@ -1,6 +1,11 @@
 """
 MTCO AI Roadmap
-Version 2.5
+Version 2.6
+
+2.6: the Work Diary header gains two activity trackers, AI Adoption and
+OpenRouter, so their totals ("adoption": emails Ken answered each week by
+company; "openrouter": his calls and charge per period) ride through with
+the time saved. Counts and money only, no names.
 
 2.5: the time saved board gains a period roller (Today to All Time), so this
 year and this quarter ride through to it as well as the rest.
@@ -187,7 +192,8 @@ time_saved, _ = load_json(tok, TIME_SAVED)
 if isinstance(time_saved, dict) and isinstance(time_saved.get("total_minutes"), (int, float)):
     workflow["time_saved"] = {k: time_saved.get(k) for k in
                               ("total_minutes", "year_minutes", "quarter_minutes", "month_minutes",
-                               "week_minutes", "today_minutes", "since", "updated")}
+                               "week_minutes", "today_minutes", "since", "adoption", "openrouter",
+                               "updated")}
 
 html = (HERE / "dashboard.html").read_text(encoding="utf-8")
 
