@@ -1,6 +1,29 @@
 """
 MTCO AI Roadmap planner component
-Version 2.1
+Version 2.2
+
+2.2: the Work Diary as designed on the canvas. The header reads "Work
+Diary" with Diary in regular weight, and under it the Time Saved Clock: its
+name and the period roller on one line (plain text with the green up and
+down mark, no border, ending level with the last minute digit), the tiles
+beneath. Three activity trackers sit in a row with level 20px headers: AI
+Adoption Activity (emails Ken answered each complete week, Kensite and
+AES, with week on week, month on month, last month's contacts and this
+month so far), OpenRouter Activity (Ken's calls and charge for the roller's
+period, linked to openrouter.ai; two placeholder key rows until the new
+keys are settled) centred between its neighbours, and GitHub Activity
+(linked to GitHub, four months of 14px days, no day labels or key, build
+commits in the last 30 days). The supplied GitHub and OpenRouter logos are
+inlined. "Nathan's WorkFlow" heads the calendar with no hint line; each day
+shows its first entry and "+N more", and hovering or focusing a day opens a
+pop-out of every entry that fades in from the top down over about two
+seconds (Thursday to Sunday open to the left). A click still opens the day
+panel, which counts "N Entries"; its project pills and the week's pen open
+the project. Any roadmap project now opens in the detail sheet: a live one
+shows its stage, a Time spent estimate from the diary (each linked entry
+counts the gap since the previous entry that day, 10 to 90 minutes; the
+first counts 30, an untimed one 20) and "Live project, so it is not queued
+in What's Next." Section headings in the sheet are Kensite green.
 
 2.1: the parchment is gone. Nathan: "a more stripped back version, much
 more in keeping with the aesthetic of the dashboard as is". The tiles are
