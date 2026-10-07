@@ -1,6 +1,15 @@
 """
 MTCO AI Roadmap planner component
-Version 1.6
+Version 1.7
+
+1.7: a split flap board at the top of the Work Diary, in Kensite green,
+showing the time Ken and our AI have saved: hours and minutes all time,
+with this week and this month beneath on wide screens, and a line saying
+since when and when it was last worked out. The numbers come in as
+workflow["time_saved"] (app 2.4, from data/Time Saved.json). Only a digit
+that changes flips; the first showing rolls each digit up from 0, and
+reduced motion sets them straight. Below 1180px wide the GitHub heatmap
+gives way to it, below 760px both are hidden.
 
 1.6: click a card in What's Next (or press Enter on it) to expand it into a
 detail sheet: company, category, lane, owner and date proposed, then what it
