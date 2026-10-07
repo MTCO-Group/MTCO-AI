@@ -1,6 +1,9 @@
 """
 MTCO AI Roadmap
-Version 2.4
+Version 2.5
+
+2.5: the time saved board gains a period roller (Today to All Time), so this
+year and this quarter ride through to it as well as the rest.
 
 2.4: the Work Diary shows the time Ken and our AI have saved, on a split
 flap board at the top. The totals are read from "data/Time Saved.json"
@@ -183,7 +186,8 @@ if not isinstance(workflow, dict) or not isinstance(workflow.get("entries"), dic
 time_saved, _ = load_json(tok, TIME_SAVED)
 if isinstance(time_saved, dict) and isinstance(time_saved.get("total_minutes"), (int, float)):
     workflow["time_saved"] = {k: time_saved.get(k) for k in
-                              ("total_minutes", "month_minutes", "week_minutes", "today_minutes", "since", "updated")}
+                              ("total_minutes", "year_minutes", "quarter_minutes", "month_minutes",
+                               "week_minutes", "today_minutes", "since", "updated")}
 
 html = (HERE / "dashboard.html").read_text(encoding="utf-8")
 
