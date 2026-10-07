@@ -1297,6 +1297,30 @@
         }
       ],
       "proposed_at": "2026-10-06"
+    },
+    {
+      "id": "kensite-service-and-waterfill-completion-alert",
+      "company": "kensite",
+      "name": "Service and Waterfill Completion Alert",
+      "stage": "Proposed",
+      "category": "Finance",
+      "owner": "Nathan Mcguinness",
+      "proposed_by": "nathan.mcguinness@kensite.co.uk",
+      "date": "Oct 2026",
+      "summary": "Picks up every service and waterfill on Big Change that has not been marked as complete, so work that was n...",
+      "scope": "Picks up every service and waterfill on Big Change that has not been marked as complete, so work that was not actually done is spotted the next day and the charge for it can be suspended on our side instead of being billed.",
+      "how": "Reads the service and waterfill jobs on Big Change each day, checks which of them are not marked complete, and emails Ewa a daily alert listing those jobs so the charge can be stopped before it goes out.",
+      "who": [
+        {
+          "who": "Ewa and the finance side",
+          "how": "charges for work that was not done are caught and suspended before invoicing, so we do not bill for it"
+        },
+        {
+          "who": "customers",
+          "how": "they are not charged for services and waterfills that never happened."
+        }
+      ],
+      "proposed_at": "2026-10-07"
     }
   ],
   "plan": {
