@@ -1,6 +1,14 @@
 """
 MTCO AI Roadmap planner component
-Version 2.0
+Version 2.1
+
+2.1: the parchment is gone. Nathan: "a more stripped back version, much
+more in keeping with the aesthetic of the dashboard as is". The tiles are
+white with the calendar's 1px keyline and 8px corners, a hairline hinge
+across the middle and Figtree figures in the page's near black; no
+housing, pins or texture, and the colon is two Kensite green dots. The
+flip, the shuffle and the roller are unchanged, with the falling leaf only
+lightly shaded.
 
 2.0: the flaps read as parchment and the roller sits quietly with the rest
 of the page. Each leaf carries three layers of paper made in the browser
