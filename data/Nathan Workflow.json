@@ -1006,6 +1006,11 @@
     "project": "kensite-big-change-reconciliation"
    },
    {
+    "time": "13:56",
+    "title": "Updated Big Change Reconciliation Worker 1.6",
+    "kind": "build"
+   },
+   {
     "time": "14:44",
     "title": "Built MCS PO Probe 1.0",
     "detail": "Gather purchase order detail evidence to prepare rehire detection",
@@ -1020,11 +1025,41 @@
     "project": "kensite-big-change-reconciliation"
    },
    {
+    "time": "15:12",
+    "title": "Updated Big Change Reconciliation Worker 1.7",
+    "kind": "build"
+   },
+   {
+    "time": "15:24",
+    "title": "Updated Big Change Reconciliation Worker 1.8",
+    "kind": "build"
+   },
+   {
+    "time": "15:39",
+    "title": "Updated Big Change Reconciliation Worker 1.9",
+    "kind": "build"
+   },
+   {
+    "time": "15:48",
+    "title": "Updated Big Change Reconciliation Worker 2.0",
+    "kind": "build"
+   },
+   {
+    "time": "15:55",
+    "title": "Updated Big Change Reconciliation Worker 2.1",
+    "kind": "build"
+   },
+   {
     "time": "16:06",
     "title": "Updated Ken Agent V9.5",
     "detail": "Search all quotes by customer and date with clear nil or fault answers",
     "tagline": true,
     "project": "kensite-quote-trends"
+   },
+   {
+    "time": "16:07",
+    "title": "Updated Big Change Reconciliation Worker 2.2",
+    "kind": "build"
    },
    {
     "title": "Emails: 86 received, 33 sent",
@@ -1517,6 +1552,12 @@
     "detail": "Checks contracts more widely to resolve unmatched visits",
     "tagline": true,
     "project": "kensite-big-change-reconciliation"
+   },
+   {
+    "time": "21:42",
+    "title": "Updated Big Change Reconciliation Worker 3.3",
+    "kind": "build",
+    "detail": "Report 65 confirmed against the real export (one row per contract, Chemi Units populated); sub contracts (0000030233#1) are folded into their parent…"
    },
    {
     "title": "Emails: 106 received, 53 sent",
@@ -2183,6 +2224,11 @@
     "project": "kensite-big-change-reconciliation"
    },
    {
+    "time": "16:35",
+    "title": "Built Big Change Reconciliation Reasoner 1.0",
+    "kind": "build"
+   },
+   {
     "time": "16:41",
     "title": "Updated Big Change Reconciliation Reasoner 1.1",
     "detail": "AI reconciliation reviews now complete reliably instead of failing on empty answers",
@@ -2358,6 +2404,11 @@
     "detail": "Fixes reconciliation errors so invoices and purchase orders match correctly",
     "tagline": true,
     "project": "kensite-big-change-reconciliation"
+   },
+   {
+    "time": "14:38",
+    "title": "Updated Big Change Reconciliation Worker 4.2",
+    "kind": "build"
    },
    {
     "title": "Emails: 98 received, 46 sent",
