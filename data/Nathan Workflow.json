@@ -3028,6 +3028,11 @@
     "detail": "Update README.md from Automations folder; Update planner/frontend/index.html from Automations folder. Plus 39 commits made by Ken and the apps"
    },
    {
+    "time": "14:29",
+    "title": "Built Diary Build Backfill September",
+    "kind": "build"
+   },
+   {
     "title": "Emails: 65 received, 18 sent",
     "kind": "email"
    }
