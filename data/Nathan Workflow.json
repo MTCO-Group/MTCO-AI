@@ -2884,7 +2884,7 @@
     "detail": "Finds the ai_roadmap block itself rather than the first mention of \"ai_roadmap\", which is a guest's ability list higher up the config, so 1.0 refused…"
    },
    {
-    "title": "Emails: 122 received, 30 sent",
+    "title": "Emails: 123 received, 30 sent",
     "kind": "email"
    }
   ]
