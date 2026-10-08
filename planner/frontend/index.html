@@ -1351,6 +1351,36 @@ async function fsPoll(){
 function fsStart(){ if(!FS.timer){ FS.timer = setInterval(fsPoll, 90000); } fsPoll(); }
 document.addEventListener("visibilitychange", () => { if(!document.hidden) fsPoll(); });
 
+/* ── Work Diary refresh ─────────────────────────────────────────────────────
+   Diary GitHub Commits.py updates data/Nathan Workflow.json every five
+   minutes, but Streamlit only hands the page new entries when the script
+   reruns, so an open page never saw them. While the Work Diary is open this
+   re-reads the public raw copy every five minutes (no API rate limit to
+   share with the time saved board) and redraws only when the entries
+   changed, keeping the open month, the selected day and keyboard focus. It
+   touches nothing in the What's Next lanes, so an unsaved arrangement is
+   never reset. A failed fetch keeps what is showing. */
+const WFR = {timer:null, busy:false};
+const WFR_URL = "https://raw.githubusercontent.com/Nathanjmcg/mtco-ai/main/data/Nathan%20Workflow.json";
+async function wfPoll(){
+  if(WFR.busy || document.hidden || !$("#wf").classList.contains("show")) return;
+  WFR.busy = true;
+  try{
+    const r = await fetch(`${WFR_URL}?t=${Date.now()}`, {cache:"no-store"});
+    if(r.ok){
+      const d = await r.json();
+      if(d && d.entries && typeof d.entries === "object" && JSON.stringify(d.entries) !== JSON.stringify(WF.entries)){
+        const a = document.activeElement, key = a && a.classList && a.classList.contains("day") ? a.dataset.key : "";
+        WF.entries = d.entries; wfRender();
+        if(key){ const nb = document.querySelector(`.day[data-key="${key}"]`); if(nb) nb.focus(); }
+      }
+    }
+  }catch(e){ /* keep what is showing */ }
+  WFR.busy = false;
+}
+function wfPollStart(){ if(!WFR.timer){ WFR.timer = setInterval(wfPoll, 300000); } wfPoll(); }
+document.addEventListener("visibilitychange", () => { if(!document.hidden) wfPoll(); });
+
 /* ── GitHub activity heatmap in the header ─────────────────────────────────
    One block per month (up to six, from the first month with commits to this
    month), Monday to Sunday down, weeks across, like GitHub's own graph. The
@@ -1609,7 +1639,7 @@ function wfShift(months){
 }
 function wfOpen(){
   $("#wf").classList.add("show");
-  wfRender(); fsRender(); fsStart(); wfSave();
+  wfRender(); fsRender(); fsStart(); wfPollStart(); wfSave();
   const b = document.querySelector(".day[tabindex='0']"); if(b) b.focus();
 }
 function wfClose(){
@@ -1664,7 +1694,7 @@ function wfRenderArgs(args){
     if(saved && saved.y){ WF.year = saved.y; WF.month = saved.m; WF.sel = saved.sel || ""; }
     if(saved && saved.open) $("#wf").classList.add("show");
   }
-  if($("#wf").classList.contains("show")){ wfRender(); fsRender(); fsStart(); }
+  if($("#wf").classList.contains("show")){ wfRender(); fsRender(); fsStart(); wfPollStart(); }
 }
 
 /* ── render from Streamlit ────────────────────────────────────────────────── */
