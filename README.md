@@ -91,7 +91,11 @@ Monday to Sunday down and weeks across, shaded by the day's build commits
 (from the "kind": "github" entries Diary GitHub Commits.py writes).
 Diary GitHub Commits.py runs every five minutes on Ken's machine (Kensite Task
 Runner) and covers yesterday and today; an open Work Diary re-reads the diary
-every five minutes, so new commits appear without reloading the page. Hover a
+every five minutes, so new commits appear without reloading the page.
+Emails in and out: Count My Emails (scheduled task on Nathan's PC, set up once
+with "Schedule Count My Emails.cmd") recounts yesterday and today every five
+minutes while he is signed in, and Push Work Diary (Kensite Task Runner, every
+five minutes) sends the day's "Emails: N received, M sent" entry. Numbers only. Hover a
 day for the repos and counts, click it to open the day, click a month name to
 show that month.
 
