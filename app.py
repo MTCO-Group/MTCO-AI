@@ -1,6 +1,11 @@
 """
 MTCO AI Roadmap
-Version 2.6
+Version 2.7
+
+2.7: the repo is MTCO-Group/MTCO-AI now it belongs to the MTCO-Group
+organisation on GitHub (08/10/2026). The old name still redirects for reads,
+but writes are made to the new one. The github_token secret must be a token
+that can write to MTCO-Group/MTCO-AI for What's Next saving to work.
 
 2.6: the Work Diary header gains two activity trackers, AI Adoption and
 OpenRouter, so their totals ("adoption": emails Ken answered each week by
@@ -67,7 +72,7 @@ from planner import planner
 
 HERE = pathlib.Path(__file__).parent
 PLACEHOLDER = "__ROADMAP_JSON__"
-REPO = "Nathanjmcg/mtco-ai"
+REPO = "MTCO-Group/MTCO-AI"
 BRANCH = "main"
 DATA_PATH = "data/roadmap.json"
 API = f"https://api.github.com/repos/{REPO}/contents/{DATA_PATH}"
