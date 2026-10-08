@@ -2870,7 +2870,7 @@
     "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update app.py from Automations folder. Plus 10 commits made by Ken and the apps"
    },
    {
-    "title": "Emails: 78 received, 10 sent",
+    "title": "Emails: 80 received, 10 sent",
     "kind": "email"
    }
   ],
@@ -3033,7 +3033,7 @@
     "kind": "build"
    },
    {
-    "title": "Emails: 73 received, 19 sent",
+    "title": "Emails: 75 received, 19 sent",
     "kind": "email"
    }
   ]
