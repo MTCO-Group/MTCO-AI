@@ -2819,6 +2819,26 @@
     "title": "Emails: 48 received, 17 sent",
     "kind": "email"
    }
+  ],
+  "2026-10-07": [
+   {
+    "time": "16:33",
+    "title": "GitHub: 21 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update app.py from Automations folder. Plus 10 commits made by Ken and the apps"
+   }
+  ],
+  "2026-10-08": [
+   {
+    "time": "10:18",
+    "title": "GitHub: 2 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Update planner/frontend/index.html from Automations folder; Update README.md from Automations folder. Plus 8 commits made by Ken and the apps"
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
