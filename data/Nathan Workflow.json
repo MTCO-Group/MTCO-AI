@@ -2828,6 +2828,10 @@
     "repo": "Nathanjmcg/MTCO-AI",
     "tagline": true,
     "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update app.py from Automations folder. Plus 10 commits made by Ken and the apps"
+   },
+   {
+    "title": "Emails: 71 received, 0 sent",
+    "kind": "email"
    }
   ],
   "2026-10-08": [
@@ -2838,6 +2842,10 @@
     "repo": "Nathanjmcg/MTCO-AI",
     "tagline": true,
     "detail": "Update README.md from Automations folder; Update planner/frontend/index.html from Automations folder. Plus 9 commits made by Ken and the apps"
+   },
+   {
+    "title": "Emails: 29 received, 0 sent",
+    "kind": "email"
    }
   ]
  },
