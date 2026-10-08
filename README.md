@@ -2,7 +2,9 @@
 
 Working folder for the MTCO Group AI Roadmap dashboard, live at
 https://mtco-ai.streamlit.app and deployed from the GitHub repo
-Nathanjmcg/mtco-ai.
+MTCO-Group/MTCO-AI (moved from Nathanjmcg/mtco-ai on 08/10/2026). The scripts
+write with the github_mtco token in Credential Manager on Ken's machine, stored
+with "Store MTCO GitHub Token.cmd".
 
 ## Files
 - `app.py` - Streamlit entry point. Reads dashboard.html, injects data/roadmap.json into it and renders it full page.
