@@ -88,7 +88,10 @@ copy at most hourly so Streamlit Cloud is not pulled every minute.
 
 The Work Diary header carries a GitHub activity heatmap: one block per month,
 Monday to Sunday down and weeks across, shaded by the day's build commits
-(from the "kind": "github" entries Diary GitHub Commits.py writes). Hover a
+(from the "kind": "github" entries Diary GitHub Commits.py writes).
+Diary GitHub Commits.py runs every five minutes on Ken's machine (Kensite Task
+Runner) and covers yesterday and today; an open Work Diary re-reads the diary
+every five minutes, so new commits appear without reloading the page. Hover a
 day for the repos and counts, click it to open the day, click a month name to
 show that month.
 
