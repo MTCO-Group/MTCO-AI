@@ -1,11 +1,11 @@
 {
  "_comment": "Minutes of work saved by Ken and the Kensite automations, from the Ken Time Saved Index, as Ken Mission Control counts them. Totals only. Written by Push Time Saved.py.",
- "total_minutes": 46917,
- "year_minutes": 46917,
- "quarter_minutes": 16999,
- "month_minutes": 16999,
- "week_minutes": 9219,
- "today_minutes": 645,
+ "total_minutes": 46987,
+ "year_minutes": 46987,
+ "quarter_minutes": 17069,
+ "month_minutes": 17069,
+ "week_minutes": 9289,
+ "today_minutes": 715,
  "since": "2026-07-20",
  "adoption": {
   "weeks": [
@@ -46,41 +46,41 @@
    },
    {
     "w": "2026-10-05",
-    "kensite": 62,
+    "kensite": 63,
     "aes": 2
    }
   ],
   "months": {
    "2026-08": 115,
    "2026-09": 291,
-   "2026-10": 106
+   "2026-10": 107
   }
  },
  "openrouter": {
   "today": {
-   "calls": 4,
-   "usd": 0.05
+   "calls": 5,
+   "usd": 0.08
   },
   "week": {
-   "calls": 64,
-   "usd": 0.66
+   "calls": 65,
+   "usd": 0.69
   },
   "month": {
-   "calls": 106,
-   "usd": 0.99
+   "calls": 107,
+   "usd": 1.02
   },
   "quarter": {
-   "calls": 106,
-   "usd": 0.99
+   "calls": 107,
+   "usd": 1.02
   },
   "year": {
-   "calls": 512,
-   "usd": 1.82
+   "calls": 513,
+   "usd": 1.85
   },
   "total": {
-   "calls": 512,
-   "usd": 1.82
+   "calls": 513,
+   "usd": 1.85
   }
  },
- "updated": "2026-10-08T10:16+01:00"
+ "updated": "2026-10-08T10:38+01:00"
 }
