@@ -1087,7 +1087,7 @@ function wfRender(){
    digit up from 0, one authored moment. Reduced motion sets the digits
    straight. Hidden until the file exists. */
 const FS = {shown:{}, timer:null, etag:"", busy:false};
-const FS_REPO = "Nathanjmcg/mtco-ai", FS_BRANCH = "live-data", FS_PATH = "data/Time%20Saved.json";
+const FS_REPO = "MTCO-Group/MTCO-AI", FS_BRANCH = "live-data", FS_PATH = "data/Time%20Saved.json";
 function fsReduce(){ try{ return window.matchMedia("(prefers-reduced-motion: reduce)").matches; }catch(e){ return false; } }
 function fsHalf(cls, ch){ const h = el("div", "h " + cls), sp = el("span"); sp.textContent = ch; h.appendChild(sp); return h; }
 function fsTile(ch, word){
@@ -1361,7 +1361,7 @@ document.addEventListener("visibilitychange", () => { if(!document.hidden) fsPol
    touches nothing in the What's Next lanes, so an unsaved arrangement is
    never reset. A failed fetch keeps what is showing. */
 const WFR = {timer:null, busy:false};
-const WFR_URL = "https://raw.githubusercontent.com/Nathanjmcg/mtco-ai/main/data/Nathan%20Workflow.json";
+const WFR_URL = "https://raw.githubusercontent.com/MTCO-Group/MTCO-AI/main/data/Nathan%20Workflow.json";
 async function wfPoll(){
   if(WFR.busy || document.hidden || !$("#wf").classList.contains("show")) return;
   WFR.busy = true;
