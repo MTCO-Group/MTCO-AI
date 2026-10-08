@@ -95,7 +95,11 @@ every five minutes, so new commits appear without reloading the page.
 Emails in and out: Count My Emails (scheduled task on Nathan's PC, set up once
 with "Schedule Count My Emails.cmd") recounts yesterday and today every five
 minutes while he is signed in, and Push Work Diary (Kensite Task Runner, every
-five minutes) sends the day's "Emails: N received, M sent" entry. Numbers only. Hover a
+five minutes) sends the day's "Emails: N received, M sent" entry. Numbers only.
+OneDrive: Count My OneDrive Files (same task, after the email count) asks
+Microsoft 365 search for files whose Modified by is Nathan, per day, and Push
+Work Diary sends "OneDrive: N files changed". Sign in once with "Connect My
+OneDrive Count.cmd". Numbers only. Hover a
 day for the repos and counts, click it to open the day, click a month name to
 show that month.
 
