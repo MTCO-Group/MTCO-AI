@@ -2830,7 +2830,7 @@
     "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update app.py from Automations folder. Plus 10 commits made by Ken and the apps"
    },
    {
-    "title": "Emails: 71 received, 0 sent",
+    "title": "Emails: 71 received, 2 sent",
     "kind": "email"
    }
   ],
@@ -2844,7 +2844,7 @@
     "detail": "Update README.md from Automations folder; Update planner/frontend/index.html from Automations folder. Plus 12 commits made by Ken and the apps"
    },
    {
-    "title": "Emails: 33 received, 0 sent",
+    "title": "Emails: 34 received, 2 sent",
     "kind": "email"
    }
   ]
