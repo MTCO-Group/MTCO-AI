@@ -2908,14 +2908,6 @@
    },
    {
     "time": "11:19",
-    "title": "GitHub: 4 commits to MTCO-AI",
-    "kind": "github",
-    "repo": "Nathanjmcg/MTCO-AI",
-    "tagline": true,
-    "detail": "Update README.md from Automations folder; Update planner/frontend/index.html from Automations folder. Plus 12 commits made by Ken and the apps"
-   },
-   {
-    "time": "11:19",
     "title": "Updated Ken Agent V24.3",
     "kind": "build",
     "detail": "Ken answers what he can do from the staff guide"
@@ -2995,6 +2987,14 @@
     "title": "Built Diary Build Log",
     "kind": "build",
     "detail": "Adds a Work Diary entry whenever a tool or automation is built or updated."
+   },
+   {
+    "time": "14:17",
+    "title": "GitHub: 5 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "Nathanjmcg/MTCO-AI",
+    "tagline": true,
+    "detail": "Update README.md from Automations folder; Update planner/frontend/index.html from Automations folder. Plus 38 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 64 received, 17 sent",
