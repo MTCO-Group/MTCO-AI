@@ -2822,6 +2822,23 @@
   ],
   "2026-10-07": [
    {
+    "time": "13:22",
+    "title": "Updated Ken Mission Control 2.7",
+    "kind": "build"
+   },
+   {
+    "time": "16:10",
+    "title": "Updated MTCO AI Roadmap 2.6",
+    "kind": "build",
+    "detail": "The Work Diary header gains two activity trackers, AI Adoption and OpenRouter, so their totals (\"adoption\": emails Ken answered each week by company;…"
+   },
+   {
+    "time": "16:25",
+    "title": "Updated MTCO AI Roadmap planner component 2.3",
+    "kind": "build",
+    "detail": "The first entry in each calendar day no longer cuts off."
+   },
+   {
     "time": "16:33",
     "title": "GitHub: 21 commits to MTCO-AI",
     "kind": "github",
@@ -2836,12 +2853,78 @@
   ],
   "2026-10-08": [
    {
+    "time": "09:39",
+    "title": "Updated Prep Schedule vs MCS Discrepancy Check 4.3",
+    "kind": "build",
+    "detail": "A collection the desk has already processed is no longer flagged as missing from MCS."
+   },
+   {
+    "time": "09:48",
+    "title": "Updated Ken Agent V24.2",
+    "kind": "build",
+    "detail": "Ken can produce the Kensite minimum hire contract"
+   },
+   {
+    "time": "10:10",
+    "title": "Updated Service and Waterfill Completion Alert 1.2",
+    "kind": "build",
+    "detail": "Live."
+   },
+   {
+    "time": "10:17",
+    "title": "Updated Diary GitHub Commits 1.3",
+    "kind": "build",
+    "detail": "Runs every five minutes from the Kensite Task Runner."
+   },
+   {
+    "time": "10:39",
+    "title": "Updated Count My Emails 1.2",
+    "kind": "build",
+    "detail": "Can run unattended."
+   },
+   {
+    "time": "10:39",
+    "title": "Built Schedule Count My Emails",
+    "kind": "build",
+    "detail": "Run once on Nathan's PC through \"Schedule Count My Emails.cmd\"."
+   },
+   {
+    "time": "11:05",
+    "title": "Built Connect My OneDrive Count",
+    "kind": "build",
+    "detail": "Run once on Nathan's PC through \"Connect My OneDrive Count.cmd\"."
+   },
+   {
+    "time": "11:06",
+    "title": "Built Count My OneDrive Files",
+    "kind": "build",
+    "detail": "Counts, for each day, how many files Nathan changed in OneDrive and SharePoint (Teams files included), and writes ONLY those numbers to \"data\\OneDriv…"
+   },
+   {
+    "time": "11:06",
+    "title": "Updated Push Work Diary 1.3",
+    "kind": "build",
+    "detail": "OneDrive file counts."
+   },
+   {
     "time": "11:19",
     "title": "GitHub: 4 commits to MTCO-AI",
     "kind": "github",
     "repo": "Nathanjmcg/MTCO-AI",
     "tagline": true,
     "detail": "Update README.md from Automations folder; Update planner/frontend/index.html from Automations folder. Plus 12 commits made by Ken and the apps"
+   },
+   {
+    "time": "11:19",
+    "title": "Updated Ken Agent V24.3",
+    "kind": "build",
+    "detail": "Ken answers what he can do from the staff guide"
+   },
+   {
+    "time": "11:19",
+    "title": "Updated Ken Agent V24.4",
+    "kind": "build",
+    "detail": "Ken's signature is set in Figtree throughout, like the rest of the team's"
    },
    {
     "time": "11:21",
@@ -2858,6 +2941,60 @@
     "repo": "MTCO-Group/didactic-octo-journey-demo-repository",
     "tagline": true,
     "detail": "Initial commit"
+   },
+   {
+    "time": "11:39",
+    "title": "Updated Ken Agent V24.5",
+    "kind": "build",
+    "detail": "Ken's signature banner is one picture, the same as the rest of the team's"
+   },
+   {
+    "time": "11:39",
+    "title": "Updated Kensite Automation Toolbox 1.5",
+    "kind": "build",
+    "detail": "Ken's signature banner is one picture (Ken Agent 24.5), so the inline images the estate scripts attach are now the banner and the accreditation strip…"
+   },
+   {
+    "time": "12:14",
+    "title": "Updated Ken Agent V24.6",
+    "kind": "build",
+    "detail": "Ken's signature is 20% bigger: banner 624 by 130, the strip, address and AI note..."
+   },
+   {
+    "time": "12:40",
+    "title": "Updated Push Time Saved 1.4",
+    "kind": "build",
+    "detail": "Reads Ken's live database when it is on this machine."
+   },
+   {
+    "time": "13:03",
+    "title": "Updated Ken Agent V24.7",
+    "kind": "build",
+    "detail": "Ken can read a handwritten stock take that someone emails him"
+   },
+   {
+    "time": "13:48",
+    "title": "Built Document Amend Worker",
+    "kind": "build",
+    "detail": "Ken can change an existing Word document in the library and save it as the next version."
+   },
+   {
+    "time": "13:49",
+    "title": "Updated Ken Agent V24.8",
+    "kind": "build",
+    "detail": "Ken can change an existing Word document in the library and save it as the next version"
+   },
+   {
+    "time": "14:11",
+    "title": "Updated Stocktake Worker 1.1",
+    "kind": "build",
+    "detail": "Reads the real MCS report, and knows the eco 32ft units by their J."
+   },
+   {
+    "time": "14:14",
+    "title": "Built Diary Build Log",
+    "kind": "build",
+    "detail": "Adds a Work Diary entry whenever a tool or automation is built or updated."
    },
    {
     "title": "Emails: 63 received, 16 sent",
