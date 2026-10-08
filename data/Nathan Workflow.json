@@ -2884,6 +2884,12 @@
     "detail": "Finds the ai_roadmap block itself rather than the first mention of \"ai_roadmap\", which is a guest's ability list higher up the config, so 1.0 refused…"
    },
    {
+    "time": "20:44",
+    "title": "Updated Restart Task Runner 1.1",
+    "kind": "build",
+    "detail": "A restart in the last 15 minutes is not repeated."
+   },
+   {
     "title": "Emails: 123 received, 30 sent",
     "kind": "email"
    }
