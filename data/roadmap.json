@@ -1321,6 +1321,26 @@
         }
       ],
       "proposed_at": "2026-10-07"
+    },
+    {
+      "id": "kensite-marketing-sub-agent-photo-clean-up-and-linkedin-content",
+      "company": "kensite",
+      "name": "Marketing Sub-Agent - Photo Clean-Up and LinkedIn Content",
+      "stage": "Proposed",
+      "category": "Hire Desk and Sales",
+      "owner": "Nathan Mcguinness",
+      "proposed_by": "nathan.mcguinness@kensite.co.uk",
+      "date": "Oct 2026",
+      "summary": "A specialist sub-agent for Kensite's marketing: we send it pictures and it cleans them up ready to use, the...",
+      "scope": "A specialist sub-agent for Kensite's marketing: we send it pictures and it cleans them up ready to use, then manages our LinkedIn content and campaigns off the back of them, so marketing output keeps going out without anyone at Kensite editing images or building and scheduling posts by hand.",
+      "how": "Pictures are sent in to the sub-agent; it cleans up the images, then turns them into LinkedIn content and runs the posting and campaign side, sitting as a marketing specialist under Ken rather than inside his general work.",
+      "who": [
+        {
+          "who": "Marketing",
+          "how": "photographs become usable content without manual editing, and LinkedIn posting and campaigns run without anyone at Kensite doing it by hand."
+        }
+      ],
+      "proposed_at": "2026-10-08"
     }
   ],
   "plan": {
