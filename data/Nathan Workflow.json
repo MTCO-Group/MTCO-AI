@@ -2779,14 +2779,6 @@
     "detail": "Adds a Work Diary entry whenever a tool or automation is built or updated."
    },
    {
-    "time": "14:17",
-    "title": "GitHub: 5 commits to MTCO-AI",
-    "kind": "github",
-    "repo": "MTCO-Group/MTCO-AI",
-    "tagline": true,
-    "detail": "Update README.md from Automations folder; Update planner/frontend/index.html from Automations folder. Plus 58 commits made by Ken and the apps"
-   },
-   {
     "time": "14:29",
     "title": "Built Diary Build Backfill September",
     "kind": "build"
@@ -2870,6 +2862,14 @@
     "title": "Updated Kensite Automation Toolbox 1.6",
     "kind": "build",
     "detail": "The signature pictures sent with an email are now worked out from the signature being sent, not from a fixed list."
+   },
+   {
+    "time": "20:37",
+    "title": "GitHub: 8 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "MTCO-Group/MTCO-AI",
+    "tagline": true,
+    "detail": "Update planner/frontend/index.html from Automations folder; Update README.md from Automations folder; Update app.py from Automations folder. Plus 63 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 122 received, 30 sent",
