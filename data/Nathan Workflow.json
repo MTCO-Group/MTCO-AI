@@ -3033,6 +3033,12 @@
     "kind": "build"
    },
    {
+    "time": "15:29",
+    "title": "Updated Stocktake Worker 1.2",
+    "kind": "build",
+    "detail": "The first live stock take (06/10/2026, 7 pages, 201 units) came back with 81 red rows, and most of them were the worker's fault, not the sheet's."
+   },
+   {
     "title": "Emails: 83 received, 26 sent",
     "kind": "email"
    }
