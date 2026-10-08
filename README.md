@@ -99,7 +99,11 @@ five minutes) sends the day's "Emails: N received, M sent" entry. Numbers only.
 OneDrive: Count My OneDrive Files (same task, after the email count) asks
 Microsoft 365 search for files whose Modified by is Nathan, per day, and Push
 Work Diary sends "OneDrive: N files changed". Sign in once with "Connect My
-OneDrive Count.cmd". Numbers only. Hover a
+OneDrive Count.cmd". Numbers only.
+Built and Updated entries: Diary Build Log (Kensite Task Runner, every five
+minutes) adds "Updated Ken Agent Vx.y" for each new Ken version, and "Built" or
+"Updated <name> <version>" for each new or re-versioned script in Automations,
+with that version's note from the script header as the detail. Hover a
 day for the repos and counts, click it to open the day, click a month name to
 show that month.
 
