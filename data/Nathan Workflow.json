@@ -1723,15 +1723,6 @@
     "project": "mtco-ai-roadmap-tracker"
    },
    {
-    "time": "21:53",
-    "title": "GitHub: 6 commits to MTCO-AI",
-    "kind": "github",
-    "repo": "Nathanjmcg/MTCO-AI",
-    "tagline": true,
-    "detail": "Update README.md from Automations folder; Update dashboard.html from Automations folder; Update app.py from Automations folder. Plus 2 commits made by Ken and the apps",
-    "project": "mtco-ai-roadmap-tracker"
-   },
-   {
     "time": "21:59",
     "title": "Updated Ken Agent V15.7",
     "detail": "Roadmap entries can now be moved, edited or deleted, keeping timelines accurate",
@@ -1764,15 +1755,6 @@
     "detail": "Corrected site counts by using postcodes, so reports show true locations",
     "tagline": true,
     "project": "kensite-live-hire-report-worker"
-   },
-   {
-    "time": "12:44",
-    "title": "GitHub: 7 commits to MTCO-AI",
-    "kind": "github",
-    "repo": "Nathanjmcg/MTCO-AI",
-    "tagline": true,
-    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update README.md from Automations folder. Plus 6 commits made by Ken and the apps",
-    "project": "mtco-ai-roadmap-tracker"
    },
    {
     "time": "21:25",
@@ -1988,15 +1970,6 @@
     "title": "Updated Ken Agent V17.7",
     "detail": "Move session picking to a simple widget and sync choices automatically",
     "tagline": true,
-    "project": "mtco-ai-roadmap-tracker"
-   },
-   {
-    "time": "22:01",
-    "title": "GitHub: 5 commits to MTCO-AI",
-    "kind": "github",
-    "repo": "Nathanjmcg/MTCO-AI",
-    "tagline": true,
-    "detail": "Update planner/frontend/index.html from Automations folder; Update app.py from Automations folder; Update planner/__init__.py from Automations folder. Plus 9 commits made by Ken and the apps",
     "project": "mtco-ai-roadmap-tracker"
    },
    {
@@ -2801,15 +2774,6 @@
     "project": "kensite-quote-trends"
    },
    {
-    "time": "13:18",
-    "title": "GitHub: 12 commits to MTCO-AI",
-    "kind": "github",
-    "repo": "Nathanjmcg/MTCO-AI",
-    "tagline": true,
-    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update README.md from Automations folder. Plus 9 commits made by Ken and the apps",
-    "project": "mtco-ai-roadmap-tracker"
-   },
-   {
     "title": "Built New Report Quote Outcomes by SubGroup",
     "detail": "Report each quote's outcome and rejection reason by subgroup",
     "tagline": true,
@@ -2842,7 +2806,15 @@
     "time": "16:33",
     "title": "GitHub: 21 commits to MTCO-AI",
     "kind": "github",
-    "repo": "Nathanjmcg/MTCO-AI",
+    "repo": "NathanMTCO/MTCO-AI",
+    "tagline": true,
+    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update app.py from Automations folder. Plus 10 commits made by Ken and the apps"
+   },
+   {
+    "time": "16:33",
+    "title": "GitHub: 21 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
     "tagline": true,
     "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update app.py from Automations folder. Plus 10 commits made by Ken and the apps"
    },
@@ -2992,9 +2964,17 @@
     "time": "14:17",
     "title": "GitHub: 5 commits to MTCO-AI",
     "kind": "github",
-    "repo": "Nathanjmcg/MTCO-AI",
+    "repo": "NathanMTCO/MTCO-AI",
     "tagline": true,
-    "detail": "Update README.md from Automations folder; Update planner/frontend/index.html from Automations folder. Plus 38 commits made by Ken and the apps"
+    "detail": "Update README.md from Automations folder; Update planner/frontend/index.html from Automations folder. Plus 39 commits made by Ken and the apps"
+   },
+   {
+    "time": "14:17",
+    "title": "GitHub: 5 commits to mtco-ai",
+    "kind": "github",
+    "repo": "Nathanjmcg/mtco-ai",
+    "tagline": true,
+    "detail": "Update README.md from Automations folder; Update planner/frontend/index.html from Automations folder. Plus 39 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 64 received, 17 sent",
