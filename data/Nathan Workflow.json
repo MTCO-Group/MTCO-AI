@@ -2872,6 +2872,18 @@
     "detail": "Update planner/frontend/index.html from Automations folder; Update README.md from Automations folder; Update app.py from Automations folder. Plus 63 commits made by Ken and the apps"
    },
    {
+    "time": "20:39",
+    "title": "Built Restart Task Runner",
+    "kind": "build",
+    "detail": "Restarts the Kensite Task Runner from afar."
+   },
+   {
+    "time": "20:39",
+    "title": "Updated MTCO Token Switch 1.1",
+    "kind": "build",
+    "detail": "Finds the ai_roadmap block itself rather than the first mention of \"ai_roadmap\", which is a guest's ability list higher up the config, so 1.0 refused…"
+   },
+   {
     "title": "Emails: 122 received, 30 sent",
     "kind": "email"
    }
