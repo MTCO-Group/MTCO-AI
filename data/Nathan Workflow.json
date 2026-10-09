@@ -2973,14 +2973,6 @@
     "detail": "Site Builder requests are read once, not every three minutes"
    },
    {
-    "time": "11:52",
-    "title": "GitHub: 1 commit to Prep-Schedule",
-    "kind": "github",
-    "repo": "NathanMTCO/Prep-Schedule",
-    "tagline": true,
-    "detail": "Update app.py from Automations folder. Plus 6 commits made by Ken and the apps"
-   },
-   {
     "time": "16:35",
     "title": "Updated Ken Agent V25.0",
     "kind": "build",
@@ -3050,6 +3042,14 @@
     "time": "23:24",
     "title": "Updated Count My OneDrive Files 1.1",
     "kind": "build"
+   },
+   {
+    "time": "23:32",
+    "title": "GitHub: 2 commits to Prep-Schedule",
+    "kind": "github",
+    "repo": "NathanMTCO/Prep-Schedule",
+    "tagline": true,
+    "detail": "Update app.py from Automations folder. Plus 32 commits made by Ken and the apps"
    },
    {
     "title": "Emails: 60 received, 13 sent",
