@@ -2989,6 +2989,12 @@
     "detail": "Update app.py from Automations folder. Plus 6 commits made by Ken and the apps"
    },
    {
+    "time": "16:35",
+    "title": "Updated Ken Agent V25.0",
+    "kind": "build",
+    "detail": "Aes_archive_merge restores only past loads last seen complete, and drops any archived..."
+   },
+   {
     "title": "Emails: 56 received, 8 sent",
     "kind": "email"
    }
