@@ -2890,7 +2890,7 @@
     "detail": "A restart in the last 15 minutes is not repeated."
    },
    {
-    "title": "Emails: 123 received, 30 sent",
+    "title": "Emails: 123 received, 32 sent",
     "kind": "email"
    }
   ],
@@ -2954,7 +2954,7 @@
     "detail": "Planner V4.6: GitHub reads shared between sessions for 30 seconds. Plus 350 commits made by Ken and the apps"
    },
    {
-    "title": "Emails: 23 received, 0 sent",
+    "title": "Emails: 36 received, 0 sent",
     "kind": "email"
    }
   ]
