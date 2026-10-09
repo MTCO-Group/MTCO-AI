@@ -3041,6 +3041,17 @@
     "detail": "Planner V4.7: MD SERVICE and ROUTING STUDY tabs; Planner V4.6: GitHub reads shared between sessions for 30 seconds. Plus 735 commits made by Ken and the apps"
    },
    {
+    "time": "23:24",
+    "title": "Updated Connect My OneDrive Count 1.1",
+    "kind": "build",
+    "detail": "On a successful sign in it leaves \"OneDrive Count Signed In.txt\" beside the counter, which is what lets the hidden five minute runs go ahead."
+   },
+   {
+    "time": "23:24",
+    "title": "Updated Count My OneDrive Files 1.1",
+    "kind": "build"
+   },
+   {
     "title": "Emails: 60 received, 13 sent",
     "kind": "email"
    }
