@@ -3001,6 +3001,12 @@
     "detail": "The \"To Delete\" folder at the top of Automations is skipped like _to_delete."
    },
    {
+    "time": "20:35",
+    "title": "Updated Ken Agent V25.1",
+    "kind": "build",
+    "detail": "Aes_service_sample writes AES Service Sample.json once (this week's service jobs with..."
+   },
+   {
     "title": "Emails: 58 received, 12 sent",
     "kind": "email"
    }
