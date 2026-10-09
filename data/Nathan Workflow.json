@@ -3012,6 +3012,18 @@
     "kind": "build"
    },
    {
+    "time": "20:55",
+    "title": "Updated Ken Agent V25.2",
+    "kind": "build",
+    "detail": "Aes_service_sample_v2 writes AES Service Sample V2.json once: driver days by actual..."
+   },
+   {
+    "time": "20:57",
+    "title": "Updated Ken Agent V25.3",
+    "kind": "build",
+    "detail": "Aes_odometer_log keeps the first and last odometer reading of each day per vehicle..."
+   },
+   {
     "title": "Emails: 59 received, 12 sent",
     "kind": "email"
    }
