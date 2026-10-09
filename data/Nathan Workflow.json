@@ -3024,6 +3024,12 @@
     "detail": "Aes_odometer_log keeps the first and last odometer reading of each day per vehicle..."
    },
    {
+    "time": "21:07",
+    "title": "Updated Ken Agent V25.4",
+    "kind": "build",
+    "detail": "Check_transport_capacity and the capacity probe read Planner V2's capacity list..."
+   },
+   {
     "title": "Emails: 59 received, 12 sent",
     "kind": "email"
    }
