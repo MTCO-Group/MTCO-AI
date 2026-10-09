@@ -2995,6 +2995,12 @@
     "detail": "Aes_archive_merge restores only past loads last seen complete, and drops any archived..."
    },
    {
+    "time": "20:34",
+    "title": "Updated Diary Build Log 1.3",
+    "kind": "build",
+    "detail": "The \"To Delete\" folder at the top of Automations is skipped like _to_delete."
+   },
+   {
     "title": "Emails: 58 received, 12 sent",
     "kind": "email"
    }
