@@ -3070,6 +3070,14 @@
     "detail": "The routing study's explanation of where the saving comes from, and the line saying which tank sizes it used, now come from service_study.json rather…"
    },
    {
+    "time": "17:24",
+    "title": "GitHub: 1 commit to Planner",
+    "kind": "github",
+    "repo": "LeeMcConvilleAES/Planner",
+    "tagline": true,
+    "detail": "Planner V4.8: routing study 1.1 with Lee tank sizes. Plus 402 commits made by Ken and the apps"
+   },
+   {
     "title": "Emails: 4 received, 2 sent",
     "kind": "email"
    }
