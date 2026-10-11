@@ -3089,6 +3089,12 @@
     "kind": "build"
    },
    {
+    "time": "19:40",
+    "title": "Built Unanswered Email Alert",
+    "kind": "build",
+    "detail": "Warns the hire desk when an email in a shared inbox has sat for 4 working hours with nobody dealing with it."
+   },
+   {
     "title": "Emails: 4 received, 3 sent",
     "kind": "email"
    }
