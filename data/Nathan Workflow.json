@@ -3078,6 +3078,12 @@
     "detail": "Planner V4.8: routing study 1.1 with Lee tank sizes. Plus 402 commits made by Ken and the apps"
    },
    {
+    "time": "17:32",
+    "title": "Updated Ken Agent V25.6",
+    "kind": "build",
+    "detail": "_bc_guard_install wraps the worker's bc_get: counts every Big Change call (Ken's..."
+   },
+   {
     "title": "Emails: 4 received, 2 sent",
     "kind": "email"
    }
