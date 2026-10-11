@@ -3095,6 +3095,16 @@
     "detail": "Warns the hire desk when an email in a shared inbox has sat for 4 working hours with nobody dealing with it."
    },
    {
+    "time": "22:10",
+    "title": "Updated Compound Drawing Watcher 1.4",
+    "kind": "build"
+   },
+   {
+    "time": "22:10",
+    "title": "Updated Site Builder Deploy 1.2",
+    "kind": "build"
+   },
+   {
     "title": "Emails: 6 received, 4 sent",
     "kind": "email"
    }
