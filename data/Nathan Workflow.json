@@ -3064,6 +3064,12 @@
   ],
   "2026-10-11": [
    {
+    "time": "16:50",
+    "title": "Updated AES Transport Planner 4.8",
+    "kind": "build",
+    "detail": "The routing study's explanation of where the saving comes from, and the line saying which tank sizes it used, now come from service_study.json rather…"
+   },
+   {
     "title": "Emails: 4 received, 2 sent",
     "kind": "email"
    }
