@@ -151,6 +151,19 @@
   .pdwho{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
   .pdwho li{font-size:13.5px;line-height:1.55;padding:9px 12px;border-radius:10px;background:#f7f7f4}
   .pdwho b{font-weight:700}
+  .pdtree{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
+  .pdtree li{font-size:13px;line-height:1.5;padding:9px 12px;border-radius:10px;background:#f7f7f4;border-left:3px solid oklch(0.62 0.15 150)}
+  .pdtree li:first-child{grid-column:1/-1;background:oklch(0.95 0.04 150)}
+  .pdtree b{display:block;font-weight:700;margin-bottom:2px}
+  .pdphases{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+  .pdphases li{font-size:13px;line-height:1.5;padding:9px 12px;border-radius:10px;background:#f7f7f4}
+  .pdphases .ph{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:2px}
+  .pdphases .ph b{font-weight:700}
+  .pdphases .ph span{font-size:11.5px;color:#5b5e66}
+  .pdphases .st{font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;background:#ececE8;color:#40424a}
+  .pdphases .st.on{background:oklch(0.93 0.07 95);color:oklch(0.38 0.1 95)}
+  .pdphases .st.done{background:oklch(0.93 0.07 150);color:oklch(0.38 0.1 150)}
+  .pdmeasure{font-size:12.5px;color:#5b5e66;margin:8px 0 0}
   .pdfoot{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 22px;border-top:1px solid #efeee9;flex:none}
   .pdfoot .lbl{font-size:12px;color:#6b6e76;margin-right:2px}
   .pdfoot .seg{display:inline-flex;border:1px solid #cfd3cf;border-radius:999px;overflow:hidden}
@@ -843,6 +856,27 @@ function pdFill(){
     const ul = el("ul", "pdwho");
     who.forEach(w => { const li = el("li"); if(w.who){ const b = el("b"); b.textContent = w.who; li.appendChild(b); } if(w.how) li.appendChild(document.createTextNode((w.who ? ": " : "") + w.how)); ul.appendChild(li); });
     d.appendChild(ul); body.appendChild(d);
+  }
+  const plan = p.plan || {};
+  if(Array.isArray(plan.branches) && plan.branches.length){
+    const d = el("section"); const t = el("h3"); t.textContent = "The tree"; d.appendChild(t);
+    const ul = el("ul", "pdtree");
+    plan.branches.forEach(b => { const li = el("li"); const n = el("b"); n.textContent = b.name || ""; li.appendChild(n); li.appendChild(document.createTextNode(b.covers || "")); ul.appendChild(li); });
+    d.appendChild(ul); body.appendChild(d);
+  }
+  if(Array.isArray(plan.phases) && plan.phases.length){
+    const d = el("section"); const t = el("h3"); t.textContent = "Build phases"; d.appendChild(t);
+    const ul = el("ul", "pdphases");
+    plan.phases.forEach(ph => {
+      const li = el("li"); const top = el("div", "ph");
+      const n = el("b"); n.textContent = ph.name || ""; top.appendChild(n);
+      if(ph.target){ const w = el("span"); w.textContent = ph.target; top.appendChild(w); }
+      if(ph.status){ const s = el("span", "st" + (/done|shipped|complete/i.test(ph.status) ? " done" : /progress|testing|build/i.test(ph.status) ? " on" : "")); s.textContent = ph.status; top.appendChild(s); }
+      li.appendChild(top); li.appendChild(document.createTextNode(ph.detail || "")); ul.appendChild(li);
+    });
+    d.appendChild(ul);
+    if(plan.measures){ const m = el("p", "pdmeasure"); m.textContent = plan.measures; d.appendChild(m); }
+    body.appendChild(d);
   }
   if(body.children.length === (ts.entries ? 1 : 0)){ const e = el("p"); e.textContent = "No further detail has been written for this idea yet."; body.appendChild(e); }
   body.scrollTop = 0;
@@ -1716,7 +1750,7 @@ function render(args){
                             companyName: names[p.company] || p.company,
                             category:p.category, summary:p.summary,
                             scope:p.scope, how:p.how, who:Array.isArray(p.who) ? p.who : [],
-                            owner:p.owner, date:p.date, proposed_at:p.proposed_at};
+                            owner:p.owner, date:p.date, proposed_at:p.proposed_at, plan:p.plan || null};
   });
 
   const saved = (args.plan && args.plan.lanes) || {};
@@ -1735,7 +1769,7 @@ function render(args){
     STATE.all[p.id] = {id:p.id, name:p.name, company:p.company, companyName: names[p.company] || p.company,
                        category:p.category, summary:p.summary, scope:p.scope, how:p.how,
                        who:Array.isArray(p.who) ? p.who : [], owner:p.owner, date:p.date,
-                       proposed_at:p.proposed_at, stage:p.stage, dates:p.dates || {}};
+                       proposed_at:p.proposed_at, stage:p.stage, dates:p.dates || {}, plan:p.plan || null};
   });
   STATE.canSave = !!args.can_save;
   STATE.dirty = false;
