@@ -3123,7 +3123,7 @@
     "detail": "Service_site_visit_outbox collects finished Site Visit Reports from the Site Visit Bot..."
    },
    {
-    "title": "Emails: 55 received, 11 sent",
+    "title": "Emails: 54 received, 11 sent",
     "kind": "email"
    }
   ]
