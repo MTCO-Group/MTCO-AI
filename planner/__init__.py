@@ -1,6 +1,17 @@
 """
 MTCO AI Roadmap planner component
-Version 2.4
+Version 2.5
+
+2.5: the AI Organisational Tree gets its own page. A widget sits bottom right
+of the landing page (Ken's portrait, the stage, the next phase and the
+branch portraits); clicking it opens the tree as designed on the canvas:
+Ken over ten branches, each with its portrait, phase, tool count and status,
+a side panel for the selected branch (what it covers, when it arrives, its
+model, its tools) and the nine build phases. The tree itself is fixed in the
+frontend; the project's stage and each phase's target and status are read
+from its plan in data/roadmap.json, so moving a phase on is a data change.
+The portraits are files in frontend/avatars/. Nathan: "Ship this, it should
+be accessible via a widget on the landing page", 12/10/2026.
 
 2.4: a project can carry a plan, and the project panel shows it: "The tree"
 (each part and what it covers) and "Build phases" (name, target month,
