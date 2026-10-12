@@ -3145,6 +3145,14 @@
     "detail": "A project can carry a plan, and the project panel shows it: \"The tree\" (each part and what it covers) and \"Build phases\" (name, target month, status…"
    },
    {
+    "time": "21:28",
+    "title": "GitHub: 2 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "MTCO-Group/MTCO-AI",
+    "tagline": true,
+    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder. Plus 80 commits made by Ken and the apps"
+   },
+   {
     "title": "Emails: 83 received, 24 sent",
     "kind": "email"
    }
