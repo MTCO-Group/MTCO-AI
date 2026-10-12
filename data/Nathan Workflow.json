@@ -3153,6 +3153,18 @@
     "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder. Plus 80 commits made by Ken and the apps"
    },
    {
+    "time": "22:55",
+    "title": "Updated Publish App To GitHub 1.7",
+    "kind": "build",
+    "detail": "The AI Organisational Tree portraits (planner/frontend/avatars/*.webp) are published too."
+   },
+   {
+    "time": "22:55",
+    "title": "Updated MTCO AI Roadmap planner component 2.5",
+    "kind": "build",
+    "detail": "The AI Organisational Tree gets its own page."
+   },
+   {
     "title": "Emails: 86 received, 24 sent",
     "kind": "email"
    }
