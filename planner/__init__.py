@@ -1,6 +1,12 @@
 """
 MTCO AI Roadmap planner component
-Version 2.3
+Version 2.4
+
+2.4: a project can carry a plan, and the project panel shows it: "The tree"
+(each part and what it covers) and "Build phases" (name, target month,
+status and what it delivers), with the success measures under them. First
+used for the AI Organisational Tree, 12/10/2026. Projects without a plan
+look exactly as before.
 
 2.3: the first entry in each calendar day no longer cuts off. Nathan: "move
 it slightly higher so it doesnt cut off". "+N more" now sits on the date's
