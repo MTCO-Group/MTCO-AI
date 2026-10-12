@@ -877,7 +877,7 @@
       "date": "Sep 2026",
       "summary": "Builds a structured hierarchy of specialised AI sub-agents working below Ken, each focused on a specific bu...",
       "scope": "Builds a structured hierarchy of specialised AI sub-agents working below Ken, each focused on a specific business domain, so that complex multi-domain requests are handled by the right specialist agent while Ken retains overall coordination. A major project that needs proper scoping and planning.",
-      "how": "Using agentic AI patterns from Google Cloud, Ken would coordinate a structured tree of specialised sub-agents, each trained and equipped for a distinct business domain (transport, yard, compliance, finance, hire desk). Tasks are routed to the right sub-agent, and results are aggregated back through Ken for a unified response.",
+      "how": "Ken stays the front door: he receives every email, checks who is asking, holds the approvals, the outbound guard, memory and the signature, and sends every reply. Below him sit ten branches, one per area of the business, each in its own file with its own instructions, its own tools (10 to 20 rather than all 102) and its own choice of model. The triage call Ken already makes on every email also decides which branch or branches a request needs, so only those tools are loaded for that reply. Long jobs inside one area (building a quote, a reconciliation, a RAMS) run as that branch's own agent and hand the result back to Ken. A request that spans areas loads more than one branch, and Ken writes one combined answer.",
       "who": [
         {
           "who": "All Kensite teams get more specialised and responsive AI support in their domain",
@@ -888,7 +888,113 @@
           "how": ""
         }
       ],
-      "proposed_at": "2026-09-22"
+      "proposed_at": "2026-09-22",
+      "plan": {
+        "branches": [
+          {
+            "name": "Ken (coordinator)",
+            "covers": "Email in and out, who is asking and what they may do, approvals, outbound guard, memory and recall, wishlist, diary, web search, spreadsheets, today's date, emailing colleagues. Routes each request to the branches it needs."
+          },
+          {
+            "name": "Hire desk",
+            "covers": "Contracts, what is on hire, customers on hire, collections due, live hire rates, proof of delivery, customer orders, live hire reports and their schedules, hire contracts, Site Builder drawings."
+          },
+          {
+            "name": "Sales",
+            "covers": "Quotes and their outcomes, quote copies, quote lines from words or drawings, raising and amending quotes in MCS, quote pipeline, SLAs, site visits. New: enquiry and lead tracking (HSS ProService, YardLink)."
+          },
+          {
+            "name": "Yard",
+            "covers": "Prep schedule, transport capacity, unit tallies, route suggestions, stocktakes, depot movements and who is in (Net2), Big Change jobs."
+          },
+          {
+            "name": "Health and Safety",
+            "covers": "RAMS requirements and creation, H&S committee agenda. New: accident and near miss logging, inspection due dates."
+          },
+          {
+            "name": "Compliance",
+            "covers": "IMS register, IMS actions and items, closing actions, document library search, reading, amending, filing and moving documents."
+          },
+          {
+            "name": "HR",
+            "covers": "Who is on leave (Breathe, dates only), staff guide. Never reasons, notes or personal details."
+          },
+          {
+            "name": "Finance",
+            "covers": "Purchase orders (find, raise, edit, copies), Zahara invoices, documents and approvals, invoice copies, what we paid, suppliers and preferences, Big Change invoices and reconciliation."
+          },
+          {
+            "name": "Marketing",
+            "covers": "New branch. Enquiry and inbox analysis, website and social content drafts, case studies from completed hires. Drafts only; nothing published without a person."
+          },
+          {
+            "name": "Leadership",
+            "covers": "AI roadmap (list, propose, update), summit programme and feedback, cross branch summaries for Nathan and Chloe, Weekly Check Up."
+          },
+          {
+            "name": "IT",
+            "covers": "Cloudflare (overview, DNS, cache), probes, Python packages, Ken's own status and version history, app status."
+          }
+        ],
+        "phases": [
+          {
+            "name": "1. Foundations",
+            "target": "Oct 2026",
+            "status": "Not started",
+            "detail": "Ken 26.0. Branch file format and loader (Ken Agent / Branches, loaded at call time like the workers), shared kernel kept with Ken (permissions, approvals, audit, outbound guard, attachments), triage returns the branches a request needs, per branch model setting, and a replay set of about 200 past requests to score routing and tool choice offline. Nothing changes for staff: every tool is still loaded."
+          },
+          {
+            "name": "2. IT branch",
+            "target": "Oct 2026",
+            "status": "Not started",
+            "detail": "First real branch, used almost only by Nathan, so it is the safest place to prove the pattern. Measured against the replay set before and after."
+          },
+          {
+            "name": "3. Finance branch",
+            "target": "Nov 2026",
+            "status": "Not started",
+            "detail": "Purchase orders, Zahara and reconciliation move across. Approvals and the write guards stay with Ken."
+          },
+          {
+            "name": "4. Hire desk branch",
+            "target": "Nov 2026",
+            "status": "Not started",
+            "detail": "The busiest area. Run in shadow for a week (both old and new routing, compare) before switching."
+          },
+          {
+            "name": "5. Sales branch",
+            "target": "Dec 2026",
+            "status": "Not started",
+            "detail": "Quotes, SLAs and site visits, plus lead tracking from HSS ProService and YardLink."
+          },
+          {
+            "name": "6. Yard and Health and Safety",
+            "target": "Dec 2026",
+            "status": "Not started",
+            "detail": "Prep schedule, transport, Net2 and stocktakes; RAMS and the H&S committee."
+          },
+          {
+            "name": "7. Compliance and HR",
+            "target": "Jan 2027",
+            "status": "Not started",
+            "detail": "IMS and the document library; leave and the staff guide, with the Breathe limits carried over unchanged."
+          },
+          {
+            "name": "8. Leadership and Marketing",
+            "target": "Feb 2027",
+            "status": "Not started",
+            "detail": "Leadership takes the roadmap, summit and cross branch summaries. Marketing starts with enquiry analysis and drafted content."
+          },
+          {
+            "name": "9. Retire the single agent",
+            "target": "Mar 2027",
+            "status": "Not started",
+            "detail": "The one large agent is removed once every tool lives in a branch. Branches can then be added for other MTCO group companies, starting with AES."
+          }
+        ],
+        "measures": "Each phase ships only if, on the replay set, routing picks the right branch at least 95% of the time, tool choice is no worse than today, cost per reply goes down, and the offline test suite passes."
+      },
+      "updated_at": "2026-10-12"
     },
     {
       "id": "kensite-rams-on-demand-agent",
