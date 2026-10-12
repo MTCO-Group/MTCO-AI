@@ -409,6 +409,114 @@
     .day .ent{display:none}
   }
 
+
+  /* ── the AI Organisational Tree: landing widget and its own page (2.5) ── */
+  #otWidget{
+    position:absolute; right:28px; bottom:66px; z-index:4;
+    display:flex; align-items:center; gap:14px; text-align:left;
+    width:316px; padding:14px 16px; border-radius:16px; border:1px solid #dfe3dc;
+    background:#fff; color:#1a1b1e; font:inherit; cursor:pointer;
+    box-shadow:0 10px 28px -16px rgba(16,26,20,.45);
+    transition:transform .16s, box-shadow .16s, border-color .16s;
+  }
+  #otWidget:hover{transform:translateY(-2px);box-shadow:0 14px 32px -16px rgba(16,26,20,.55);border-color:#0d823b}
+  #otWidget:focus-visible{outline:2px solid #0d823b;outline-offset:3px}
+  #otWidget .wkn{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 2px #fff,0 0 0 4px #0d823b}
+  #otWidget .wtx{min-width:0;flex:1}
+  #otWidget .wk{font-size:10.5px;font-weight:700;color:#0a6630;text-transform:uppercase;letter-spacing:.06em}
+  #otWidget .wt{font-size:15px;font-weight:800;margin-top:1px}
+  #otWidget .wst{display:flex;margin-top:7px}
+  #otWidget .wst img{width:22px;height:22px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #fff;margin-right:-5px;background:#eef0ec}
+  #otWidget .wst span{font-size:11.5px;color:#5c5e66;margin-left:12px;align-self:center;white-space:nowrap}
+  #otWidget .warr{width:18px;height:18px;flex:none;color:#0d823b}
+  @media (max-width:760px){ #otWidget{left:16px;right:16px;width:auto;bottom:60px} }
+
+  #ot{position:absolute;inset:0;background:#faf9f5;display:none;overflow-y:auto;z-index:6;color:#1a1b1e}
+  #ot.show{display:block}
+  #ot:focus{outline:none}
+  #ot .otw{max-width:1360px;margin:0 auto;padding:0 30px}
+  #ot .othead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-top:22px}
+  #ot .otback{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:13px;font-weight:600;color:#1a1b1e;
+    padding:10px 16px;border:1px solid #cfd3cf;border-radius:999px;background:#fff;min-height:44px;cursor:pointer}
+  #ot .otback:hover{border-color:#0d823b}
+  #ot .otback:focus-visible,#ot .otb:focus-visible,#ot .otken:focus-visible{outline:2px solid #0d823b;outline-offset:3px}
+  #ot .otback svg{width:15px;height:15px}
+  #ot .otmeta{font-size:12.5px;color:#5c5e66}
+  #ot .otpills{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+  #ot .otpill{font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px}
+  #ot h1{margin:18px 0 0;font-size:34px;font-weight:800;letter-spacing:-.02em}
+  #ot .otintro{margin:8px 0 0;font-size:15px;line-height:1.55;color:#45474e;max-width:78ch}
+  #ot .ottiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+  #ot .ottile{background:#fff;border:1px solid #e4e5e1;border-radius:14px;padding:14px 16px}
+  #ot .ottile .k{font-size:11px;font-weight:700;color:#5c5e66;text-transform:uppercase;letter-spacing:.06em}
+  #ot .ottile .v{font-size:30px;font-weight:800;margin-top:2px}
+  #ot .ottile .s{font-size:12px;color:#5c5e66}
+  #ot .otrow{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;margin-top:22px}
+  #ot .otcard{background:#fff;border:1px solid #e4e5e1;border-radius:18px}
+  #ot .ottree{flex:999 1 640px;min-width:0;padding:26px 24px 28px}
+  #ot .oth{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  #ot .oth h2{margin:0;font-size:18px;font-weight:800}
+  #ot .oth div{font-size:12px;color:#5c5e66}
+  #ot .otken{font:inherit;cursor:pointer;text-align:left;padding:14px 20px;border-radius:16px;color:#1a1b1e;min-height:64px;
+    background:#fff;border:1px solid #cfd3cf;box-shadow:0 8px 22px -16px rgba(16,26,20,.45);display:flex;align-items:center;gap:12px}
+  #ot .otken.on{background:#f0f7f2;border:2px solid #0d823b;box-shadow:none}
+  #ot .otken img{width:52px;height:52px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #fff,0 0 0 4px #0d823b;flex:none}
+  #ot .otken b{display:block;font-size:16px;font-weight:800}
+  #ot .otken span{font-size:12px;color:#45474e}
+  #ot .otstem{width:2px;height:22px;background:#b9cfc0;margin:0 auto}
+  #ot .otbar{margin:0 7%;height:2px;background:#b9cfc0}
+  #ot .otgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+  #ot .otcol{display:flex;flex-direction:column;align-items:center}
+  #ot .otcol i{display:block;width:2px;height:16px;background:#b9cfc0}
+  #ot .otcol.on i{background:#0d823b}
+  #ot .otb{font:inherit;width:100%;min-height:128px;text-align:left;cursor:pointer;padding:12px;border-radius:14px;color:#1a1b1e;
+    background:#faf9f5;border:1px solid #dfe3dc;transition:border-color .15s}
+  #ot .otb:hover{border-color:#0d823b}
+  #ot .otb.new{border-color:#ecc49a}
+  #ot .otb.on{background:#f0f7f2;border:2px solid #0d823b;box-shadow:0 8px 20px -14px rgba(13,130,59,.7)}
+  #ot .otb .ph{font-size:10.5px;font-weight:700;color:#5c5e66;text-transform:uppercase;letter-spacing:.06em}
+  #ot .otb .nm{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px;min-height:48px}
+  #ot .otb .nm b{font-size:15px;font-weight:800;line-height:1.2;min-width:0}
+  #ot .otb .nm img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 2px #fff,0 0 0 4px #0d823b}
+  #ot .otb .tl{font-size:12px;color:#45474e;margin-top:6px}
+  #ot .chip{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(13,130,59,.10);color:#0a6630}
+  #ot .chip.new{background:rgba(210,122,30,.13);color:#8a4a0c}
+  #ot .otkey{margin-top:26px;display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#45474e}
+  #ot .otkey div{display:flex;align-items:center;gap:6px}
+  #ot .otkey span{width:10px;height:10px;border-radius:50%;display:inline-block;box-sizing:border-box}
+  #ot .otside{flex:1 1 340px;max-width:420px;min-width:280px;padding:22px 22px 24px}
+  #ot .otside .k{font-size:11px;font-weight:700;color:#0a6630;text-transform:uppercase;letter-spacing:.06em}
+  #ot .otside h2{margin:4px 0 0;font-size:22px;font-weight:800}
+  #ot .otside p{margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#45474e}
+  #ot .otfacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}
+  #ot .otfacts div{background:#f7f7f4;border-radius:12px;padding:10px 12px}
+  #ot .otfacts small{display:block;font-size:11px;color:#5c5e66;font-weight:700}
+  #ot .otfacts b{display:block;font-size:15px;font-weight:800;margin-top:2px}
+  #ot .otside h3{margin:18px 0 8px;font-size:13px;font-weight:800}
+  #ot .ottools{display:flex;flex-wrap:wrap;gap:6px}
+  #ot .ottools span{font-size:12px;padding:4px 9px;border-radius:8px;background:#f2f3ef;color:#2c2e33;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  #ot .otphases{margin:22px 0 40px;padding:24px}
+  #ot .otscroll{overflow-x:auto;margin-top:16px}
+  #ot .otph{display:grid;grid-template-columns:repeat(9,minmax(118px,1fr));gap:10px;min-width:1140px}
+  #ot .otph > div{display:flex;flex-direction:column;gap:8px}
+  #ot .otph .bar{height:6px;border-radius:999px;background:#dfe3dc}
+  #ot .otph .bar.on{background:#0d823b}
+  #ot .otph .t{font-size:11px;font-weight:700;color:#5c5e66}
+  #ot .otph .t em{font-style:normal;margin-left:6px;padding:1px 7px;border-radius:999px;background:rgba(13,130,59,.10);color:#0a6630}
+  #ot .otph b{font-size:14px;font-weight:800;line-height:1.25}
+  #ot .otph p{margin:0;font-size:12px;line-height:1.5;color:#45474e}
+  #ot .otgate{margin-top:20px;padding:14px 16px;border-radius:12px;background:rgba(13,130,59,.07);display:flex;gap:12px;align-items:flex-start;font-size:13px;line-height:1.55}
+  #ot .otgate svg{width:18px;height:18px;flex:none;margin-top:1px}
+  @media (max-width:980px){ #ot .otgrid{grid-template-columns:repeat(3,minmax(0,1fr))} #ot .otside{max-width:none} }
+  @media (max-width:760px){
+    #ot .otw{padding:0 16px}
+    #ot h1{font-size:26px}
+    #ot .ottiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+    #ot .otgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    #ot .ottree{padding:20px 14px}
+    #ot .otpills{margin-left:0}
+  }
+
   #toast{
     position:absolute;left:50%;bottom:26px;transform:translateX(-50%) translateY(8px);
     background:#1a1b1e;color:#fff;font-size:12.5px;font-weight:600;padding:9px 16px;
@@ -427,6 +535,19 @@
     What's next?
     <span class="tally" id="tally" hidden></span>
   </button>
+
+
+  <button id="otWidget" type="button" aria-controls="ot">
+    <img class="wkn" src="avatars/ken.webp" alt="">
+    <span class="wtx">
+      <span class="wk" id="otWK">Proposed</span>
+      <span class="wt" style="display:block">AI Organisational Tree</span>
+      <span class="wst" id="otWStack"></span>
+    </span>
+    <svg class="warr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+  </button>
+
+  <div id="ot" role="region" aria-labelledby="otH1" tabindex="-1"></div>
 
   <div id="planner">
     <div class="phead">
@@ -959,6 +1080,7 @@ function openPlanner(){
   $("#planner").style.display = "flex";
   $("#board").style.visibility = "hidden";
   $("#whatsNext").style.display = "none";
+  $("#otWidget").style.display = "none";
   try{ sessionStorage.setItem("mtco.planner.open", "1"); }catch(e){}
 }
 function closePlanner(){
@@ -968,11 +1090,206 @@ function closePlanner(){
   $("#planner").style.display = "none";
   $("#board").style.visibility = "";
   $("#whatsNext").style.display = "";
+  $("#otWidget").style.display = "";
   try{ sessionStorage.removeItem("mtco.planner.open"); }catch(e){}
 }
 function toast(text){
   const t = $("#toast"); t.textContent = text; t.classList.add("show");
   setTimeout(() => t.classList.remove("show"), 2600);
+}
+
+
+/* ── the AI Organisational Tree (2.5) ─────────────────────────────────────
+   Opened from the widget on the landing page. The tree itself (branches,
+   tools, models, portraits) is fixed here as designed on the canvas; the
+   project's stage and each build phase's target and status come from the
+   project's plan in data/roadmap.json, so moving a phase on is a data
+   change, not a code change. Portraits are files in avatars/ beside this. */
+const OT_ID = "kensite-ai-organisational-tree-sub-agent-architecture";
+const OT_KEN = {key:"ken", name:"Ken", when:"Today", model:"DeepSeek Flash",
+  covers:"Receives every email, checks who is asking and what they may do, holds approvals, the outbound guard, memory and the signature, and sends every reply. The triage call he already makes picks the branches each request needs.",
+  tools:["get_today","build_excel","read_email_attachment","search_web","recall_conversations","remember_fact","add_to_wishlist","diary_entry","email_colleague","cc_reply"]};
+const OT_BRANCHES = [
+  {key:"hire-desk", name:"Hire Desk", phase:4, when:"Nov 2026", model:"DeepSeek Flash",
+   covers:"Contracts, what is on hire, customers, collections due, live hire rates, proof of delivery, customer orders, live hire reports, hire contracts and Site Builder drawings.",
+   tools:["lookup_contract","search_contracts","live_hire_rates","whats_on_hire","search_customers","customer_on_hire","collections_due","proof_of_delivery","find_customer_order","attach_live_hire_report","schedule_live_hire_report","report_schedules","hire_contract","drawing_requests_status","attach_drawing_pdf"]},
+  {key:"sales", name:"Sales", phase:5, when:"Dec 2026", model:"DeepSeek Flash",
+   covers:"Quotes and their outcomes, quote lines from words or drawings, raising and amending quotes in MCS, the quote pipeline, SLAs and site visits.",
+   tools:["find_quotes","quote_outcomes","lookup_quote","attach_quote_copy","drawing_bill_of_quantities","quote_lines_from_words","create_mcs_quote","show_quote_lines_tool","amend_mcs_quote_tool","my_quote_pipeline","sla_requirements","create_sla","site_visit_requirements","create_site_visit"],
+   newText:"Lead tracking for HSS ProService and YardLink: every availability check and enquiry, whether it was quoted, and whether it was won."},
+  {key:"yard", name:"Yard", phase:6, when:"Dec 2026", model:"DeepSeek Flash",
+   covers:"Prep schedule, transport capacity, unit tallies, route suggestions, stocktakes, depot movements and who is in.",
+   tools:["check_prep_schedule","check_transport_capacity","tally_units","apply_route_suggestion","process_stocktake","who_is_in","depot_movements"]},
+  {key:"health-and-safety", name:"Health and Safety", phase:6, when:"Dec 2026", model:"DeepSeek Flash",
+   covers:"RAMS requirements and creation, and the H&S committee agenda.",
+   tools:["rams_requirements","create_rams","hs_committee_agenda"],
+   newText:"Accident and near miss logging, and inspection due dates."},
+  {key:"compliance", name:"Compliance", phase:7, when:"Jan 2027", model:"DeepSeek Flash",
+   covers:"The IMS register and its actions, and the document library: search, read, amend, file and move documents.",
+   tools:["my_ims_actions","ims_register_summary","ims_item_detail","close_ims_action","search_documents","read_document","open_document_for_editing","amend_document","attach_document","move_document","find_folders","file_email_attachment"]},
+  {key:"hr", name:"HR", phase:7, when:"Jan 2027", model:"DeepSeek Flash",
+   covers:"Who is on leave, from Breathe, as dates only, and the staff guide. Never reasons, notes or personal details.",
+   tools:["who_is_on_leave","staff_guide"]},
+  {key:"finance", name:"Finance", phase:3, when:"Nov 2026", model:"DeepSeek Flash",
+   covers:"Purchase orders, Zahara invoices and approvals, invoice copies, what we paid, suppliers and preferences, Big Change invoices and reconciliation.",
+   tools:["zahara_purchase_orders","zahara_invoices","zahara_document","zahara_approvals","lookup_po","purchase_orders_for_contract","attach_po_copy","fetch_invoice_copy","reconciliation_report","raise_purchase_order","edit_purchase_order","what_did_we_pay","who_do_we_buy_from","remember_supplier_preference","check_purchase_order_suppliers","bigchange_invoices","consolidate_bigchange_invoices"]},
+  {key:"marketing", name:"Marketing", phase:8, when:"Feb 2027", model:"To be chosen", isNew:true,
+   covers:"A new branch with no tools yet. Drafts only: nothing is published without a person.",
+   tools:[], newText:"Enquiry and inbox analysis, website and social content drafts, and case studies from completed hires."},
+  {key:"leadership", name:"Leadership", phase:8, when:"Feb 2027", model:"Stronger reasoning model",
+   covers:"The AI roadmap, the summit programme and feedback, cross branch summaries for Nathan and Chloe, and the Weekly Check Up.",
+   tools:["roadmap","ai_roadmap_list","propose_ai_project","update_ai_project","summit_programme","summit_calendar","summit_sessions","summit_feedback","summit_people","summit_send_ask","summit_digest"]},
+  {key:"it", name:"IT", phase:2, when:"Oct 2026", model:"DeepSeek Flash",
+   covers:"Cloudflare, probes, Python packages, Ken's own status and version history, and app status. The first branch to be built, because it is used almost only by Nathan.",
+   tools:["cloudflare_overview","cloudflare_dns_lookup","cloudflare_dns_set","cloudflare_dns_remove","cloudflare_purge_cache","cloudflare_request_tool","install_python_package","run_probe","my_version_history","my_own_status","site_builder_app_status"]}
+];
+const OT_PHASES = [
+  {name:"1. Foundations", target:"Oct 2026", detail:"Branch loader, routing in triage, per branch model, replay set of 200 past requests. No change for staff."},
+  {name:"2. IT", target:"Oct 2026", detail:"First real branch. Proves the pattern where the risk is lowest."},
+  {name:"3. Finance", target:"Nov 2026", detail:"Purchase orders, Zahara and reconciliation. Approvals stay with Ken."},
+  {name:"4. Hire Desk", target:"Nov 2026", detail:"Busiest area. A week in shadow before switching."},
+  {name:"5. Sales", target:"Dec 2026", detail:"Quotes, SLAs and site visits, plus lead tracking."},
+  {name:"6. Yard, H&S", target:"Dec 2026", detail:"Prep schedule, transport, Net2, stocktakes, RAMS."},
+  {name:"7. Compliance, HR", target:"Jan 2027", detail:"IMS, the document library, leave and the staff guide."},
+  {name:"8. Leadership, Marketing", target:"Feb 2027", detail:"Roadmap and summit; enquiry analysis and drafted content."},
+  {name:"9. Retire single agent", target:"Mar 2027", detail:"Every tool in a branch. Group companies such as AES can follow."}
+];
+const OT_STAGE = {proposed:["Proposed","oklch(0.93 0.07 25)","oklch(0.42 0.12 25)"], scoped:["Scoped","oklch(0.93 0.07 60)","oklch(0.42 0.1 60)"],
+  planned:["Planned","oklch(0.93 0.07 80)","oklch(0.42 0.1 80)"], building:["Building","oklch(0.93 0.07 95)","oklch(0.38 0.1 95)"],
+  testing:["Testing","oklch(0.93 0.07 130)","oklch(0.38 0.1 130)"], shipped:["Shipped","oklch(0.93 0.07 150)","oklch(0.38 0.1 150)"]};
+const OT = {picked:"hire-desk", project:null};
+const otEsc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const otAv = k => "avatars/" + k + ".webp";
+
+function otPhases(){
+  const pl = (OT.project && OT.project.plan && Array.isArray(OT.project.plan.phases)) ? OT.project.plan.phases : [];
+  return OT_PHASES.map((p, i) => {
+    const d = pl[i] || {}, st = String(d.status || "Not started");
+    return {...p, target: d.target || p.target, status: st, done: /^(done|shipped|complete)/i.test(st), live: /progress|building|testing/i.test(st)};
+  });
+}
+function otNext(ph){ const i = ph.findIndex(p => !p.done); return i < 0 ? ph.length : i; }
+
+function otWidgetFill(){
+  const stage = OT_STAGE[String((OT.project && OT.project.stage) || "proposed").toLowerCase()] || OT_STAGE.proposed;
+  const ph = otPhases(), n = otNext(ph);
+  $("#otWK").textContent = stage[0] + " · " + (n >= ph.length ? "all phases done" : "Phase " + (n+1) + " next");
+  $("#otWStack").innerHTML = OT_BRANCHES.slice(0, 6).map(b => `<img src="${otAv(b.key)}" alt="">`).join("") +
+    `<span>${OT_BRANCHES.length} branches</span>`;
+}
+
+function otRender(){
+  const ph = otPhases(), n = otNext(ph);
+  const stage = OT_STAGE[String((OT.project && OT.project.stage) || "proposed").toLowerCase()] || OT_STAGE.proposed;
+  const total = OT_KEN.tools.length + OT_BRANCHES.reduce((a, b) => a + b.tools.length, 0);
+  const counts = OT_BRANCHES.map(b => b.tools.length).filter(x => x > 0);
+  const sel = OT.picked === "ken" ? OT_KEN : (OT_BRANCHES.find(b => b.key === OT.picked) || OT_BRANCHES[0]);
+  const isKen = sel === OT_KEN;
+  const last = ph[ph.length - 1];
+  const tools = sel.tools.length ? sel.tools : ["none yet"];
+  $("#ot").innerHTML = `
+  <div class="otw">
+    <div class="othead">
+      <button class="otback" id="otBack" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>AI Roadmap</button>
+      <div class="otmeta">Kensite · IT and Data · Owner: Nathan McGuinness</div>
+      <div class="otpills">
+        <span class="otpill" style="background:${stage[1]};color:${stage[2]}">${stage[0]}</span>
+        <span class="otpill" style="background:rgba(13,130,59,.10);color:#0a6630">${n >= ph.length ? "All phases done" : "Phase " + (n+1) + " of " + ph.length + (ph[n].live ? " in progress" : " next")}</span>
+      </div>
+    </div>
+    <h1 id="otH1">AI Organisational Tree</h1>
+    <p class="otintro">Ken stays the front door. Below him sit ten branches, one for each part of the business, each with its own instructions, its own tools and its own model. Each email loads only the branches it needs.</p>
+    <div class="ottiles">
+      <div class="ottile"><div class="k">Branches</div><div class="v">${OT_BRANCHES.length}</div><div class="s">plus Ken as coordinator</div></div>
+      <div class="ottile"><div class="k">Tools today</div><div class="v">${total}</div><div class="s">all loaded on every email</div></div>
+      <div class="ottile"><div class="k">Tools per branch</div><div class="v">${Math.min(...counts)} to ${Math.max(...counts)}</div><div class="s">only the branches a request needs</div></div>
+      <div class="ottile"><div class="k">Target</div><div class="v">${otEsc(last.target)}</div><div class="s">single agent retired</div></div>
+    </div>
+    <div class="otrow">
+      <section class="otcard ottree" aria-labelledby="otTreeH">
+        <div class="oth"><h2 id="otTreeH">The tree</h2><div>Select a branch to see what it covers</div></div>
+        <div style="display:flex;justify-content:center;margin-top:22px">
+          <button type="button" class="otken${isKen ? " on" : ""}" data-ot="ken" aria-pressed="${isKen}">
+            <img src="${otAv("ken")}" alt="">
+            <div><b>Ken</b><span>Coordinator · ${OT_KEN.tools.length} tools · routes every email</span></div>
+          </button>
+        </div>
+        <div class="otstem"></div><div class="otbar"></div>
+        <div class="otgrid">
+          ${OT_BRANCHES.map(b => { const on = b === sel; return `
+          <div class="otcol${on ? " on" : ""}"><i></i>
+            <button type="button" class="otb${on ? " on" : ""}${b.isNew ? " new" : ""}" data-ot="${b.key}" aria-pressed="${on}">
+              <div class="ph">Phase ${b.phase}</div>
+              <div class="nm"><b>${otEsc(b.name)}</b><img src="${otAv(b.key)}" alt=""></div>
+              <div class="tl">${b.tools.length ? b.tools.length + " tools" : "New: no tools yet"}</div>
+              <span class="chip${b.isNew ? " new" : ""}">${b.isNew ? "New capability" : "From today's tools"}</span>
+            </button>
+          </div>`; }).join("")}
+        </div>
+        <div class="otkey">
+          <div><span style="background:#0d823b"></span>Built on today's tools</div>
+          <div><span style="background:#d27a1e"></span>New capability</div>
+          <div><span style="border:2px solid #0d823b"></span>Selected</div>
+        </div>
+      </section>
+      <aside class="otcard otside" aria-live="polite">
+        <div class="k">${isKen ? "Coordinator" : "Branch · Phase " + sel.phase}</div>
+        <h2>${otEsc(sel.name)}</h2>
+        <p>${otEsc(sel.covers)}</p>
+        <div class="otfacts"><div><small>Arrives in</small><b>${otEsc(sel.when)}</b></div><div><small>Model</small><b>${otEsc(sel.model)}</b></div></div>
+        <h3>${sel.tools.length ? "Tools it holds (" + sel.tools.length + ")" : "Tools it holds"}</h3>
+        <div class="ottools">${tools.map(t => `<span>${otEsc(t)}</span>`).join("")}</div>
+        ${sel.newText ? `<h3>New for this branch</h3><p style="margin:0;font-size:13px">${otEsc(sel.newText)}</p>` : ""}
+      </aside>
+    </div>
+    <section class="otcard otphases" aria-labelledby="otPhH">
+      <div class="oth"><h2 id="otPhH">Build phases</h2><div>${otEsc(ph[0].target)} to ${otEsc(last.target)}</div></div>
+      <div class="otscroll"><div class="otph">
+        ${ph.map((p, i) => `<div>
+          <div class="bar${p.done || i === n ? " on" : ""}"></div>
+          <div class="t">${otEsc(p.target)}${p.done || p.live ? `<em>${otEsc(p.status)}</em>` : ""}</div>
+          <b>${otEsc(p.name)}</b><p>${otEsc(p.detail)}</p></div>`).join("")}
+      </div></div>
+      <div class="otgate"><svg viewBox="0 0 24 24" fill="none" stroke="#0d823b" stroke-width="2.2" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+        <div><b>Each phase ships only when</b> routing picks the right branch at least 95% of the time on a replay of 200 past requests, tool choice is no worse than today, cost per reply falls, and the offline test suite passes.</div></div>
+    </section>
+  </div>`;
+}
+
+function otOpen(){
+  otRender();
+  $("#ot").classList.add("show");
+  $("#board").style.visibility = "hidden";
+  $("#whatsNext").style.display = "none";
+  $("#otWidget").style.display = "none";
+  try{ sessionStorage.setItem("mtco.ot.open", OT.picked); }catch(e){}
+  $("#ot").focus({preventScroll:true});
+}
+function otClose(){
+  $("#ot").classList.remove("show");
+  $("#board").style.visibility = "";
+  $("#whatsNext").style.display = "";
+  $("#otWidget").style.display = "";
+  try{ sessionStorage.removeItem("mtco.ot.open"); }catch(e){}
+  $("#otWidget").focus({preventScroll:true});
+}
+$("#otWidget").addEventListener("click", otOpen);
+$("#ot").addEventListener("click", ev => {
+  if(ev.target.closest("#otBack")){ otClose(); return; }
+  const b = ev.target.closest("[data-ot]");
+  if(!b) return;
+  OT.picked = b.dataset.ot;
+  const top = $("#ot").scrollTop;
+  otRender();
+  $("#ot").scrollTop = top;
+  const again = $(`#ot [data-ot="${OT.picked}"]`); if(again) again.focus({preventScroll:true});
+  try{ sessionStorage.setItem("mtco.ot.open", OT.picked); }catch(e){}
+});
+$("#ot").addEventListener("keydown", ev => { if(ev.key === "Escape"){ ev.preventDefault(); ev.stopPropagation(); otClose(); } });
+function otArgs(roadmap){
+  OT.project = (roadmap.projects || []).find(p => p && p.id === OT_ID) || null;
+  otWidgetFill();
+  if($("#ot").classList.contains("show")) otRender();
 }
 
 $("#whatsNext").addEventListener("click", openPlanner);
@@ -1789,6 +2106,7 @@ function render(args){
 
   renderCards();
   wfRenderArgs(args);
+  otArgs(roadmap);
   Streamlit.height(args.height || 900);
 
   let wasSaving = false, wasOpen = false;
@@ -1798,6 +2116,9 @@ function render(args){
     if(wasSaving) sessionStorage.removeItem("mtco.planner.saving");
   }catch(e){}
   if(wasOpen) openPlanner();
+  let otWas = null;
+  try{ otWas = sessionStorage.getItem("mtco.ot.open"); }catch(e){}
+  if(otWas && !wasOpen && !$("#ot").classList.contains("show")){ OT.picked = otWas; otOpen(); }
   if(wasSaving){
     closePlanner();
     toast(args.saved_at ? "Plan saved " + args.saved_at : "Plan saved");
