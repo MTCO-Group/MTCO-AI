@@ -1447,6 +1447,26 @@
         }
       ],
       "proposed_at": "2026-10-08"
+    },
+    {
+      "id": "kensite-adoption-over-appearance-driving-ai-adoption-as-a-metric",
+      "company": "kensite",
+      "name": "Adoption over Appearance - Driving AI Adoption as a Metric",
+      "stage": "Proposed",
+      "category": "IT and Data",
+      "owner": "Nathan McGuinness",
+      "proposed_by": "nathan.mcguinness@kensite.co.uk",
+      "date": "Oct 2026",
+      "summary": "Drives AI adoption at Kensite as a headline metric, ahead of appearance.",
+      "scope": "Drives AI adoption at Kensite as a headline metric, ahead of appearance. It looks for further automation opportunities of the same kind as the automated PODs and automated copy invoices, which have been well received and have had a measurable impact on the business, and pushes them out so more people are using AI regularly to build a wider culture of data enrichment and adoption.",
+      "how": "Not specified in the email beyond identifying further opportunities like the POD and copy invoice automations.",
+      "who": [
+        {
+          "who": "Whole business",
+          "how": "a wider culture of regular AI use and data enrichment, building on the reception the POD and copy invoice automations already had."
+        }
+      ],
+      "proposed_at": "2026-10-13"
     }
   ],
   "plan": {
