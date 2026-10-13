@@ -3237,6 +3237,12 @@
     "detail": "Joins three independent views of the 21/09 to 27/09/2026 AES invoices: 1."
    },
    {
+    "time": "18:30",
+    "title": "Updated Forensic Adjudication 0.2",
+    "kind": "build",
+    "detail": "Final stage for 21/09 to 27/09/2026, after \"Reconcile and Authorise.py\"."
+   },
+   {
     "title": "Emails: 68 received, 18 sent",
     "kind": "email"
    }
