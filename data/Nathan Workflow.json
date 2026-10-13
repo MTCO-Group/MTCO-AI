@@ -3219,6 +3219,12 @@
     "detail": "A confidence layer that sits AFTER the Big Change Reconciliation Worker and never changes what it matched."
    },
    {
+    "time": "18:15",
+    "title": "Updated Build Audit Pack 0.1",
+    "kind": "build",
+    "detail": "Turns the 21/09 to 27/09/2026 data into plain JSON for independent auditors."
+   },
+   {
     "title": "Emails: 67 received, 18 sent",
     "kind": "email"
    }
