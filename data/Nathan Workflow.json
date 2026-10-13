@@ -3177,6 +3177,18 @@
     "detail": "A contract collected in parts is no longer flagged as a duplicate."
    },
    {
+    "time": "12:33",
+    "title": "Updated Ken Agent V25.8",
+    "kind": "build",
+    "detail": "Aes_feed_due puts the planner feed on a working day schedule; the schedule sync trial..."
+   },
+   {
+    "time": "12:35",
+    "title": "Updated AES Transport Planner 4.9",
+    "kind": "build",
+    "detail": "Ken V25.8 checks Big Change on a working day schedule (every 2 minutes on weekdays 06:30 to 17:00, every 15 minutes outside that, every 30 at weekend…"
+   },
+   {
     "title": "Emails: 30 received, 10 sent",
     "kind": "email"
    }
