@@ -3316,6 +3316,12 @@
     "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update README.md; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…. Plus 8 commits made by Ken and the apps"
    },
    {
+    "time": "21:30",
+    "title": "Updated Update Roadmap Project 1.1",
+    "kind": "build",
+    "detail": "A file can add a project as well."
+   },
+   {
     "title": "Emails: 68 received, 18 sent",
     "kind": "email"
    }
