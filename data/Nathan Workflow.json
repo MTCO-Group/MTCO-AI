@@ -3249,6 +3249,18 @@
     "detail": "A confidence layer that sits AFTER the Big Change Reconciliation Worker and never changes what it matched."
    },
    {
+    "time": "18:45",
+    "title": "Updated Forensic Adjudication 0.3",
+    "kind": "build",
+    "detail": "Final stage for 21/09 to 27/09/2026, after \"Reconcile and Authorise.py\"."
+   },
+   {
+    "time": "18:45",
+    "title": "Updated Reconcile and Authorise 0.3",
+    "kind": "build",
+    "detail": "Joins three independent views of the 21/09 to 27/09/2026 AES invoices: 1."
+   },
+   {
     "title": "Emails: 68 received, 18 sent",
     "kind": "email"
    }
