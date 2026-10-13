@@ -3285,6 +3285,17 @@
     "detail": "Reconciles the AES invoices of 21/09 to 27/09/2026 to Kensite's MCS records: the script does every lookup, Gemini 3.8 Flash (OpenRouter) judges the i…"
    },
    {
+    "time": "20:50",
+    "title": "Built Accuracy Harness for the Big Change Reconciliation Worker",
+    "kind": "build"
+   },
+   {
+    "time": "20:50",
+    "title": "Updated Kensite Big Change Reconciliation Worker 4.4",
+    "kind": "build",
+    "detail": "From the forensic reconciliation of the 21/09 to 27/09/2026 week, which found the worker overstating revenue three ways: a weekly line was paid a ful…"
+   },
+   {
     "title": "Emails: 68 received, 18 sent",
     "kind": "email"
    }
