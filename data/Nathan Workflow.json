@@ -3243,6 +3243,12 @@
     "detail": "Final stage for 21/09 to 27/09/2026, after \"Reconcile and Authorise.py\"."
    },
    {
+    "time": "18:40",
+    "title": "Updated Reconciliation Decision Model (TEST) 0.8",
+    "kind": "build",
+    "detail": "A confidence layer that sits AFTER the Big Change Reconciliation Worker and never changes what it matched."
+   },
+   {
     "title": "Emails: 68 received, 18 sent",
     "kind": "email"
    }
