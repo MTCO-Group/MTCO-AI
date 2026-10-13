@@ -3189,6 +3189,12 @@
     "detail": "Ken V25.8 checks Big Change on a working day schedule (every 2 minutes on weekdays 06:30 to 17:00, every 15 minutes outside that, every 30 at weekend…"
    },
    {
+    "time": "16:55",
+    "title": "Updated Prep Schedule vs MCS Discrepancy Check 4.5",
+    "kind": "build",
+    "detail": "Nathan is copied in twice a day, not on every email."
+   },
+   {
     "title": "Emails: 65 received, 18 sent",
     "kind": "email"
    }
