@@ -3195,6 +3195,12 @@
     "detail": "Nathan is copied in twice a day, not on every email."
    },
    {
+    "time": "17:40",
+    "title": "Updated Reconciliation Decision Model (TEST) 0.3",
+    "kind": "build",
+    "detail": "A confidence layer that sits AFTER the Big Change Reconciliation Worker and never changes what it matched."
+   },
+   {
     "title": "Emails: 66 received, 18 sent",
     "kind": "email"
    }
