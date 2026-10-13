@@ -3308,6 +3308,14 @@
     "detail": "Every 32ft unit weighs 100 kg more."
    },
    {
+    "time": "21:21",
+    "title": "GitHub: 5 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "MTCO-Group/Compound-Builder",
+    "tagline": true,
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update README.md; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…. Plus 8 commits made by Ken and the apps"
+   },
+   {
     "title": "Emails: 68 received, 18 sent",
     "kind": "email"
    }
