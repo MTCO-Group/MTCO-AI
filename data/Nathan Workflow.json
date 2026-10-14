@@ -3370,7 +3370,7 @@
     "detail": "Aes_invoice_index pulls invoices only; the rate card lookups (102 calls a run) are..."
    },
    {
-    "title": "Emails: 20 received, 7 sent",
+    "title": "Emails: 22 received, 7 sent",
     "kind": "email"
    }
   ]
