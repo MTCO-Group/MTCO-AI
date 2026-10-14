@@ -3358,6 +3358,12 @@
     "detail": "Reads the length of fragmented MP4s, which is what HeyGen sends."
    },
    {
+    "time": "10:50",
+    "title": "Built Marketing Agent",
+    "kind": "build",
+    "detail": "First version, the worker Ken hands marketing jobs to."
+   },
+   {
     "title": "Emails: 15 received, 5 sent",
     "kind": "email"
    }
