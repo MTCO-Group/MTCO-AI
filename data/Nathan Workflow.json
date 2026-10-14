@@ -3352,6 +3352,12 @@
     "detail": "HeyGen takes prompt_enhancement as a word, so the clips now send \"disabled\"."
    },
    {
+    "time": "10:45",
+    "title": "Updated Probe Marketing Agent 1.2",
+    "kind": "build",
+    "detail": "Reads the length of fragmented MP4s, which is what HeyGen sends."
+   },
+   {
     "title": "Emails: 15 received, 3 sent",
     "kind": "email"
    }
