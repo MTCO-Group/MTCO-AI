@@ -3382,6 +3382,18 @@
     "detail": "Copes with the Big Change API usage limit."
    },
    {
+    "time": "11:48",
+    "title": "Updated Ken Agent V26.1",
+    "kind": "build",
+    "detail": "Ken can hand marketing jobs to the Marketing Agent (tidied photos, new images, videos..."
+   },
+   {
+    "time": "11:50",
+    "title": "Built Mail Header Probe",
+    "kind": "build",
+    "detail": "Read only."
+   },
+   {
     "title": "Emails: 22 received, 7 sent",
     "kind": "email"
    }
