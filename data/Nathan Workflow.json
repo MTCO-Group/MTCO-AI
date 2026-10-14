@@ -3346,6 +3346,12 @@
     "detail": "Ken no longer reads or remarks on the pictures in an email signature"
    },
    {
+    "time": "10:40",
+    "title": "Updated Probe Marketing Agent 1.1",
+    "kind": "build",
+    "detail": "HeyGen takes prompt_enhancement as a word, so the clips now send \"disabled\"."
+   },
+   {
     "title": "Emails: 13 received, 2 sent",
     "kind": "email"
    }
