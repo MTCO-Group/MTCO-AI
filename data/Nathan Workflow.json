@@ -3424,6 +3424,18 @@
     "detail": "Turns a Big Change Reconciliation Worker workbook into a clearer one: an Overview page, an All Invoices sheet in plain English (sorted with what need…"
    },
    {
+    "time": "12:00",
+    "title": "Updated Reformat Reconciliation 1.3",
+    "kind": "build",
+    "detail": "Turns a Big Change Reconciliation Worker workbook into a clearer one: an Overview page, an All Invoices sheet in plain English (sorted with what need…"
+   },
+   {
+    "time": "12:00",
+    "title": "Updated Kensite Big Change Reconciliation Worker 4.5",
+    "kind": "build",
+    "detail": "Per Nathan, 15/10/2026."
+   },
+   {
     "title": "Emails: 20 received, 5 sent",
     "kind": "email"
    }
