@@ -3474,6 +3474,18 @@
     "detail": "Ken can be chatted with from Ken Desktop, the pop up app on Kensite PCs"
    },
    {
+    "time": "12:25",
+    "title": "Updated Ken Agent V26.5",
+    "kind": "build",
+    "detail": "A small photo attached to an email is no longer thrown away as a signature logo"
+   },
+   {
+    "time": "12:25",
+    "title": "Updated Marketing Agent 1.3",
+    "kind": "build",
+    "detail": "A small photo is no longer skipped, and a tidy can smooth dents when asked."
+   },
+   {
     "title": "Emails: 25 received, 10 sent",
     "kind": "email"
    }
