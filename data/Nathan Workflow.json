@@ -3486,6 +3486,12 @@
     "detail": "A small photo is no longer skipped, and a tidy can smooth dents when asked."
    },
    {
+    "time": "14:29",
+    "title": "Updated Ken Agent V26.6",
+    "kind": "build",
+    "detail": "Live hire answers show the contract and add a PDF; a rate change names its line"
+   },
+   {
     "title": "Emails: 50 received, 26 sent",
     "kind": "email"
    }
