@@ -410,7 +410,7 @@
   }
 
 
-  /* ── the AI Organisational Tree: landing widget and its own page (2.5) ── */
+  /* ── the AI Agent Structure: landing widget and its own page (2.6) ── */
   #otWidget{
     position:absolute; right:28px; bottom:66px; z-index:4;
     display:flex; align-items:center; gap:14px; text-align:left;
@@ -434,19 +434,21 @@
   #ot{position:absolute;inset:0;background:#faf9f5;display:none;overflow-y:auto;z-index:6;color:#1a1b1e}
   #ot.show{display:block}
   #ot:focus{outline:none}
-  #ot .otw{max-width:1360px;margin:0 auto;padding:0 30px}
+  #ot .otw{max-width:1360px;margin:0 auto;padding:0 30px 40px}
   #ot .othead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-top:22px}
   #ot .otback{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:13px;font-weight:600;color:#1a1b1e;
     padding:10px 16px;border:1px solid #cfd3cf;border-radius:999px;background:#fff;min-height:44px;cursor:pointer}
   #ot .otback:hover{border-color:#0d823b}
-  #ot .otback:focus-visible,#ot .otb:focus-visible,#ot .otken:focus-visible{outline:2px solid #0d823b;outline-offset:3px}
+  #ot .otback:focus-visible,#ot .otb:focus-visible,#ot .otken:focus-visible,#ot .kt-viewport:focus-visible{outline:2px solid #0d823b;outline-offset:3px}
   #ot .otback svg{width:15px;height:15px}
   #ot .otmeta{font-size:12.5px;color:#5c5e66}
   #ot .otpills{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
-  #ot .otpill{font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px}
+  #ot .otpill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;
+    background:oklch(0.93 0.07 60);color:oklch(0.42 0.1 60)}
+  #ot .otpill.live{background:#0d823b;color:#fff}
+  #ot .otpill.live::before,#ot .chip.live::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#fff}
   #ot h1{margin:18px 0 0;font-size:34px;font-weight:800;letter-spacing:-.02em}
-  #ot .otintro{margin:8px 0 0;font-size:15px;line-height:1.55;color:#45474e;max-width:78ch}
-  #ot .ottiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+  #ot .ottiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:22px}
   #ot .ottile{background:#fff;border:1px solid #e4e5e1;border-radius:14px;padding:14px 16px}
   #ot .ottile .k{font-size:11px;font-weight:700;color:#5c5e66;text-transform:uppercase;letter-spacing:.06em}
   #ot .ottile .v{font-size:30px;font-weight:800;margin-top:2px}
@@ -454,70 +456,105 @@
   #ot .otrow{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;margin-top:22px}
   #ot .otcard{background:#fff;border:1px solid #e4e5e1;border-radius:18px}
   #ot .ottree{flex:999 1 640px;min-width:0;padding:26px 24px 28px}
-  #ot .oth{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
   #ot .oth h2{margin:0;font-size:18px;font-weight:800}
-  #ot .oth div{font-size:12px;color:#5c5e66}
   #ot .otken{font:inherit;cursor:pointer;text-align:left;padding:14px 20px;border-radius:16px;color:#1a1b1e;min-height:64px;
-    background:#fff;border:1px solid #cfd3cf;box-shadow:0 8px 22px -16px rgba(16,26,20,.45);display:flex;align-items:center;gap:12px}
-  #ot .otken.on{background:#f0f7f2;border:2px solid #0d823b;box-shadow:none}
+    background:#fff;border:1px solid #0d823b;box-shadow:0 8px 22px -16px rgba(16,26,20,.45);display:flex;align-items:center;gap:12px}
+  #ot .otken.on{background:#f0f7f2;border:2px solid #0d823b}
   #ot .otken img{width:52px;height:52px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #fff,0 0 0 4px #0d823b;flex:none}
   #ot .otken b{display:block;font-size:16px;font-weight:800}
-  #ot .otken span{font-size:12px;color:#45474e}
-  #ot .otstem{width:2px;height:22px;background:#b9cfc0;margin:0 auto}
-  #ot .otbar{margin:0 7%;height:2px;background:#b9cfc0}
+  #ot .otken .sub{font-size:12px;color:#45474e}
+  #ot .otken .chip{margin:0 0 0 6px}
   #ot .otgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+  #ot .otgrid.top{margin-top:22px}
   #ot .otcol{display:flex;flex-direction:column;align-items:center}
-  #ot .otcol i{display:block;width:2px;height:16px;background:#b9cfc0}
-  #ot .otcol.on i{background:#0d823b}
-  #ot .otb{font:inherit;width:100%;min-height:128px;text-align:left;cursor:pointer;padding:12px;border-radius:14px;color:#1a1b1e;
+  #ot .otb{font:inherit;width:100%;min-height:118px;text-align:left;cursor:pointer;padding:12px;border-radius:14px;color:#1a1b1e;
     background:#faf9f5;border:1px solid #dfe3dc;transition:border-color .15s}
   #ot .otb:hover{border-color:#0d823b}
-  #ot .otb.new{border-color:#ecc49a}
   #ot .otb.live{border-color:#0d823b}
   #ot .otb.on{background:#f0f7f2;border:2px solid #0d823b;box-shadow:0 8px 20px -14px rgba(13,130,59,.7)}
-  #ot .otb .ph{font-size:10.5px;font-weight:700;color:#5c5e66;text-transform:uppercase;letter-spacing:.06em}
-  #ot .otb .nm{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px;min-height:48px}
+  #ot .otb .nm{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px}
   #ot .otb .nm b{font-size:15px;font-weight:800;line-height:1.2;min-width:0}
-  #ot .otb .nm img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 2px #fff,0 0 0 4px #0d823b}
+  #ot .otb .nm img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 2px #fff,0 0 0 4px #cfd3cf}
+  #ot .otb.live .nm img{box-shadow:0 0 0 2px #fff,0 0 0 4px #0d823b}
   #ot .otb .tl{font-size:12px;color:#45474e;margin-top:6px}
-  #ot .chip{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(13,130,59,.10);color:#0a6630}
-  #ot .chip.new{background:rgba(210,122,30,.13);color:#8a4a0c}
+  #ot .chip{display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;
+    background:oklch(0.93 0.07 60);color:oklch(0.42 0.1 60)}
   #ot .chip.live{background:#0d823b;color:#fff}
-  #ot .chip.live::before{content:"";display:inline-block;width:6px;height:6px;margin-right:5px;border-radius:50%;background:#fff;vertical-align:1px}
   #ot .otkey{margin-top:26px;display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#45474e}
   #ot .otkey div{display:flex;align-items:center;gap:6px}
   #ot .otkey span{width:10px;height:10px;border-radius:50%;display:inline-block;box-sizing:border-box}
+  #ot .otkey span.dot{width:7px;height:7px}
   #ot .otside{flex:1 1 340px;max-width:420px;min-width:280px;padding:22px 22px 24px}
   #ot .otside .k{font-size:11px;font-weight:700;color:#0a6630;text-transform:uppercase;letter-spacing:.06em}
   #ot .otside h2{margin:4px 0 0;font-size:22px;font-weight:800}
   #ot .otside p{margin:10px 0 0;font-size:13.5px;line-height:1.6;color:#45474e}
+  #ot .otside p.next{margin:0;font-size:13px}
+  #ot .otside ul{margin:0;padding-left:18px;font-size:13px;line-height:1.6;color:#2c2e33}
+  #ot .otside li{margin:0 0 4px}
   #ot .otfacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}
   #ot .otfacts div{background:#f7f7f4;border-radius:12px;padding:10px 12px}
   #ot .otfacts small{display:block;font-size:11px;color:#5c5e66;font-weight:700}
   #ot .otfacts b{display:block;font-size:15px;font-weight:800;margin-top:2px}
+  #ot .otfacts span{display:block;font-size:11.5px;color:#5c5e66;margin-top:2px}
   #ot .otside h3{margin:18px 0 8px;font-size:13px;font-weight:800}
   #ot .ottools{display:flex;flex-wrap:wrap;gap:6px}
   #ot .ottools span{font-size:12px;padding:4px 9px;border-radius:8px;background:#f2f3ef;color:#2c2e33;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-  #ot .otphases{margin:22px 0 40px;padding:24px}
-  #ot .otscroll{overflow-x:auto;margin-top:16px}
-  #ot .otph{display:grid;grid-template-columns:repeat(9,minmax(118px,1fr));gap:10px;min-width:1140px}
-  #ot .otph > div{display:flex;flex-direction:column;gap:8px}
-  #ot .otph .bar{height:6px;border-radius:999px;background:#dfe3dc}
-  #ot .otph .bar.on{background:#0d823b}
-  #ot .otph .t{font-size:11px;font-weight:700;color:#5c5e66}
-  #ot .otph .t em{font-style:normal;margin-left:6px;padding:1px 7px;border-radius:999px;background:rgba(13,130,59,.10);color:#0a6630}
-  #ot .otph b{font-size:14px;font-weight:800;line-height:1.25}
-  #ot .otph p{margin:0;font-size:12px;line-height:1.5;color:#45474e}
-  #ot .otgate{margin-top:20px;padding:14px 16px;border-radius:12px;background:rgba(13,130,59,.07);display:flex;gap:12px;align-items:flex-start;font-size:13px;line-height:1.55}
-  #ot .otgate svg{width:18px;height:18px;flex:none;margin-top:1px}
-  @media (max-width:980px){ #ot .otgrid{grid-template-columns:repeat(3,minmax(0,1fr))} #ot .otside{max-width:none} }
+
+  /* traffic: dots run out from Ken to each agent and results run back */
+  #ot .tr-lane{position:relative;margin:0 auto;width:2px;background:#b9cfc0}
+  #ot .tr-bar{position:relative;height:2px;margin:0 calc((100% - 48px) / 10);background:#b9cfc0}
+  #ot .tr-dot{position:absolute;width:6px;height:6px;border-radius:50%;opacity:0;animation-timing-function:linear;animation-iteration-count:infinite}
+  #ot .tr-down{left:-5px;animation-name:tr-down}
+  #ot .tr-up{left:1px;animation-name:tr-up}
+  #ot .tr-out-l,#ot .tr-out-r{top:-5px;margin-left:-3px}
+  #ot .tr-in-l,#ot .tr-in-r{top:1px;margin-left:-3px}
+  #ot .tr-out-l{animation-name:tr-out-l} #ot .tr-out-r{animation-name:tr-out-r}
+  #ot .tr-in-l{animation-name:tr-in-l} #ot .tr-in-r{animation-name:tr-in-r}
+  @keyframes tr-down{0%{top:-3px;opacity:0}12%{opacity:1}88%{opacity:1}100%{top:calc(100% - 3px);opacity:0}}
+  @keyframes tr-up{0%{top:calc(100% - 3px);opacity:0}12%{opacity:1}88%{opacity:1}100%{top:-3px;opacity:0}}
+  @keyframes tr-out-l{0%{left:50%;opacity:0}12%{opacity:1}88%{opacity:1}100%{left:0%;opacity:0}}
+  @keyframes tr-out-r{0%{left:50%;opacity:0}12%{opacity:1}88%{opacity:1}100%{left:100%;opacity:0}}
+  @keyframes tr-in-l{0%{left:0%;opacity:0}12%{opacity:1}88%{opacity:1}100%{left:50%;opacity:0}}
+  @keyframes tr-in-r{0%{left:100%;opacity:0}12%{opacity:1}88%{opacity:1}100%{left:50%;opacity:0}}
+
+  /* the Recent jobs ticker along the bottom */
+  #ot .otjobs{margin-top:20px;padding:14px 0 16px;overflow:hidden}
+  #ot .otjobs .hd{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:0 22px}
+  #ot .otjobs h2{margin:0;font-size:14px;font-weight:800}
+  #ot .otjobs .otnote{font-size:12px;color:#5c5e66}
+  #ot .otjobs .sample{margin-left:auto;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#fff4d6;color:#7a5600}
+  #ot .kt-viewport{margin-top:12px;overflow:hidden;padding:0 0 2px 22px;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 22px,#000 calc(100% - 40px),transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 22px,#000 calc(100% - 40px),transparent)}
+  #ot .kt-track{display:flex;width:max-content;animation:kt-scroll 40s linear infinite}
+  #ot .kt-viewport:hover .kt-track,#ot .kt-viewport:focus-within .kt-track{animation-play-state:paused}
+  #ot .kt-item{display:inline-flex;align-items:center;gap:8px;flex:none;margin-right:10px;padding:8px 12px;border:1px solid #e4e5e1;
+    border-radius:12px;background:#faf9f5;white-space:nowrap}
+  #ot .kt-item .at{font-size:12px;color:#5c5e66;font-variant-numeric:tabular-nums}
+  #ot .kt-item .who{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:#eef4ef;color:#0a6630}
+  #ot .kt-item .what{font-size:13px;color:#1a1b1e}
+  @keyframes kt-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  @media (max-width:980px){
+    #ot .otgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    #ot .tr-lane,#ot .tr-bar{display:none}
+    #ot .otgrid.top{margin-bottom:16px}
+    #ot .otgrid.bottom{margin-top:16px}
+    #ot .otside{max-width:none}
+  }
   @media (max-width:760px){
-    #ot .otw{padding:0 16px}
+    #ot .otw{padding:0 16px 32px}
     #ot h1{font-size:26px}
-    #ot .ottiles{grid-template-columns:repeat(2,minmax(0,1fr))}
     #ot .otgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
     #ot .ottree{padding:20px 14px}
     #ot .otpills{margin-left:0}
+    #ot .otjobs .sample{margin-left:0}
+    #ot .otb .nm{flex-direction:column-reverse;align-items:flex-start;gap:8px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    #ot .tr-dot,#ot .kt-item.dup{display:none !important}
+    #ot .kt-track{animation:none !important}
+    #ot .kt-viewport{overflow-x:auto}
   }
 
   #toast{
@@ -543,8 +580,8 @@
   <button id="otWidget" type="button" aria-controls="ot">
     <img class="wkn" src="avatars/ken.webp" alt="">
     <span class="wtx">
-      <span class="wk" id="otWK">Proposed</span>
-      <span class="wt" style="display:block">AI Organisational Tree</span>
+      <span class="wk" id="otWK">2 Live · 9 Scoped</span>
+      <span class="wt" style="display:block">AI Agent Structure</span>
       <span class="wst" id="otWStack"></span>
     </span>
     <svg class="warr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
@@ -1102,160 +1139,128 @@ function toast(text){
 }
 
 
-/* ── the AI Organisational Tree (2.5) ─────────────────────────────────────
-   Opened from the widget on the landing page. The tree itself (branches,
-   tools, models, portraits) is fixed here as designed on the canvas; the
-   project's stage and each build phase's target and status come from the
-   project's plan in data/roadmap.json, so moving a phase on is a data
-   change, not a code change. Portraits are files in avatars/ beside this. */
-const OT_ID = "kensite-ai-organisational-tree-sub-agent-architecture";
-const OT_KEN = {key:"ken", name:"Ken", when:"Today", model:"DeepSeek Flash",
-  covers:"Receives every email, checks who is asking and what they may do, holds approvals, the outbound guard, memory and the signature, and sends every reply. The triage call he already makes picks the branches each request needs.",
-  tools:["get_today","build_excel","read_email_attachment","search_web","recall_conversations","remember_fact","add_to_wishlist","diary_entry","email_colleague","cc_reply"]};
-const OT_BRANCHES = [
-  {key:"hire-desk", name:"Hire Desk", phase:4, when:"Nov 2026", model:"DeepSeek Flash",
-   covers:"Contracts, what is on hire, customers, collections due, live hire rates, proof of delivery, customer orders, live hire reports, hire contracts and Site Builder drawings.",
-   tools:["lookup_contract","search_contracts","live_hire_rates","whats_on_hire","search_customers","customer_on_hire","collections_due","proof_of_delivery","find_customer_order","attach_live_hire_report","schedule_live_hire_report","report_schedules","hire_contract","drawing_requests_status","attach_drawing_pdf"]},
-  {key:"sales", name:"Sales", phase:5, when:"Dec 2026", model:"DeepSeek Flash",
-   covers:"Quotes and their outcomes, quote lines from words or drawings, raising and amending quotes in MCS, the quote pipeline, SLAs and site visits.",
-   tools:["find_quotes","quote_outcomes","lookup_quote","attach_quote_copy","drawing_bill_of_quantities","quote_lines_from_words","create_mcs_quote","show_quote_lines_tool","amend_mcs_quote_tool","my_quote_pipeline","sla_requirements","create_sla","site_visit_requirements","create_site_visit"],
-   newText:"Lead tracking for HSS ProService and YardLink: every availability check and enquiry, whether it was quoted, and whether it was won."},
-  {key:"yard", name:"Yard", phase:6, when:"Dec 2026", model:"DeepSeek Flash",
-   covers:"Prep schedule, transport capacity, unit tallies, route suggestions, stocktakes, depot movements and who is in.",
-   tools:["check_prep_schedule","check_transport_capacity","tally_units","apply_route_suggestion","process_stocktake","who_is_in","depot_movements"]},
-  {key:"health-and-safety", name:"Health and Safety", phase:6, when:"Dec 2026", model:"DeepSeek Flash",
-   covers:"RAMS requirements and creation, and the H&S committee agenda.",
-   tools:["rams_requirements","create_rams","hs_committee_agenda"],
-   newText:"Accident and near miss logging, and inspection due dates."},
-  {key:"compliance", name:"Compliance", phase:7, when:"Jan 2027", model:"DeepSeek Flash",
-   covers:"The IMS register and its actions, and the document library: search, read, amend, file and move documents.",
-   tools:["my_ims_actions","ims_register_summary","ims_item_detail","close_ims_action","search_documents","read_document","open_document_for_editing","amend_document","attach_document","move_document","find_folders","file_email_attachment"]},
-  {key:"hr", name:"HR", phase:7, when:"Jan 2027", model:"DeepSeek Flash",
-   covers:"Who is on leave, from Breathe, as dates only, and the staff guide. Never reasons, notes or personal details.",
-   tools:["who_is_on_leave","staff_guide"]},
-  {key:"finance", name:"Finance", phase:3, when:"Nov 2026", model:"DeepSeek Flash",
-   covers:"Purchase orders, Zahara invoices and approvals, invoice copies, what we paid, suppliers and preferences, Big Change invoices and reconciliation.",
-   tools:["zahara_purchase_orders","zahara_invoices","zahara_document","zahara_approvals","lookup_po","purchase_orders_for_contract","attach_po_copy","fetch_invoice_copy","reconciliation_report","raise_purchase_order","edit_purchase_order","what_did_we_pay","who_do_we_buy_from","remember_supplier_preference","check_purchase_order_suppliers","bigchange_invoices","consolidate_bigchange_invoices"]},
-  {key:"marketing", name:"Marketing", phase:8, when:"14 Oct 2026", model:"Muse Image, HeyGen Video, GPT-6 Sol", isNew:true, live:true,
-   covers:"Live. The Marketing Agent tidies site photos (the area around the cabins), makes new images and one short video of up to 20 seconds, and writes posts and captions, always after asking for references. Drafts only: nothing is published without a person.",
-   tools:["marketing_job","marketing_go","marketing_status","marketing_stop"], newText:"Still to come: enquiry and inbox analysis, website drafts, and case studies from completed hires."},
-  {key:"leadership", name:"Leadership", phase:8, when:"Feb 2027", model:"Stronger reasoning model",
-   covers:"The AI roadmap, the summit programme and feedback, cross branch summaries for Nathan and Chloe, and the Weekly Check Up.",
-   tools:["roadmap","ai_roadmap_list","propose_ai_project","update_ai_project","summit_programme","summit_calendar","summit_sessions","summit_feedback","summit_people","summit_send_ask","summit_digest"]},
-  {key:"it", name:"IT", phase:2, when:"Oct 2026", model:"DeepSeek Flash",
-   covers:"Cloudflare, probes, Python packages, Ken's own status and version history, and app status. The first branch to be built, because it is used almost only by Nathan.",
-   tools:["cloudflare_overview","cloudflare_dns_lookup","cloudflare_dns_set","cloudflare_dns_remove","cloudflare_purge_cache","cloudflare_request_tool","install_python_package","run_probe","my_version_history","my_own_status","site_builder_app_status"]}
-];
-const OT_PHASES = [
-  {name:"1. Foundations", target:"Oct 2026", detail:"Branch loader, routing in triage, per branch model, replay set of 200 past requests. No change for staff."},
-  {name:"2. IT", target:"Oct 2026", detail:"First real branch. Proves the pattern where the risk is lowest."},
-  {name:"3. Finance", target:"Nov 2026", detail:"Purchase orders, Zahara and reconciliation. Approvals stay with Ken."},
-  {name:"4. Hire Desk", target:"Nov 2026", detail:"Busiest area. A week in shadow before switching."},
-  {name:"5. Sales", target:"Dec 2026", detail:"Quotes, SLAs and site visits, plus lead tracking."},
-  {name:"6. Yard, H&S", target:"Dec 2026", detail:"Prep schedule, transport, Net2, stocktakes, RAMS."},
-  {name:"7. Compliance, HR", target:"Jan 2027", detail:"IMS, the document library, leave and the staff guide."},
-  {name:"8. Leadership, Marketing", target:"Feb 2027", detail:"Marketing Agent live since 14 Oct. Roadmap, summit and enquiry analysis to follow."},
-  {name:"9. Retire single agent", target:"Mar 2027", detail:"Every tool in a branch. Group companies such as AES can follow."}
-];
-const OT_STAGE = {proposed:["Proposed","oklch(0.93 0.07 25)","oklch(0.42 0.12 25)"], scoped:["Scoped","oklch(0.93 0.07 60)","oklch(0.42 0.1 60)"],
-  planned:["Planned","oklch(0.93 0.07 80)","oklch(0.42 0.1 80)"], building:["Building","oklch(0.93 0.07 95)","oklch(0.38 0.1 95)"],
-  testing:["Testing","oklch(0.93 0.07 130)","oklch(0.38 0.1 130)"], shipped:["Shipped","oklch(0.93 0.07 150)","oklch(0.38 0.1 150)"]};
-const OT = {picked:"hire-desk", project:null};
+/* ── the AI Agent Structure (2.6) ─────────────────────────────────────────
+   Opened from the widget on the landing page. Ken sits in the middle as
+   Chief of Staff, with five agents above him and five below, so every line
+   runs to him. Each agent is Live or Scoped (Ken does a Scoped agent's work
+   with its tools until it is built); clicking one shows its overview,
+   status, model, capabilities and tools on the right. The moving dots (jobs
+   out to an agent, results back to Ken, last 24 hours) and the Recent jobs
+   ticker use sample figures, marked as such, until Ken writes a job feed.
+   The structure is fixed here as designed on the canvas; portraits are
+   files in avatars/ beside this. */
+const OT_AGENTS = [{"key":"ken","traffic24h":6,"jobs":[{"at":"16/10 08:30","who":"Leadership","what":"Set a reminder for the Monday review"},{"at":"16/10 08:05","who":"Finance","what":"Built an Excel summary from an attachment"},{"at":"15/10 15:40","who":"Sales","what":"Remembered a customer’s preferred contact"},{"at":"15/10 10:20","who":"Hire Desk","what":"Copied a colleague in on a reply"}],"name":"Ken","live":true,"model":"DeepSeek Flash","statusNote":"Handles every email","overview":"Ken is the front door and Chief of Staff. Every email reaches him first: he checks who is asking, keeps the approvals and the outbound guard, and sends every reply. Until each scoped agent is built, he does its work himself with its tools.","caps":["Receives every email and sends every reply","Checks who is asking and what they may do","Holds approvals and the outbound guard","Keeps memory, the wishlist and the work diary","Hands each request to the agents it needs"],"tools":["get_today","build_excel","read_email_attachment","search_web","recall_conversations","remember_fact","add_to_wishlist","diary_entry","email_colleague","cc_reply"]},{"key":"hire-desk","traffic24h":9,"jobs":[{"at":"16/10 08:20","who":"Hire Desk","what":"Listed what a customer has on hire"},{"at":"16/10 07:55","who":"Transport","what":"Collections due this week"},{"at":"15/10 14:10","who":"Hire Desk","what":"Attached a live hire report"},{"at":"15/10 09:45","who":"Sales","what":"Checked live hire rates for a unit"}],"name":"Hire Desk","live":false,"model":"DeepSeek Flash","statusNote":"Ken does this work today","overview":"The busiest desk: everything about what is out on hire, from contracts and customers to rates, collections and the paperwork that goes with them.","caps":["Contracts and what is on hire","Customers and collections due","Live hire rates","Proof of delivery and customer orders","Live hire reports and hire contracts","Site Builder drawings"],"tools":["lookup_contract","search_contracts","live_hire_rates","whats_on_hire","search_customers","customer_on_hire","collections_due","proof_of_delivery","find_customer_order","attach_live_hire_report","schedule_live_hire_report","report_schedules","hire_contract","drawing_requests_status","attach_drawing_pdf"]},{"key":"sales","traffic24h":5,"jobs":[{"at":"16/10 08:35","who":"Sales","what":"Raised a quote in MCS from a drawing"},{"at":"15/10 16:20","who":"Sales","what":"Quote pipeline for the week"},{"at":"15/10 11:05","who":"Leadership","what":"Quote outcomes for September"}],"name":"Sales","live":false,"model":"DeepSeek Flash","statusNote":"Ken does this work today","overview":"Quotes from first enquiry to outcome: building and amending them in MCS, the pipeline, SLAs and site visits.","caps":["Quotes and their outcomes","Quote lines from words or drawings","Raising and amending quotes in MCS","The quote pipeline","SLAs and site visits"],"tools":["find_quotes","quote_outcomes","lookup_quote","attach_quote_copy","drawing_bill_of_quantities","quote_lines_from_words","create_mcs_quote","show_quote_lines_tool","amend_mcs_quote_tool","my_quote_pipeline","sla_requirements","create_sla","site_visit_requirements","create_site_visit"]},{"key":"yard","traffic24h":3,"jobs":[{"at":"16/10 07:40","who":"Yard","what":"Prep schedule for tomorrow"},{"at":"15/10 15:00","who":"Transport","what":"Transport capacity for next week"},{"at":"15/10 08:15","who":"Yard","what":"Who is in today"}],"name":"Yard","live":false,"model":"DeepSeek Flash","statusNote":"Ken does this work today","overview":"What leaves and returns to the yard: the prep schedule, transport capacity and routes, unit tallies, stocktakes and who is on site.","caps":["The prep schedule","Transport capacity and route suggestions","Unit tallies","Stocktakes","Depot movements and who is in"],"tools":["check_prep_schedule","check_transport_capacity","tally_units","apply_route_suggestion","process_stocktake","who_is_in","depot_movements"]},{"key":"health-and-safety","traffic24h":0,"jobs":[{"at":"15/10 13:30","who":"Health and Safety","what":"Drafted RAMS for a site install"},{"at":"14/10 10:00","who":"Health and Safety","what":"Committee agenda for the next meeting"}],"name":"Health and Safety","live":false,"model":"DeepSeek Flash","statusNote":"Ken does this work today","overview":"RAMS on request and the Health and Safety committee agenda.","caps":["RAMS requirements and creation","The Health and Safety committee agenda"],"tools":["rams_requirements","create_rams","hs_committee_agenda"]},{"key":"compliance","traffic24h":2,"jobs":[{"at":"16/10 08:10","who":"Compliance","what":"Open IMS actions"},{"at":"15/10 12:40","who":"Finance","what":"Found and attached a policy document"},{"at":"14/10 15:20","who":"Compliance","what":"Filed an attachment in the document library"}],"name":"Compliance","live":false,"model":"DeepSeek Flash","statusNote":"Ken does this work today","overview":"The IMS register and the document library: finding, reading, amending, filing and moving documents.","caps":["The IMS register and its actions","Searching and reading the document library","Amending, filing and moving documents"],"tools":["my_ims_actions","ims_register_summary","ims_item_detail","close_ims_action","search_documents","read_document","open_document_for_editing","amend_document","attach_document","move_document","find_folders","file_email_attachment"]},{"key":"hr","traffic24h":1,"jobs":[{"at":"16/10 07:50","who":"Yard","what":"Who is on leave next week"},{"at":"15/10 09:10","who":"Hire Desk","what":"Looked up the staff guide on overtime"}],"name":"HR","live":false,"model":"DeepSeek Flash","statusNote":"Ken does this work today","overview":"Who is on leave and the staff guide. Dates only: never reasons, notes or personal details.","caps":["Who is on leave, from Breathe, as dates only","The staff guide"],"tools":["who_is_on_leave","staff_guide"]},{"key":"finance","traffic24h":4,"jobs":[{"at":"16/10 08:25","who":"Finance","what":"Invoices waiting for approval"},{"at":"15/10 16:45","who":"Yard","what":"Raised a purchase order"},{"at":"15/10 10:50","who":"Finance","what":"What we paid a supplier last quarter"}],"name":"Finance","live":false,"model":"DeepSeek Flash","statusNote":"Ken does this work today","overview":"Purchase orders, Zahara invoices and approvals, what we paid and who we buy from, and the Big Change reconciliation.","caps":["Purchase orders: find, raise and edit","Zahara invoices and approvals","Invoice copies and what we paid","Suppliers and preferences","Big Change invoices and reconciliation"],"tools":["zahara_purchase_orders","zahara_invoices","zahara_document","zahara_approvals","lookup_po","purchase_orders_for_contract","attach_po_copy","fetch_invoice_copy","reconciliation_report","raise_purchase_order","edit_purchase_order","what_did_we_pay","who_do_we_buy_from","remember_supplier_preference","check_purchase_order_suppliers","bigchange_invoices","consolidate_bigchange_invoices"]},{"key":"marketing","traffic24h":2,"jobs":[{"at":"16/10 08:00","who":"Marketing","what":"Tidied two site photos"},{"at":"15/10 14:30","who":"Marketing","what":"LinkedIn post and caption drafted"},{"at":"14/10 11:20","who":"Leadership","what":"Fifteen second video drafted"}],"name":"Marketing","live":true,"model":"Muse Image, HeyGen Video, GPT-6 Sol","statusNote":"Since 14 Oct 2026","overview":"Tidies site photos, makes new images and one short video, and writes the posts to go with them, always after asking for reference images or video. Drafts only: nothing is published without a person.","caps":["Tidies site photos: clutter, mud and rubbish gone, brighter weather, cabin lettering kept exact","Makes new marketing images","Makes one short video, never over 20 seconds","Writes LinkedIn, Instagram and Facebook posts and captions in the Kensite voice","Asks for reference images or video before making anything"],"tools":["marketing_job","marketing_go","marketing_status","marketing_stop"]},{"key":"leadership","traffic24h":1,"jobs":[{"at":"16/10 07:30","who":"Leadership","what":"Weekly Check Up"},{"at":"15/10 17:00","who":"Leadership","what":"Summary across every agent"},{"at":"14/10 09:30","who":"IT","what":"Updated a project on the AI roadmap"}],"name":"Leadership","live":false,"model":"Stronger reasoning model","statusNote":"Ken does this work today","overview":"The AI roadmap, the summit programme, summaries across every agent for Nathan and Chloe, and the Weekly Check Up.","caps":["The AI roadmap: list, propose and update","The summit programme and feedback","Summaries across every agent for Nathan and Chloe","The Weekly Check Up"],"tools":["roadmap","ai_roadmap_list","propose_ai_project","update_ai_project","summit_programme","summit_calendar","summit_sessions","summit_feedback","summit_people","summit_send_ask","summit_digest"]},{"key":"it","traffic24h":3,"jobs":[{"at":"16/10 08:15","who":"IT","what":"Ran a probe on Big Change"},{"at":"15/10 13:00","who":"IT","what":"Purged the website cache in Cloudflare"},{"at":"15/10 09:00","who":"IT","what":"Ken’s own status"}],"name":"IT","live":false,"model":"DeepSeek Flash","statusNote":"Ken does this work today","overview":"Cloudflare, probes and Python packages, Ken's own status and version history, and app status.","caps":["Cloudflare: DNS and cache","Probes and Python packages","Ken's status and version history","App status"],"tools":["cloudflare_overview","cloudflare_dns_lookup","cloudflare_dns_set","cloudflare_dns_remove","cloudflare_purge_cache","cloudflare_request_tool","install_python_package","run_probe","my_version_history","my_own_status","site_builder_app_status"]}];
+const OT_GREEN = "#0d823b", OT_GREY = "#40424a";
+const OT = {picked:"marketing"};
 const otEsc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const otAv = k => "avatars/" + k + ".webp";
 
-function otPhases(){
-  const pl = (OT.project && OT.project.plan && Array.isArray(OT.project.plan.phases)) ? OT.project.plan.phases : [];
-  return OT_PHASES.map((p, i) => {
-    const d = pl[i] || {}, st = String(d.status || "Not started");
-    return {...p, target: d.target || p.target, status: st, done: /^(done|shipped|complete)/i.test(st), live: /progress|building|testing/i.test(st)};
-  });
+function otTraffic(count, name){
+  const n = count > 0 ? Math.min(4, Math.ceil(count / 3)) : 0;
+  const secs = Math.max(1.1, 3.2 - count * 0.12), barSecs = secs * 1.8;
+  const dots = phase => Array.from({length: n}, (_, i) => ({
+    secs: secs.toFixed(2), delay: (-(i + phase) * secs / n).toFixed(2),
+    barSecs: barSecs.toFixed(2), barDelay: (-(i + phase) * barSecs / n).toFixed(2)}));
+  return {out: dots(0), back: dots(0.5),
+    label: count + (count === 1 ? " job" : " jobs") + (name ? " between Ken and " + name : " through Ken") + " in the last 24 hours (sample figure)"};
 }
-function otNext(ph){ const i = ph.findIndex(p => !p.done); return i < 0 ? ph.length : i; }
+function otDots(list, cls, colour, bar){
+  return list.map(d => `<span class="tr-dot ${cls}" style="background:${colour};animation-duration:${bar ? d.barSecs : d.secs}s;animation-delay:${bar ? d.barDelay : d.delay}s"></span>`).join("");
+}
+function otLane(t, upward, h, colour){
+  return `<div class="tr-lane" aria-hidden="true" style="height:${h}px${colour ? ";background:" + colour : ""}">` +
+    otDots(t.out, upward ? "tr-up" : "tr-down", OT_GREEN) + otDots(t.back, upward ? "tr-down" : "tr-up", OT_GREY) + `</div>`;
+}
+function otBar(t){
+  return `<div class="tr-bar" aria-hidden="true">` + otDots(t.out, "tr-out-l", OT_GREEN, 1) + otDots(t.out, "tr-out-r", OT_GREEN, 1) +
+    otDots(t.back, "tr-in-l", OT_GREY, 1) + otDots(t.back, "tr-in-r", OT_GREY, 1) + `</div>`;
+}
+function otCard(a, sel, upward){
+  const on = a === sel, t = otTraffic(a.traffic24h || 0, a.name);
+  const btn = `<button type="button" class="otb${on ? " on" : ""}${a.live ? " live" : ""}" data-ot="${a.key}" aria-pressed="${on}" title="${otEsc(t.label)}">
+              <div class="nm"><b>${otEsc(a.name)}</b><img src="${otAv(a.key)}" alt=""></div>
+              <div class="tl">${a.tools.length} tools</div>
+              <span class="chip${a.live ? " live" : ""}">${a.live ? "Live" : "Scoped"}</span>
+            </button>`;
+  const lane = otLane(t, upward, 28, on ? OT_GREEN : "");
+  return `<div class="otcol">${upward ? btn + lane : lane + btn}</div>`;
+}
 
 function otWidgetFill(){
-  const stage = OT_STAGE[String((OT.project && OT.project.stage) || "proposed").toLowerCase()] || OT_STAGE.proposed;
-  const ph = otPhases(), n = otNext(ph);
-  $("#otWK").textContent = stage[0] + " · " + (n >= ph.length ? "all phases done" : "Phase " + (n+1) + " next");
-  $("#otWStack").innerHTML = OT_BRANCHES.slice(0, 6).map(b => `<img src="${otAv(b.key)}" alt="">`).join("") +
-    `<span>${OT_BRANCHES.length} branches</span>`;
+  const live = OT_AGENTS.filter(a => a.live).length;
+  const agents = OT_AGENTS.filter(a => a.key !== "ken");
+  $("#otWK").textContent = live + " Live · " + (OT_AGENTS.length - live) + " Scoped";
+  $("#otWStack").innerHTML = agents.slice(0, 6).map(a => `<img src="${otAv(a.key)}" alt="">`).join("") +
+    `<span>${agents.length} agents</span>`;
 }
 
 function otRender(){
-  const ph = otPhases(), n = otNext(ph);
-  const stage = OT_STAGE[String((OT.project && OT.project.stage) || "proposed").toLowerCase()] || OT_STAGE.proposed;
-  const total = OT_KEN.tools.length + OT_BRANCHES.reduce((a, b) => a + b.tools.length, 0);
-  const counts = OT_BRANCHES.map(b => b.tools.length).filter(x => x > 0);
-  const sel = OT.picked === "ken" ? OT_KEN : (OT_BRANCHES.find(b => b.key === OT.picked) || OT_BRANCHES[0]);
-  const isKen = sel === OT_KEN;
-  const last = ph[ph.length - 1];
-  const tools = sel.tools.length ? sel.tools : ["none yet"];
+  const ken = OT_AGENTS.find(a => a.key === "ken");
+  const agents = OT_AGENTS.filter(a => a !== ken);
+  const top = agents.slice(0, 5), bottom = agents.slice(5);
+  const sel = OT_AGENTS.find(a => a.key === OT.picked) || OT_AGENTS.find(a => a.key === "marketing");
+  const isKen = sel === ken;
+  const live = OT_AGENTS.filter(a => a.live).length;
+  const total = OT_AGENTS.reduce((n, a) => n + a.tools.length, 0);
+  const sum = list => list.reduce((n, a) => n + (a.traffic24h || 0), 0);
+  const tTop = otTraffic(sum(top)), tBottom = otTraffic(sum(bottom));
+  const status = sel.live ? "Live" : "Scoped";
+  let loop = sel.jobs.slice();
+  while(sel.jobs.length && loop.length < 8) loop = loop.concat(sel.jobs);
+  const items = loop.concat(loop).map((j, i) => { const dup = i >= sel.jobs.length; return `<div class="kt-item${dup ? " dup" : ""}"${dup ? ' aria-hidden="true"' : ""}><span class="at">${otEsc(j.at)}</span><span class="who">${otEsc(j.who)}</span><span class="what">${otEsc(j.what)}</span></div>`; }).join("");
   $("#ot").innerHTML = `
   <div class="otw">
     <div class="othead">
       <button class="otback" id="otBack" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>AI Roadmap</button>
       <div class="otmeta">Kensite · IT and Data · Owner: Nathan McGuinness</div>
-      <div class="otpills">
-        <span class="otpill" style="background:${stage[1]};color:${stage[2]}">${stage[0]}</span>
-        <span class="otpill" style="background:rgba(13,130,59,.10);color:#0a6630">${n >= ph.length ? "All phases done" : "Phase " + (n+1) + " of " + ph.length + (ph[n].live ? " in progress" : " next")}</span>
-      </div>
+      <div class="otpills"><span class="otpill live">${live} Live</span><span class="otpill">${OT_AGENTS.length - live} Scoped</span></div>
     </div>
-    <h1 id="otH1">AI Organisational Tree</h1>
-    <p class="otintro">Ken stays the front door. Below him sit ten branches, one for each part of the business, each with its own instructions, its own tools and its own model. Each email loads only the branches it needs.</p>
+    <h1 id="otH1">AI Agent Structure</h1>
     <div class="ottiles">
-      <div class="ottile"><div class="k">Branches</div><div class="v">${OT_BRANCHES.length}</div><div class="s">plus Ken as coordinator</div></div>
-      <div class="ottile"><div class="k">Tools today</div><div class="v">${total}</div><div class="s">all loaded on every email</div></div>
-      <div class="ottile"><div class="k">Tools per branch</div><div class="v">${Math.min(...counts)} to ${Math.max(...counts)}</div><div class="s">only the branches a request needs</div></div>
-      <div class="ottile"><div class="k">Target</div><div class="v">${otEsc(last.target)}</div><div class="s">single agent retired</div></div>
+      <div class="ottile"><div class="k">Agents</div><div class="v">${agents.length}</div><div class="s">Ken as Chief of Staff</div></div>
+      <div class="ottile"><div class="k">Pre-Defined Tools</div><div class="v">${total}</div></div>
     </div>
     <div class="otrow">
       <section class="otcard ottree" aria-labelledby="otTreeH">
-        <div class="oth"><h2 id="otTreeH">The tree</h2><div>Select a branch to see what it covers</div></div>
-        <div style="display:flex;justify-content:center;margin-top:22px">
-          <button type="button" class="otken${isKen ? " on" : ""}" data-ot="ken" aria-pressed="${isKen}">
+        <div class="oth"><h2 id="otTreeH">The Structure</h2></div>
+        <div class="otgrid top">${top.map(a => otCard(a, sel, true)).join("")}</div>
+        ${otBar(tTop)}${otLane(tTop, true, 26)}
+        <div style="display:flex;justify-content:center">
+          <button type="button" class="otken${isKen ? " on" : ""}" data-ot="ken" aria-pressed="${isKen}" title="${otEsc(otTraffic(sum(OT_AGENTS), "").label)}">
             <img src="${otAv("ken")}" alt="">
-            <div><b>Ken</b><span>Coordinator · ${OT_KEN.tools.length} tools · routes every email</span></div>
+            <div><b>Ken</b><span class="sub">Chief of Staff</span></div>
+            <span class="chip live">Live</span>
           </button>
         </div>
-        <div class="otstem"></div><div class="otbar"></div>
-        <div class="otgrid">
-          ${OT_BRANCHES.map(b => { const on = b === sel; return `
-          <div class="otcol${on ? " on" : ""}"><i></i>
-            <button type="button" class="otb${on ? " on" : ""}${b.isNew ? " new" : ""}${b.live ? " live" : ""}" data-ot="${b.key}" aria-pressed="${on}">
-              <div class="ph">Phase ${b.phase}</div>
-              <div class="nm"><b>${otEsc(b.name)}</b><img src="${otAv(b.key)}" alt=""></div>
-              <div class="tl">${b.tools.length ? b.tools.length + " tools" : "New: no tools yet"}</div>
-              <span class="chip${b.live ? " live" : b.isNew ? " new" : ""}">${b.live ? "Live now" : b.isNew ? "New capability" : "From today's tools"}</span>
-            </button>
-          </div>`; }).join("")}
-        </div>
+        ${otLane(tBottom, false, 26)}${otBar(tBottom)}
+        <div class="otgrid bottom">${bottom.map(a => otCard(a, sel, false)).join("")}</div>
         <div class="otkey">
-          <div><span style="background:#0d823b"></span>Built on today's tools</div>
-          <div><span style="background:#d27a1e"></span>New capability</div>
-          <div><span style="background:#0d823b;box-shadow:0 0 0 3px rgba(13,130,59,.25)"></span>Live now</div>
-          <div><span style="border:2px solid #0d823b"></span>Selected</div>
+          <div><span style="background:${OT_GREEN}"></span>Live: working today</div>
+          <div><span style="background:oklch(0.62 0.12 60)"></span>Scoped: Ken does this work until it is built</div>
+          <div><span style="border:2px solid ${OT_GREEN}"></span>Selected</div>
+          <div><span class="dot" style="background:${OT_GREEN}"></span><span class="dot" style="background:${OT_GREY}"></span>Moving dots: jobs out to each agent and results back to Ken, last 24 hours (sample figures)</div>
         </div>
       </section>
       <aside class="otcard otside" aria-live="polite">
-        <div class="k">${isKen ? "Coordinator" : "Branch · Phase " + sel.phase}</div>
+        <div class="k">${isKen ? "Chief of Staff" : "Agent"} · ${status}</div>
         <h2>${otEsc(sel.name)}</h2>
-        <p>${otEsc(sel.covers)}</p>
-        <div class="otfacts"><div><small>${sel.live ? "Live since" : "Arrives in"}</small><b>${otEsc(sel.when)}</b></div><div><small>Model</small><b>${otEsc(sel.model)}</b></div></div>
-        <h3>${sel.tools.length ? "Tools it holds (" + sel.tools.length + ")" : "Tools it holds"}</h3>
-        <div class="ottools">${tools.map(t => `<span>${otEsc(t)}</span>`).join("")}</div>
-        ${sel.newText ? `<h3>New for this branch</h3><p style="margin:0;font-size:13px">${otEsc(sel.newText)}</p>` : ""}
+        <p>${otEsc(sel.overview)}</p>
+        <div class="otfacts"><div><small>Status</small><b>${status}</b><span>${otEsc(sel.statusNote)}</span></div><div><small>Model</small><b>${otEsc(sel.model)}</b></div></div>
+        <h3>Capabilities</h3>
+        <ul>${sel.caps.map(c => `<li>${otEsc(c)}</li>`).join("")}</ul>
+        <h3>Coming next</h3>
+        <p class="next">Nothing Planned</p>
+        <h3>${sel.live ? "Tools it holds" : "Tools it will take over"} (${sel.tools.length})</h3>
+        <div class="ottools">${sel.tools.map(t => `<span>${otEsc(t)}</span>`).join("")}</div>
       </aside>
     </div>
-    <section class="otcard otphases" aria-labelledby="otPhH">
-      <div class="oth"><h2 id="otPhH">Build phases</h2><div>${otEsc(ph[0].target)} to ${otEsc(last.target)}</div></div>
-      <div class="otscroll"><div class="otph">
-        ${ph.map((p, i) => `<div>
-          <div class="bar${p.done || i === n ? " on" : ""}"></div>
-          <div class="t">${otEsc(p.target)}${p.done || p.live ? `<em>${otEsc(p.status)}</em>` : ""}</div>
-          <b>${otEsc(p.name)}</b><p>${otEsc(p.detail)}</p></div>`).join("")}
-      </div></div>
-      <div class="otgate"><svg viewBox="0 0 24 24" fill="none" stroke="#0d823b" stroke-width="2.2" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-        <div><b>Each phase ships only when</b> routing picks the right branch at least 95% of the time on a replay of 200 past requests, tool choice is no worse than today, cost per reply falls, and the offline test suite passes.</div></div>
+    <section class="otcard otjobs" aria-labelledby="otJobsH">
+      <div class="hd">
+        <h2 id="otJobsH">Recent jobs · ${otEsc(sel.name)}</h2>
+        <span class="otnote">${isKen ? "What Ken has done lately" : sel.live ? "What it has done lately" : "Done by Ken with this agent’s tools"}</span>
+        <span class="sample">Sample entries, not real jobs yet</span>
+      </div>
+      <div class="kt-viewport" tabindex="0" aria-label="Recent jobs, pauses on hover"><div class="kt-track" style="animation-duration:${loop.length * 6}s">${items}</div></div>
     </section>
   </div>`;
 }
@@ -1290,8 +1295,7 @@ $("#ot").addEventListener("click", ev => {
   try{ sessionStorage.setItem("mtco.ot.open", OT.picked); }catch(e){}
 });
 $("#ot").addEventListener("keydown", ev => { if(ev.key === "Escape"){ ev.preventDefault(); ev.stopPropagation(); otClose(); } });
-function otArgs(roadmap){
-  OT.project = (roadmap.projects || []).find(p => p && p.id === OT_ID) || null;
+function otArgs(){
   otWidgetFill();
   if($("#ot").classList.contains("show")) otRender();
 }
@@ -2110,7 +2114,7 @@ function render(args){
 
   renderCards();
   wfRenderArgs(args);
-  otArgs(roadmap);
+  otArgs();
   Streamlit.height(args.height || 900);
 
   let wasSaving = false, wasOpen = false;
