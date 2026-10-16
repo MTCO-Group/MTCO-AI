@@ -473,6 +473,7 @@
     background:#faf9f5;border:1px solid #dfe3dc;transition:border-color .15s}
   #ot .otb:hover{border-color:#0d823b}
   #ot .otb.new{border-color:#ecc49a}
+  #ot .otb.live{border-color:#0d823b}
   #ot .otb.on{background:#f0f7f2;border:2px solid #0d823b;box-shadow:0 8px 20px -14px rgba(13,130,59,.7)}
   #ot .otb .ph{font-size:10.5px;font-weight:700;color:#5c5e66;text-transform:uppercase;letter-spacing:.06em}
   #ot .otb .nm{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px;min-height:48px}
@@ -481,6 +482,8 @@
   #ot .otb .tl{font-size:12px;color:#45474e;margin-top:6px}
   #ot .chip{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(13,130,59,.10);color:#0a6630}
   #ot .chip.new{background:rgba(210,122,30,.13);color:#8a4a0c}
+  #ot .chip.live{background:#0d823b;color:#fff}
+  #ot .chip.live::before{content:"";display:inline-block;width:6px;height:6px;margin-right:5px;border-radius:50%;background:#fff;vertical-align:1px}
   #ot .otkey{margin-top:26px;display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#45474e}
   #ot .otkey div{display:flex;align-items:center;gap:6px}
   #ot .otkey span{width:10px;height:10px;border-radius:50%;display:inline-block;box-sizing:border-box}
@@ -1133,9 +1136,9 @@ const OT_BRANCHES = [
   {key:"finance", name:"Finance", phase:3, when:"Nov 2026", model:"DeepSeek Flash",
    covers:"Purchase orders, Zahara invoices and approvals, invoice copies, what we paid, suppliers and preferences, Big Change invoices and reconciliation.",
    tools:["zahara_purchase_orders","zahara_invoices","zahara_document","zahara_approvals","lookup_po","purchase_orders_for_contract","attach_po_copy","fetch_invoice_copy","reconciliation_report","raise_purchase_order","edit_purchase_order","what_did_we_pay","who_do_we_buy_from","remember_supplier_preference","check_purchase_order_suppliers","bigchange_invoices","consolidate_bigchange_invoices"]},
-  {key:"marketing", name:"Marketing", phase:8, when:"Feb 2027", model:"To be chosen", isNew:true,
-   covers:"A new branch with no tools yet. Drafts only: nothing is published without a person.",
-   tools:[], newText:"Enquiry and inbox analysis, website and social content drafts, and case studies from completed hires."},
+  {key:"marketing", name:"Marketing", phase:8, when:"14 Oct 2026", model:"Muse Image, HeyGen Video, GPT-6 Sol", isNew:true, live:true,
+   covers:"Live. The Marketing Agent tidies site photos (the area around the cabins), makes new images and one short video of up to 20 seconds, and writes posts and captions, always after asking for references. Drafts only: nothing is published without a person.",
+   tools:["marketing_job","marketing_go","marketing_status","marketing_stop"], newText:"Still to come: enquiry and inbox analysis, website drafts, and case studies from completed hires."},
   {key:"leadership", name:"Leadership", phase:8, when:"Feb 2027", model:"Stronger reasoning model",
    covers:"The AI roadmap, the summit programme and feedback, cross branch summaries for Nathan and Chloe, and the Weekly Check Up.",
    tools:["roadmap","ai_roadmap_list","propose_ai_project","update_ai_project","summit_programme","summit_calendar","summit_sessions","summit_feedback","summit_people","summit_send_ask","summit_digest"]},
@@ -1151,7 +1154,7 @@ const OT_PHASES = [
   {name:"5. Sales", target:"Dec 2026", detail:"Quotes, SLAs and site visits, plus lead tracking."},
   {name:"6. Yard, H&S", target:"Dec 2026", detail:"Prep schedule, transport, Net2, stocktakes, RAMS."},
   {name:"7. Compliance, HR", target:"Jan 2027", detail:"IMS, the document library, leave and the staff guide."},
-  {name:"8. Leadership, Marketing", target:"Feb 2027", detail:"Roadmap and summit; enquiry analysis and drafted content."},
+  {name:"8. Leadership, Marketing", target:"Feb 2027", detail:"Marketing Agent live since 14 Oct. Roadmap, summit and enquiry analysis to follow."},
   {name:"9. Retire single agent", target:"Mar 2027", detail:"Every tool in a branch. Group companies such as AES can follow."}
 ];
 const OT_STAGE = {proposed:["Proposed","oklch(0.93 0.07 25)","oklch(0.42 0.12 25)"], scoped:["Scoped","oklch(0.93 0.07 60)","oklch(0.42 0.1 60)"],
@@ -1218,17 +1221,18 @@ function otRender(){
         <div class="otgrid">
           ${OT_BRANCHES.map(b => { const on = b === sel; return `
           <div class="otcol${on ? " on" : ""}"><i></i>
-            <button type="button" class="otb${on ? " on" : ""}${b.isNew ? " new" : ""}" data-ot="${b.key}" aria-pressed="${on}">
+            <button type="button" class="otb${on ? " on" : ""}${b.isNew ? " new" : ""}${b.live ? " live" : ""}" data-ot="${b.key}" aria-pressed="${on}">
               <div class="ph">Phase ${b.phase}</div>
               <div class="nm"><b>${otEsc(b.name)}</b><img src="${otAv(b.key)}" alt=""></div>
               <div class="tl">${b.tools.length ? b.tools.length + " tools" : "New: no tools yet"}</div>
-              <span class="chip${b.isNew ? " new" : ""}">${b.isNew ? "New capability" : "From today's tools"}</span>
+              <span class="chip${b.live ? " live" : b.isNew ? " new" : ""}">${b.live ? "Live now" : b.isNew ? "New capability" : "From today's tools"}</span>
             </button>
           </div>`; }).join("")}
         </div>
         <div class="otkey">
           <div><span style="background:#0d823b"></span>Built on today's tools</div>
           <div><span style="background:#d27a1e"></span>New capability</div>
+          <div><span style="background:#0d823b;box-shadow:0 0 0 3px rgba(13,130,59,.25)"></span>Live now</div>
           <div><span style="border:2px solid #0d823b"></span>Selected</div>
         </div>
       </section>
@@ -1236,7 +1240,7 @@ function otRender(){
         <div class="k">${isKen ? "Coordinator" : "Branch · Phase " + sel.phase}</div>
         <h2>${otEsc(sel.name)}</h2>
         <p>${otEsc(sel.covers)}</p>
-        <div class="otfacts"><div><small>Arrives in</small><b>${otEsc(sel.when)}</b></div><div><small>Model</small><b>${otEsc(sel.model)}</b></div></div>
+        <div class="otfacts"><div><small>${sel.live ? "Live since" : "Arrives in"}</small><b>${otEsc(sel.when)}</b></div><div><small>Model</small><b>${otEsc(sel.model)}</b></div></div>
         <h3>${sel.tools.length ? "Tools it holds (" + sel.tools.length + ")" : "Tools it holds"}</h3>
         <div class="ottools">${tools.map(t => `<span>${otEsc(t)}</span>`).join("")}</div>
         ${sel.newText ? `<h3>New for this branch</h3><p style="margin:0;font-size:13px">${otEsc(sel.newText)}</p>` : ""}
