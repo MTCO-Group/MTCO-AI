@@ -932,7 +932,7 @@
           },
           {
             "name": "Marketing",
-            "covers": "New branch. Enquiry and inbox analysis, website and social content drafts, case studies from completed hires. Drafts only; nothing published without a person."
+            "covers": "Live since 14/10/2026: the Marketing Agent tidies site photos, makes new images and one short video of up to 20 seconds, and writes posts and captions, always after asking for references (Muse Image, HeyGen Video, GPT-6 Sol). Drafts only; nothing published without a person. Enquiry analysis, website drafts and case studies to follow."
           },
           {
             "name": "Leadership",
@@ -989,8 +989,8 @@
           {
             "name": "8. Leadership and Marketing",
             "target": "Feb 2027",
-            "status": "Not started",
-            "detail": "Leadership takes the roadmap, summit and cross branch summaries. Marketing starts with enquiry analysis and drafted content."
+            "status": "In progress",
+            "detail": "Marketing went live early, on 14/10/2026: the Marketing Agent, built as a worker Ken loads at call time, moves under the branch loader unchanged when phase 1 lands. Leadership takes the roadmap, summit and cross branch summaries; Marketing adds enquiry analysis next."
           },
           {
             "name": "9. Retire the single agent",
@@ -1001,7 +1001,7 @@
         ],
         "measures": "Each phase ships only if, on the replay set, routing picks the right branch at least 95% of the time, tool choice is no worse than today, cost per reply goes down, and the offline test suite passes."
       },
-      "updated_at": "2026-10-13",
+      "updated_at": "2026-10-16",
       "dates": {
         "Planned": "Oct 2026"
       }
@@ -1449,22 +1449,30 @@
     {
       "id": "kensite-marketing-sub-agent-photo-clean-up-and-linkedin-content",
       "company": "kensite",
-      "name": "Marketing Sub-Agent - Photo Clean-Up and LinkedIn Content",
-      "stage": "Proposed",
+      "name": "Marketing Agent - Photos, Images, Video and Social Posts",
+      "stage": "Shipped",
       "category": "Hire Desk and Sales",
-      "owner": "Nathan Mcguinness",
+      "owner": "Nathan McGuinness",
       "proposed_by": "nathan.mcguinness@kensite.co.uk",
       "date": "Oct 2026",
-      "summary": "A specialist sub-agent for Kensite's marketing: we send it pictures and it cleans them up ready to use, the...",
-      "scope": "A specialist sub-agent for Kensite's marketing: we send it pictures and it cleans them up ready to use, then manages our LinkedIn content and campaigns off the back of them, so marketing output keeps going out without anyone at Kensite editing images or building and scheduling posts by hand.",
-      "how": "Pictures are sent in to the sub-agent; it cleans up the images, then turns them into LinkedIn content and runs the posting and campaign side, sitting as a marketing specialist under Ken rather than inside his general work.",
+      "summary": "Email Ken a site photo or a brief and the Marketing Agent sends back a tidied photo, new images, a short video and the posts to go with them.",
+      "scope": "The first branch of the AI Organisational Tree to go live. Staff email Ken for marketing content and he hands the job to the Marketing Agent, which tidies site photos (the area around the cabins: clutter, mud and rubbish gone, brighter weather, with the cabins and their lettering kept exactly as they are), makes new images, makes one short video of up to 20 seconds, and writes LinkedIn, Instagram and Facebook posts and captions in the Kensite voice. It always asks for reference images or video before it makes anything. It only makes drafts: nothing is posted, and every file is labelled AI edited or AI generated so it can be marked as AI when it goes out.",
+      "how": "A worker beside Ken, loaded at call time like the Stocktake Worker, using three models and no others: Meta Muse Image for photos and images, HeyGen Video for the clip, and OpenAI GPT-6 Sol for the plan, the image checks and the copy. Every image is checked against the photo it came from and every post against the brand rules, and anything that fails a check is still sent, with the reason. Videos are measured from the file itself and are never sent over 20 seconds. Finished videos follow on the requester's own email thread, through Ken's outbound guard (Ken 26.1).",
       "who": [
         {
-          "who": "Marketing",
-          "how": "photographs become usable content without manual editing, and LinkedIn posting and campaigns run without anyone at Kensite doing it by hand."
+          "who": "Marketing and Sales",
+          "how": "ready to use photos, images, short videos and posts from one email, without editing images or writing posts by hand"
+        },
+        {
+          "who": "Kensite",
+          "how": "marketing content that stays on brand and factually right: only confirmed product facts, approved hashtags and no exclamation marks"
         }
       ],
-      "proposed_at": "2026-10-08"
+      "proposed_at": "2026-10-08",
+      "dates": {
+        "Shipped": "Oct 2026"
+      },
+      "updated_at": "2026-10-16"
     },
     {
       "id": "kensite-adoption-over-appearance-driving-ai-adoption-as-a-metric",
