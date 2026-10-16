@@ -3468,6 +3468,12 @@
     "detail": "Update planner/frontend/index.html from Automations folder. Plus 19 commits made by Ken and the apps"
    },
    {
+    "time": "10:28",
+    "title": "Updated Ken Agent V26.4",
+    "kind": "build",
+    "detail": "Ken can be chatted with from Ken Desktop, the pop up app on Kensite PCs"
+   },
+   {
     "title": "Emails: 15 received, 6 sent",
     "kind": "email"
    }
