@@ -3504,6 +3504,12 @@
   ],
   "2026-10-17": [
    {
+    "time": "09:20",
+    "title": "Updated MCS Quote Rehearsal 1.2",
+    "kind": "build",
+    "detail": "The HSSH001 quote Ken could not raise at 08:58 (HTTP 500 from QuickQuote/Create twice), rehearsed beside the same lines for AINSC005, whose quote wen…"
+   },
+   {
     "title": "Emails: 2 received, 1 sent",
     "kind": "email"
    }
