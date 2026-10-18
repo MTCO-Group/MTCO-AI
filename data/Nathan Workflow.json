@@ -3569,6 +3569,12 @@
     "detail": "Nathan asked for every MCS routine Ken has to be tried after the quote title fault."
    },
    {
+    "time": "20:06",
+    "title": "Updated Ken Agent V27.2",
+    "kind": "build",
+    "detail": "Ken Desktop's mic turns what you say into words in the message box"
+   },
+   {
     "title": "Emails: 2 received, 0 sent",
     "kind": "email"
    }
