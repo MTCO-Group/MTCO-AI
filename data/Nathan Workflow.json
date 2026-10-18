@@ -3534,6 +3534,12 @@
   ],
   "2026-10-18": [
    {
+    "time": "14:04",
+    "title": "Updated Ken Agent V27.0",
+    "kind": "build",
+    "detail": "Ken can raise workflows from the Technical and Enquiries mailboxes, and see them through"
+   },
+   {
     "title": "Emails: 2 received, 0 sent",
     "kind": "email"
    }
