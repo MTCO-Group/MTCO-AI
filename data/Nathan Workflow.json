@@ -3545,6 +3545,12 @@
     "kind": "build"
    },
    {
+    "time": "15:00",
+    "title": "Updated MCS Quote Create Test 1.1",
+    "kind": "build",
+    "detail": "1.0 failed the same way without TANK and IBC, so they are not the cause."
+   },
+   {
     "title": "Emails: 2 received, 0 sent",
     "kind": "email"
    }
