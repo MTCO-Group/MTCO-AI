@@ -3557,6 +3557,12 @@
     "detail": "1.1 failed too, so no single line is the cause."
    },
    {
+    "time": "15:20",
+    "title": "Updated Ken Agent V27.1",
+    "kind": "build",
+    "detail": "Ken's quotes go into MCS again when the customer's name is long: the title is kept to..."
+   },
+   {
     "title": "Emails: 2 received, 0 sent",
     "kind": "email"
    }
