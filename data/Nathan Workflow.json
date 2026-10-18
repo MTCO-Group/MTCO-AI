@@ -3575,6 +3575,12 @@
     "detail": "Ken Desktop's mic turns what you say into words in the message box"
    },
    {
+    "time": "21:15",
+    "title": "Updated Kensite Big Change Reconciliation Worker 4.7",
+    "kind": "build",
+    "detail": "From Ewa's notes on the 05/10 to 11/10 run."
+   },
+   {
     "title": "Emails: 2 received, 3 sent",
     "kind": "email"
    }
