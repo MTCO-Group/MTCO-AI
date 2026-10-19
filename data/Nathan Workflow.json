@@ -3621,6 +3621,12 @@
     "detail": "Planner V5.0: vehicle work MOT, PMI or Service; Planner V5.0: GitHub reads shared between sessions for 30 seconds. Plus 429 commits made by Ken and the apps"
    },
    {
+    "time": "16:41",
+    "title": "Updated Ken Agent V27.4",
+    "kind": "build",
+    "detail": "Ken tells a workflow's owner when AES have its job on (ETA) and when it is done (POD..."
+   },
+   {
     "title": "Emails: 6 received, 0 sent",
     "kind": "email"
    }
