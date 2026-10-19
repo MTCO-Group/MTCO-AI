@@ -3593,6 +3593,12 @@
     "detail": "Tablet mode, for drawing on an iPad."
    },
    {
+    "time": "11:20",
+    "title": "Updated AES Transport Planner 5.0",
+    "kind": "build",
+    "detail": "A vehicle booking's work is MOT, PMI or Service (Nathan, 19/10/2026), replacing MOT, Repair, Service and Test."
+   },
+   {
     "title": "Emails: 6 received, 0 sent",
     "kind": "email"
    }
