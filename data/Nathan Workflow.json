@@ -3627,6 +3627,12 @@
     "detail": "Ken tells a workflow's owner when AES have its job on (ETA) and when it is done (POD..."
    },
    {
+    "time": "17:08",
+    "title": "Updated Ken Agent V27.5",
+    "kind": "build",
+    "detail": "Ken can read and change a colleague's Outlook calendar shared with him, and any..."
+   },
+   {
     "title": "Emails: 6 received, 0 sent",
     "kind": "email"
    }
