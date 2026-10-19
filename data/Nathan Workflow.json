@@ -3593,6 +3593,14 @@
     "detail": "Tablet mode, for drawing on an iPad."
    },
    {
+    "time": "11:17",
+    "title": "GitHub: 1 commit to Planner",
+    "kind": "github",
+    "repo": "LeeMcConvilleAES/Planner",
+    "tagline": true,
+    "detail": "Planner V5.0: vehicle work MOT, PMI or Service. Plus 228 commits made by Ken and the apps"
+   },
+   {
     "time": "11:20",
     "title": "Updated AES Transport Planner 5.0",
     "kind": "build",
