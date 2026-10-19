@@ -3607,6 +3607,14 @@
     "detail": "A vehicle booking's work is MOT, PMI or Service (Nathan, 19/10/2026), replacing MOT, Repair, Service and Test."
    },
    {
+    "time": "11:26",
+    "title": "GitHub: 2 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "MTCO-Group/Compound-Builder",
+    "tagline": true,
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html. Plus 5 commits made by Ken and the apps"
+   },
+   {
     "title": "Emails: 6 received, 0 sent",
     "kind": "email"
    }
