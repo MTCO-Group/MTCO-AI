@@ -3661,6 +3661,11 @@
     "title": "Updated Count My Emails 1.3",
     "kind": "build",
     "detail": "Stops Outlook running out of shared resources."
+   },
+   {
+    "time": "14:53",
+    "title": "Updated Ken Agent V27.8",
+    "kind": "build"
    }
   ]
  },
