@@ -3643,6 +3643,18 @@
     "title": "Updated Ken Agent V27.6",
     "kind": "build",
     "detail": "An AES job whose status flickers back and forth no longer sends the same heads-up again"
+   },
+   {
+    "time": "13:34",
+    "title": "Updated Ken Agent V27.7",
+    "kind": "build",
+    "detail": "Ken keeps an email trail together: a reply goes with the emails before it instead of..."
+   },
+   {
+    "time": "13:36",
+    "title": "Updated Kensite Big Change Reconciliation Worker 4.8",
+    "kind": "build",
+    "detail": "From Ewa's notes on the 12/10 to 17/10 run, and Nathan 20/10/2026."
    }
   ]
  },
