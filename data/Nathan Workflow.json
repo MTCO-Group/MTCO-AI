@@ -3668,6 +3668,14 @@
     "kind": "build"
    },
    {
+    "time": "15:58",
+    "title": "GitHub: 1 commit to MTCO-AI",
+    "kind": "github",
+    "repo": "MTCO-Group/MTCO-AI",
+    "tagline": true,
+    "detail": "Update planner/frontend/index.html from Automations folder. Plus 19 commits made by Ken and the apps"
+   },
+   {
     "time": "16:01",
     "title": "Updated Marketing Agent 1.4",
     "kind": "build",
