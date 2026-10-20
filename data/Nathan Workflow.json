@@ -3698,6 +3698,12 @@
     "title": "Updated Marketing Agent 1.5",
     "kind": "build",
     "detail": "When a picture came with the request, the reply says so and asks for any others."
+   },
+   {
+    "time": "19:06",
+    "title": "Updated Marketing Agent 1.6",
+    "kind": "build",
+    "detail": "A tidy keeps what its first attempt got right, and the better attempt is the one sent."
    }
   ]
  },
