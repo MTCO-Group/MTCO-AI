@@ -3666,6 +3666,18 @@
     "time": "14:53",
     "title": "Updated Ken Agent V27.8",
     "kind": "build"
+   },
+   {
+    "time": "16:01",
+    "title": "Updated Marketing Agent 1.4",
+    "kind": "build",
+    "detail": "A tidy starts with Glimpse looking at the photo and listing what to change."
+   },
+   {
+    "time": "16:01",
+    "title": "Updated Probe Marketing Agent 1.3",
+    "kind": "build",
+    "detail": "Assess\" has Glimpse look at a photo the way a tidy now starts (worker 1.4)."
    }
   ]
  },
