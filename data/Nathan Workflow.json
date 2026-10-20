@@ -3636,6 +3636,14 @@
     "title": "Emails: 6 received, 0 sent",
     "kind": "email"
    }
+  ],
+  "2026-10-20": [
+   {
+    "time": "11:46",
+    "title": "Updated Ken Agent V27.6",
+    "kind": "build",
+    "detail": "An AES job whose status flickers back and forth no longer sends the same heads-up again"
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
