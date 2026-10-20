@@ -3692,6 +3692,12 @@
     "title": "Updated Ken Agent V27.9",
     "kind": "build",
     "detail": "A picture sent in Ken Desktop now reaches the tools, so a marketing tidy gets the photo"
+   },
+   {
+    "time": "18:26",
+    "title": "Updated Marketing Agent 1.5",
+    "kind": "build",
+    "detail": "When a picture came with the request, the reply says so and asks for any others."
    }
   ]
  },
