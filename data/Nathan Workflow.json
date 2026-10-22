@@ -3761,6 +3761,18 @@
     "title": "Built Net2 Server Host Check",
     "kind": "build",
     "detail": "Is the depot's Net2 server on the machine the Task Runner runs on?"
+   },
+   {
+    "time": "11:56",
+    "title": "Built Net2 Port 8026 Check",
+    "kind": "build",
+    "detail": "Net2's Nginx passes every API call to 127.0.0.1:8026 and nothing is listening there."
+   },
+   {
+    "time": "11:56",
+    "title": "Built Net2 Server Detail Check",
+    "kind": "build",
+    "detail": "Net2 runs on Ken's machine, and its Nginx answers 502 on localhost:8443, so whatever Nginx passes requests to is not answering."
    }
   ]
  },
