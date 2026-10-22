@@ -3743,6 +3743,12 @@
     "title": "Updated Ken Agent V28.1",
     "kind": "build",
     "detail": "Ken ticks the workflow stages he can see are done, and offers to do the ones he can"
+   },
+   {
+    "time": "11:26",
+    "title": "Built Clocking Report 03 to 09 Oct",
+    "kind": "build",
+    "detail": "Claire Simmons (20/10) is missing the weekly clocking report for Saturday 03 to Friday 09 October; the Monday 12/10 run did not send one."
    }
   ]
  },
