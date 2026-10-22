@@ -3779,6 +3779,12 @@
     "title": "Built Net2 Local API Check",
     "kind": "build",
     "detail": "Nginx passes Net2's API calls to 127.0.0.1:8026 and nothing listens there."
+   },
+   {
+    "time": "13:07",
+    "title": "Built Net2 Local API Check 2",
+    "kind": "build",
+    "detail": "Nathan says the Net2 Configuration Utility shows the Local API enabled, while the registry value read earlier says 0."
    }
   ]
  },
