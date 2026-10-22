@@ -3785,6 +3785,12 @@
     "title": "Built Net2 Local API Check 2",
     "kind": "build",
     "detail": "Nathan says the Net2 Configuration Utility shows the Local API enabled, while the registry value read earlier says 0."
+   },
+   {
+    "time": "13:17",
+    "title": "Updated Net2 Local API Check 2 1.1",
+    "kind": "build",
+    "detail": "After Nathan's restart."
    }
   ]
  },
