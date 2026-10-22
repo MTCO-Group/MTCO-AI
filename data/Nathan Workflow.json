@@ -3736,6 +3736,14 @@
     "kind": "build",
     "detail": "Ken turns a Site Visit Report PDF into an editable Word document"
    }
+  ],
+  "2026-10-22": [
+   {
+    "time": "09:24",
+    "title": "Updated Ken Agent V28.1",
+    "kind": "build",
+    "detail": "Ken ticks the workflow stages he can see are done, and offers to do the ones he can"
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
