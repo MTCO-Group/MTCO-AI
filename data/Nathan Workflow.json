@@ -3755,6 +3755,12 @@
     "title": "Updated Net2 Gate Probe 1.1",
     "kind": "build",
     "detail": "Also reads api/v1/net2version, the page the portal itself checks first, which goes through to the depot's Net2 server."
+   },
+   {
+    "time": "11:51",
+    "title": "Built Net2 Server Host Check",
+    "kind": "build",
+    "detail": "Is the depot's Net2 server on the machine the Task Runner runs on?"
    }
   ]
  },
