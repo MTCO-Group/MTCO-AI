@@ -3797,6 +3797,16 @@
     "title": "Updated Net2 Gate Probe 1.2",
     "kind": "build",
     "detail": "After the Local API was switched back on, tries the same sign in and reads two ways: through Net2 Online as Ken does, and straight to Net2 on this ma…"
+   },
+   {
+    "time": "13:27",
+    "title": "Built Net2 Local Sign In Probe",
+    "kind": "build"
+   },
+   {
+    "time": "13:27",
+    "title": "Built Net2 Online Link Check",
+    "kind": "build"
    }
   ]
  },
