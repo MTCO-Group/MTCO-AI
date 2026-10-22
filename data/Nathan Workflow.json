@@ -3773,6 +3773,12 @@
     "title": "Built Net2 Server Detail Check",
     "kind": "build",
     "detail": "Net2 runs on Ken's machine, and its Nginx answers 502 on localhost:8443, so whatever Nginx passes requests to is not answering."
+   },
+   {
+    "time": "12:02",
+    "title": "Built Net2 Local API Check",
+    "kind": "build",
+    "detail": "Nginx passes Net2's API calls to 127.0.0.1:8026 and nothing listens there."
    }
   ]
  },
