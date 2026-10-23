@@ -56,41 +56,41 @@
    },
    {
     "w": "2026-10-19",
-    "kensite": 96,
+    "kensite": 97,
     "aes": 0
    }
   ],
   "months": {
    "2026-08": 115,
    "2026-09": 291,
-   "2026-10": 353
+   "2026-10": 354
   }
  },
  "openrouter": {
   "today": {
-   "calls": 2,
-   "usd": 0.01
+   "calls": 3,
+   "usd": 0.03
   },
   "week": {
-   "calls": 96,
-   "usd": 0.93
+   "calls": 97,
+   "usd": 0.95
   },
   "month": {
-   "calls": 353,
-   "usd": 3.76
+   "calls": 354,
+   "usd": 3.78
   },
   "quarter": {
-   "calls": 353,
-   "usd": 3.76
+   "calls": 354,
+   "usd": 3.78
   },
   "year": {
-   "calls": 759,
-   "usd": 4.6
+   "calls": 760,
+   "usd": 4.61
   },
   "total": {
-   "calls": 759,
-   "usd": 4.6
+   "calls": 760,
+   "usd": 4.61
   }
  },
- "updated": "2026-10-23T09:45+01:00"
+ "updated": "2026-10-23T09:51+01:00"
 }
