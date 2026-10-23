@@ -3815,6 +3815,12 @@
     "title": "Updated Ken Agent V28.2",
     "kind": "build",
     "detail": "Admins mark Ken's calls on the inbox, and the marks steer how he sorts the next emails"
+   },
+   {
+    "time": "11:22",
+    "title": "Built Clocking Report From Net2 Export",
+    "kind": "build",
+    "detail": "Ken cannot read Net2 Online (HTTP 502 since 19/10), so Nathan exported the events from Net2 himself (\"191026.csv\" in the Automations folder, 19/10 04…"
    }
   ]
  },
