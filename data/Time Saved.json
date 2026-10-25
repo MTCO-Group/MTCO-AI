@@ -4,8 +4,8 @@
  "year_minutes": 70875,
  "quarter_minutes": 40957,
  "month_minutes": 40957,
- "week_minutes": 11289,
- "today_minutes": 30,
+ "week_minutes": 11269,
+ "today_minutes": 10,
  "since": "2026-07-20",
  "adoption": {
   "weeks": [
@@ -92,5 +92,5 @@
    "usd": 4.77
   }
  },
- "updated": "2026-10-25T00:02+01:00"
+ "updated": "2026-10-25T02:00+00:00"
 }
