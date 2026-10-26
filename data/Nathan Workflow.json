@@ -3822,6 +3822,20 @@
     "kind": "build",
     "detail": "Ken cannot read Net2 Online (HTTP 502 since 19/10), so Nathan exported the events from Net2 himself (\"191026.csv\" in the Automations folder, 19/10 04…"
    }
+  ],
+  "2026-10-26": [
+   {
+    "time": "09:39",
+    "title": "Updated Ken Agent V28.3",
+    "kind": "build",
+    "detail": "The clocking report flags days over standard hours and dates starters and leavers"
+   },
+   {
+    "time": "09:43",
+    "title": "Updated Clocking Report From Net2 Export 1.1",
+    "kind": "build",
+    "detail": "Rebuilt on Ken 28.3 for Claire's changes: days over the standard hours flagged, Chantelle Robinson added, Troy Holcroft kept only to his last day (22…"
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
