@@ -3835,6 +3835,16 @@
     "title": "Updated Clocking Report From Net2 Export 1.1",
     "kind": "build",
     "detail": "Rebuilt on Ken 28.3 for Claire's changes: days over the standard hours flagged, Chantelle Robinson added, Troy Holcroft kept only to his last day (22…"
+   },
+   {
+    "time": "09:53",
+    "title": "Updated Ken Agent V28.4",
+    "kind": "build"
+   },
+   {
+    "time": "09:58",
+    "title": "Updated Clocking Report From Net2 Export 1.2",
+    "kind": "build"
    }
   ]
  },
