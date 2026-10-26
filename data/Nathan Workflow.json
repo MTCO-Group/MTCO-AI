@@ -3851,6 +3851,18 @@
     "title": "Updated Clocking Report From Net2 Export 1.3",
     "kind": "build",
     "detail": "Rebuilt with net2.over_grace_minutes 14, so only a day 15 minutes or more past the standard 9h 30m is flagged over (Claire, HR)."
+   },
+   {
+    "time": "11:20",
+    "title": "Updated Ken Agent V28.5",
+    "kind": "build",
+    "detail": "Days over standard hours now say in Notes how far over, rounded down to 15 minutes"
+   },
+   {
+    "time": "11:24",
+    "title": "Updated Clocking Report From Net2 Export 1.4",
+    "kind": "build",
+    "detail": "Rebuilt on Ken 28.5, so each day over standard hours says in Notes how far over, rounded down to 15 minutes."
    }
   ]
  },
