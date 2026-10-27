@@ -3882,6 +3882,12 @@
     "title": "Built Kensite Staff Agent Kit",
     "kind": "build",
     "detail": "The shared plumbing for agents that staff build themselves."
+   },
+   {
+    "time": "12:56",
+    "title": "Updated Ken Agent V28.7",
+    "kind": "build",
+    "detail": "Staff agents report in to Ken, and he tells their owners when one fails or goes quiet"
    }
   ]
  },
