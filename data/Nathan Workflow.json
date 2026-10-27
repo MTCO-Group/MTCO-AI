@@ -3888,6 +3888,24 @@
     "title": "Updated Ken Agent V28.7",
     "kind": "build",
     "detail": "Staff agents report in to Ken, and he tells their owners when one fails or goes quiet"
+   },
+   {
+    "time": "14:39",
+    "title": "Built Connect My Email Count",
+    "kind": "build",
+    "detail": "One off, run by the Kensite Task Runner on Ken's machine."
+   },
+   {
+    "time": "14:39",
+    "title": "Built Count My Emails Online",
+    "kind": "build",
+    "detail": "My work diary has stopped running my emails to the planner\"."
+   },
+   {
+    "time": "14:39",
+    "title": "Updated Count My Emails 1.4",
+    "kind": "build",
+    "detail": "Retired for scheduled use."
    }
   ]
  },
