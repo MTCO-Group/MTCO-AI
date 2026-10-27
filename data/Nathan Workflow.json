@@ -3870,6 +3870,18 @@
     "time": "12:15",
     "title": "Updated Ken Agent V28.6",
     "kind": "build"
+   },
+   {
+    "time": "12:49",
+    "title": "Updated Diary Build Log 1.4",
+    "kind": "build",
+    "detail": "The staff agents' template, their Drafts folder and the Offline folder their tests write are skipped."
+   },
+   {
+    "time": "12:49",
+    "title": "Built Kensite Staff Agent Kit",
+    "kind": "build",
+    "detail": "The shared plumbing for agents that staff build themselves."
    }
   ]
  },
