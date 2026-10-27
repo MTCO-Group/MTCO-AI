@@ -3906,6 +3906,12 @@
     "title": "Updated Count My Emails 1.4",
     "kind": "build",
     "detail": "Retired for scheduled use."
+   },
+   {
+    "time": "15:35",
+    "title": "Updated Ken Agent V28.8",
+    "kind": "build",
+    "detail": "Ken runs the Kensite Yard jobs: the scheduled checks, reminders, damage reports and..."
    }
   ]
  },
