@@ -3920,6 +3920,12 @@
     "title": "Updated Ken Agent V28.9",
     "kind": "build",
     "detail": "Ken can report on a month of Dialpad calls: by category, who calls most, and who is..."
+   },
+   {
+    "time": "15:09",
+    "title": "Updated Kensite Big Change Reconciliation Worker 4.9",
+    "kind": "build",
+    "detail": "From Ewa's notes on the 19/10 to 25/10 run."
    }
   ]
  },
