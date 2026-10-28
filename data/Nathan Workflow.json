@@ -3913,6 +3913,14 @@
     "kind": "build",
     "detail": "Ken runs the Kensite Yard jobs: the scheduled checks, reminders, damage reports and..."
    }
+  ],
+  "2026-10-28": [
+   {
+    "time": "14:19",
+    "title": "Updated Ken Agent V28.9",
+    "kind": "build",
+    "detail": "Ken can report on a month of Dialpad calls: by category, who calls most, and who is..."
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
