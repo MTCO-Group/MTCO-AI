@@ -3950,18 +3950,18 @@
     "detail": "Ken's weekly hire answer leads with the figure alone, without the week's dates or how..."
    },
    {
-    "time": "15:30",
-    "title": "GitHub: 5 commits to Prep-Schedule",
-    "kind": "github",
-    "repo": "NathanMTCO/Prep-Schedule",
-    "tagline": true,
-    "detail": "Update app.py from Automations folder; Add files via upload. Plus 8 commits made by Ken and the apps"
-   },
-   {
     "time": "15:45",
     "title": "Updated Ken Agent V29.3",
     "kind": "build",
     "detail": "Ken reads each Kensite HIAB job's ETA from Big Change and the AES planner for the Prep..."
+   },
+   {
+    "time": "16:17",
+    "title": "GitHub: 6 commits to Prep-Schedule",
+    "kind": "github",
+    "repo": "NathanMTCO/Prep-Schedule",
+    "tagline": true,
+    "detail": "Update app.py from Automations folder; Add files via upload. Plus 15 commits made by Ken and the apps"
    }
   ]
  },
