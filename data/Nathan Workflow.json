@@ -3974,6 +3974,12 @@
     "title": "Updated Ken Agent V29.5",
     "kind": "build",
     "detail": "The prep schedule ETAs run on Windows again: a job AES have a day out wrote its day..."
+   },
+   {
+    "time": "16:38",
+    "title": "Updated Ken Agent V29.6",
+    "kind": "build",
+    "detail": "A shared word like Construction no longer makes two customers' names look alike in the..."
    }
   ]
  },
