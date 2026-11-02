@@ -3935,6 +3935,14 @@
     "kind": "build",
     "detail": "Ken can attach a supplier invoice's own PDF out of Zahara"
    }
+  ],
+  "2026-11-02": [
+   {
+    "time": "13:27",
+    "title": "Updated Ken Agent V29.1",
+    "kind": "build",
+    "detail": "Ken gives the weekly hire figure right now, broken down as the Weekly Check Up does it"
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
