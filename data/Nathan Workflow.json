@@ -3956,6 +3956,12 @@
     "repo": "NathanMTCO/Prep-Schedule",
     "tagline": true,
     "detail": "Update app.py from Automations folder; Add files via upload. Plus 8 commits made by Ken and the apps"
+   },
+   {
+    "time": "15:45",
+    "title": "Updated Ken Agent V29.3",
+    "kind": "build",
+    "detail": "Ken reads each Kensite HIAB job's ETA from Big Change and the AES planner for the Prep..."
    }
   ]
  },
