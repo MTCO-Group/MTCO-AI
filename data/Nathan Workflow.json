@@ -3942,6 +3942,12 @@
     "title": "Updated Ken Agent V29.1",
     "kind": "build",
     "detail": "Ken gives the weekly hire figure right now, broken down as the Weekly Check Up does it"
+   },
+   {
+    "time": "13:35",
+    "title": "Updated Ken Agent V29.2",
+    "kind": "build",
+    "detail": "Ken's weekly hire answer leads with the figure alone, without the week's dates or how..."
    }
   ]
  },
