@@ -4026,6 +4026,12 @@
     "title": "Updated Ken Agent V30.1",
     "kind": "build",
     "detail": "A live ETA on the Prep Schedule is set once, when the job goes live, and then stays put"
+   },
+   {
+    "time": "13:03",
+    "title": "Updated Ken Agent V30.2",
+    "kind": "build",
+    "detail": "Pressing ETA on the Prep Schedule has Ken time a live job again from where the wagon..."
    }
   ]
  },
