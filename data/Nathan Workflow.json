@@ -3988,6 +3988,12 @@
     "title": "Updated Ken Agent V29.7",
     "kind": "build",
     "detail": "A confirmed delivery time on the Prep Schedule is kept, not lost the next morning"
+   },
+   {
+    "time": "11:05",
+    "title": "Updated Ken Agent V29.8",
+    "kind": "build",
+    "detail": "Ken names the haulier on the Prep Schedule's External Haulage jobs from the job's PO..."
    }
   ]
  },
