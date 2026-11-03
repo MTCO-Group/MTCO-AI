@@ -4038,6 +4038,18 @@
     "repo": "NathanMTCO/Prep-Schedule",
     "tagline": true,
     "detail": "Update app.py from Automations folder. Plus 50 commits made by Ken and the apps"
+   },
+   {
+    "time": "18:24",
+    "title": "Updated Ken Agent V30.4",
+    "kind": "build",
+    "detail": "Ken learns from his Skipped emails: teach-only marks, orders, one email once"
+   },
+   {
+    "time": "18:24",
+    "title": "Updated Ken Agent V30.5",
+    "kind": "build",
+    "detail": "Ken keeps the Contract Delivery Lead live log up to date"
    }
   ]
  },
