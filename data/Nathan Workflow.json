@@ -4002,18 +4002,18 @@
     "detail": "An AES job gets an ETA from AES's schedule even when the Prep Schedule has it as External"
    },
    {
-    "time": "11:54",
-    "title": "GitHub: 3 commits to Prep-Schedule",
-    "kind": "github",
-    "repo": "NathanMTCO/Prep-Schedule",
-    "tagline": true,
-    "detail": "Update app.py from Automations folder. Plus 27 commits made by Ken and the apps"
-   },
-   {
     "time": "12:09",
     "title": "Updated Ken Agent V30.0",
     "kind": "build",
     "detail": "The Prep Schedule's POD and POC buttons: Ken emails the proof of delivery or..."
+   },
+   {
+    "time": "12:16",
+    "title": "GitHub: 4 commits to Prep-Schedule",
+    "kind": "github",
+    "repo": "NathanMTCO/Prep-Schedule",
+    "tagline": true,
+    "detail": "Update app.py from Automations folder. Plus 33 commits made by Ken and the apps"
    }
   ]
  },
