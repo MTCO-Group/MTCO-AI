@@ -3994,6 +3994,12 @@
     "title": "Updated Ken Agent V29.8",
     "kind": "build",
     "detail": "Ken names the haulier on the Prep Schedule's External Haulage jobs from the job's PO..."
+   },
+   {
+    "time": "11:25",
+    "title": "Updated Ken Agent V29.9",
+    "kind": "build",
+    "detail": "An AES job gets an ETA from AES's schedule even when the Prep Schedule has it as External"
    }
   ]
  },
