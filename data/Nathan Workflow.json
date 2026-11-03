@@ -3981,6 +3981,14 @@
     "tagline": true,
     "detail": "Update app.py from Automations folder; Add files via upload. Plus 23 commits made by Ken and the apps"
    }
+  ],
+  "2026-11-03": [
+   {
+    "time": "10:25",
+    "title": "Updated Ken Agent V29.7",
+    "kind": "build",
+    "detail": "A confirmed delivery time on the Prep Schedule is kept, not lost the next morning"
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
