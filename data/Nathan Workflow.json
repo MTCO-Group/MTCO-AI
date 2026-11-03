@@ -4032,6 +4032,12 @@
     "title": "Updated Ken Agent V30.2",
     "kind": "build",
     "detail": "Pressing ETA on the Prep Schedule has Ken time a live job again from where the wagon..."
+   },
+   {
+    "time": "13:28",
+    "title": "Updated Ken Agent V30.3",
+    "kind": "build",
+    "detail": "A 15% lorry allowance on Google's drive times for the Prep Schedule's live ETAs"
    }
   ]
  },
