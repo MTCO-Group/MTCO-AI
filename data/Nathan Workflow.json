@@ -4008,14 +4008,6 @@
     "detail": "The Prep Schedule's POD and POC buttons: Ken emails the proof of delivery or..."
    },
    {
-    "time": "12:23",
-    "title": "GitHub: 6 commits to Prep-Schedule",
-    "kind": "github",
-    "repo": "NathanMTCO/Prep-Schedule",
-    "tagline": true,
-    "detail": "Update app.py from Automations folder. Plus 38 commits made by Ken and the apps"
-   },
-   {
     "time": "12:26",
     "title": "Updated Kensite Big Change Reconciliation Worker 5.0",
     "kind": "build",
@@ -4038,6 +4030,14 @@
     "title": "Updated Ken Agent V30.3",
     "kind": "build",
     "detail": "A 15% lorry allowance on Google's drive times for the Prep Schedule's live ETAs"
+   },
+   {
+    "time": "13:38",
+    "title": "GitHub: 7 commits to Prep-Schedule",
+    "kind": "github",
+    "repo": "NathanMTCO/Prep-Schedule",
+    "tagline": true,
+    "detail": "Update app.py from Automations folder. Plus 50 commits made by Ken and the apps"
    }
   ]
  },
