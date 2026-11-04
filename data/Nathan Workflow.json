@@ -4125,6 +4125,12 @@
     "title": "Updated Prep Schedule vs MCS Discrepancy Check 4.8",
     "kind": "build",
     "detail": "UNIT NUMBERS FOR THE PRODUCTION PLANNER."
+   },
+   {
+    "time": "21:26",
+    "title": "Built Prep Schedule unit numbers",
+    "kind": "build",
+    "detail": "The MCS fleet number of each On Hire unit, or \"[Not Picked]\", on the Prep Schedule's job panel and week chips."
    }
   ]
  },
