@@ -4078,17 +4078,17 @@
     "kind": "build"
    },
    {
-    "time": "10:02",
-    "title": "GitHub: 3 commits to Prep-Schedule",
-    "kind": "github",
-    "repo": "MTCO-Group/Prep-Schedule",
-    "tagline": true,
-    "detail": "Update app.py from Automations folder; Update requirements.txt from Automations folder. Plus 7 commits made by Ken and the apps"
-   },
-   {
     "time": "10:06",
     "title": "Updated Publish App To GitHub 1.3",
     "kind": "build"
+   },
+   {
+    "time": "10:12",
+    "title": "GitHub: 4 commits to Prep-Schedule",
+    "kind": "github",
+    "repo": "MTCO-Group/Prep-Schedule",
+    "tagline": true,
+    "detail": "Update app.py from Automations folder; Update requirements.txt from Automations folder. Plus 10 commits made by Ken and the apps"
    }
   ]
  },
