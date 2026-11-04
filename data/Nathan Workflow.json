@@ -4094,6 +4094,31 @@
     "time": "14:41",
     "title": "Updated Kensite Automation Toolbox 1.7",
     "kind": "build"
+   },
+   {
+    "time": "14:46",
+    "title": "Updated Kensite Big Change Reconciliation Worker 5.1",
+    "kind": "build"
+   },
+   {
+    "time": "14:46",
+    "title": "Updated Kensite Daily Deliveries and Collections 2.6",
+    "kind": "build"
+   },
+   {
+    "time": "14:46",
+    "title": "Updated Kensite Quote Trends 1.2",
+    "kind": "build"
+   },
+   {
+    "time": "14:46",
+    "title": "Updated Kensite Live Hire Report Worker 2.1",
+    "kind": "build"
+   },
+   {
+    "time": "14:46",
+    "title": "Updated Prep Schedule vs MCS Discrepancy Check 4.7",
+    "kind": "build"
    }
   ]
  },
