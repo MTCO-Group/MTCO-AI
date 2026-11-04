@@ -3044,14 +3044,6 @@
     "kind": "build"
    },
    {
-    "time": "23:32",
-    "title": "GitHub: 2 commits to Prep-Schedule",
-    "kind": "github",
-    "repo": "NathanMTCO/Prep-Schedule",
-    "tagline": true,
-    "detail": "Update app.py from Automations folder. Plus 32 commits made by Ken and the apps"
-   },
-   {
     "title": "Emails: 60 received, 13 sent",
     "kind": "email"
    }
@@ -3972,14 +3964,6 @@
     "title": "Updated Ken Agent V29.6",
     "kind": "build",
     "detail": "A shared word like Construction no longer makes two customers' names look alike in the..."
-   },
-   {
-    "time": "16:58",
-    "title": "GitHub: 8 commits to Prep-Schedule",
-    "kind": "github",
-    "repo": "NathanMTCO/Prep-Schedule",
-    "tagline": true,
-    "detail": "Update app.py from Automations folder; Add files via upload. Plus 23 commits made by Ken and the apps"
    }
   ],
   "2026-11-03": [
@@ -4035,9 +4019,9 @@
     "time": "13:38",
     "title": "GitHub: 7 commits to Prep-Schedule",
     "kind": "github",
-    "repo": "NathanMTCO/Prep-Schedule",
+    "repo": "MTCO-Group/Prep-Schedule",
     "tagline": true,
-    "detail": "Update app.py from Automations folder. Plus 50 commits made by Ken and the apps"
+    "detail": "Update app.py from Automations folder. Plus 78 commits made by Ken and the apps"
    },
    {
     "time": "18:24",
