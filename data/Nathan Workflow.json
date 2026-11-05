@@ -4194,6 +4194,14 @@
     "time": "21:06",
     "title": "Updated Kensite Compound Drawing Generator 4.9",
     "kind": "build"
+   },
+   {
+    "time": "21:17",
+    "title": "GitHub: 3 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "MTCO-Group/Compound-Builder",
+    "tagline": true,
+    "detail": "Site Builder Deploy: update generator/portal_issue.py; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…; Site Builder Deploy: update .github/workflows/portal-issue.yml. Plus 13 commits made by Ken and the apps"
    }
   ]
  },
