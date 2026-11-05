@@ -4171,6 +4171,18 @@
     "title": "Updated Prep Schedule vs MCS Discrepancy Check 5.0",
     "kind": "build",
     "detail": "AN MCS REPORT OUTAGE NO LONGER EMAILS MITCH AND PETE EVERY TEN MINUTES."
+   },
+   {
+    "time": "20:46",
+    "title": "Updated Compound Drawing Watcher 1.5",
+    "kind": "build",
+    "detail": "Customer portal issues."
+   },
+   {
+    "time": "20:46",
+    "title": "Built Portal issue",
+    "kind": "build",
+    "detail": "Issues one drawing for the Kensite customer portal's \"Update PDF\" button."
    }
   ]
  },
