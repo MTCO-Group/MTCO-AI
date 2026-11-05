@@ -4196,12 +4196,12 @@
     "kind": "build"
    },
    {
-    "time": "21:17",
-    "title": "GitHub: 3 commits to Compound-Builder",
+    "time": "21:43",
+    "title": "GitHub: 6 commits to Compound-Builder",
     "kind": "github",
     "repo": "MTCO-Group/Compound-Builder",
     "tagline": true,
-    "detail": "Site Builder Deploy: update generator/portal_issue.py; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…; Site Builder Deploy: update .github/workflows/portal-issue.yml. Plus 13 commits made by Ken and the apps"
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…; Site Builder Deploy: update builder/index.html. Plus 13 commits made by Ken and the apps"
    }
   ]
  },
