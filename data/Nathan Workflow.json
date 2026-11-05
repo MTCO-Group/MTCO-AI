@@ -4165,6 +4165,12 @@
     "repo": "MTCO-Group/Prep-Schedule",
     "tagline": true,
     "detail": "Update unit_numbers.py from Automations folder. Plus 11 commits made by Ken and the apps"
+   },
+   {
+    "time": "14:01",
+    "title": "Updated Prep Schedule vs MCS Discrepancy Check 5.0",
+    "kind": "build",
+    "detail": "AN MCS REPORT OUTAGE NO LONGER EMAILS MITCH AND PETE EVERY TEN MINUTES."
    }
   ]
  },
