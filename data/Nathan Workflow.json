@@ -4202,6 +4202,12 @@
     "repo": "MTCO-Group/Compound-Builder",
     "tagline": true,
     "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…; Site Builder Deploy: update builder/index.html. Plus 13 commits made by Ken and the apps"
+   },
+   {
+    "time": "22:24",
+    "title": "Updated Ken Agent V30.6",
+    "kind": "build",
+    "detail": "Ken runs PowerShell lines too when Nathan emails them with KEN PS in the subject"
    }
   ]
  },
