@@ -4189,6 +4189,11 @@
     "title": "Updated Site Builder Deploy 1.3",
     "kind": "build",
     "detail": "The portal folder (portal/<REF>.pdf and portal/<REF>.json, written by the customer portal's \"Portal issue\" workflow) is protected like data/: never p…"
+   },
+   {
+    "time": "21:06",
+    "title": "Updated Kensite Compound Drawing Generator 4.9",
+    "kind": "build"
    }
   ]
  },
