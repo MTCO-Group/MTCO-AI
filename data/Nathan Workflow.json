@@ -4228,6 +4228,12 @@
     "title": "Updated Think Hire SLA Scorecard 1.3",
     "kind": "build",
     "detail": "Report 69 was renamed 'Fleet Age by Customer' so it can serve other customers; the fleet comes from it again."
+   },
+   {
+    "time": "11:22",
+    "title": "Updated Clocking Report From Net2 Export 1.5",
+    "kind": "build",
+    "detail": "Net2 Online is still down, so Nathan pulled the gate events out of Net2 on Ken's laptop and emailed them to himself (subjects \"23rd\", \"Week before la…"
    }
   ]
  },
