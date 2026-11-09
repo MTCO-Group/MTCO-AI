@@ -4222,6 +4222,12 @@
     "title": "Updated Think Hire SLA Scorecard 1.1",
     "kind": "build",
     "detail": "Reports are found by name with spaces and case evened out, falling back to a name that starts with the wanted words, because the first October run co…"
+   },
+   {
+    "time": "11:17",
+    "title": "Updated Think Hire SLA Scorecard 1.3",
+    "kind": "build",
+    "detail": "Report 69 was renamed 'Fleet Age by Customer' so it can serve other customers; the fleet comes from it again."
    }
   ]
  },
