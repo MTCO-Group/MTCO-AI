@@ -4216,6 +4216,12 @@
     "title": "Built Think Hire SLA Scorecard",
     "kind": "build",
     "detail": "Fills in Think Hire's (THINK001) monthly KPI and SLA table for the month just gone and emails it to Nathan as a Kensite Word document, from Ken's mai…"
+   },
+   {
+    "time": "11:12",
+    "title": "Updated Think Hire SLA Scorecard 1.1",
+    "kind": "build",
+    "detail": "Reports are found by name with spaces and case evened out, falling back to a name that starts with the wanted words, because the first October run co…"
    }
   ]
  },
