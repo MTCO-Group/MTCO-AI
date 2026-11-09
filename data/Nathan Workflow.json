@@ -4234,6 +4234,12 @@
     "title": "Updated Clocking Report From Net2 Export 1.5",
     "kind": "build",
     "detail": "Net2 Online is still down, so Nathan pulled the gate events out of Net2 on Ken's laptop and emailed them to himself (subjects \"23rd\", \"Week before la…"
+   },
+   {
+    "time": "23:40",
+    "title": "Updated Ken Agent V30.7",
+    "kind": "build",
+    "detail": "Ken tries again when Microsoft's mail service is briefly unavailable, and says why an..."
    }
   ]
  },
