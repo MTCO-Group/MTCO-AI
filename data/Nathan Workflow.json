@@ -4209,6 +4209,14 @@
     "kind": "build",
     "detail": "Ken runs PowerShell lines too when Nathan emails them with KEN PS in the subject"
    }
+  ],
+  "2026-11-09": [
+   {
+    "time": "11:07",
+    "title": "Built Think Hire SLA Scorecard",
+    "kind": "build",
+    "detail": "Fills in Think Hire's (THINK001) monthly KPI and SLA table for the month just gone and emails it to Nathan as a Kensite Word document, from Ken's mai…"
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
