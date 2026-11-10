@@ -4273,6 +4273,12 @@
     "repo": "MTCO-Group/Compound-Builder",
     "tagline": true,
     "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update builder/index.html; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…. Plus 1 commit made by Ken and the apps"
+   },
+   {
+    "time": "00:37",
+    "title": "Updated Kensite Compound Drawings - Streamlit app 6.3",
+    "kind": "build",
+    "detail": "Top bar tidied to the design canvas."
    }
   ]
  },
