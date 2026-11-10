@@ -4279,6 +4279,14 @@
     "title": "Updated Kensite Compound Drawings - Streamlit app 6.3",
     "kind": "build",
     "detail": "Top bar tidied to the design canvas."
+   },
+   {
+    "time": "11:42",
+    "title": "GitHub: 1 commit to Prep-Schedule",
+    "kind": "github",
+    "repo": "MTCO-Group/Prep-Schedule",
+    "tagline": true,
+    "detail": "Update app.py from Automations folder. Plus 26 commits made by Ken and the apps"
    }
   ]
  },
