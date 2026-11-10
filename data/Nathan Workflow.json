@@ -4293,6 +4293,12 @@
     "title": "Updated Kensite Big Change Reconciliation Worker 5.2",
     "kind": "build",
     "detail": "A month end reconciliation."
+   },
+   {
+    "time": "21:59",
+    "title": "Updated Ken Agent V30.8",
+    "kind": "build",
+    "detail": "Ken runs the month end AES reconciliation, with the consolidated invoice breakdown and..."
    }
   ]
  },
