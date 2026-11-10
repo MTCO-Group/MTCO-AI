@@ -4267,6 +4267,12 @@
     "repo": "MTCO-Group/Compound-Builder",
     "tagline": true,
     "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…. Plus 1 commit made by Ken and the apps"
+   },
+   {
+    "time": "00:22",
+    "title": "Updated Kensite Compound Drawings - Streamlit app 6.2",
+    "kind": "build",
+    "detail": "A first floor unit cannot be turned on its own."
    }
   ]
  },
