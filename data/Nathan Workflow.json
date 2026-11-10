@@ -4259,6 +4259,14 @@
     "title": "Updated Kensite Compound DXF Converter 3.7",
     "kind": "build",
     "detail": "Fixes from the functionality review."
+   },
+   {
+    "time": "00:15",
+    "title": "GitHub: 4 commits to Compound-Builder",
+    "kind": "github",
+    "repo": "MTCO-Group/Compound-Builder",
+    "tagline": true,
+    "detail": "Site Builder Deploy: update streamlit_app.py; Site Builder Deploy: update generator/Kensite Compound DXF Converter.p…; Site Builder Deploy: update generator/Kensite Compound Drawing Generat…. Plus 1 commit made by Ken and the apps"
    }
   ]
  },
