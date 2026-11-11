@@ -228,7 +228,18 @@
   .acdone summary::-webkit-details-marker{display:none}
   .acdone #acDone{max-height:160px;margin-top:6px}
   .aclink{margin-top:6px;border:0;background:none;padding:2px 0;font:inherit;font-size:12px;color:#0d823b;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
-  .acpop.ro .acadd,.acpop.ro .acdel,.acpop.ro .aclink{display:none}
+  .acpop.ro .acadd,.acpop.ro .acdel,.acpop.ro .aclink,.acpop.ro .acassign{display:none}
+  .acassign{display:flex;align-items:center;gap:8px;margin-top:-2px;font-size:12px;color:#5c5e66}
+  .acassign label{font-weight:600}
+  .acassign select,.acmeta select{font:inherit;font-size:12px;color:#1a1b1e;border:1px solid #cfd3cf;border-radius:8px;padding:3px 6px;background:#fff;max-width:200px;min-width:0}
+  .acassign select{flex:1}
+  .acassign select:focus-visible,.acmeta select:focus-visible{outline:2px solid #0d823b;outline-offset:1px}
+  .acsug{flex:none;padding:1px 7px;border-radius:999px;background:#e7f3ec;color:#0a6630;font-weight:700;font-size:11px}
+  .acmeta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:3px}
+  .acmeta .acdt{display:inline}
+  .acmeta .ppill{max-width:200px}
+  .acmeta select{max-width:170px;padding:1px 4px;border-color:transparent;background:transparent;color:#5c5e66}
+  .acit:hover .acmeta select,.acmeta select:focus{border-color:#cfd3cf;background:#fff}
   @media (prefers-reduced-motion:reduce){.acpop{animation:none}}
   @media (max-width:560px){.acpop{position:fixed;top:118px;left:16px;right:16px;width:auto;max-width:none}}
   .wfsec{flex:1;min-height:0;display:flex;flex-direction:column;padding:4px 30px 24px;gap:12px}
@@ -726,6 +737,11 @@
               <input id="acInput" type="text" maxlength="140" placeholder="Add an action, short work title">
               <button class="btn primary" id="acAdd" type="submit">Add</button>
             </form>
+            <div class="acassign" id="acAssign">
+              <label for="acProj">Project</label>
+              <select id="acProj"></select>
+              <span class="acsug" id="acSug" hidden>Suggested</span>
+            </div>
             <p class="acnote" id="acNote" hidden></p>
             <ul class="aclist" id="acList" aria-label="Open actions"></ul>
             <p class="acempty" id="acEmpty">No open actions.</p>
@@ -2136,6 +2152,60 @@ const AC_TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 const AC_BIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>';
 function acToday(){ const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); }
 function acShort(iso){ if(!iso) return ""; const [y,m,d] = iso.split("-").map(Number); return d + " " + WF_MON[m-1].slice(0,3); }
+/* open projects: everything on the roadmap that is not Shipped; projects in
+   flight (Scoped, Planned, Building, Testing, Live) first, then Proposed */
+const AC_INFLIGHT = {Scoped:1, Planned:1, Building:1, Testing:1, Live:1};
+const AC_STOP = new Set("the and for with from that this into onto over under about need needs get got set make made send sent check sort update new our all any per via out off its are was were will can not you your what when who how why use using have has had re fw".split(" "));
+function acOpenProjects(){
+  return Object.values(STATE.all || {}).filter(p => p && p.stage && p.stage !== "Shipped")
+    .sort((a,b) => (AC_INFLIGHT[b.stage]||0) - (AC_INFLIGHT[a.stage]||0) || String(a.name).localeCompare(String(b.name)));
+}
+function acWords(t){
+  return new Set(String(t || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/)
+    .filter(w => w.length > 2 && !AC_STOP.has(w))
+    .map(w => w.replace(/(ings|ing|ers|er|ed|es|s)$/, "")).filter(w => w.length > 2));
+}
+/* the best open project for an action: action words found in the project's
+   name count 3, in its category, summary, scope or how 1, its company name
+   1; in flight projects get +1. Nothing under 3 is suggested. */
+function acSuggest(text){
+  const words = acWords(text); if(!words.size) return "";
+  let best = "", top = 0;
+  acOpenProjects().forEach(p => {
+    const nm = acWords(p.name), rest = acWords([p.category, p.summary, p.scope, p.how].join(" "));
+    const co = acWords(COMPANY_NAME[p.company] || p.company);
+    let sc = 0;
+    words.forEach(w => { if(nm.has(w)) sc += 3; else if(rest.has(w)) sc += 1; if(co.has(w)) sc += 1; });
+    if(sc && AC_INFLIGHT[p.stage]) sc += 1;
+    if(sc > top){ top = sc; best = p.id; }
+  });
+  return top >= 3 ? best : "";
+}
+function acFillSelect(sel, value){
+  sel.innerHTML = "";
+  const none = el("option"); none.value = ""; none.textContent = "No project"; sel.appendChild(none);
+  const groups = {flight: el("optgroup"), proposed: el("optgroup")};
+  groups.flight.label = "In progress"; groups.proposed.label = "Proposed";
+  acOpenProjects().forEach(p => {
+    const o = el("option"); o.value = p.id; o.textContent = p.name + (p.company ? " (" + (COMPANY_NAME[p.company] || p.company) + ")" : "");
+    (AC_INFLIGHT[p.stage] ? groups.flight : groups.proposed).appendChild(o);
+  });
+  if(groups.flight.children.length) sel.appendChild(groups.flight);
+  if(groups.proposed.children.length) sel.appendChild(groups.proposed);
+  if(value && !sel.querySelector(`option[value="${CSS.escape(value)}"]`)){
+    const p = pdProject(value); const o = el("option"); o.value = value; o.textContent = p ? p.name : value; sel.appendChild(o);
+  }
+  sel.value = value || "";
+}
+const ACF = {manual:false};
+function acFormSuggest(){
+  if(ACF.manual) return;
+  const id = acSuggest($("#acInput").value);
+  $("#acProj").value = id; $("#acSug").hidden = !id;
+}
+$("#acInput").addEventListener("input", acFormSuggest);
+$("#acProj").addEventListener("change", () => { ACF.manual = true; $("#acSug").hidden = true; });
+
 function acArgs(wf){
   if(Array.isArray(wf.actions)) AC.items = wf.actions.map(x => Object.assign({}, x));
   AC.note = wf.actions_note || "";
@@ -2155,8 +2225,18 @@ function acItem(it){
   });
   chk.dataset.id = it.id;
   const tx = el("span", "actx"); const ti = el("span", "acti"); ti.textContent = it.text; tx.appendChild(ti);
+  const meta = el("span", "acmeta");
   const dt = el("span", "acdt"); dt.textContent = it.done ? ("Done " + acShort(it.done_at)) : ("Added " + acShort(it.added));
-  if(dt.textContent.trim().split(" ").length > 1) tx.appendChild(dt);
+  if(dt.textContent.trim().split(" ").length > 1) meta.appendChild(dt);
+  if(it.done || !STATE.canSave){
+    const pill = it.project ? wfPill(it.project) : null; if(pill) meta.appendChild(pill);
+  } else {
+    const sel = el("select"); acFillSelect(sel, it.project || "");
+    sel.setAttribute("aria-label", "Project for: " + it.text);
+    sel.addEventListener("change", () => { it.project = sel.value; acSave(); });
+    meta.appendChild(sel);
+  }
+  if(meta.children.length) tx.appendChild(meta);
   const del = el("button", "acdel"); del.type = "button"; del.innerHTML = AC_BIN;
   del.setAttribute("aria-label", "Delete: " + it.text);
   del.addEventListener("click", () => { AC.items = AC.items.filter(x => x.id !== it.id); acSave(); acRender(); $("#acInput").focus(); });
@@ -2176,6 +2256,7 @@ function acRender(){
   const msg = AC.note || (STATE.canSave ? "" : "Read only: live saving is not switched on.");
   note.hidden = !msg; note.textContent = msg;
   $("#acPop").classList.toggle("ro", !STATE.canSave);
+  const ps = $("#acProj"), keep = ps.value; acFillSelect(ps, keep);
 }
 function acSave(){
   if(!STATE.canSave) return;
@@ -2199,8 +2280,10 @@ $("#acForm").addEventListener("submit", ev => {
   ev.preventDefault();
   const inp = $("#acInput"), text = inp.value.replace(/\s+/g, " ").trim().slice(0, 140);
   if(!text || !STATE.canSave) return;
-  AC.items.unshift({id: "a" + Date.now().toString(36), text, done: false, added: acToday(), done_at: ""});
-  inp.value = ""; acSave(); acRender(); inp.focus();
+  AC.items.unshift({id: "a" + Date.now().toString(36), text, done: false, added: acToday(), done_at: "",
+                    project: $("#acProj").value || ""});
+  inp.value = ""; ACF.manual = false; $("#acProj").value = ""; $("#acSug").hidden = true;
+  acSave(); acRender(); inp.focus();
 });
 $("#acClear").addEventListener("click", () => {
   AC.items = AC.items.filter(x => !x.done); acSave(); acRender(); $("#acInput").focus();
