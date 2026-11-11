@@ -1,6 +1,18 @@
 """
 MTCO AI Roadmap
-Version 2.7
+Version 2.8
+
+2.8, 11/11/2026: Actions. Nathan: "On my Work Diary, add a section for
+'Actions' by me. it should be a button that expands into a pop up, sat
+under 'Back to Whats Next'". The list lives in data/Nathan Actions.json in
+this repo:
+    {"items": [{"id": "...", "text": "...", "done": false,
+                "added": "2026-11-11", "done_at": ""}], "updated": "..."}
+It rides to the Work Diary inside the workflow argument (workflow["actions"]),
+so the component wrapper did not change. Every add, tick, untick or delete
+in the pop up sends the whole list back as {"kind": "actions", ...}; it is
+saved BEFORE the page is drawn on the rerun that follows, so the list that
+comes back is the one just saved. Short work titles only: the app is public.
 
 2.7: the repo is MTCO-Group/MTCO-AI now it belongs to the MTCO-Group
 organisation on GitHub (08/10/2026). The old name still redirects for reads,
@@ -77,6 +89,7 @@ BRANCH = "main"
 DATA_PATH = "data/roadmap.json"
 API = f"https://api.github.com/repos/{REPO}/contents/{DATA_PATH}"
 WORKFLOW = "data/Nathan Workflow.json"
+ACTIONS = "data/Nathan Actions.json"
 TIME_SAVED = "data/Time Saved.json"
 FALLBACK = {"active": ["mtco", "kensite", "aes"], "categories": [], "projects": []}
 
@@ -177,7 +190,61 @@ def save_plan(tok, lanes):
     return True, ""
 
 
+def clean_actions(items):
+    """The list as the pop up sent it, made safe: at most 300 items, text cut
+    to 140 characters, unknown keys dropped."""
+    out = []
+    for it in (items if isinstance(items, list) else [])[:300]:
+        if not isinstance(it, dict):
+            continue
+        text = " ".join(str(it.get("text") or "").split())[:140]
+        if not text:
+            continue
+        out.append({"id": str(it.get("id") or "")[:24] or f"a{len(out)}", "text": text,
+                    "done": bool(it.get("done")), "added": str(it.get("added") or "")[:10],
+                    "done_at": str(it.get("done_at") or "")[:10]})
+    return out
+
+
+def save_actions(tok, items):
+    """Write data/Nathan Actions.json, retrying once on a clash."""
+    url = f"https://api.github.com/repos/{REPO}/contents/{ACTIONS.replace(' ', '%20')}"
+    doc = {"items": clean_actions(items),
+           "updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")}
+    body = base64.b64encode((json.dumps(doc, indent=1, ensure_ascii=False) + "\n").encode("utf-8")).decode()
+    for _attempt in (1, 2):
+        try:
+            r = requests.get(url, headers=headers(tok), params={"ref": BRANCH}, timeout=15)
+            sha = r.json().get("sha") if r.status_code == 200 else None
+            payload = {"message": "Update Nathan's Actions from the Work Diary", "content": body, "branch": BRANCH}
+            if sha:
+                payload["sha"] = sha
+            w = requests.put(url, headers=headers(tok), json=payload, timeout=30)
+            if w.status_code in (200, 201):
+                return True, ""
+            if w.status_code not in (409, 422):
+                return False, f"GitHub answered HTTP {w.status_code}"
+        except Exception as e:  # noqa: BLE001
+            return False, f"the write failed ({type(e).__name__})"
+    return False, "the file changed at the same moment"
+
+
+def handle_actions(tok, value):
+    """Save an Actions change from the pop up once per nonce. Returns a note
+    for the pop up when it could not be saved."""
+    if not (tok and isinstance(value, dict) and value.get("kind") == "actions"):
+        return ""
+    if not value.get("nonce") or value["nonce"] == st.session_state.get("actions_nonce"):
+        return ""
+    st.session_state["actions_nonce"] = value["nonce"]
+    ok, why = save_actions(tok, value.get("items"))
+    return "" if ok else f"Not saved: {why}. Try again in a moment."
+
+
 tok = token()
+# 2.8: an Actions change from the last run is saved before anything is read,
+# so the list drawn below is the one just saved.
+actions_note = handle_actions(tok, st.session_state.get("board"))
 remote, _sha = load_remote(tok) if tok else (None, None)
 roadmap = remote or load_local()
 if remote is None and tok:
@@ -199,6 +266,10 @@ if isinstance(time_saved, dict) and isinstance(time_saved.get("total_minutes"), 
                               ("total_minutes", "year_minutes", "quarter_minutes", "month_minutes",
                                "week_minutes", "today_minutes", "since", "adoption", "openrouter",
                                "updated")}
+
+actions, _ = load_json(tok, ACTIONS)
+workflow["actions"] = clean_actions((actions or {}).get("items") if isinstance(actions, dict) else [])
+workflow["actions_note"] = actions_note
 
 html = (HERE / "dashboard.html").read_text(encoding="utf-8")
 
@@ -230,6 +301,12 @@ if result and result.get("nonce") and result["nonce"] != st.session_state.get("n
     st.session_state["nonce"] = result["nonce"]
     if not tok:
         pass
+    elif result.get("kind") == "actions":
+        # normally already saved at the top of this run; this catches a value
+        # the session state did not carry
+        if result["nonce"] != st.session_state.get("actions_nonce"):
+            handle_actions(tok, result)
+            st.rerun()
     elif result.get("kind", "plan") == "plan":
         ok, why = save_plan(tok, result.get("lanes") or {})
         if ok:
