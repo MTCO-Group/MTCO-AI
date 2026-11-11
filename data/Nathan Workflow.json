@@ -4315,6 +4315,18 @@
     "repo": "MTCO-Group/MTCO-AI",
     "tagline": true,
     "detail": "Update planner/frontend/index.html from Automations folder; Update README.md from Automations folder; Update app.py from Automations folder. Plus 13 commits made by Ken and the apps"
+   },
+   {
+    "time": "15:03",
+    "title": "Updated AES Transport Planner 5.2",
+    "kind": "build",
+    "detail": "The holiday form's name list also offers Steve Ennion, Steven Bond, Jeff Matthews and Kirt Seddon (Nathan, 11/11/2026)."
+   },
+   {
+    "time": "15:03",
+    "title": "Updated MTCO AI Roadmap 2.9",
+    "kind": "build",
+    "detail": "An action can belong to a roadmap project."
    }
   ]
  },
