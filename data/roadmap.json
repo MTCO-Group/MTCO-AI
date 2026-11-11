@@ -1553,6 +1553,26 @@
         "Testing": "Oct 2026"
       },
       "updated_at": "2026-10-13"
+    },
+    {
+      "id": "kensite-k2b-kensite-2nd-brain-platform",
+      "company": "kensite",
+      "name": "K2B - Kensite 2nd Brain Platform",
+      "stage": "Proposed",
+      "category": "IT and Data",
+      "owner": "Nathan McGuinness",
+      "proposed_by": "nathan.mcguinness@kensite.co.uk",
+      "date": "Nov 2026",
+      "summary": "Serves as a second brain for all staff, holding shared projects and tasks in one place.",
+      "scope": "Serves as a second brain for all staff, holding shared projects and tasks in one place.",
+      "how": "It takes ideas and projects from staff and formats them in the K2B platform, so they are captured and shared rather than sitting with the person who raised them.",
+      "who": [
+        {
+          "who": "Everyone benefits",
+          "how": "all areas of Kensite, with all staff sharing the same projects and tasks."
+        }
+      ],
+      "proposed_at": "2026-11-11"
     }
   ],
   "plan": {
