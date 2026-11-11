@@ -64,6 +64,10 @@ full scope, how it works and who it helps, with buttons to place it in a lane
 and arrows to step to the next card. A drag does not open it.
 
 ## Work Diary and Nathan Workflow
+Under Back to What's Next sits an Actions pill (with the open count) that opens a pop up
+action list: add, tick off, untick, delete, clear done. It is saved live to
+`data/Nathan Actions.json` (app 2.8). Short work titles only: the app is public.
+
 The What's Next view has a Work Diary button. The Work Diary holds the Nathan Workflow
 widget: a month calendar, Monday first, where clicking a day slides out that day's work
 entries. Keyboard: arrow keys move between days, Enter opens one, Page Up and Page Down
