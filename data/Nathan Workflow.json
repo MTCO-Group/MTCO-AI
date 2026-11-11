@@ -4327,6 +4327,14 @@
     "title": "Updated MTCO AI Roadmap 2.9",
     "kind": "build",
     "detail": "An action can belong to a roadmap project."
+   },
+   {
+    "time": "16:53",
+    "title": "GitHub: 1 commit to Planner",
+    "kind": "github",
+    "repo": "LeeMcConvilleAES/Planner",
+    "tagline": true,
+    "detail": "Planner V5.2: service staff on the holiday list. Plus 339 commits made by Ken and the apps"
    }
   ]
  },
