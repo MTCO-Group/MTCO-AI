@@ -4300,6 +4300,14 @@
     "kind": "build",
     "detail": "Ken runs the month end AES reconciliation, with the consolidated invoice breakdown and..."
    }
+  ],
+  "2026-11-11": [
+   {
+    "time": "14:13",
+    "title": "Updated MTCO AI Roadmap 2.8",
+    "kind": "build",
+    "detail": "Actions."
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
