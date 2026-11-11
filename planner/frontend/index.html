@@ -188,6 +188,49 @@
   #wf ::selection{background:rgba(13,130,59,.18)}
   .wfback{display:inline-flex;align-items:center;gap:6px}
   .wfback svg{width:16px;height:16px;flex:none}
+  /* Actions (2026-11-11): a pill under Back to What's Next that opens a pop up list */
+  .wfacts{flex-direction:column;align-items:stretch;gap:8px}
+  .acwrap{position:relative;display:flex;flex-direction:column}
+  .acbtn{justify-content:flex-start}
+  .acbtn[aria-expanded="true"]{border-color:#0d823b;color:#0d823b}
+  .acn{margin-left:auto;min-width:20px;padding:1px 6px;border-radius:999px;background:#0d823b;color:#fff;font-size:11.5px;font-weight:700;text-align:center;font-variant-numeric:tabular-nums}
+  .acpop{position:absolute;top:calc(100% + 8px);right:0;z-index:40;width:360px;max-width:calc(100vw - 40px);max-height:520px;display:flex;flex-direction:column;gap:10px;padding:14px;background:#fff;border:1px solid #cfd3cf;border-radius:14px;box-shadow:0 12px 28px rgba(20,24,22,.16),0 2px 6px rgba(20,24,22,.08);animation:rise .18s cubic-bezier(.22,.9,.28,1) both}
+  .acpop[hidden]{display:none}
+  .achd{display:flex;align-items:center;gap:10px}
+  .achd h3{margin:0;font-size:15px;font-weight:800}
+  .acsum{margin-right:auto;font-size:12px;color:#5c5e66;font-variant-numeric:tabular-nums}
+  .acadd{display:flex;gap:8px}
+  .acadd input{flex:1;min-width:0;font:inherit;font-size:13px;padding:8px 12px;border:1px solid #cfd3cf;border-radius:999px;color:#1a1b1e;caret-color:#0d823b}
+  .acadd input:focus-visible{outline:2px solid #0d823b;outline-offset:1px;border-color:#0d823b}
+  .acadd .btn{padding:8px 14px}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .acnote{margin:0;padding:8px 10px;border-radius:8px;font-size:12px;background:#fff5e6;border:1px solid #f0d9ad;color:#6b4e12}
+  .aclist{list-style:none;margin:0;padding:0;overflow:auto;display:flex;flex-direction:column;gap:2px}
+  #acList{max-height:300px}
+  .acit{display:flex;align-items:flex-start;gap:8px;padding:6px 4px;border-radius:8px}
+  .acit:hover{background:#f3f5f3}
+  .acchk{flex:none;width:20px;height:20px;margin-top:1px;border:1.5px solid #8a8c94;border-radius:6px;background:#fff;display:grid;place-items:center;cursor:pointer;padding:0}
+  .acchk svg{width:14px;height:14px;opacity:0}
+  .acchk[aria-checked="true"]{background:#0d823b;border-color:#0d823b;color:#fff}
+  .acchk[aria-checked="true"] svg{opacity:1}
+  .acchk:focus-visible,.acdel:focus-visible,.aclink:focus-visible,.acdone summary:focus-visible{outline:2px solid #0d823b;outline-offset:2px}
+  .actx{flex:1;min-width:0;font-size:13px;line-height:1.4;color:#1a1b1e;overflow-wrap:anywhere}
+  .acdt{display:block;font-size:11px;color:#6b6e76;font-variant-numeric:tabular-nums}
+  .acti{display:block}
+  .acdone .acti{color:#6b6e76;text-decoration:line-through}
+  .acdel{flex:none;width:24px;height:24px;border:0;background:none;border-radius:6px;color:#6b6e76;cursor:pointer;display:grid;place-items:center;opacity:0;padding:0}
+  .acit:hover .acdel,.acdel:focus-visible{opacity:1}
+  .acdel:hover{color:#b3261e;background:#fbeceb}
+  .acdel svg{width:14px;height:14px}
+  .acempty{margin:2px 4px;font-size:12.5px;color:#6b6e76}
+  .acdone{border-top:1px solid #e3e6e3;padding-top:8px}
+  .acdone summary{cursor:pointer;font-size:12.5px;font-weight:700;color:#40424a;list-style:none}
+  .acdone summary::-webkit-details-marker{display:none}
+  .acdone #acDone{max-height:160px;margin-top:6px}
+  .aclink{margin-top:6px;border:0;background:none;padding:2px 0;font:inherit;font-size:12px;color:#0d823b;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+  .acpop.ro .acadd,.acpop.ro .acdel,.acpop.ro .aclink{display:none}
+  @media (prefers-reduced-motion:reduce){.acpop{animation:none}}
+  @media (max-width:560px){.acpop{position:fixed;top:118px;left:16px;right:16px;width:auto;max-width:none}}
   .wfsec{flex:1;min-height:0;display:flex;flex-direction:column;padding:4px 30px 24px;gap:12px}
   .wfbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;flex:none}
   .wfbar h2{margin:0;font-size:17px;font-weight:800;letter-spacing:-.01em}
@@ -662,11 +705,37 @@
         <div class="months" id="wfHeatMonths"></div>
         <div class="wftip" id="wfHeatTip"></div>
       </div>
-      <div class="pacts">
+      <div class="pacts wfacts">
         <button class="btn wfback" id="wfBack" type="button">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12H7"></path><path d="M11 6l-6 6 6 6"></path></svg>
           Back to What's Next
         </button>
+        <div class="acwrap">
+          <button class="btn wfback acbtn" id="acOpen" type="button" aria-expanded="false" aria-controls="acPop">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"></path><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"></path></svg>
+            Actions<span class="acn" id="acCount" hidden></span>
+          </button>
+          <div class="acpop" id="acPop" role="dialog" aria-labelledby="acH" hidden>
+            <div class="achd">
+              <h3 id="acH">Actions</h3>
+              <span class="acsum" id="acSum"></span>
+              <button class="iconbtn" id="acClose" type="button" aria-label="Close actions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+            </div>
+            <form class="acadd" id="acForm" autocomplete="off">
+              <label class="sr" for="acInput">New action</label>
+              <input id="acInput" type="text" maxlength="140" placeholder="Add an action, short work title">
+              <button class="btn primary" id="acAdd" type="submit">Add</button>
+            </form>
+            <p class="acnote" id="acNote" hidden></p>
+            <ul class="aclist" id="acList" aria-label="Open actions"></ul>
+            <p class="acempty" id="acEmpty">No open actions.</p>
+            <details class="acdone" id="acDoneWrap" hidden>
+              <summary>Done <span id="acDoneN"></span></summary>
+              <ul class="aclist" id="acDone" aria-label="Done actions"></ul>
+              <button class="aclink" id="acClear" type="button">Clear done</button>
+            </details>
+          </div>
+        </div>
       </div>
     </div>
     <section class="wfsec" aria-labelledby="wfH2">
@@ -2041,6 +2110,7 @@ document.addEventListener("keydown", ev => {
 
 function wfRenderArgs(args){
   const wf = args.workflow || {};
+  acArgs(wf);
   WF.entries = (wf.entries && typeof wf.entries === "object") ? wf.entries : {};
   const ts = (wf.time_saved && typeof wf.time_saved === "object") ? wf.time_saved : null;
   if(ts && (!WF.saved || String(ts.updated || "") > String(WF.saved.updated || ""))) WF.saved = ts;
@@ -2055,6 +2125,93 @@ function wfRenderArgs(args){
   }
   if($("#wf").classList.contains("show")){ wfRender(); fsRender(); fsStart(); wfPollStart(); }
 }
+
+/* ── Actions (11/11/2026) ───────────────────────────────────────────────────
+   Nathan's own action list, opened from the pill under Back to What's Next.
+   Every change is shown at once and the whole list goes back to the app
+   ({kind:"actions"}), which saves data/Nathan Actions.json before the page
+   is drawn again. Short work titles only: the app is public. */
+const AC = {items:[], note:""};
+const AC_TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>';
+const AC_BIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>';
+function acToday(){ const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); }
+function acShort(iso){ if(!iso) return ""; const [y,m,d] = iso.split("-").map(Number); return d + " " + WF_MON[m-1].slice(0,3); }
+function acArgs(wf){
+  if(Array.isArray(wf.actions)) AC.items = wf.actions.map(x => Object.assign({}, x));
+  AC.note = wf.actions_note || "";
+  acRender();
+}
+function acItem(it){
+  const li = el("li", "acit");
+  const chk = el("button", "acchk");
+  chk.type = "button"; chk.setAttribute("role", "checkbox");
+  chk.setAttribute("aria-checked", it.done ? "true" : "false");
+  chk.setAttribute("aria-label", (it.done ? "Mark not done: " : "Mark done: ") + it.text);
+  chk.innerHTML = AC_TICK; chk.disabled = !STATE.canSave;
+  chk.addEventListener("click", () => {
+    it.done = !it.done; it.done_at = it.done ? acToday() : "";
+    acSave(); acRender();
+    const again = document.querySelector(`.acchk[data-id="${it.id}"]`); if(again) again.focus();
+  });
+  chk.dataset.id = it.id;
+  const tx = el("span", "actx"); const ti = el("span", "acti"); ti.textContent = it.text; tx.appendChild(ti);
+  const dt = el("span", "acdt"); dt.textContent = it.done ? ("Done " + acShort(it.done_at)) : ("Added " + acShort(it.added));
+  if(dt.textContent.trim().split(" ").length > 1) tx.appendChild(dt);
+  const del = el("button", "acdel"); del.type = "button"; del.innerHTML = AC_BIN;
+  del.setAttribute("aria-label", "Delete: " + it.text);
+  del.addEventListener("click", () => { AC.items = AC.items.filter(x => x.id !== it.id); acSave(); acRender(); $("#acInput").focus(); });
+  li.append(chk, tx, del);
+  return li;
+}
+function acRender(){
+  const open = AC.items.filter(x => !x.done), done = AC.items.filter(x => x.done)
+    .sort((a,b) => String(b.done_at).localeCompare(String(a.done_at)));
+  const n = $("#acCount"); n.hidden = !open.length; n.textContent = open.length;
+  $("#acSum").textContent = open.length + " open" + (done.length ? ", " + done.length + " done" : "");
+  const ul = $("#acList"); ul.innerHTML = ""; open.forEach(it => ul.appendChild(acItem(it)));
+  $("#acEmpty").hidden = !!open.length;
+  $("#acDoneWrap").hidden = !done.length; $("#acDoneN").textContent = "(" + done.length + ")";
+  const dl = $("#acDone"); dl.innerHTML = ""; done.forEach(it => dl.appendChild(acItem(it)));
+  const note = $("#acNote");
+  const msg = AC.note || (STATE.canSave ? "" : "Read only: live saving is not switched on.");
+  note.hidden = !msg; note.textContent = msg;
+  $("#acPop").classList.toggle("ro", !STATE.canSave);
+}
+function acSave(){
+  if(!STATE.canSave) return;
+  AC.note = "";
+  try{ sessionStorage.setItem("mtco.ac.open", $("#acPop").hidden ? "" : "1"); }catch(e){}
+  Streamlit.value({kind:"actions", items:AC.items, nonce: Date.now()});
+}
+function acOpen(){
+  $("#acPop").hidden = false; $("#acOpen").setAttribute("aria-expanded", "true"); acRender();
+  try{ sessionStorage.setItem("mtco.ac.open", "1"); }catch(e){}
+  setTimeout(() => (STATE.canSave ? $("#acInput") : $("#acClose")).focus(), 0);
+}
+function acClose(focusBack){
+  $("#acPop").hidden = true; $("#acOpen").setAttribute("aria-expanded", "false");
+  try{ sessionStorage.setItem("mtco.ac.open", ""); }catch(e){}
+  if(focusBack) $("#acOpen").focus();
+}
+$("#acOpen").addEventListener("click", () => { if($("#acPop").hidden) acOpen(); else acClose(true); });
+$("#acClose").addEventListener("click", () => acClose(true));
+$("#acForm").addEventListener("submit", ev => {
+  ev.preventDefault();
+  const inp = $("#acInput"), text = inp.value.replace(/\s+/g, " ").trim().slice(0, 140);
+  if(!text || !STATE.canSave) return;
+  AC.items.unshift({id: "a" + Date.now().toString(36), text, done: false, added: acToday(), done_at: ""});
+  inp.value = ""; acSave(); acRender(); inp.focus();
+});
+$("#acClear").addEventListener("click", () => {
+  AC.items = AC.items.filter(x => !x.done); acSave(); acRender(); $("#acInput").focus();
+});
+$("#acPop").addEventListener("keydown", ev => {
+  if(ev.key === "Escape"){ ev.preventDefault(); ev.stopPropagation(); acClose(true); }
+});
+document.addEventListener("pointerdown", ev => {
+  if(!$("#acPop").hidden && !ev.target.closest(".acwrap")) acClose(false);
+});
+try{ if(sessionStorage.getItem("mtco.ac.open") === "1") setTimeout(() => { if($("#wf").classList.contains("show")) acOpen(); }, 0); }catch(e){}
 
 /* ── render from Streamlit ────────────────────────────────────────────────── */
 let built = false;
