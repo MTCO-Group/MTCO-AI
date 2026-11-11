@@ -1,6 +1,14 @@
 """
 MTCO AI Roadmap
-Version 2.8
+Version 2.9
+
+2.9, 11/11/2026: an action can belong to a roadmap project. Nathan: "make
+it so that the action reads open projects and suggests a project to assign
+it to". Each item may carry "project" (a roadmap id, "" for none). The pop
+up suggests one as the action is typed, from the open projects (anything
+not Shipped, those in flight first), and each open action has a project
+picker. The suggestion is worked out in the page from the roadmap it
+already has; nothing new is read.
 
 2.8, 11/11/2026: Actions. Nathan: "On my Work Diary, add a section for
 'Actions' by me. it should be a button that expands into a pop up, sat
@@ -202,7 +210,8 @@ def clean_actions(items):
             continue
         out.append({"id": str(it.get("id") or "")[:24] or f"a{len(out)}", "text": text,
                     "done": bool(it.get("done")), "added": str(it.get("added") or "")[:10],
-                    "done_at": str(it.get("done_at") or "")[:10]})
+                    "done_at": str(it.get("done_at") or "")[:10],
+                    "project": str(it.get("project") or "")[:80]})
     return out
 
 
