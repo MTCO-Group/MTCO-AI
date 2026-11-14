@@ -4336,6 +4336,14 @@
     "tagline": true,
     "detail": "Planner V5.2: service staff on the holiday list. Plus 339 commits made by Ken and the apps"
    }
+  ],
+  "2026-11-14": [
+   {
+    "time": "21:49",
+    "title": "Updated Ken Agent V30.9",
+    "kind": "build",
+    "detail": "Ken gives each type of workflow from each mailbox an owner of its own, and can raise..."
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
