@@ -4362,14 +4362,6 @@
     "kind": "build"
    },
    {
-    "time": "11:05",
-    "title": "GitHub: 4 commits to MTCO-AI",
-    "kind": "github",
-    "repo": "MTCO-Group/MTCO-AI",
-    "tagline": true,
-    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update README.md from Automations folder. Plus 12 commits made by Ken and the apps"
-   },
-   {
     "time": "11:07",
     "title": "Updated MTCO AI Roadmap 3.0",
     "kind": "build",
@@ -4422,6 +4414,14 @@
     "title": "Updated MTCO AI Roadmap planner component 2.7",
     "kind": "build",
     "detail": "Scoping asks set questions (app 3.1)."
+   },
+   {
+    "time": "11:57",
+    "title": "GitHub: 8 commits to MTCO-AI",
+    "kind": "github",
+    "repo": "MTCO-Group/MTCO-AI",
+    "tagline": true,
+    "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update README.md from Automations folder. Plus 21 commits made by Ken and the apps"
    }
   ]
  },
