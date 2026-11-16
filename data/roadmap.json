@@ -1093,7 +1093,7 @@
       "id": "kensite-kensite-openrouter-account-and-shared-api-keys",
       "company": "kensite",
       "name": "Kensite OpenRouter Account and Shared API Keys",
-      "stage": "Scoped",
+      "stage": "Planned",
       "category": "IT and Data",
       "owner": "Nathan Mcguinness",
       "proposed_by": "nathan.mcguinness@kensite.co.uk",
@@ -1109,9 +1109,12 @@
       ],
       "proposed_at": "2026-09-23",
       "dates": {
-        "Scoped": "Sep 2026"
+        "Scoped": "Sep 2026",
+        "Planned": "Nov 2026"
       },
-      "updated_at": "2026-09-23"
+      "updated_at": "2026-11-16",
+      "outputs": "A manageable company funded dahboard for AI API usuage where costs can be monitored on a tool by tool basis",
+      "roi": "Other - visibility over costs and ownership of credenitals."
     },
     {
       "id": "kensite-voice-notes-as-a-data-collection-tool",
