@@ -87,6 +87,10 @@ roi, who and tested can be set from the page). Chunks are kept with the actions 
 Under Back to What's Next sits an Actions pill (with the open count) that opens a pop up
 action list: add, tick off, untick, delete, clear done. It is saved live to
 `data/Nathan Actions.json` (app 2.8). Short work titles only: the app is public.
+Ken can add to the list too (agent 31.2): Nathan asks him "add this as an action for me"
+and he writes the title and picks a category (Email, Other, New Starter). A category with
+parts, such as New Starter's six steps, shows as tick boxes under the action. Categories are
+set in `planner_actions.categories` in Ken Agent Config.json.
 
 The What's Next view has a Work Diary button. The Work Diary holds the Nathan Workflow
 widget: a month calendar, Monday first, where clicking a day slides out that day's work
