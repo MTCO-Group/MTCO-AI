@@ -882,7 +882,7 @@
       "id": "kensite-ai-organisational-tree-sub-agent-architecture",
       "company": "kensite",
       "name": "AI Organisational Tree - Sub-Agent Architecture",
-      "stage": "Building",
+      "stage": "Testing",
       "category": "IT and Data",
       "owner": "Nathan McGuinness",
       "proposed_by": "nathan.mcguinness@kensite.co.uk",
@@ -1009,7 +1009,8 @@
       "updated_at": "2026-11-16",
       "dates": {
         "Planned": "Oct 2026",
-        "Building": "Nov 2026"
+        "Building": "Nov 2026",
+        "Testing": "Nov 2026"
       }
     },
     {
