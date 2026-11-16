@@ -1,6 +1,15 @@
 """
 MTCO AI Roadmap planner component
-Version 2.5
+Version 2.6
+
+2.6, 16/11/2026: the project flow (app 3.0). The What's Next view gains an In
+progress band (approved projects from Scoping to Testing, each with its
+stage and, once it has chunks, a progress bar). The project sheet opens with
+the flow: the six stages, and for the current one what there is to do
+(approve; set out the scope; split the work into chunks and assign them;
+tick chunks off in Build, which moves to Testing when all are done; say it
+is tested and mark it shipped). Changes come back as {"kind": "flow",
+"items": [...], "projects": [...]}. The wrapper itself is unchanged.
 
 2.5: the AI Organisational Tree gets its own page. A widget sits bottom right
 of the landing page (Ken's portrait, the stage, the next phase and the
