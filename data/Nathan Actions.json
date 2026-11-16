@@ -117,7 +117,17 @@
    "project": "mtco-shared-ai-knowledge-repository-event-transcripts",
    "chunk": true,
    "mine": false
+  },
+  {
+   "id": "cmwjf6ivv",
+   "text": "Connect to Claude",
+   "done": false,
+   "added": "2026-11-16",
+   "done_at": "",
+   "project": "mtco-shared-ai-knowledge-repository-event-transcripts",
+   "chunk": true,
+   "mine": false
   }
  ],
- "updated": "2026-11-16 15:29"
+ "updated": "2026-11-16 15:30"
 }
