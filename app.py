@@ -1,6 +1,14 @@
 """
 MTCO AI Roadmap
-Version 3.1
+Version 3.2
+
+3.2, 16/11/2026: ideas can be deleted. Nathan: "I need to be able to delete
+ideas too, as rejected or dismissed. These will be accessible via a little
+'Trash' icon in the top right". A project change {"id": ..., "trash":
+"Rejected" or "Dismissed"} moves the project out of "projects" into "trash"
+in data/roadmap.json, stamped "trashed": {"as", "at", "stage"}, so the
+dashboard, the counts and Ken no longer see it; {"id": ..., "restore": true}
+puts it back at the stage it left. Nothing is ever erased from the file.
 
 3.1, 16/11/2026: Scoping asks set questions. Nathan: the return on investment
 shows 'Increases Profit?', 'Increases Sales?' and 'Other', and who it
@@ -300,6 +308,10 @@ def clean_project_change(ch):
         out["roi_tags"] = [t for t in ROI_TAGS if t in ch["roi_tags"]]
     if isinstance(ch.get("teams"), list):
         out["teams"] = [t for t in TEAMS if t in ch["teams"]]
+    if ch.get("trash") in ("Rejected", "Dismissed"):
+        out["trash"] = ch["trash"]
+    if ch.get("restore") is True:
+        out["restore"] = True
     return out if len(out) > 1 else None
 
 
@@ -318,8 +330,27 @@ def save_projects(tok, changes):
         by_id = {p.get("id"): p for p in current.get("projects", [])}
         said = []
         for ch in changes:
+            if ch.get("restore"):
+                binned = current.get("trash") or []
+                back = next((x for x in binned if x.get("id") == ch["id"]), None)
+                if back is not None and ch["id"] not in by_id:
+                    current["trash"] = [x for x in binned if x is not back]
+                    back.pop("trashed", None)
+                    back["updated_at"] = now.strftime("%Y-%m-%d")
+                    current.setdefault("projects", []).append(back)
+                    by_id[ch["id"]] = back
+                    said.append(f"{back.get('name', ch['id'])} restored")
+                continue
             p = by_id.get(ch["id"])
             if p is None:
+                continue
+            if ch.get("trash"):
+                current["projects"] = [x for x in current["projects"] if x is not p]
+                by_id.pop(ch["id"], None)
+                p["trashed"] = {"as": ch["trash"], "at": now.strftime("%Y-%m-%d"), "stage": p.get("stage")}
+                p["updated_at"] = now.strftime("%Y-%m-%d")
+                current.setdefault("trash", []).insert(0, p)
+                said.append(f"{p.get('name', ch['id'])} deleted as {ch['trash'].lower()}")
                 continue
             for key in ("scope", "outputs", "roi", "who", "tested", "roi_tags", "teams"):
                 if key in ch:
