@@ -161,6 +161,24 @@
   .flopt[aria-pressed="true"]{background:#0d823b;border-color:#0d823b;color:#fff}
   .flopt:focus-visible{outline:2px solid #0d823b;outline-offset:2px}
   .flgroup input[hidden]{display:none}
+  /* trash (16/11/2026): rejected and dismissed ideas, behind the bin icon top right of What's Next */
+  .trwrap{position:relative;display:flex}
+  .trbtn{position:relative}
+  .trn{position:absolute;top:-4px;right:-4px;min-width:17px;padding:0 4px;border-radius:999px;background:#40424a;color:#fff;font-size:10.5px;font-weight:700;line-height:17px;text-align:center;font-variant-numeric:tabular-nums}
+  .trpop{z-index:60}
+  .trlist{max-height:380px}
+  .trlist li{display:flex;align-items:center;gap:10px;padding:8px 4px;border-bottom:1px solid #efeee9}
+  .trlist li:last-child{border-bottom:0}
+  .trlist .tx{flex:1;min-width:0}
+  .trlist .nm{display:block;font-size:13px;font-weight:700;line-height:1.3;overflow-wrap:anywhere}
+  .trlist .why{display:block;font-size:11.5px;color:#6b6e76;margin-top:2px}
+  .trlist .btn{padding:5px 12px;font-size:12px;flex:none}
+  .fldel{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end;border-top:1px solid #e6e5e1;padding-top:10px;font-size:12.5px;color:#53565e}
+  .fldel .flback.del{color:#b3261e}
+  .fldel .btn{padding:6px 13px;font-size:12.5px}
+  .fldel .btn.warn{border-color:#b3261e;color:#b3261e}
+  .fldel .btn.warn:hover{background:#fbeceb}
+  .readonly .fldel{display:none}
   .flrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .flrow .sp{flex:1}
   .fladd{display:flex;gap:8px}
@@ -714,6 +732,20 @@
         <p>Drag the proposed ideas into the order they get built. This is the AI Manager's queue, so what sits in Now is what gets worked on next.</p>
       </div>
       <div class="pacts">
+        <div class="trwrap">
+          <button class="iconbtn trbtn" id="trOpen" type="button" aria-expanded="false" aria-controls="trPop" aria-label="Trash: rejected and dismissed ideas" title="Trash: rejected and dismissed ideas">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"></path><path d="M10 11v6M14 11v6"></path><path d="M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12"></path><path d="M9 7V4h6v3"></path></svg><span class="trn" id="trCount" hidden></span>
+          </button>
+          <div class="acpop trpop" id="trPop" role="dialog" aria-labelledby="trH" hidden>
+            <div class="achd">
+              <h3 id="trH">Trash</h3>
+              <span class="acsum" id="trSum"></span>
+              <button class="iconbtn" id="trClose" type="button" aria-label="Close trash"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+            </div>
+            <ul class="aclist trlist" id="trList" aria-label="Rejected and dismissed ideas"></ul>
+            <p class="acempty" id="trEmpty">Nothing has been rejected or dismissed.</p>
+          </div>
+        </div>
         <button class="btn icon" id="wfOpen" type="button" aria-controls="wf">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
           Work Diary
@@ -2346,7 +2378,7 @@ function acItem(it){
 }
 function acRender(){
   // a project's chunk shows here only once it is assigned to me
-  const shown = AC.items.filter(x => !x.chunk || x.mine);
+  const shown = AC.items.filter(x => !x.chunk || (x.mine && (STATE.all || {})[x.project]));
   const open = shown.filter(x => !x.done), done = shown.filter(x => x.done)
     .sort((a,b) => String(b.done_at).localeCompare(String(a.done_at)));
   const n = $("#acCount"); n.hidden = !open.length; n.textContent = open.length;
@@ -2654,9 +2686,82 @@ function flSection(p){
     const g = flProgress(p.id); if(g.total) panel.appendChild(flBar(p.id));
     const r = row(); const sp = el("span", "sp"); r.appendChild(sp); back(r);
   }
+  if(stage !== "Shipped" && STATE.canSave){
+    const d = el("div", "fldel"); panel.appendChild(d);
+    const ask = () => {
+      d.innerHTML = "";
+      const b = el("button", "flback del"); b.type = "button"; b.textContent = "Delete idea"; b.dataset.fk = "del";
+      b.addEventListener("click", choose); d.appendChild(b);
+    };
+    const choose = () => {
+      d.innerHTML = "";
+      const t = el("span"); t.textContent = "Delete this idea as"; d.appendChild(t);
+      ["Rejected", "Dismissed"].forEach(why => {
+        const b = el("button", "btn warn"); b.type = "button"; b.textContent = why; b.dataset.fk = "del-" + why;
+        b.addEventListener("click", () => trSend(p.id, why)); d.appendChild(b);
+      });
+      const c = el("button", "btn"); c.type = "button"; c.textContent = "Cancel"; c.dataset.fk = "del-cancel";
+      c.addEventListener("click", () => { ask(); d.querySelector("button").focus(); }); d.appendChild(c);
+      d.querySelector(".btn").focus();
+    };
+    ask();
+  }
   if(!STATE.canSave) sec.querySelectorAll("button,input,textarea").forEach(x => { x.disabled = true; });
   return sec;
 }
+
+/* ── trash (16/11/2026) ─────────────────────────────────────────────────────
+   Nathan: "I need to be able to delete ideas too, as rejected or dismissed.
+   These will be accessible via a little 'Trash' icon in the top right".
+   A deleted idea leaves the roadmap's projects for its trash list, marked
+   Rejected or Dismissed with the day and the stage it was at, so it drops
+   out of the board, the counts and the queue. The bin icon lists them and
+   can restore one to the stage it left. Sent as project changes
+   {id, trash:"Rejected"} and {id, restore:true}. */
+function trSend(id, why){
+  const p = (STATE.all || {})[id]; if(!p || !STATE.canSave) return;
+  p.trashed = {as: why, at: acToday(), stage: p.stage};
+  delete STATE.all[id]; delete STATE.projects[id]; delete FL_DRAFT[id];
+  ORDER.forEach(k => { STATE.lanes[k] = STATE.lanes[k].filter(x => x !== id); });
+  STATE.trash = [p].concat(STATE.trash || []);
+  if(PD.id === id) pdClose();
+  flCommit([{id, trash: why}]);
+  trRender();
+  toast(p.name + " deleted as " + why.toLowerCase() + ". It can be restored from the trash.");
+}
+function trRestore(id){
+  const p = (STATE.trash || []).find(x => x.id === id); if(!p || !STATE.canSave) return;
+  STATE.trash = STATE.trash.filter(x => x.id !== id);
+  delete p.trashed; STATE.all[id] = p;
+  if(p.stage === "Proposed"){ STATE.projects[id] = p; STATE.lanes.tray.push(id); }
+  flCommit([{id, restore: true}]);
+  trRender();
+  toast(p.name + " restored to " + (FL_LABEL[p.stage] || p.stage) + ".");
+}
+function trRender(){
+  const list = STATE.trash || [];
+  const n = $("#trCount"); n.hidden = !list.length; n.textContent = list.length;
+  $("#trSum").textContent = list.length ? list.length + (list.length === 1 ? " idea" : " ideas") : "";
+  $("#trEmpty").hidden = !!list.length;
+  const ul = $("#trList"); ul.innerHTML = "";
+  list.forEach(p => {
+    const li = el("li"), tx = el("span", "tx"), nm = el("span", "nm"), why = el("span", "why");
+    nm.textContent = p.name;
+    const t = p.trashed || {};
+    why.textContent = [(t.as || "Deleted") + (t.at ? " " + acShort(t.at) : ""), p.companyName || "", t.stage ? "was " + (FL_LABEL[t.stage] || t.stage) : ""].filter(Boolean).join(" · ");
+    tx.append(nm, why);
+    const b = el("button", "btn"); b.type = "button"; b.textContent = "Restore"; b.disabled = !STATE.canSave;
+    b.setAttribute("aria-label", "Restore " + p.name);
+    b.addEventListener("click", () => { trRestore(p.id); const f = $("#trList").querySelector("button") || $("#trClose"); f.focus(); });
+    li.append(tx, b); ul.appendChild(li);
+  });
+}
+function trOpen(){ $("#trPop").hidden = false; $("#trOpen").setAttribute("aria-expanded", "true"); trRender(); $("#trClose").focus(); }
+function trClose(focusBack){ $("#trPop").hidden = true; $("#trOpen").setAttribute("aria-expanded", "false"); if(focusBack) $("#trOpen").focus(); }
+$("#trOpen").addEventListener("click", () => { if($("#trPop").hidden) trOpen(); else trClose(true); });
+$("#trClose").addEventListener("click", () => trClose(true));
+$("#trPop").addEventListener("keydown", ev => { if(ev.key === "Escape"){ ev.preventDefault(); ev.stopPropagation(); trClose(true); } });
+document.addEventListener("pointerdown", ev => { if(!$("#trPop").hidden && !ev.target.closest(".trwrap")) trClose(false); });
 
 /* ── render from Streamlit ────────────────────────────────────────────────── */
 let built = false;
@@ -2703,6 +2808,10 @@ function render(args){
                        outputs:p.outputs || "", roi:p.roi || "", tested:!!p.tested,
                        roi_tags:Array.isArray(p.roi_tags) ? p.roi_tags : [], teams:Array.isArray(p.teams) ? p.teams : []};
   });
+  STATE.trash = (roadmap.trash || []).filter(p => p && p.id).map(p => Object.assign({}, p, {
+    companyName: names[p.company] || p.company, who: Array.isArray(p.who) ? p.who : [], dates: p.dates || {}, plan: p.plan || null,
+    outputs: p.outputs || "", roi: p.roi || "", tested: !!p.tested,
+    roi_tags: Array.isArray(p.roi_tags) ? p.roi_tags : [], teams: Array.isArray(p.teams) ? p.teams : []}));
   // the Proposed ones are the same objects, so the flow sees one record per project
   Object.keys(STATE.projects).forEach(id => { if(STATE.all[id]) STATE.projects[id] = STATE.all[id]; });
   STATE.canSave = !!args.can_save;
@@ -2724,6 +2833,7 @@ function render(args){
   renderCards();
   wfRenderArgs(args);
   flBand();
+  trRender();
   if(PD.id) pdFill();
   otArgs();
   Streamlit.height(args.height || 900);
