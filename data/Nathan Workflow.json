@@ -4410,6 +4410,18 @@
     "title": "Updated Net2 Code Build 1.4",
     "kind": "build",
     "detail": "The suite prints an arrow that Windows' default output encoding cannot write to a file, so both test runs are given UTF 8 output."
+   },
+   {
+    "time": "11:57",
+    "title": "Updated MTCO AI Roadmap 3.1",
+    "kind": "build",
+    "detail": "Scoping asks set questions."
+   },
+   {
+    "time": "11:57",
+    "title": "Updated MTCO AI Roadmap planner component 2.7",
+    "kind": "build",
+    "detail": "Scoping asks set questions (app 3.1)."
    }
   ]
  },
