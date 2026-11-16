@@ -1394,7 +1394,7 @@
       "id": "kensite-work-diary-tool-self-filling-workload-log",
       "company": "kensite",
       "name": "Work Diary Tool - Self-Filling Workload Log",
-      "stage": "Scoped",
+      "stage": "Proposed",
       "category": "People and HR",
       "owner": "Nathan McGuinness",
       "proposed_by": "chloe.ainscough@kensite.co.uk",
@@ -1420,7 +1420,8 @@
       "dates": {
         "Building": "Oct 2026",
         "Planned": "Nov 2026",
-        "Scoped": "Nov 2026"
+        "Scoped": "Nov 2026",
+        "Proposed": "Nov 2026"
       },
       "updated_at": "2026-11-16"
     },
