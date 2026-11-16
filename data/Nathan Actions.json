@@ -11,9 +11,9 @@
   {
    "id": "cmwj985z0",
    "text": "Build out repeatable code",
-   "done": false,
+   "done": true,
    "added": "2026-11-16",
-   "done_at": "",
+   "done_at": "2026-11-16",
    "project": "kensite-off-hire-inbox-monitor-daily-summary",
    "chunk": true,
    "mine": true
@@ -21,9 +21,9 @@
   {
    "id": "cmwj98kaz",
    "text": "Format on-demand report",
-   "done": false,
+   "done": true,
    "added": "2026-11-16",
-   "done_at": "",
+   "done_at": "2026-11-16",
    "project": "kensite-off-hire-inbox-monitor-daily-summary",
    "chunk": true,
    "mine": true
