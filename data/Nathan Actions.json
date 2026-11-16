@@ -47,7 +47,17 @@
    "project": "kensite-ai-organisational-tree-sub-agent-architecture",
    "chunk": true,
    "mine": true
+  },
+  {
+   "id": "cmwj9goyz",
+   "text": "Set up OpenRouter Account",
+   "done": false,
+   "added": "2026-11-16",
+   "done_at": "",
+   "project": "kensite-kensite-openrouter-account-and-shared-api-keys",
+   "chunk": true,
+   "mine": false
   }
  ],
- "updated": "2026-11-16 12:48"
+ "updated": "2026-11-16 12:49"
 }
