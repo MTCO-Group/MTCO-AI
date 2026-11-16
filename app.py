@@ -1,6 +1,15 @@
 """
 MTCO AI Roadmap
-Version 3.2
+Version 3.3
+
+3.3, 16/11/2026: actions can carry a category and parts. Ken (agent 31.2) adds
+actions to data/Nathan Actions.json when Nathan asks him to, each with a
+"category" (Email, Other, New Starter, and whatever is added to Ken's config
+later) and, for a category like New Starter, "parts": a checklist of steps
+[{"text", "done"}]. Saving from the page now keeps "category", "parts" and
+"by" on an item instead of dropping them, and the Actions pop up shows the
+category as a tag and the parts as tick boxes under the action; the action
+is done when every part is.
 
 3.2, 16/11/2026: ideas can be deleted. Nathan: "I need to be able to delete
 ideas too, as rejected or dismissed. These will be accessible via a little
@@ -247,6 +256,15 @@ def clean_actions(items):
         if it.get("chunk"):
             out[-1]["chunk"] = True
             out[-1]["mine"] = bool(it.get("mine"))
+        if it.get("category"):
+            out[-1]["category"] = " ".join(str(it["category"]).split())[:40]
+        if it.get("by"):
+            out[-1]["by"] = str(it["by"])[:20]
+        if isinstance(it.get("parts"), list) and it["parts"]:
+            parts = [{"text": " ".join(str(x.get("text") or "").split())[:80], "done": bool(x.get("done"))}
+                     for x in it["parts"][:20] if isinstance(x, dict) and str(x.get("text") or "").strip()]
+            if parts:
+                out[-1]["parts"] = parts
     return out
 
 
