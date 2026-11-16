@@ -4398,6 +4398,12 @@
     "title": "Updated Net2 Code Build 1.2",
     "kind": "build",
     "detail": "The staging copy goes in a fresh folder each run (the first run's folder could not be cleared, something in it was still open)."
+   },
+   {
+    "time": "11:32",
+    "title": "Updated Net2 Code Build 1.3",
+    "kind": "build",
+    "detail": "Section 222 passed on the real V31.0."
    }
   ]
  },
