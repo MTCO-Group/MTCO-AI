@@ -697,7 +697,7 @@
       "id": "kensite-off-hire-inbox-monitor-daily-summary",
       "company": "kensite",
       "name": "Off-Hire Inbox Monitor & Daily Summary",
-      "stage": "Building",
+      "stage": "Testing",
       "category": "Operations",
       "owner": "Nathan Mcguinness",
       "proposed_by": "nathan.mcguinness@kensite.co.uk",
@@ -713,9 +713,10 @@
       ],
       "proposed_at": "2026-09-17",
       "dates": {
-        "Building": "Oct 2026"
+        "Building": "Oct 2026",
+        "Testing": "Nov 2026"
       },
-      "updated_at": "2026-10-13"
+      "updated_at": "2026-11-16"
     },
     {
       "id": "kensite-sla-request-agent",
