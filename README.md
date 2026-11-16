@@ -63,6 +63,21 @@ Click any card (or focus it and press Enter) to expand it: the sheet shows the
 full scope, how it works and who it helps, with buttons to place it in a lane
 and arrows to step to the next card. A drag does not open it.
 
+## Project flow
+A project moves Proposed, Scoping, Planning, Build, Testing, Shipped (stored as the
+roadmap stages Proposed, Scoped, Planned, Building, Testing, Shipped). Open a project
+from What's Next (a proposed card, or the In progress band) to move it on:
+- Proposed: awaiting approval; Approve moves it to Scoping.
+- Scoping: the job it does, its outputs, its return on investment and who it benefits.
+- Planning: split the work into chunks; each can be assigned to Nathan, which puts it
+  in his Actions.
+- Build: tick chunks off; each turns green and fills the project's progress bar. When
+  every chunk is done the project moves to Testing by itself.
+- Testing: tick "I have tested this", then Mark as shipped.
+Project changes are written to `data/roadmap.json` (only stage, dates, scope, outputs,
+roi, who and tested can be set from the page). Chunks are kept with the actions in
+`data/Nathan Actions.json` as items with `"chunk": true` and the project's id.
+
 ## Work Diary and Nathan Workflow
 Under Back to What's Next sits an Actions pill (with the open count) that opens a pop up
 action list: add, tick off, untick, delete, clear done. It is saved live to
