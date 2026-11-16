@@ -76,6 +76,9 @@ from What's Next (a proposed card, or the In progress band) to move it on:
 - Build: tick chunks off; each turns green and fills the project's progress bar. When
   every chunk is done the project moves to Testing by itself.
 - Testing: tick "I have tested this", then Mark as shipped.
+- Any stage before Shipped: Delete idea, as Rejected or Dismissed. It moves from
+  `projects` to `trash` in `data/roadmap.json`; the bin icon top right of What's Next
+  lists the trash and can restore an idea to the stage it left.
 Project changes are written to `data/roadmap.json` (only stage, dates, scope, outputs,
 roi, who and tested can be set from the page). Chunks are kept with the actions in
 `data/Nathan Actions.json` as items with `"chunk": true` and the project's id.
