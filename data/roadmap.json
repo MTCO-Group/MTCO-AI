@@ -83,7 +83,7 @@
       "id": "aes-ainscough-haulage-driver-tracking-agent",
       "company": "aes",
       "name": "Ainscough Haulage Driver Tracking Agent",
-      "stage": "Proposed",
+      "stage": "Scoped",
       "category": "Transport and Logistics",
       "owner": "Chloe Ainscough",
       "proposed_by": "chloe.ainscough@kensite.co.uk",
@@ -105,7 +105,11 @@
           "how": "professional, transparent delivery experience"
         }
       ],
-      "proposed_at": "2026-09-16"
+      "proposed_at": "2026-09-16",
+      "dates": {
+        "Scoped": "Nov 2026"
+      },
+      "updated_at": "2026-11-16"
     },
     {
       "id": "kensite-the-pizza-tracker-automated-customer-delivery-cycle",
