@@ -749,7 +749,7 @@
       "id": "aes-sla-agreement-agent",
       "company": "aes",
       "name": "SLA / Agreement Agent",
-      "stage": "Proposed",
+      "stage": "Scoped",
       "category": "Operations",
       "owner": "Nathan McGuinness",
       "proposed_by": "nathan.mcguinness@kensite.co.uk",
@@ -763,7 +763,11 @@
           "how": "faster customer onboarding, consistent framework documents without manual assembly, reduced risk of keying errors on rates and terms."
         }
       ],
-      "proposed_at": "2026-09-19"
+      "proposed_at": "2026-09-19",
+      "dates": {
+        "Scoped": "Nov 2026"
+      },
+      "updated_at": "2026-11-16"
     },
     {
       "id": "mtco-h-s-committee-agent",
