@@ -1169,7 +1169,7 @@
       "id": "kensite-churn-signals-from-sales-activity",
       "company": "kensite",
       "name": "Churn Signals from Sales Activity",
-      "stage": "Proposed",
+      "stage": "Scoped",
       "category": "Hire Desk and Sales",
       "owner": "Chloe Ainscough",
       "proposed_by": "chloe.ainscough@kensite.co.uk",
@@ -1187,7 +1187,11 @@
           "how": "earlier sight of late payment."
         }
       ],
-      "proposed_at": "2026-09-23"
+      "proposed_at": "2026-09-23",
+      "dates": {
+        "Scoped": "Nov 2026"
+      },
+      "updated_at": "2026-11-16"
     },
     {
       "id": "kensite-credit-control-early-warning-payment-risk-signals",
