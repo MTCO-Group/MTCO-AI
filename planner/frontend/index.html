@@ -311,6 +311,12 @@
   .acdone #acDone{max-height:160px;margin-top:6px}
   .aclink{margin-top:6px;border:0;background:none;padding:2px 0;font:inherit;font-size:12px;color:#0d823b;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
   .acpop.ro .acadd,.acpop.ro .acdel,.acpop.ro .aclink,.acpop.ro .acassign{display:none}
+  .accat{flex:none;padding:1px 8px;border-radius:999px;background:#eef0ee;border:1px solid #d9ddd9;color:#40424a;font-size:11px;font-weight:700}
+  .acparts{list-style:none;margin:6px 0 2px;padding:0;display:flex;flex-direction:column;gap:4px}
+  .acparts li{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#1a1b1e}
+  .acparts li.done{color:#0a6630}
+  .acchk.sm{width:17px;height:17px;border-radius:5px;margin-top:0}
+  .acchk.sm svg{width:12px;height:12px}
   .acassign{display:flex;align-items:center;gap:8px;margin-top:-2px;font-size:12px;color:#5c5e66}
   .acassign label{font-weight:600}
   .acassign select,.acmeta select{font:inherit;font-size:12px;color:#1a1b1e;border:1px solid #cfd3cf;border-radius:8px;padding:3px 6px;background:#fff;max-width:200px;min-width:0}
@@ -2349,14 +2355,18 @@ function acItem(it){
   chk.innerHTML = AC_TICK; chk.disabled = !STATE.canSave;
   chk.addEventListener("click", () => {
     it.done = !it.done; it.done_at = it.done ? acToday() : "";
+    if(it.done && Array.isArray(it.parts)) it.parts.forEach(x => { x.done = true; });   // ticking the action ticks its parts
     acSave(true); acRender();
     const again = document.querySelector(`.acchk[data-id="${it.id}"]`); if(again) again.focus();
   });
   chk.dataset.id = it.id;
   const tx = el("span", "actx"); const ti = el("span", "acti"); ti.textContent = it.text; tx.appendChild(ti);
   const meta = el("span", "acmeta");
+  if(it.category){ const c = el("span", "accat"); c.textContent = it.category; meta.appendChild(c); }
   const dt = el("span", "acdt"); dt.textContent = it.done ? ("Done " + acShort(it.done_at)) : ("Added " + acShort(it.added));
   if(dt.textContent.trim().split(" ").length > 1) meta.appendChild(dt);
+  const parts = Array.isArray(it.parts) ? it.parts : [];
+  if(parts.length){ const n = el("span", "acdt"); n.textContent = parts.filter(x => x.done).length + " of " + parts.length + " parts"; meta.appendChild(n); }
   if(it.done || it.chunk || !STATE.canSave){
     const pill = it.project ? wfPill(it.project) : null; if(pill) meta.appendChild(pill);
   } else {
@@ -2366,6 +2376,26 @@ function acItem(it){
     meta.appendChild(sel);
   }
   if(meta.children.length) tx.appendChild(meta);
+  // a category with parts (a new starter's six steps): each ticks on its own, and the last one finishes the action
+  if(parts.length && !it.done){
+    const ul = el("ul", "acparts"); ul.setAttribute("aria-label", "Parts of: " + it.text);
+    parts.forEach((part, i) => {
+      const li2 = el("li"); if(part.done) li2.classList.add("done");
+      const pc = el("button", "acchk sm"); pc.type = "button"; pc.setAttribute("role", "checkbox");
+      pc.setAttribute("aria-checked", part.done ? "true" : "false"); pc.setAttribute("aria-label", part.text);
+      pc.innerHTML = AC_TICK; pc.disabled = !STATE.canSave; pc.dataset.pid = it.id + ":" + i;
+      pc.addEventListener("click", () => {
+        part.done = !part.done;
+        if(parts.every(x => x.done)){ it.done = true; it.done_at = acToday(); }
+        acSave(true); acRender();
+        const again = document.querySelector(`.acchk[data-pid="${it.id}:${i}"]`) || document.querySelector(`.acchk[data-id="${it.id}"]`);
+        if(again) again.focus();
+      });
+      const pt = el("span"); pt.textContent = part.text;
+      li2.append(pc, pt); ul.appendChild(li2);
+    });
+    tx.appendChild(ul);
+  }
   const del = el("button", "acdel"); del.type = "button"; del.innerHTML = AC_BIN;
   del.setAttribute("aria-label", (it.chunk ? "Take off my actions: " : "Delete: ") + it.text);
   if(it.chunk) del.title = "Take off my actions (it stays in the project's plan)";
