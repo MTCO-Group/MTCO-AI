@@ -121,9 +121,9 @@
   {
    "id": "cmwjf6ivv",
    "text": "Connect to Claude",
-   "done": false,
+   "done": true,
    "added": "2026-11-16",
-   "done_at": "",
+   "done_at": "2026-11-16",
    "project": "mtco-shared-ai-knowledge-repository-event-transcripts",
    "chunk": true,
    "mine": true
