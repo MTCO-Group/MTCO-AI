@@ -43,11 +43,12 @@
         }
       ],
       "proposed_at": "2026-09-15",
-      "updated_at": "2026-10-13",
+      "updated_at": "2026-11-16",
       "dates": {
         "Building": "Sep 2026",
         "Testing": "Oct 2026"
-      }
+      },
+      "tested": true
     },
     {
       "id": "aes-aes-service-agent",
