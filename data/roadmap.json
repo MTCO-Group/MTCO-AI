@@ -1010,7 +1010,7 @@
       "id": "kensite-rams-on-demand-agent",
       "company": "kensite",
       "name": "RAMS on Demand Agent",
-      "stage": "Testing",
+      "stage": "Shipped",
       "category": "HSEQ and Compliance",
       "owner": "Nathan McGuinness",
       "proposed_by": "nathan.mcguinness@kensite.co.uk",
@@ -1034,7 +1034,8 @@
       ],
       "proposed_at": "2026-09-22",
       "dates": {
-        "Testing": "Sep 2026"
+        "Testing": "Sep 2026",
+        "Shipped": "Nov 2026"
       },
       "updated_at": "2026-11-16",
       "tested": true
