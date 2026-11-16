@@ -131,9 +131,9 @@
   {
    "id": "cmwjfdki7",
    "text": "Establish Big Change API Access",
-   "done": false,
+   "done": true,
    "added": "2026-11-16",
-   "done_at": "",
+   "done_at": "2026-11-16",
    "project": "aes-ainscough-haulage-driver-tracking-agent",
    "chunk": true,
    "mine": true
@@ -156,7 +156,7 @@
    "done_at": "",
    "project": "aes-ainscough-haulage-driver-tracking-agent",
    "chunk": true,
-   "mine": false
+   "mine": true
   },
   {
    "id": "cmwjfex13",
