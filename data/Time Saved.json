@@ -4,8 +4,8 @@
  "year_minutes": 95459,
  "quarter_minutes": 65541,
  "month_minutes": 15249,
- "week_minutes": 6357,
- "today_minutes": 120,
+ "week_minutes": 0,
+ "today_minutes": 0,
  "since": "2026-07-20",
  "adoption": {
   "weeks": [
@@ -88,8 +88,8 @@
    "usd": 0.0
   },
   "week": {
-   "calls": 49,
-   "usd": 0.59
+   "calls": 0,
+   "usd": 0.0
   },
   "month": {
    "calls": 145,
@@ -108,5 +108,5 @@
    "usd": 6.67
   }
  },
- "updated": "2026-11-15T16:32+00:00"
+ "updated": "2026-11-16T00:00+00:00"
 }
