@@ -1285,7 +1285,7 @@
       "id": "kensite-cross-hire-invoice-reconciliation",
       "company": "kensite",
       "name": "Cross-Hire Invoice Reconciliation",
-      "stage": "Proposed",
+      "stage": "Scoped",
       "category": "Finance",
       "owner": "Chloe Ainscough",
       "proposed_by": "chloe.ainscough@kensite.co.uk",
@@ -1303,7 +1303,11 @@
           "how": "cross-hire records that reconcile."
         }
       ],
-      "proposed_at": "2026-09-23"
+      "proposed_at": "2026-09-23",
+      "dates": {
+        "Scoped": "Nov 2026"
+      },
+      "updated_at": "2026-11-16"
     },
     {
       "id": "aes-abnormal-load-and-movement-notifications",
