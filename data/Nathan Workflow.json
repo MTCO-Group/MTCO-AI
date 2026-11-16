@@ -4434,6 +4434,12 @@
     "title": "Updated Ken Agent V31.1",
     "kind": "build",
     "detail": "The weekly report is now the Weekly Timesheet, and a day on training counts as a..."
+   },
+   {
+    "time": "13:32",
+    "title": "Built Net2 Resend Last Week",
+    "kind": "build",
+    "detail": "Nathan asked for last week's Weekly Timesheet to be sent again now that Ken 31.1 titles it \"Weekly Timesheet\", sends it to Paul Gormley and Nathan, a…"
    }
   ]
  },
