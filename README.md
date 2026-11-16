@@ -68,7 +68,9 @@ A project moves Proposed, Scoping, Planning, Build, Testing, Shipped (stored as 
 roadmap stages Proposed, Scoped, Planned, Building, Testing, Shipped). Open a project
 from What's Next (a proposed card, or the In progress band) to move it on:
 - Proposed: awaiting approval; Approve moves it to Scoping.
-- Scoping: the job it does, its outputs, its return on investment and who it benefits.
+- Scoping: the job it does, its outputs, its return on investment (Increases Profit?,
+  Increases Sales?, Other) and who it benefits (Hiredesk, Sales, Yard, H&S, Compliance,
+  HR, Finance, Marketing, Leadership, IT).
 - Planning: split the work into chunks; each can be assigned to Nathan, which puts it
   in his Actions.
 - Build: tick chunks off; each turns green and fills the project's progress bar. When
