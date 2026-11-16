@@ -4479,6 +4479,12 @@
     "repo": "MTCO-Group/MTCO-AI",
     "tagline": true,
     "detail": "Update planner/frontend/index.html from Automations folder; Update planner/__init__.py from Automations folder; Update README.md from Automations folder. Plus 106 commits made by Ken and the apps"
+   },
+   {
+    "time": "16:27",
+    "title": "Updated MTCO AI Roadmap 3.3",
+    "kind": "build",
+    "detail": "Actions can carry a category and parts."
    }
   ]
  },
