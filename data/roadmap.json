@@ -1530,7 +1530,7 @@
       "id": "kensite-unanswered-email-alert",
       "company": "kensite",
       "name": "Unanswered Email Alert",
-      "stage": "Testing",
+      "stage": "Shipped",
       "category": "Hire Desk and Sales",
       "owner": "Nathan McGuinness",
       "proposed_by": "nathan.mcguinness@kensite.co.uk",
@@ -1550,7 +1550,8 @@
       ],
       "proposed_at": "2026-10-11",
       "dates": {
-        "Testing": "Oct 2026"
+        "Testing": "Oct 2026",
+        "Shipped": "Nov 2026"
       },
       "updated_at": "2026-11-16",
       "tested": true
