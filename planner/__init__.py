@@ -1,6 +1,12 @@
 """
 MTCO AI Roadmap planner component
-Version 2.6
+Version 2.7
+
+2.7, 16/11/2026: Scoping asks set questions (app 3.1). Return on investment is
+three toggles, Increases Profit?, Increases Sales? and Other (Other opens a
+line to say what); Who it benefits is ten team toggles (Hiredesk, Sales,
+Yard, H&S, Compliance, HR, Finance, Marketing, Leadership, IT). They come
+back as roi_tags, roi and teams on the project change.
 
 2.6, 16/11/2026: the project flow (app 3.0). The What's Next view gains an In
 progress band (approved projects from Scoping to Testing, each with its
