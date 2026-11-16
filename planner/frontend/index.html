@@ -153,6 +153,14 @@
   .flpanel label.flf small{font-weight:500;letter-spacing:0;text-transform:none;color:#6b6e76;font-size:12px}
   .flpanel textarea,.flpanel input[type=text]{font:inherit;font-size:13px;font-weight:400;letter-spacing:0;text-transform:none;color:#1a1b1e;border:1px solid #cfd3cf;border-radius:8px;padding:8px 10px;background:#fff;caret-color:#0d823b;resize:vertical;min-height:38px}
   .flpanel textarea:focus-visible,.flpanel input[type=text]:focus-visible{outline:2px solid #0d823b;outline-offset:1px;border-color:#0d823b}
+  .flgroup{display:flex;flex-direction:column;gap:6px}
+  .flgroup .flh{font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#0a6630}
+  .flopts{display:flex;flex-wrap:wrap;gap:6px}
+  .flopt{font:inherit;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;border:1px solid #cfd3cf;background:#fff;color:#1a1b1e;cursor:pointer}
+  .flopt:hover{border-color:#8a8c94}
+  .flopt[aria-pressed="true"]{background:#0d823b;border-color:#0d823b;color:#fff}
+  .flopt:focus-visible{outline:2px solid #0d823b;outline-offset:2px}
+  .flgroup input[hidden]{display:none}
   .flrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .flrow .sp{flex:1}
   .fladd{display:flex;gap:8px}
@@ -1171,9 +1179,10 @@ function pdFill(){
   const scoping = p.stage === "Scoped" && STATE.canSave;   // the Scoping form holds these while it is open
   if(!scoping) sec("What it does", p.scope || p.summary);
   if(!scoping) sec("Outputs", p.outputs);
-  if(!scoping) sec("Return on investment", p.roi);
+  if(!scoping) sec("Return on investment", flRoiText(p));
+  if(!scoping) sec("Who it benefits", (p.teams || []).join(", "));
   sec("How it works", p.how);
-  const who = scoping ? [] : (p.who || []).filter(w => w && (w.who || w.how));
+  const who = (p.who || []).filter(w => w && (w.who || w.how));
   if(who.length){
     const d = el("section"); const t = el("h3"); t.textContent = "Who it helps"; d.appendChild(t);
     const ul = el("ul", "pdwho");
@@ -1240,6 +1249,7 @@ function pdOpen(id, from, list){
 }
 function pdClose(){
   const id = PD.id; PD.id = ""; PD.filled = "";
+  if(id) delete FL_DRAFT[id];   // choices not saved are dropped with the sheet
   const pd = $("#pd"); pd.classList.remove("show"); pd.setAttribute("aria-hidden", "true");
   document.querySelectorAll(".card.open,.fcard.open").forEach(c => c.classList.remove("open"));
   const c = id && document.querySelector(`.card[data-id="${CSS.escape(id)}"],.fcard[data-id="${CSS.escape(id)}"]`);
@@ -2403,6 +2413,17 @@ try{ if(sessionStorage.getItem("mtco.ac.open") === "1") setTimeout(() => { if($(
 const FL_STAGES = ["Proposed","Scoped","Planned","Building","Testing","Shipped"];
 const FL_LABEL = {Proposed:"Proposed", Scoped:"Scoping", Planned:"Planning", Building:"Build", Testing:"Testing", Shipped:"Shipped"};
 const FL_HUE = {Proposed:25, Scoped:55, Planned:85, Building:105, Testing:130, Shipped:150};
+const FL_ROI = [{id:"profit", label:"Increases Profit?"}, {id:"sales", label:"Increases Sales?"}, {id:"other", label:"Other"}];
+const FL_TEAMS = ["Hiredesk","Sales","Yard","H&S","Compliance","HR","Finance","Marketing","Leadership","IT"];
+const FL_DRAFT = {};
+/* the return on investment as a sentence for the read only view */
+function flRoiText(p){
+  const tags = p.roi_tags || [], out = [];
+  if(tags.includes("profit")) out.push("Increases profit");
+  if(tags.includes("sales")) out.push("Increases sales");
+  if(tags.includes("other")) out.push(p.roi ? "Other: " + p.roi : "Other");
+  return out.length ? out.join(". ") + "." : (p.roi || "");
+}
 function flChunks(id){ return AC.items.filter(x => x.chunk && x.project === id); }
 function flProgress(id){
   const c = flChunks(id), d = c.filter(x => x.done).length;
@@ -2567,10 +2588,36 @@ function flSection(p){
     };
     const job = field("scope", "The job it does", "What this project is supposed to do.", p.scope || p.summary, 3);
     const outs = field("outputs", "Outputs", "What it is supposed to produce.", p.outputs, 2);
-    const roi = field("roi", "Return on investment", "What it gives back for the time and money put in.", p.roi, 2);
-    const who = field("who", "Who it benefits", "One per line, as Who: how it helps them.", flWhoText(p.who), 3);
-    const read = () => ({scope: job.value.trim(), outputs: outs.value.trim(), roi: roi.value.trim(), who: flWhoParse(who.value)});
-    const keep = () => { const v = read(); Object.assign(p, v); return v; };
+    // choices are held in a draft until saved, so a redraw does not undo them
+    const draft = FL_DRAFT[p.id] || (FL_DRAFT[p.id] = {tags: new Set(p.roi_tags || []), teams: new Set(p.teams || [])});
+    const group = label => {
+      const g = el("div", "flgroup"); g.setAttribute("role", "group"); g.setAttribute("aria-label", label);
+      const h = el("span", "flh"); h.textContent = label; const box = el("div", "flopts");
+      g.append(h, box); panel.appendChild(g); return g;
+    };
+    const pick = (box, set, value, label, fk, after) => {
+      const b = el("button", "flopt"); b.type = "button"; b.textContent = label; b.dataset.fk = fk;
+      b.setAttribute("aria-pressed", set.has(value) ? "true" : "false");
+      b.addEventListener("click", () => {
+        if(set.has(value)) set.delete(value); else set.add(value);
+        b.setAttribute("aria-pressed", set.has(value) ? "true" : "false");
+        if(after) after();
+      });
+      box.appendChild(b); return b;
+    };
+    const rg = group("Return on investment"), rbox = rg.querySelector(".flopts");
+    const other = el("input"); other.type = "text"; other.maxLength = 300; other.dataset.fk = "sc-roi"; other.value = p.roi || "";
+    other.placeholder = "What is the other return?"; other.setAttribute("aria-label", "Other return on investment");
+    const showOther = () => { other.hidden = !draft.tags.has("other"); };
+    FL_ROI.forEach(o => pick(rbox, draft.tags, o.id, o.label, "roi-" + o.id, o.id === "other" ? () => { showOther(); if(!other.hidden) other.focus(); } : null));
+    rg.appendChild(other); showOther();
+    const tg = group("Who it benefits"), tbox = tg.querySelector(".flopts");
+    FL_TEAMS.forEach(t => pick(tbox, draft.teams, t, t, "team-" + t));
+    const read = () => ({scope: job.value.trim(), outputs: outs.value.trim(),
+                         roi_tags: FL_ROI.map(o => o.id).filter(id => draft.tags.has(id)),
+                         roi: draft.tags.has("other") ? other.value.trim() : "",
+                         teams: FL_TEAMS.filter(t => draft.teams.has(t))});
+    const keep = () => { const v = read(); Object.assign(p, v); delete FL_DRAFT[p.id]; return v; };
     const r = row();
     const save = el("button", "btn"); save.type = "button"; save.textContent = "Save scope"; save.dataset.fk = "savescope";
     save.addEventListener("click", () => { flCommit([Object.assign({id:p.id}, keep())]); toast("Scope saved."); });
@@ -2653,7 +2700,8 @@ function render(args){
                        category:p.category, summary:p.summary, scope:p.scope, how:p.how,
                        who:Array.isArray(p.who) ? p.who : [], owner:p.owner, date:p.date,
                        proposed_at:p.proposed_at, stage:p.stage, dates:p.dates || {}, plan:p.plan || null,
-                       outputs:p.outputs || "", roi:p.roi || "", tested:!!p.tested};
+                       outputs:p.outputs || "", roi:p.roi || "", tested:!!p.tested,
+                       roi_tags:Array.isArray(p.roi_tags) ? p.roi_tags : [], teams:Array.isArray(p.teams) ? p.teams : []};
   });
   // the Proposed ones are the same objects, so the flow sees one record per project
   Object.keys(STATE.projects).forEach(id => { if(STATE.all[id]) STATE.projects[id] = STATE.all[id]; });
