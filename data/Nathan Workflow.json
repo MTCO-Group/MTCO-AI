@@ -4428,6 +4428,12 @@
     "title": "Updated Ken Agent V31.0",
     "kind": "build",
     "detail": "Ken completes Net2 Online's emailed sign in code himself, and says so when a Net2 read..."
+   },
+   {
+    "time": "13:10",
+    "title": "Updated Ken Agent V31.1",
+    "kind": "build",
+    "detail": "The weekly report is now the Weekly Timesheet, and a day on training counts as a..."
    }
   ]
  },
