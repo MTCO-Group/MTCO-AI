@@ -1,6 +1,11 @@
 """
 MTCO AI Roadmap planner component
-Version 2.7
+Version 2.8
+
+2.8, 16/11/2026: the trash (app 3.2). A project sheet has "Delete idea" at
+the foot of its flow, which asks Rejected or Dismissed; a bin icon top right
+of What's Next shows the count and opens the list, each with Restore. Sent
+as project changes {id, trash} and {id, restore}.
 
 2.7, 16/11/2026: Scoping asks set questions (app 3.1). Return on investment is
 three toggles, Increases Profit?, Increases Sales? and Other (Other opens a
