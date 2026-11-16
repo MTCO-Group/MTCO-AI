@@ -882,7 +882,7 @@
       "id": "kensite-ai-organisational-tree-sub-agent-architecture",
       "company": "kensite",
       "name": "AI Organisational Tree - Sub-Agent Architecture",
-      "stage": "Planned",
+      "stage": "Building",
       "category": "IT and Data",
       "owner": "Nathan McGuinness",
       "proposed_by": "nathan.mcguinness@kensite.co.uk",
@@ -1006,9 +1006,10 @@
         ],
         "measures": "Each phase ships only if, on the replay set, routing picks the right branch at least 95% of the time, tool choice is no worse than today, cost per reply goes down, and the offline test suite passes."
       },
-      "updated_at": "2026-10-16",
+      "updated_at": "2026-11-16",
       "dates": {
-        "Planned": "Oct 2026"
+        "Planned": "Oct 2026",
+        "Building": "Nov 2026"
       }
     },
     {
