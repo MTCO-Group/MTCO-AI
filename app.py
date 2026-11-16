@@ -1,6 +1,23 @@
 """
 MTCO AI Roadmap
-Version 2.9
+Version 3.0
+
+3.0, 16/11/2026: the project flow. Nathan: a proposed project sits awaiting
+approval; Scoping sets out the job it does, its outputs, its return on
+investment and who it benefits; Planning splits it into chunks, which are
+to-do actions he can assign to himself; Build works through the chunks,
+each turning green and filling the project's progress bar; when every chunk
+is done it moves to Testing, where he says he has tested it and then marks
+it shipped. The stages are the roadmap's own (Proposed, Scoped, Planned,
+Building, Testing, Shipped), so Ken and the dashboard read them as before.
+  * The project panel sends {"kind": "flow", "items": [...], "projects":
+    [{"id": ..., "stage": ..., "scope": ..., "outputs": ..., "roi": ...,
+    "who": [...], "tested": ...}]}. Only those fields of a project can be
+    changed from the page; a stage change stamps dates[stage] and updated_at.
+  * Chunks live with the actions in data/Nathan Actions.json: an item with
+    "chunk": true belongs to its "project", and "mine": true puts it in the
+    Actions pop up. Progress is done chunks over all chunks.
+  * As with Actions, a change is saved before the page is drawn again.
 
 2.9, 11/11/2026: an action can belong to a roadmap project. Nathan: "make
 it so that the action reads open projects and suggests a project to assign
@@ -202,7 +219,7 @@ def clean_actions(items):
     """The list as the pop up sent it, made safe: at most 300 items, text cut
     to 140 characters, unknown keys dropped."""
     out = []
-    for it in (items if isinstance(items, list) else [])[:300]:
+    for it in (items if isinstance(items, list) else [])[:800]:
         if not isinstance(it, dict):
             continue
         text = " ".join(str(it.get("text") or "").split())[:140]
@@ -212,6 +229,9 @@ def clean_actions(items):
                     "done": bool(it.get("done")), "added": str(it.get("added") or "")[:10],
                     "done_at": str(it.get("done_at") or "")[:10],
                     "project": str(it.get("project") or "")[:80]})
+        if it.get("chunk"):
+            out[-1]["chunk"] = True
+            out[-1]["mine"] = bool(it.get("mine"))
     return out
 
 
@@ -225,6 +245,13 @@ def save_actions(tok, items):
         try:
             r = requests.get(url, headers=headers(tok), params={"ref": BRANCH}, timeout=15)
             sha = r.json().get("sha") if r.status_code == 200 else None
+            if sha:
+                try:
+                    old = json.loads(base64.b64decode(r.json().get("content") or "").decode())
+                    if old.get("items") == doc["items"]:
+                        return True, ""          # nothing changed: no commit for a stage only change
+                except Exception:  # noqa: BLE001
+                    pass
             payload = {"message": "Update Nathan's Actions from the Work Diary", "content": body, "branch": BRANCH}
             if sha:
                 payload["sha"] = sha
@@ -238,16 +265,93 @@ def save_actions(tok, items):
     return False, "the file changed at the same moment"
 
 
+STAGES = ["Proposed", "Scoped", "Planned", "Building", "Testing", "Shipped"]
+
+
+def clean_project_change(ch):
+    """One project change from the page, cut down to what the page may set."""
+    if not isinstance(ch, dict) or not ch.get("id"):
+        return None
+    out = {"id": str(ch["id"])[:120]}
+    if ch.get("stage") in STAGES:
+        out["stage"] = ch["stage"]
+    for key in ("scope", "outputs", "roi"):
+        if isinstance(ch.get(key), str):
+            out[key] = ch[key].strip()[:3000]
+    if isinstance(ch.get("who"), list):
+        who = []
+        for w in ch["who"][:20]:
+            if isinstance(w, dict) and (w.get("who") or w.get("how")):
+                who.append({"who": str(w.get("who") or "").strip()[:120],
+                            "how": str(w.get("how") or "").strip()[:500]})
+        out["who"] = who
+    if isinstance(ch.get("tested"), bool):
+        out["tested"] = ch["tested"]
+    return out if len(out) > 1 else None
+
+
+def save_projects(tok, changes):
+    """Apply project changes to data/roadmap.json. The file is re-read first
+    and only the named fields of the named projects are touched, so anything
+    Ken filed a moment ago is kept. Tried once more on a clash."""
+    changes = [c for c in (clean_project_change(x) for x in (changes or [])[:20]) if c]
+    if not changes:
+        return True, ""
+    now = datetime.now(timezone.utc)
+    for _attempt in (1, 2):
+        current, sha = load_remote(tok)
+        if current is None:
+            return False, "the roadmap could not be read back"
+        by_id = {p.get("id"): p for p in current.get("projects", [])}
+        said = []
+        for ch in changes:
+            p = by_id.get(ch["id"])
+            if p is None:
+                continue
+            for key in ("scope", "outputs", "roi", "who", "tested"):
+                if key in ch:
+                    p[key] = ch[key]
+            if "stage" in ch and ch["stage"] != p.get("stage"):
+                p["stage"] = ch["stage"]
+                p.setdefault("dates", {})[ch["stage"]] = now.strftime("%b %Y")
+                said.append(f"{p.get('name', ch['id'])} moved to {ch['stage']}")
+            else:
+                said.append(f"{p.get('name', ch['id'])} updated")
+            p["updated_at"] = now.strftime("%Y-%m-%d")
+        if not said:
+            return True, ""
+        body = (json.dumps(current, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+        payload = {"message": ("Roadmap: " + "; ".join(said))[:200] + " (from the dashboard)",
+                   "content": base64.b64encode(body).decode(), "branch": BRANCH, "sha": sha}
+        try:
+            w = requests.put(API, headers=headers(tok), json=payload, timeout=30)
+            if w.status_code in (200, 201):
+                return True, ""
+            if w.status_code not in (409, 422):
+                return False, f"GitHub answered HTTP {w.status_code}"
+        except Exception as e:  # noqa: BLE001
+            return False, f"the write failed ({type(e).__name__})"
+    return False, "the roadmap changed at the same moment"
+
+
 def handle_actions(tok, value):
-    """Save an Actions change from the pop up once per nonce. Returns a note
-    for the pop up when it could not be saved."""
-    if not (tok and isinstance(value, dict) and value.get("kind") == "actions"):
+    """Save an Actions or project flow change from the page once per nonce.
+    Returns a note for the page when something could not be saved."""
+    if not (tok and isinstance(value, dict) and value.get("kind") in ("actions", "flow")):
         return ""
     if not value.get("nonce") or value["nonce"] == st.session_state.get("actions_nonce"):
         return ""
     st.session_state["actions_nonce"] = value["nonce"]
-    ok, why = save_actions(tok, value.get("items"))
-    return "" if ok else f"Not saved: {why}. Try again in a moment."
+    notes = []
+    if isinstance(value.get("items"), list):
+        ok, why = save_actions(tok, value.get("items"))
+        if not ok:
+            notes.append(f"Not saved: {why}. Try again in a moment.")
+    if value.get("kind") == "flow" and value.get("projects"):
+        ok, why = save_projects(tok, value.get("projects"))
+        if not ok:
+            notes.append(f"The project was not saved: {why}. Try again in a moment.")
+    return " ".join(notes)
 
 
 tok = token()
@@ -310,7 +414,7 @@ if result and result.get("nonce") and result["nonce"] != st.session_state.get("n
     st.session_state["nonce"] = result["nonce"]
     if not tok:
         pass
-    elif result.get("kind") == "actions":
+    elif result.get("kind") in ("actions", "flow"):
         # normally already saved at the top of this run; this catches a value
         # the session state did not carry
         if result["nonce"] != st.session_state.get("actions_nonce"):
