@@ -31,9 +31,9 @@
   {
    "id": "cmwj9e5jf",
    "text": "Claude Design Frame",
-   "done": false,
+   "done": true,
    "added": "2026-11-16",
-   "done_at": "",
+   "done_at": "2026-11-16",
    "project": "kensite-ai-organisational-tree-sub-agent-architecture",
    "chunk": true,
    "mine": true
@@ -41,9 +41,9 @@
   {
    "id": "cmwj9e8nf",
    "text": "Update GitHub",
-   "done": false,
+   "done": true,
    "added": "2026-11-16",
-   "done_at": "",
+   "done_at": "2026-11-16",
    "project": "kensite-ai-organisational-tree-sub-agent-architecture",
    "chunk": true,
    "mine": true
