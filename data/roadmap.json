@@ -1488,7 +1488,7 @@
       "id": "kensite-adoption-over-appearance-driving-ai-adoption-as-a-metric",
       "company": "kensite",
       "name": "Adoption over Appearance - Driving AI Adoption as a Metric",
-      "stage": "Building",
+      "stage": "Planned",
       "category": "IT and Data",
       "owner": "Nathan McGuinness",
       "proposed_by": "nathan.mcguinness@kensite.co.uk",
@@ -1504,9 +1504,10 @@
       ],
       "proposed_at": "2026-10-13",
       "dates": {
-        "Building": "Oct 2026"
+        "Building": "Oct 2026",
+        "Planned": "Nov 2026"
       },
-      "updated_at": "2026-10-13"
+      "updated_at": "2026-11-16"
     },
     {
       "id": "kensite-site-visit-report-agent",
