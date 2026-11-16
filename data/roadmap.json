@@ -83,7 +83,7 @@
       "id": "aes-ainscough-haulage-driver-tracking-agent",
       "company": "aes",
       "name": "Ainscough Haulage Driver Tracking Agent",
-      "stage": "Scoped",
+      "stage": "Planned",
       "category": "Transport and Logistics",
       "owner": "Chloe Ainscough",
       "proposed_by": "chloe.ainscough@kensite.co.uk",
@@ -107,9 +107,12 @@
       ],
       "proposed_at": "2026-09-16",
       "dates": {
-        "Scoped": "Nov 2026"
+        "Scoped": "Nov 2026",
+        "Planned": "Nov 2026"
       },
-      "updated_at": "2026-11-16"
+      "updated_at": "2026-11-16",
+      "outputs": "GIve realtime ETA and Tracking Info direct from AES Big Change System, to the minute, based on Traffic and Movement API",
+      "roi": "Sales - USP that cannot be reasonably offered by competitors"
     },
     {
       "id": "kensite-the-pizza-tracker-automated-customer-delivery-cycle",
