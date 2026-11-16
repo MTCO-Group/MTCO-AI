@@ -4386,6 +4386,12 @@
     "title": "Updated Net2 Source Extract 1.2",
     "kind": "build",
     "detail": "Read only, third pass: the staged V31.0's header note was not found by parse_version_notes."
+   },
+   {
+    "time": "11:17",
+    "title": "Updated Net2 Code Build 1.1",
+    "kind": "build",
+    "detail": "The first build's V31.0 had its note in the opening text but not in the \"# X.Y:\" list parse_version_notes reads, so section 222 stopped at its first…"
    }
   ]
  },
