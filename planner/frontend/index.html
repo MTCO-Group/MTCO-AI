@@ -119,6 +119,62 @@
   .card:hover{border-color:#cfd3cf}
   .card.open{border-color:#0d823b;box-shadow:0 0 0 1px #0d823b}
 
+  /* project flow (3.0, 16/11/2026): the In progress band and the flow section of the project sheet */
+  .inprog{margin:0 30px 10px;flex:none}
+  .ipbody{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 6px;scrollbar-width:thin}
+  .fcard{font:inherit;text-align:left;flex:none;width:236px;background:#fff;border:1px solid #e6e5e1;border-radius:10px;padding:10px 12px;
+    display:flex;flex-direction:column;gap:6px;cursor:pointer;color:#1a1b1e}
+  .fcard:hover{border-color:#cfd3cf}
+  .fcard:focus-visible{outline:2px solid #0d823b;outline-offset:2px}
+  .fcard.open{border-color:#0d823b;box-shadow:0 0 0 1px #0d823b}
+  .fcard .nm{font-size:13px;font-weight:700;line-height:1.25;text-wrap:pretty}
+  .fcard .mt{display:flex;align-items:center;gap:8px;font-size:11px;color:#6b6e76}
+  .fcard .co{display:inline-flex;align-items:center;gap:5px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .fcard .co i{width:7px;height:7px;border-radius:50%;flex:none;display:block}
+  .flchip{flex:none;margin-left:auto;padding:1px 8px;border-radius:999px;font-size:11px;font-weight:700;color:#000}
+  .flbar{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#53565e;font-variant-numeric:tabular-nums}
+  .flbar .tr{flex:1;height:6px;border-radius:999px;background:#ecebe6;overflow:hidden}
+  .flbar .tr i{display:block;height:100%;border-radius:999px;background:#0d823b;transition:width .35s cubic-bezier(.22,.9,.28,1)}
+  .pdflow{border:1px solid #e6e5e1;border-radius:12px;background:#fbfaf7;padding:12px 14px;display:flex;flex-direction:column;gap:12px}
+  .flsteps{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:2px 0;flex-wrap:wrap}
+  .flsteps li{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:#6b6e76;padding:3px 7px;border-radius:999px;border:1px solid transparent}
+  .flsteps li b{width:16px;height:16px;border-radius:50%;border:1.5px solid #a9aca9;display:grid;place-items:center;flex:none;color:#fff}
+  .flsteps li b svg{width:11px;height:11px;opacity:0}
+  .flsteps li.done{color:#0a6630}
+  .flsteps li.done b{background:#0d823b;border-color:#0d823b}
+  .flsteps li.done b svg{opacity:1}
+  .flsteps li.cur{color:#000;border-color:#0d823b;background:#fff}
+  .flsteps li.cur b{border-color:#0d823b;box-shadow:inset 0 0 0 3px #fff;background:#0d823b}
+  .flsteps li+li{margin-left:14px;position:relative}
+  .flsteps li+li::before{content:"";position:absolute;left:-12px;top:50%;width:9px;height:1.5px;background:#cfd3cf}
+  .flpanel{display:flex;flex-direction:column;gap:10px}
+  .flpanel > p{font-size:13px;line-height:1.5;color:#40424a;margin:0}
+  .flpanel label.flf{display:flex;flex-direction:column;gap:4px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#0a6630}
+  .flpanel label.flf small{font-weight:500;letter-spacing:0;text-transform:none;color:#6b6e76;font-size:12px}
+  .flpanel textarea,.flpanel input[type=text]{font:inherit;font-size:13px;font-weight:400;letter-spacing:0;text-transform:none;color:#1a1b1e;border:1px solid #cfd3cf;border-radius:8px;padding:8px 10px;background:#fff;caret-color:#0d823b;resize:vertical;min-height:38px}
+  .flpanel textarea:focus-visible,.flpanel input[type=text]:focus-visible{outline:2px solid #0d823b;outline-offset:1px;border-color:#0d823b}
+  .flrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .flrow .sp{flex:1}
+  .fladd{display:flex;gap:8px}
+  .fladd input{flex:1;min-width:0;border-radius:999px !important;padding:8px 12px !important}
+  .fladd .btn{padding:8px 14px}
+  .fllist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+  .fllist li{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px;padding:6px 6px;border-radius:8px;background:#fff;border:1px solid #efeee9}
+  .fllist li.done{background:#e9f5ee;border-color:#bfe0cc}
+  .fllist li.done .t{color:#0a6630}
+  .fllist .t{flex:1;min-width:0;font-size:13px;line-height:1.4;overflow-wrap:anywhere}
+  .fllist .acdel{opacity:1}
+  .pdflow .acchk:disabled{opacity:.45;cursor:default}
+  .fllist .t{min-width:110px}
+  .flmine{font:inherit;font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:999px;border:1px solid #cfd3cf;background:#fff;color:#40424a;cursor:pointer;flex:none}
+  .flmine[aria-pressed="true"]{background:#0d823b;border-color:#0d823b;color:#fff}
+  .flmine:focus-visible,.flback:focus-visible{outline:2px solid #0d823b;outline-offset:2px}
+  .flback{border:0;background:none;padding:2px 0;font:inherit;font-size:12px;color:#53565e;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+  .flcheck{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600;color:#1a1b1e;cursor:pointer}
+  .flempty{font-size:12.5px;color:#6b6e76;margin:0}
+  .readonly .pdflow .btn,.readonly .pdflow .flmine,.readonly .pdflow .flback,.readonly .pdflow .fladd,.readonly .pdflow .acdel{display:none}
+  @media (prefers-reduced-motion:reduce){.flbar .tr i{transition:none}}
+
   /* project detail: a card expands into a sheet over the planner */
   #pd{position:absolute;inset:0;z-index:40;display:none;align-items:center;justify-content:center;padding:28px;
       background:rgba(26,27,30,.32);animation:pdfade .16s ease-out both}
@@ -660,6 +716,15 @@
     </div>
     <div class="note" id="note" hidden></div>
 
+    <div class="inprog" id="inprog" hidden>
+      <div class="trayhead">
+        <span class="laneTag" style="background:oklch(0.93 0.07 105);border:1px solid oklch(0.78 0.14 105);color:#000">IN PROGRESS <span id="ipCount">0</span></span>
+        <div class="rule"></div>
+        <span class="hint">Approved projects, from Scoping to Testing. Click one to work on it.</span>
+      </div>
+      <div class="ipbody" id="ipBody"></div>
+    </div>
+
     <div class="tray">
       <div class="trayhead">
         <span class="laneTag" id="trayTag" style="background:oklch(0.93 0.07 25);border:1px solid oklch(0.78 0.14 25);color:#000">NOT PLACED <span id="trayCount">0</span></span>
@@ -798,7 +863,7 @@
       </div>
       <div class="pdbody" id="pdBody"></div>
       <div class="pdfoot">
-        <span class="live" id="pdLive" hidden>Live project, so it is not queued in What's Next.</span>
+        <span class="live" id="pdLive" hidden>Approved, so it is no longer queued in What's Next.</span>
         <span class="lbl" id="pdMoveLbl">Place in</span>
         <div class="seg" id="pdSeg" role="group" aria-labelledby="pdMoveLbl"></div>
         <span class="sp"></span>
@@ -1074,14 +1139,23 @@ function pdFill(){
   const meta = $("#pdMeta"); meta.innerHTML = "";
   const lane = live ? null : PD_LANES.find(l => l.id === pdLaneOf(p.id));
   const ls = el("span", "lane");
-  const stHue = live ? (PD_STAGE_HUE[p.stage] != null ? PD_STAGE_HUE[p.stage] : 150) : lane.hue;
-  ls.textContent = live ? [p.stage || "Live", (p.dates && p.stage && p.dates[p.stage]) || p.date || ""].join(" ").trim() : lane.label;
+  const stHue = live ? (FL_HUE[p.stage] != null ? FL_HUE[p.stage] : (PD_STAGE_HUE[p.stage] != null ? PD_STAGE_HUE[p.stage] : 150)) : lane.hue;
+  ls.textContent = live ? [FL_LABEL[p.stage] || p.stage || "Live", (p.dates && p.stage && p.dates[p.stage]) || p.date || ""].join(" ").trim() : lane.label;
   ls.style.background = `oklch(0.93 0.07 ${stHue})`; ls.style.boxShadow = `inset 0 0 0 1px oklch(0.78 0.14 ${stHue})`;
   meta.appendChild(ls);
   if(p.owner){ const o = el("span"); o.textContent = "Owner: " + p.owner; meta.appendChild(o); }
   const when = p.proposed_at ? wfLong(wfDate(p.proposed_at)).replace(/^\w+ /, "") : (p.date || "");
   if(when){ const w = el("span"); w.textContent = "Proposed " + when; meta.appendChild(w); }
-  const body = $("#pdBody"); body.innerHTML = "";
+  const body = $("#pdBody");
+  // 3.0: a redraw of the same project keeps what is being typed, the focus and the scroll
+  const same = PD.filled === PD.id, kept = {}; let keptFocus = null; const keptScroll = body.scrollTop;
+  if(same){
+    body.querySelectorAll("textarea[data-fk],input[data-fk]").forEach(x => { kept[x.dataset.fk] = x.value; });
+    const a = document.activeElement;
+    if(a && a.dataset && a.dataset.fk && body.contains(a)) keptFocus = {fk:a.dataset.fk, at:a.selectionStart};
+  }
+  body.innerHTML = "";
+  body.appendChild(flSection(p));
   const ts = pdTimeSpent(p.id);
   if(ts.entries){
     const d = el("section", "pdtime");
@@ -1094,9 +1168,12 @@ function pdFill(){
     body.appendChild(d);
   }
   const sec = (h, text) => { if(!text) return; const d = el("section"); const t = el("h3"); t.textContent = h; const q = el("p"); q.textContent = text; d.append(t, q); body.appendChild(d); };
-  sec("What it does", p.scope || p.summary);
+  const scoping = p.stage === "Scoped" && STATE.canSave;   // the Scoping form holds these while it is open
+  if(!scoping) sec("What it does", p.scope || p.summary);
+  if(!scoping) sec("Outputs", p.outputs);
+  if(!scoping) sec("Return on investment", p.roi);
   sec("How it works", p.how);
-  const who = (p.who || []).filter(w => w && (w.who || w.how));
+  const who = scoping ? [] : (p.who || []).filter(w => w && (w.who || w.how));
   if(who.length){
     const d = el("section"); const t = el("h3"); t.textContent = "Who it helps"; d.appendChild(t);
     const ul = el("ul", "pdwho");
@@ -1124,8 +1201,13 @@ function pdFill(){
     if(plan.measures){ const m = el("p", "pdmeasure"); m.textContent = plan.measures; d.appendChild(m); }
     body.appendChild(d);
   }
-  if(body.children.length === (ts.entries ? 1 : 0)){ const e = el("p"); e.textContent = "No further detail has been written for this idea yet."; body.appendChild(e); }
-  body.scrollTop = 0;
+  if(!scoping && body.children.length === (ts.entries ? 2 : 1)){ const e = el("p"); e.textContent = "No further detail has been written for this idea yet."; body.appendChild(e); }
+  if(same){
+    Object.keys(kept).forEach(k => { const x = body.querySelector(`[data-fk="${k}"]`); if(x && (x.tagName === "TEXTAREA" || x.tagName === "INPUT")) x.value = kept[k]; });
+    body.scrollTop = keptScroll;
+    if(keptFocus){ const x = body.querySelector(`[data-fk="${keptFocus.fk}"]`); if(x){ x.focus(); try{ if(keptFocus.at != null && x.setSelectionRange) x.setSelectionRange(keptFocus.at, keptFocus.at); }catch(e){} } }
+  } else body.scrollTop = 0;
+  PD.filled = PD.id;
   const seg = $("#pdSeg"); seg.innerHTML = "";
   $("#pdMoveLbl").parentElement.querySelectorAll(".lbl,.seg").forEach(x => { x.style.display = STATE.canSave && !live ? "" : "none"; });
   $("#pdLive").hidden = !live;
@@ -1137,8 +1219,10 @@ function pdFill(){
   });
   const order = PD.list || pdOrder(), i = order.indexOf(PD.id);
   $("#pdPrev").disabled = i <= 0; $("#pdNext").disabled = i < 0 || i >= order.length - 1;
-  document.querySelectorAll(".card.open").forEach(c => c.classList.remove("open"));
-  const c = document.querySelector(`.card[data-id="${CSS.escape(PD.id)}"]`); if(c) c.classList.add("open");
+  document.querySelectorAll(".card.open,.fcard.open").forEach(c => c.classList.remove("open"));
+  const c = document.querySelector(`.card[data-id="${CSS.escape(PD.id)}"],.fcard[data-id="${CSS.escape(PD.id)}"]`); if(c) c.classList.add("open");
+  // a button that was just used may be gone; keep the focus inside the sheet so Escape still closes it
+  if($("#pd").classList.contains("show") && !$("#pd").contains(document.activeElement)) $("#pdClose").focus();
 }
 function pdOpen(id, from, list){
   if(!pdProject(id)) return;
@@ -1155,10 +1239,10 @@ function pdOpen(id, from, list){
   $("#pdClose").focus();
 }
 function pdClose(){
-  const id = PD.id; PD.id = "";
+  const id = PD.id; PD.id = ""; PD.filled = "";
   const pd = $("#pd"); pd.classList.remove("show"); pd.setAttribute("aria-hidden", "true");
-  document.querySelectorAll(".card.open").forEach(c => c.classList.remove("open"));
-  const c = id && document.querySelector(`.card[data-id="${CSS.escape(id)}"]`);
+  document.querySelectorAll(".card.open,.fcard.open").forEach(c => c.classList.remove("open"));
+  const c = id && document.querySelector(`.card[data-id="${CSS.escape(id)}"],.fcard[data-id="${CSS.escape(id)}"]`);
   if(c) c.focus(); else if(PD.from && PD.from.isConnected) PD.from.focus();
   PD.list = null; PD.from = null;
 }
@@ -1190,10 +1274,11 @@ $("#pdPrev").addEventListener("click", () => pdStep(-1));
 $("#pdNext").addEventListener("click", () => pdStep(1));
 $("#pd").addEventListener("keydown", ev => {
   if(ev.key === "Escape"){ ev.preventDefault(); ev.stopPropagation(); pdClose(); return; }
-  if(ev.key === "ArrowLeft" && !ev.target.closest(".seg")){ ev.preventDefault(); pdStep(-1); }
-  if(ev.key === "ArrowRight" && !ev.target.closest(".seg")){ ev.preventDefault(); pdStep(1); }
+  const typing = ev.target.matches && ev.target.matches("input,textarea,select");
+  if(ev.key === "ArrowLeft" && !typing && !ev.target.closest(".seg")){ ev.preventDefault(); pdStep(-1); }
+  if(ev.key === "ArrowRight" && !typing && !ev.target.closest(".seg")){ ev.preventDefault(); pdStep(1); }
   if(ev.key === "Tab"){
-    const f = [...$("#pd").querySelectorAll("button:not([disabled]):not([hidden])")].filter(b => b.offsetParent);
+    const f = [...$("#pd").querySelectorAll("button:not([disabled]):not([hidden]),input,textarea,select")].filter(b => b.offsetParent);
     if(!f.length) return;
     if(ev.shiftKey && document.activeElement === f[0]){ ev.preventDefault(); f[f.length-1].focus(); }
     else if(!ev.shiftKey && document.activeElement === f[f.length-1]){ ev.preventDefault(); f[0].focus(); }
@@ -2209,6 +2294,8 @@ $("#acProj").addEventListener("change", () => { ACF.manual = true; $("#acSug").h
 function acArgs(wf){
   if(Array.isArray(wf.actions)) AC.items = wf.actions.map(x => Object.assign({}, x));
   AC.note = wf.actions_note || "";
+  if(AC.note && AC.note !== AC.told){ toast(AC.note); }
+  AC.told = AC.note;
   acRender();
 }
 function acItem(it){
@@ -2220,7 +2307,7 @@ function acItem(it){
   chk.innerHTML = AC_TICK; chk.disabled = !STATE.canSave;
   chk.addEventListener("click", () => {
     it.done = !it.done; it.done_at = it.done ? acToday() : "";
-    acSave(); acRender();
+    acSave(true); acRender();
     const again = document.querySelector(`.acchk[data-id="${it.id}"]`); if(again) again.focus();
   });
   chk.dataset.id = it.id;
@@ -2228,7 +2315,7 @@ function acItem(it){
   const meta = el("span", "acmeta");
   const dt = el("span", "acdt"); dt.textContent = it.done ? ("Done " + acShort(it.done_at)) : ("Added " + acShort(it.added));
   if(dt.textContent.trim().split(" ").length > 1) meta.appendChild(dt);
-  if(it.done || !STATE.canSave){
+  if(it.done || it.chunk || !STATE.canSave){
     const pill = it.project ? wfPill(it.project) : null; if(pill) meta.appendChild(pill);
   } else {
     const sel = el("select"); acFillSelect(sel, it.project || "");
@@ -2238,13 +2325,19 @@ function acItem(it){
   }
   if(meta.children.length) tx.appendChild(meta);
   const del = el("button", "acdel"); del.type = "button"; del.innerHTML = AC_BIN;
-  del.setAttribute("aria-label", "Delete: " + it.text);
-  del.addEventListener("click", () => { AC.items = AC.items.filter(x => x.id !== it.id); acSave(); acRender(); $("#acInput").focus(); });
+  del.setAttribute("aria-label", (it.chunk ? "Take off my actions: " : "Delete: ") + it.text);
+  if(it.chunk) del.title = "Take off my actions (it stays in the project's plan)";
+  del.addEventListener("click", () => {
+    if(it.chunk) it.mine = false; else AC.items = AC.items.filter(x => x.id !== it.id);
+    acSave(); acRender(); $("#acInput").focus();
+  });
   li.append(chk, tx, del);
   return li;
 }
 function acRender(){
-  const open = AC.items.filter(x => !x.done), done = AC.items.filter(x => x.done)
+  // a project's chunk shows here only once it is assigned to me
+  const shown = AC.items.filter(x => !x.chunk || x.mine);
+  const open = shown.filter(x => !x.done), done = shown.filter(x => x.done)
     .sort((a,b) => String(b.done_at).localeCompare(String(a.done_at)));
   const n = $("#acCount"); n.hidden = !open.length; n.textContent = open.length;
   $("#acSum").textContent = open.length + " open" + (done.length ? ", " + done.length + " done" : "");
@@ -2258,11 +2351,10 @@ function acRender(){
   $("#acPop").classList.toggle("ro", !STATE.canSave);
   const ps = $("#acProj"), keep = ps.value; acFillSelect(ps, keep);
 }
-function acSave(){
+function acSave(ticked){
   if(!STATE.canSave) return;
-  AC.note = "";
   try{ sessionStorage.setItem("mtco.ac.open", $("#acPop").hidden ? "" : "1"); }catch(e){}
-  Streamlit.value({kind:"actions", items:AC.items, nonce: Date.now()});
+  flCommit([], ticked);
 }
 function acOpen(){
   $("#acPop").hidden = false; $("#acOpen").setAttribute("aria-expanded", "true"); acRender();
@@ -2286,7 +2378,9 @@ $("#acForm").addEventListener("submit", ev => {
   acSave(); acRender(); inp.focus();
 });
 $("#acClear").addEventListener("click", () => {
-  AC.items = AC.items.filter(x => !x.done); acSave(); acRender(); $("#acInput").focus();
+  // a done chunk stays in its project's plan; it only leaves this list
+  AC.items.forEach(x => { if(x.done && x.chunk) x.mine = false; });
+  AC.items = AC.items.filter(x => !x.done || x.chunk); acSave(); acRender(); $("#acInput").focus();
 });
 $("#acPop").addEventListener("keydown", ev => {
   if(ev.key === "Escape"){ ev.preventDefault(); ev.stopPropagation(); acClose(true); }
@@ -2295,6 +2389,227 @@ document.addEventListener("pointerdown", ev => {
   if(!$("#acPop").hidden && !ev.target.closest(".acwrap")) acClose(false);
 });
 try{ if(sessionStorage.getItem("mtco.ac.open") === "1") setTimeout(() => { if($("#wf").classList.contains("show")) acOpen(); }, 0); }catch(e){}
+
+/* ── project flow (3.0, 16/11/2026) ─────────────────────────────────────────
+   Nathan: a proposed project sits awaiting approval; Scoping sets out the
+   job it does, its outputs, its return on investment and who it benefits;
+   Planning splits it into chunks, which are to-do actions he can assign to
+   himself; Build works through them, each turning green and filling the
+   project's progress bar; when all are done it moves to Testing, where he
+   says he has tested it and then marks it shipped.
+   The stages are the roadmap's own values. Chunks are actions marked
+   chunk:true with the project's id (mine:true puts one in the Actions pop
+   up). Every change is drawn at once and sent to the app as {kind:"flow"}. */
+const FL_STAGES = ["Proposed","Scoped","Planned","Building","Testing","Shipped"];
+const FL_LABEL = {Proposed:"Proposed", Scoped:"Scoping", Planned:"Planning", Building:"Build", Testing:"Testing", Shipped:"Shipped"};
+const FL_HUE = {Proposed:25, Scoped:55, Planned:85, Building:105, Testing:130, Shipped:150};
+function flChunks(id){ return AC.items.filter(x => x.chunk && x.project === id); }
+function flProgress(id){
+  const c = flChunks(id), d = c.filter(x => x.done).length;
+  return {total:c.length, done:d, pct:c.length ? Math.round(d * 100 / c.length) : 0};
+}
+function flMonth(){ const d = new Date(); return AD_MON[d.getMonth()] + " " + d.getFullYear(); }
+function flBar(id){
+  const g = flProgress(id), b = el("div", "flbar");
+  b.setAttribute("role", "progressbar"); b.setAttribute("aria-valuemin", "0"); b.setAttribute("aria-valuemax", String(g.total));
+  b.setAttribute("aria-valuenow", String(g.done)); b.setAttribute("aria-label", "Chunks done");
+  const tr = el("div", "tr"), i = el("i"); i.style.width = g.pct + "%"; tr.appendChild(i);
+  const t = el("span"); t.textContent = g.done + " of " + g.total + " done";
+  b.append(tr, t);
+  return b;
+}
+/* set a stage here and now; returns the change to send */
+function flStageLocal(id, stage){
+  const p = STATE.all[id]; if(!p) return null;
+  p.stage = stage; p.dates = p.dates || {}; p.dates[stage] = flMonth();
+  if(stage === "Proposed"){
+    if(!STATE.projects[id]){ STATE.projects[id] = p; STATE.lanes.tray.push(id); }
+  } else if(STATE.projects[id]){
+    delete STATE.projects[id];
+    ORDER.forEach(k => { STATE.lanes[k] = STATE.lanes[k].filter(x => x !== id); });
+  }
+  return {id, stage};
+}
+/* a Build project whose chunks are all done moves to Testing */
+function flAdvanceLocal(){
+  const out = [];
+  Object.values(STATE.all || {}).forEach(p => {
+    if(p.stage !== "Building") return;
+    const g = flProgress(p.id);
+    if(g.total && g.done === g.total){ out.push(flStageLocal(p.id, "Testing")); toast("Every chunk is done. " + p.name + " moved to Testing."); }
+  });
+  return out.filter(Boolean);
+}
+/* send the actions and any project changes, then redraw everything that shows them */
+function flCommit(projects, ticked){
+  let all = (projects || []).filter(Boolean);
+  if(ticked) all = all.concat(flAdvanceLocal());
+  if(STATE.canSave){
+    AC.note = "";
+    Streamlit.value({kind:"flow", items:AC.items, projects:all, nonce: Date.now()});
+  }
+  renderCards(); flBand(); acRender();
+  if(PD.id) pdFill();
+}
+function flBand(){
+  const list = Object.values(STATE.all || {}).filter(p => FL_STAGES.indexOf(p.stage) > 0 && p.stage !== "Shipped")
+    .sort((a,b) => FL_STAGES.indexOf(a.stage) - FL_STAGES.indexOf(b.stage) || String(a.name).localeCompare(String(b.name)));
+  $("#inprog").hidden = !list.length; $("#ipCount").textContent = list.length;
+  const box = $("#ipBody"), left = box.scrollLeft; box.innerHTML = "";
+  const ids = list.map(p => p.id);
+  list.forEach(p => {
+    const b = el("button", "fcard"); b.type = "button"; b.dataset.id = p.id; b.setAttribute("aria-haspopup", "dialog");
+    const hue = COMPANY_HUE[p.company] != null ? COMPANY_HUE[p.company] : 220;
+    const nm = el("div", "nm"); nm.textContent = p.name;
+    const mt = el("div", "mt");
+    const co = el("span", "co"); const dot = el("i"); dot.style.background = `oklch(0.62 0.17 ${hue})`;
+    const con = el("span"); con.textContent = p.companyName || ""; co.append(dot, con);
+    const chip = el("span", "flchip"); chip.textContent = FL_LABEL[p.stage] || p.stage;
+    chip.style.background = `oklch(0.93 0.07 ${FL_HUE[p.stage]})`; chip.style.boxShadow = `inset 0 0 0 1px oklch(0.78 0.14 ${FL_HUE[p.stage]})`;
+    mt.append(co, chip); b.append(nm, mt);
+    if(flProgress(p.id).total) b.appendChild(flBar(p.id));
+    if(PD.id === p.id) b.classList.add("open");
+    b.addEventListener("click", () => pdOpen(p.id, b, ids));
+    box.appendChild(b);
+  });
+  box.scrollLeft = left;
+}
+function flChunkRow(it, canTick){
+  const li = el("li"); if(it.done) li.classList.add("done");
+  const chk = el("button", "acchk"); chk.type = "button"; chk.setAttribute("role", "checkbox");
+  chk.setAttribute("aria-checked", it.done ? "true" : "false");
+  chk.setAttribute("aria-label", (it.done ? "Mark not done: " : "Mark done: ") + it.text);
+  chk.innerHTML = AC_TICK; chk.disabled = !STATE.canSave || !canTick; chk.dataset.fk = "chk-" + it.id;
+  if(!canTick) chk.title = "Chunks are ticked off in Build";
+  chk.addEventListener("click", () => { it.done = !it.done; it.done_at = it.done ? acToday() : ""; flCommit([], true); });
+  const t = el("span", "t"); t.textContent = it.text;
+  const mine = el("button", "flmine"); mine.type = "button"; mine.dataset.fk = "mine-" + it.id;
+  mine.setAttribute("aria-pressed", it.mine ? "true" : "false");
+  mine.textContent = it.mine ? "Assigned to me" : "Assign to me";
+  mine.addEventListener("click", () => { it.mine = !it.mine; flCommit([]); });
+  const del = el("button", "acdel"); del.type = "button"; del.innerHTML = AC_BIN; del.setAttribute("aria-label", "Delete chunk: " + it.text);
+  del.addEventListener("click", () => { AC.items = AC.items.filter(x => x.id !== it.id); flCommit([], true); });
+  li.append(chk, t, mine, del);
+  return li;
+}
+function flChunkList(p, canTick){
+  const frag = document.createDocumentFragment(), chunks = flChunks(p.id);
+  if(chunks.length){
+    const ul = el("ul", "fllist"); ul.setAttribute("aria-label", "Chunks");
+    chunks.forEach(it => ul.appendChild(flChunkRow(it, canTick)));
+    frag.appendChild(ul);
+  } else { const e = el("p", "flempty"); e.textContent = "No chunks yet."; frag.appendChild(e); }
+  const f = el("form", "fladd"); f.autocomplete = "off";
+  const inp = el("input"); inp.type = "text"; inp.maxLength = 140; inp.placeholder = "Add a chunk of work"; inp.dataset.fk = "newchunk";
+  inp.setAttribute("aria-label", "New chunk");
+  const add = el("button", "btn"); add.type = "submit"; add.textContent = "Add chunk";
+  f.append(inp, add);
+  f.addEventListener("submit", ev => {
+    ev.preventDefault();
+    const text = inp.value.replace(/\s+/g, " ").trim().slice(0, 140);
+    if(!text || !STATE.canSave) return;
+    AC.items.push({id: "c" + Date.now().toString(36), text, done: false, added: acToday(), done_at: "", project: p.id, chunk: true, mine: false});
+    inp.value = ""; flCommit([]);
+    const again = $("#pdBody").querySelector('[data-fk="newchunk"]'); if(again) again.focus();
+  });
+  frag.appendChild(f);
+  return frag;
+}
+function flWhoText(who){ return (who || []).filter(w => w && (w.who || w.how)).map(w => (w.who || "") + (w.how ? ": " + w.how : "")).join("\n"); }
+function flWhoParse(text){
+  return String(text || "").split("\n").map(l => l.trim()).filter(Boolean).map(l => {
+    const i = l.indexOf(":");
+    return i > 0 ? {who: l.slice(0, i).trim(), how: l.slice(i + 1).trim()} : {who: l, how: ""};
+  });
+}
+function flSection(p){
+  const sec = el("section", "pdflow"); sec.setAttribute("aria-label", "Project flow");
+  const at = Math.max(0, FL_STAGES.indexOf(p.stage));
+  const ol = el("ol", "flsteps");
+  FL_STAGES.forEach((s, i) => {
+    const li = el("li"); if(i < at || p.stage === "Shipped") li.classList.add("done"); else if(i === at){ li.classList.add("cur"); li.setAttribute("aria-current", "step"); }
+    const b = el("b"); b.innerHTML = AC_TICK; const t = el("span"); t.textContent = FL_LABEL[s];
+    li.append(b, t); ol.appendChild(li);
+  });
+  sec.appendChild(ol);
+  const panel = el("div", "flpanel"); sec.appendChild(panel);
+  const say = text => { const q = el("p"); q.textContent = text; panel.appendChild(q); return q; };
+  const row = () => { const r = el("div", "flrow"); panel.appendChild(r); return r; };
+  const go = (label, to, extra, primary) => {
+    const b = el("button", "btn" + (primary === false ? "" : " primary")); b.type = "button"; b.textContent = label; b.dataset.fk = "go-" + to;
+    b.addEventListener("click", () => {
+      const ch = Object.assign(flStageLocal(p.id, to) || {id:p.id}, extra ? extra() : {});
+      flCommit([ch]);
+      toast(p.name + " moved to " + FL_LABEL[to] + ".");
+    });
+    return b;
+  };
+  const back = r => {
+    if(at < 1) return;
+    const prev = FL_STAGES[at - 1];
+    const b = el("button", "flback"); b.type = "button"; b.textContent = "Move back to " + FL_LABEL[prev]; b.dataset.fk = "back";
+    b.addEventListener("click", () => { flCommit([flStageLocal(p.id, prev)]); });
+    r.appendChild(b);
+  };
+  const stage = FL_STAGES[at];
+  if(stage === "Proposed"){
+    say("Awaiting approval. Approving it moves it to Scoping, where its scope is set out.");
+    const r = row(); r.appendChild(go("Approve, move to Scoping", "Scoped"));
+  } else if(stage === "Scoped" && !STATE.canSave){
+    say("In Scoping: the scope of the idea is being set out.");
+  } else if(stage === "Scoped"){
+    say("Set out the scope of the idea.");
+    const field = (key, label, hint, value, rows) => {
+      const l = el("label", "flf"); l.appendChild(document.createTextNode(label));
+      if(hint){ const sm = el("small"); sm.textContent = hint; l.appendChild(sm); }
+      const ta = el("textarea"); ta.rows = rows || 2; ta.value = value || ""; ta.dataset.fk = "sc-" + key; ta.maxLength = 3000;
+      l.appendChild(ta); panel.appendChild(l); return ta;
+    };
+    const job = field("scope", "The job it does", "What this project is supposed to do.", p.scope || p.summary, 3);
+    const outs = field("outputs", "Outputs", "What it is supposed to produce.", p.outputs, 2);
+    const roi = field("roi", "Return on investment", "What it gives back for the time and money put in.", p.roi, 2);
+    const who = field("who", "Who it benefits", "One per line, as Who: how it helps them.", flWhoText(p.who), 3);
+    const read = () => ({scope: job.value.trim(), outputs: outs.value.trim(), roi: roi.value.trim(), who: flWhoParse(who.value)});
+    const keep = () => { const v = read(); Object.assign(p, v); return v; };
+    const r = row();
+    const save = el("button", "btn"); save.type = "button"; save.textContent = "Save scope"; save.dataset.fk = "savescope";
+    save.addEventListener("click", () => { flCommit([Object.assign({id:p.id}, keep())]); toast("Scope saved."); });
+    r.append(go("Scope set, move to Planning", "Planned", keep), save);
+    const sp = el("span", "sp"); r.appendChild(sp); back(r);
+  } else if(stage === "Planned"){
+    say("Split the work into chunks. Each chunk is a to-do action you can assign to yourself; assigned chunks show in your Actions.");
+    panel.appendChild(flChunkList(p, false));
+    const r = row(); const b = go("Plan set, move to Build", "Building"); b.disabled = !flProgress(p.id).total;
+    if(b.disabled) b.title = "Add at least one chunk first";
+    r.appendChild(b); const sp = el("span", "sp"); r.appendChild(sp); back(r);
+  } else if(stage === "Building"){
+    say("Work through the chunks. Each one turns green when it is done, and when every chunk is done this moves to Testing.");
+    panel.appendChild(flBar(p.id));
+    panel.appendChild(flChunkList(p, true));
+    const r = row(); const sp = el("span", "sp"); r.appendChild(sp); back(r);
+  } else if(stage === "Testing"){
+    const g = flProgress(p.id);
+    say(g.total ? "Everything for this idea is built: " + g.done + " of " + g.total + " chunks done. Test it, then mark it shipped."
+                : "Built. Test it, then mark it shipped.");
+    if(g.total) panel.appendChild(flBar(p.id));
+    const lab = el("label", "flcheck");
+    const chk = el("button", "acchk"); chk.type = "button"; chk.setAttribute("role", "checkbox"); chk.dataset.fk = "tested";
+    chk.setAttribute("aria-checked", p.tested ? "true" : "false"); chk.innerHTML = AC_TICK; chk.disabled = !STATE.canSave;
+    chk.setAttribute("aria-label", "I have tested this");
+    chk.addEventListener("click", () => { p.tested = !p.tested; flCommit([{id:p.id, tested:p.tested}]); });
+    const t = el("span"); t.textContent = "I have tested this";
+    lab.append(chk, t); panel.appendChild(lab);
+    const r = row(); const b = go("Mark as shipped", "Shipped"); b.disabled = !p.tested;
+    if(b.disabled) b.title = "Tick that you have tested it first";
+    r.appendChild(b); const sp = el("span", "sp"); r.appendChild(sp); back(r);
+  } else {
+    say("Built, tested and shipped" + (p.dates && p.dates.Shipped ? ", " + p.dates.Shipped : "") + ".");
+    const g = flProgress(p.id); if(g.total) panel.appendChild(flBar(p.id));
+    const r = row(); const sp = el("span", "sp"); r.appendChild(sp); back(r);
+  }
+  if(!STATE.canSave) sec.querySelectorAll("button,input,textarea").forEach(x => { x.disabled = true; });
+  return sec;
+}
 
 /* ── render from Streamlit ────────────────────────────────────────────────── */
 let built = false;
@@ -2318,7 +2633,9 @@ function render(args){
                             owner:p.owner, date:p.date, proposed_at:p.proposed_at, plan:p.plan || null};
   });
 
-  const saved = (args.plan && args.plan.lanes) || {};
+  // 3.0: a redraw after an Actions or flow save must not undo an arrangement not yet saved
+  const unsaved = STATE.dirty ? STATE.lanes : null;
+  const saved = unsaved || (args.plan && args.plan.lanes) || {};
   const placed = new Set();
   const lanes = {now:[], next:[], later:[], tray:[]};
   ["now","next","later"].forEach(k => {
@@ -2326,6 +2643,7 @@ function render(args){
       if(STATE.projects[id] && !placed.has(id)){ lanes[k].push(id); placed.add(id); }
     });
   });
+  if(unsaved) (unsaved.tray || []).forEach(id => { if(STATE.projects[id] && !placed.has(id)){ lanes.tray.push(id); placed.add(id); } });
   proposed.forEach(p => { if(!placed.has(p.id)) lanes.tray.push(p.id); });
   STATE.lanes = lanes;
   STATE.all = {};
@@ -2334,10 +2652,13 @@ function render(args){
     STATE.all[p.id] = {id:p.id, name:p.name, company:p.company, companyName: names[p.company] || p.company,
                        category:p.category, summary:p.summary, scope:p.scope, how:p.how,
                        who:Array.isArray(p.who) ? p.who : [], owner:p.owner, date:p.date,
-                       proposed_at:p.proposed_at, stage:p.stage, dates:p.dates || {}, plan:p.plan || null};
+                       proposed_at:p.proposed_at, stage:p.stage, dates:p.dates || {}, plan:p.plan || null,
+                       outputs:p.outputs || "", roi:p.roi || "", tested:!!p.tested};
   });
+  // the Proposed ones are the same objects, so the flow sees one record per project
+  Object.keys(STATE.projects).forEach(id => { if(STATE.all[id]) STATE.projects[id] = STATE.all[id]; });
   STATE.canSave = !!args.can_save;
-  STATE.dirty = false;
+  STATE.dirty = !!unsaved;
 
   document.getElementById("planner").classList.toggle("readonly", !STATE.canSave);
   const note = $("#note");
@@ -2354,6 +2675,8 @@ function render(args){
 
   renderCards();
   wfRenderArgs(args);
+  flBand();
+  if(PD.id) pdFill();
   otArgs();
   Streamlit.height(args.height || 900);
 
