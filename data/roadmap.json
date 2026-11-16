@@ -1364,7 +1364,8 @@
       },
       "updated_at": "2026-11-16",
       "outputs": "GitHub Repo for storing Shared AI knowledge and experience, including Seminar TRanscripts etc",
-      "roi": "Other - Centralised Knowledge not otherwise accessible/"
+      "roi": "Other - Centralised Knowledge not otherwise accessible/",
+      "tested": true
     },
     {
       "id": "aes-ai-dynamic-pricing-and-self-serve-quoting-tool-aes",
