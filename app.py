@@ -1,6 +1,13 @@
 """
 MTCO AI Roadmap
-Version 3.0
+Version 3.1
+
+3.1, 16/11/2026: Scoping asks set questions. Nathan: the return on investment
+shows 'Increases Profit?', 'Increases Sales?' and 'Other', and who it
+benefits is chosen from Hiredesk, Sales, Yard, H&S, Compliance, HR, Finance,
+Marketing, Leadership and IT. A project now carries "roi_tags" (any of
+profit, sales, other; "roi" holds the text typed for Other) and "teams"
+(the chosen names). The "who" list Ken writes is left as it is.
 
 3.0, 16/11/2026: the project flow. Nathan: a proposed project sits awaiting
 approval; Scoping sets out the job it does, its outputs, its return on
@@ -266,6 +273,8 @@ def save_actions(tok, items):
 
 
 STAGES = ["Proposed", "Scoped", "Planned", "Building", "Testing", "Shipped"]
+ROI_TAGS = ["profit", "sales", "other"]
+TEAMS = ["Hiredesk", "Sales", "Yard", "H&S", "Compliance", "HR", "Finance", "Marketing", "Leadership", "IT"]
 
 
 def clean_project_change(ch):
@@ -287,6 +296,10 @@ def clean_project_change(ch):
         out["who"] = who
     if isinstance(ch.get("tested"), bool):
         out["tested"] = ch["tested"]
+    if isinstance(ch.get("roi_tags"), list):
+        out["roi_tags"] = [t for t in ROI_TAGS if t in ch["roi_tags"]]
+    if isinstance(ch.get("teams"), list):
+        out["teams"] = [t for t in TEAMS if t in ch["teams"]]
     return out if len(out) > 1 else None
 
 
@@ -308,7 +321,7 @@ def save_projects(tok, changes):
             p = by_id.get(ch["id"])
             if p is None:
                 continue
-            for key in ("scope", "outputs", "roi", "who", "tested"):
+            for key in ("scope", "outputs", "roi", "who", "tested", "roi_tags", "teams"):
                 if key in ch:
                     p[key] = ch[key]
             if "stage" in ch and ch["stage"] != p.get("stage"):
