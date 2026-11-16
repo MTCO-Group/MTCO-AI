@@ -126,7 +126,7 @@
    "done_at": "",
    "project": "mtco-shared-ai-knowledge-repository-event-transcripts",
    "chunk": true,
-   "mine": false
+   "mine": true
   }
  ],
  "updated": "2026-11-16 15:30"
