@@ -1337,7 +1337,7 @@
       "id": "mtco-shared-ai-knowledge-repository-event-transcripts",
       "company": "mtco",
       "name": "Shared AI Knowledge Repository (Event Transcripts)",
-      "stage": "Building",
+      "stage": "Testing",
       "category": "IT and Data",
       "owner": "Nathan McGuinness",
       "proposed_by": "nathan.mcguinness@kensite.co.uk",
@@ -1359,7 +1359,8 @@
       "dates": {
         "Scoped": "Nov 2026",
         "Planned": "Nov 2026",
-        "Building": "Nov 2026"
+        "Building": "Nov 2026",
+        "Testing": "Nov 2026"
       },
       "updated_at": "2026-11-16",
       "outputs": "GitHub Repo for storing Shared AI knowledge and experience, including Seminar TRanscripts etc",
