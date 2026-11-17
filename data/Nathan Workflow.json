@@ -4526,6 +4526,12 @@
     "time": "21:37",
     "title": "Updated AES Timesheet Worker 1.4",
     "kind": "build"
+   },
+   {
+    "time": "21:42",
+    "title": "Updated AES Timesheet Worker 1.5",
+    "kind": "build",
+    "detail": "The second preview run (17/11/2026) showed two more."
    }
   ]
  },
