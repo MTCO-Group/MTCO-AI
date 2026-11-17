@@ -4492,6 +4492,14 @@
     "kind": "build",
     "detail": "Ken can add an action to Nathan's Actions on the MTCO planner"
    }
+  ],
+  "2026-11-17": [
+   {
+    "time": "10:12",
+    "title": "Built AES Weekly Reconciliation Send",
+    "kind": "build",
+    "detail": "Every Monday morning Ken runs the Big Change (AES) reconciliation for the week just gone, Monday to Sunday, and emails the workbook and its summary t…"
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
