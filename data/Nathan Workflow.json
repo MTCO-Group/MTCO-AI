@@ -4550,6 +4550,18 @@
     "title": "Updated AES Timesheet Worker 1.9",
     "kind": "build",
     "detail": "Nathan, 17/11/2026, on the design sheet: \"Remove this tagline\"."
+   },
+   {
+    "time": "22:07",
+    "title": "Built AES Timesheet Worker One Off Build",
+    "kind": "build",
+    "detail": "Builds the week 07 to 13/11/2026 again with the worker as it now stands (the design Nathan signed off), so he can see the finished workbook."
+   },
+   {
+    "time": "22:07",
+    "title": "Updated AES Timesheet Worker 2.3",
+    "kind": "build",
+    "detail": "Nathan signed the design sheet off on 17/11/2026 (\"OK that's good\") and it was read back against what this worker builds."
    }
   ]
  },
