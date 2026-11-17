@@ -4505,6 +4505,17 @@
     "title": "Updated AES Weekly Reconciliation Send 1.1",
     "kind": "build",
     "detail": "Live."
+   },
+   {
+    "time": "21:27",
+    "title": "Updated AES Driver Weekly Timesheet 1.2",
+    "kind": "build"
+   },
+   {
+    "time": "21:27",
+    "title": "Built AG-UI Preflight Probe",
+    "kind": "build",
+    "detail": "Read only apart from one folder of its own, 17/11/2026 (Yard App Chat with Ken, plan Task K1)."
    }
   ]
  },
