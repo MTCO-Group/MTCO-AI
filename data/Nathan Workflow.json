@@ -4562,6 +4562,12 @@
     "title": "Updated AES Timesheet Worker 2.3",
     "kind": "build",
     "detail": "Nathan signed the design sheet off on 17/11/2026 (\"OK that's good\") and it was read back against what this worker builds."
+   },
+   {
+    "time": "22:12",
+    "title": "Built Yard Chat Build",
+    "kind": "build",
+    "detail": "BUILDS AND TESTS Ken Agent V31.3 (Chat with Ken on the yard app, over AG-UI 1.0; design in Kensite Yard App/docs/superpowers/specs/2026-11-17-chat-wi…"
    }
   ]
  },
