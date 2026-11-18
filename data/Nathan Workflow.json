@@ -4576,6 +4576,12 @@
     "title": "Updated AES Timesheet Worker 2.4",
     "kind": "build",
     "detail": "Overtime should be over 9.5 hours actually as they get 30 mins lunch\"."
+   },
+   {
+    "time": "10:02",
+    "title": "Updated Ken Agent V31.3",
+    "kind": "build",
+    "detail": "Chat with Ken on the yard app, over the AG-UI protocol"
    }
   ]
  },
