@@ -9,14 +9,6 @@
    "project": ""
   },
   {
-   "id": "amwjiiug1",
-   "text": "CAPOR Metric",
-   "done": false,
-   "added": "2026-11-16",
-   "done_at": "",
-   "project": "kensite-adoption-over-appearance-driving-ai-adoption-as-a-metric"
-  },
-  {
    "id": "amwjiarki",
    "text": "Tablet Roll Out",
    "done": false,
@@ -193,5 +185,5 @@
    "mine": true
   }
  ],
- "updated": "2026-11-16 17:07"
+ "updated": "2026-11-18 10:16"
 }
