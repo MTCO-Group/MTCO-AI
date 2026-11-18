@@ -4588,6 +4588,12 @@
     "title": "Updated Ken Agent V31.4",
     "kind": "build",
     "detail": "Yard chat can run on a model of its own, and is never given money figures"
+   },
+   {
+    "time": "21:02",
+    "title": "Updated Kensite Big Change Reconciliation Worker 5.3",
+    "kind": "build",
+    "detail": "From Ewa's notes on the 09/11 to 15/11 run."
    }
   ]
  },
