@@ -4594,6 +4594,12 @@
     "title": "Updated Kensite Big Change Reconciliation Worker 5.3",
     "kind": "build",
     "detail": "From Ewa's notes on the 09/11 to 15/11 run."
+   },
+   {
+    "time": "21:20",
+    "title": "Updated Ken Agent V31.5",
+    "kind": "build",
+    "detail": "The yard app's Stock Take shows each unit's MCS status as it is added"
    }
   ]
  },
