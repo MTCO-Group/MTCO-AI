@@ -4569,6 +4569,14 @@
     "kind": "build",
     "detail": "BUILDS AND TESTS Ken Agent V31.3 (Chat with Ken on the yard app, over AG-UI 1.0; design in Kensite Yard App/docs/superpowers/specs/2026-11-17-chat-wi…"
    }
+  ],
+  "2026-11-18": [
+   {
+    "time": "09:27",
+    "title": "Updated AES Timesheet Worker 2.4",
+    "kind": "build",
+    "detail": "Overtime should be over 9.5 hours actually as they get 30 mins lunch\"."
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
