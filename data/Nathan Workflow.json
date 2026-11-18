@@ -4582,6 +4582,12 @@
     "title": "Updated Ken Agent V31.3",
     "kind": "build",
     "detail": "Chat with Ken on the yard app, over the AG-UI protocol"
+   },
+   {
+    "time": "20:43",
+    "title": "Updated Ken Agent V31.4",
+    "kind": "build",
+    "detail": "Yard chat can run on a model of its own, and is never given money figures"
    }
   ]
  },
