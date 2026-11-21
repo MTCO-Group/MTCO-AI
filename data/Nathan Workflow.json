@@ -4601,6 +4601,26 @@
     "kind": "build",
     "detail": "The yard app's Stock Take shows each unit's MCS status as it is added"
    }
+  ],
+  "2026-11-21": [
+   {
+    "time": "07:23",
+    "title": "Updated Ken Agent V31.6",
+    "kind": "build",
+    "detail": "The yard app can fetch every unit's status in one go, and never waits on MCS"
+   },
+   {
+    "time": "07:23",
+    "title": "Updated Ken Agent V31.7",
+    "kind": "build",
+    "detail": "The yard app can show the prep schedule"
+   },
+   {
+    "time": "07:23",
+    "title": "Updated Ken Agent V31.8",
+    "kind": "build",
+    "detail": "The yard app's prep schedule shows the furniture that goes in each unit"
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
