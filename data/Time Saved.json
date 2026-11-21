@@ -5,7 +5,7 @@
  "quarter_minutes": 75603,
  "month_minutes": 25311,
  "week_minutes": 10062,
- "today_minutes": 1980,
+ "today_minutes": 0,
  "since": "2026-07-20",
  "adoption": {
   "weeks": [
@@ -89,8 +89,8 @@
  },
  "openrouter": {
   "today": {
-   "calls": 19,
-   "usd": 0.14
+   "calls": 0,
+   "usd": 0.0
   },
   "week": {
    "calls": 106,
@@ -113,5 +113,5 @@
    "usd": 7.53
   }
  },
- "updated": "2026-11-20T17:07+00:00"
+ "updated": "2026-11-21T00:00+00:00"
 }
