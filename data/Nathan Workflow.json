@@ -4670,6 +4670,12 @@
     "title": "Updated New Starter Form 1.3",
     "kind": "build",
     "detail": "Each new starter has a folder and a checklist."
+   },
+   {
+    "time": "11:18",
+    "title": "Built Quotes by Customer Weekly",
+    "kind": "build",
+    "detail": "Every Monday at 08:00 Ken emails Chloe the quotes raised last week, by customer, with a rolling 52 week snapshot."
    }
   ]
  },
