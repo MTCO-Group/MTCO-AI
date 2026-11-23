@@ -4628,6 +4628,12 @@
     "title": "Built New Starter Form",
     "kind": "build",
     "detail": "Fills in and submits Truly SMB's \"Kensite New starter form\" (a Microsoft Form) for a new member of staff, keeps a Word copy of what was sent, and wri…"
+   },
+   {
+    "time": "08:53",
+    "title": "Updated Ken Agent V31.9",
+    "kind": "build",
+    "detail": "Ken sends the AES reconciliation by himself every Monday morning"
    }
   ]
  },
