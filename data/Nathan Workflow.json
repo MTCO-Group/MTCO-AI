@@ -4621,6 +4621,14 @@
     "kind": "build",
     "detail": "The yard app's prep schedule shows the furniture that goes in each unit"
    }
+  ],
+  "2026-11-23": [
+   {
+    "time": "08:48",
+    "title": "Built New Starter Form",
+    "kind": "build",
+    "detail": "Fills in and submits Truly SMB's \"Kensite New starter form\" (a Microsoft Form) for a new member of staff, keeps a Word copy of what was sent, and wri…"
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
