@@ -4634,6 +4634,18 @@
     "title": "Updated Ken Agent V31.9",
     "kind": "build",
     "detail": "Ken sends the AES reconciliation by himself every Monday morning"
+   },
+   {
+    "time": "08:58",
+    "title": "Updated Ken Agent V32.0",
+    "kind": "build",
+    "detail": "Ken can fill in Truly's new starter form"
+   },
+   {
+    "time": "08:58",
+    "title": "Built New Starter Form Dry Run",
+    "kind": "build",
+    "detail": "Opens Truly's real new starter form, fills it with sample answers marked TEST, reads them back, takes a screenshot into the Screenshots folder and st…"
    }
   ]
  },
