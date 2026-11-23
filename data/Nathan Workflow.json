@@ -4676,6 +4676,12 @@
     "title": "Built Quotes by Customer Weekly",
     "kind": "build",
     "detail": "Every Monday at 08:00 Ken emails Chloe the quotes raised last week, by customer, with a rolling 52 week snapshot."
+   },
+   {
+    "time": "12:28",
+    "title": "Updated Kensite Big Change Reconciliation Worker 5.4",
+    "kind": "build",
+    "detail": "From Ewa's notes on the 02/11 and 16/11 runs."
    }
   ]
  },
