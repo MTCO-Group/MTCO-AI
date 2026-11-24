@@ -4701,6 +4701,14 @@
     "title": "Updated Kensite Compound Drawing Generator 5.1",
     "kind": "build",
     "detail": "Fewer dotted lines on the ground floor page."
+   },
+   {
+    "time": "15:14",
+    "title": "GitHub: 1 commit to Compound-Builder",
+    "kind": "github",
+    "repo": "MTCO-Group/Compound-Builder",
+    "tagline": true,
+    "detail": "Site Builder Deploy: update generator/Kensite Compound Drawing Generat…. Plus 16 commits made by Ken and the apps"
    }
   ]
  },
