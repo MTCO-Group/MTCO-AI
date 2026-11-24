@@ -117,9 +117,9 @@
   {
    "id": "cmwj9igwz",
    "text": "Add AMEX Details within budget for Auto Top Up",
-   "done": false,
+   "done": true,
    "added": "2026-11-16",
-   "done_at": "",
+   "done_at": "2026-11-24",
    "project": "kensite-kensite-openrouter-account-and-shared-api-keys",
    "chunk": true,
    "mine": true
