@@ -4694,6 +4694,14 @@
     "kind": "build",
     "detail": "Ken can email reports and documents to outside addresses on request, and a schedule..."
    }
+  ],
+  "2026-11-24": [
+   {
+    "time": "15:13",
+    "title": "Updated Kensite Compound Drawing Generator 5.1",
+    "kind": "build",
+    "detail": "Fewer dotted lines on the ground floor page."
+   }
   ]
  },
  "_comment": "Nathan Workflow work diary for the MTCO AI Roadmap app. Built 06/10/2026 from Ken's version history, the automation scripts' versions and dates, and known milestones. The app is public: work items only."
