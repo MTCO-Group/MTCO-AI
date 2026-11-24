@@ -11,9 +11,9 @@
   {
    "id": "amwjiarki",
    "text": "Tablet Roll Out",
-   "done": false,
+   "done": true,
    "added": "2026-11-16",
-   "done_at": "",
+   "done_at": "2026-11-24",
    "project": ""
   },
   {
@@ -185,5 +185,5 @@
    "mine": true
   }
  ],
- "updated": "2026-11-18 10:17"
+ "updated": "2026-11-24 11:02"
 }
