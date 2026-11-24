@@ -4709,6 +4709,12 @@
     "repo": "MTCO-Group/Compound-Builder",
     "tagline": true,
     "detail": "Site Builder Deploy: update generator/Kensite Compound Drawing Generat…. Plus 16 commits made by Ken and the apps"
+   },
+   {
+    "time": "15:32",
+    "title": "Updated Ken Agent V32.3",
+    "kind": "build",
+    "detail": "Service_aes_issue_alerts emails the AES Service Desk each service or water fill job..."
    }
   ]
  },
