@@ -1126,9 +1126,10 @@
         "Building": "Nov 2026",
         "Testing": "Nov 2026"
       },
-      "updated_at": "2026-11-24",
+      "updated_at": "2026-11-25",
       "outputs": "A manageable company funded dahboard for AI API usuage where costs can be monitored on a tool by tool basis",
-      "roi": "Other - visibility over costs and ownership of credenitals."
+      "roi": "Other - visibility over costs and ownership of credenitals.",
+      "tested": true
     },
     {
       "id": "kensite-voice-notes-as-a-data-collection-tool",
