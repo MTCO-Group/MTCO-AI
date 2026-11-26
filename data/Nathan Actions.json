@@ -1,6 +1,14 @@
 {
  "items": [
   {
+   "id": "amwxd60u3",
+   "text": "Cyber Essenitals - Investigate",
+   "done": false,
+   "added": "2026-11-26",
+   "done_at": "",
+   "project": ""
+  },
+  {
    "id": "amwxd43qe",
    "text": "Firewall Issue with Truly",
    "done": false,
@@ -193,5 +201,5 @@
    "mine": true
   }
  ],
- "updated": "2026-11-26 09:40"
+ "updated": "2026-11-26 09:42"
 }
